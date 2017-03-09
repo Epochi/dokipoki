@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+ {% include head.html %}
+
+  <body class="rozine">
+
+      {% include navbar.html %}
+      {% include subheader.html %}
+      {% include divider.html %}
+      {% include paslaugos.html %}
+      {% include divider.html %}
+      {% include kaina.html %}
+      <div class="container">
+      </div>
+      
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>    
+      <script type="text/javascript" src="{{ "/js/bin/materialize.js" | prepend: site.baseurl }}"></script>  
+      <script type="text/javascript" src="{{ "/js/bin/main.js" | prepend: site.baseurl }}"></script>  
+      
+  </body>
+
+</html>
