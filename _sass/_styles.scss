@@ -13,9 +13,9 @@ $zalia:#a9ddd4;
     background-color:$rozine !important;
 }
 nav .brand-logo {
-    font-family: "Block Sketch", sans-serif;
-    font-weight: bold;
-    font-size: 2.25rem;
+    font-family: "KG Air", sans-serif;
+    font-weight: 600;
+    font-size: 1.625rem;
     color: $text-color;
 }
 
@@ -133,6 +133,10 @@ nav ul a:hover {
     background-size: cover;
     min-height: calc(100vw * 0.053);
 }
+.empty-divider{
+     max-height: 110px;
+     min-height: calc(100vw * 0.053);
+}
 
 @media only screen and (min-width: 601px) {
     #subheader-wrapper {
@@ -161,6 +165,9 @@ nav ul a:hover {
     html {
         font-size: 20px;
     }
+    .brand-logo{
+        height: 50px;
+    }
 }
 
 .subheader.sub-title{
@@ -176,6 +183,7 @@ nav ul a:hover {
     background-position: 50% 30%;
      background-size: 233px 385px;
 }
+/*
 #Programa .section-header::after{
     content: '';
     position: absolute;
@@ -185,19 +193,19 @@ nav ul a:hover {
     top: 120%;
     //border-bottom: 2px solid #444;
     border-radius: 54px;
-}
+}*/
 
 
-.programa h4{
+.programa h4,.kaina h4{
     margin-top:0;
     margin-bottom:0;
     font-family: Amatic SC, sans-serif;
 }
-.programa .services div{
+.programa .services div, .kaina .services div{
     font-family:"KG Kindergarden";
     font-size: 0.75rem;
 }
-.programa .services{
+.programa .services,.kaina .services{
     padding-bottom:30px;
     position:relative;
 }
@@ -213,3 +221,33 @@ nav ul a:hover {
     position:absolute;
     
 }*/
+.kaina h4 span{
+    margin-right: -0.15em;
+}
+.kontaktai .row{
+    margin-bottom:0;
+}
+.kontaktai{
+        background-color:$zydra;
+        padding-bottom: 100px;
+}
+
+.nav-wrapper li a.active{
+    color:#444;
+}
+#Programa{
+    margin-top: -1.5rem;
+    padding-top: 1.5rem;
+}
+nav.z-depth-0 .brand-logo{
+    color:$text-color;
+    transition: color 0.2s;
+}
+
+nav .brand-logo{
+    color:$zydra;
+    transition: color 0.2s;
+    background: url('/img/components/baloonwhitelogo.png') no-repeat center;
+    background-size: 100% auto;
+    padding: 0 10px;
+}

@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $(".button-collapse").sideNav();
-
+    $('.scrollspy').scrollSpy();
 
 $(window).scroll(function() {
     if(document.body.scrollTop == 0) {
@@ -9,6 +9,8 @@ $(window).scroll(function() {
         $("#nav").removeClass("z-depth-0");
     }
 });
+
+
 
 });
 
