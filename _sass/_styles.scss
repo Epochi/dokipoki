@@ -55,8 +55,8 @@ nav ul a:hover {
     background-size: 100% 100%;
 }
 .title-background{
-    padding: 110px 40px 80px;
-    background: url('/img/components/baloon-square.png') no-repeat;
+    padding: 110px 40px 85px;
+    background: url('/img/components/ballon logo250hx255w.png') no-repeat;
     background-position: center;
     background-size: 100% 100%;
 }
@@ -210,10 +210,10 @@ nav ul a:hover {
     position:relative;
 }
 
-/*.services img{
-    height:100%;
-    width:auto;
-}*/
+.services img{
+     height:100%;
+     width:auto;
+}
 
 //line to clock
 /*.services.row::before{
@@ -250,4 +250,23 @@ nav .brand-logo{
     background: url('/img/components/baloonwhitelogo.png') no-repeat center;
     background-size: 100% auto;
     padding: 0 10px;
+    
+}
+
+#brand-logo-img{
+    height:2.5rem;
+    width:2.5rem;
+    background: url('/img/components/ballon logo250hx255w.png') no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.no-padding-sides{
+    padding-left:0px !important;
+    padding-right:0px !important;
+}
+
+.kaina .services img{
+    height:4rem;
+    width:auto;
 }
