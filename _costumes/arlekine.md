@@ -1,4 +1,4 @@
 ---
-personazas: Arlekina
-img: /img/personazai/arlekina.png
+personazas: Arlekinė
+img: /img/personazai/arlekine.png
 ---
