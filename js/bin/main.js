@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $(".button-collapse").sideNav({
-      closeOnClick: true
+      closeOnClick: true,
+      draggable: true
     });
     $('.scrollspy').scrollSpy();
 
