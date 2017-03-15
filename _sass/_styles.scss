@@ -336,7 +336,7 @@ nav .brand-logo{
     .brand-logo{
         transform: translateX(0%);
     }
-    .brand-logo::after{
+    nav .brand-logo::after{
         content: none;
     }
     #subheader-wrapper {
@@ -344,13 +344,13 @@ nav .brand-logo{
         background:none;
     }
 }
-/*
+
 @media only screen and (min-width: 0px) {
     html {
         font-size: 12px;
     }
 }
-*/
+
 @media only screen and (min-width: 992px) {
     html {
         font-size: 18px;
