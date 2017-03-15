@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    $(".button-collapse").sideNav();
+    $(".button-collapse").sideNav({
+      closeOnClick: true
+    });
     $('.scrollspy').scrollSpy();
 
 $(window).scroll(function() {
