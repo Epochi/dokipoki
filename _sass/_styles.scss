@@ -171,6 +171,9 @@ nav ul a:hover {
         .phone-nubmer{
         color:#039be5;
     }
+    .brand-logo{
+        transform: translateX(0%);
+    }
 }
 
 @media only screen and (min-width: 0px) {
@@ -186,6 +189,9 @@ nav ul a:hover {
     html {
         font-size: 18px;
     }
+    .brand-logo{
+        transform: translateX(0%);
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -193,6 +199,7 @@ nav ul a:hover {
         font-size: 20px;
     }
     .brand-logo{
+        transform: translateX(-50%);
         height: 50px;
     }
 }
