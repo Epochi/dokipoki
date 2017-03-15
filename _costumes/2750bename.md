@@ -1,4 +1,4 @@
 ---
-personazas: Benamė
+personazas: Ragana
 img: /img/personazai/bename.png
 ---
