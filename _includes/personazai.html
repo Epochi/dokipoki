@@ -6,32 +6,13 @@
     </div>
 
     <div  id="Personazai"  class="row  section scrollspy">
-        <div class="services-wrapper col s6 ">
-            <div class="services row">
-                <div class="col s3"><img src="/img/components/heart.png"></img>
-                </div>
-                <div class="col s9">
-                    <h4>INVIDUALI PERSONAŽUI</h4>
-                    <div>pritaikyta prie Jūsų mažylių, bei pačio personažo!</div>
-                </div>
+        {% for costume in site.costumes %}
+        <div class="personazai-wrapper col s4">
+            <div>
+                <img src="{{ costume.img }}"/>
             </div>
-            <div class="services row">
-                <div class="col s3"><img src="/img/components/nata-01.png"></img>
-                </div>
-                <div class="col s9">
-                    <h4>ŠOKIAI</h4>
-                    <div>darys visų pamėgtą piratų mankštą, šoks princesių šokį ar dainuos Elzos dainelę.</div>
-                </div>
-            </div>
-            <div class="services row">
-                <div class="col s3"><img src="/img/components/zvaigzde-02-01.png"></img>
-                </div>
-                <div class="col s9">
-                    <h4>ŽAIDIMAI</h4>
-                    <div>tarpusavyje ar kartu su tėveliais varžysis įvairiose aktyviose rungtyse, trauks dovanas iš stebuklingos maišiuko ir žais daug kitų smagių žaidimų!</div>
-                </div>
-            </div>
-
+            <h4>{{ costume.personazas }}</h4>
         </div>
+        {% endfor %}
     </div>
 </div>

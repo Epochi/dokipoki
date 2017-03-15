@@ -133,6 +133,22 @@ nav ul a:hover {
     background-size: cover;
     min-height: calc(100vw * 0.053);
 }
+.debeselis-divider > img{
+    position: absolute;
+    transform: translateY(-80%);
+    width: 100%;
+}
+.debeselis-divider{
+    width: 100%;
+    background-image: url('/img/components/debeseliai.png');
+    max-height: 110px;
+    /* height: 8vh; */
+    background-position: center;
+    background-repeat: repeat-x;
+    padding:60px 0;
+    background-size: auto 100%;
+    min-height: calc(100vw * 0.053);
+}
 .empty-divider{
      max-height: 110px;
      min-height: calc(100vw * 0.053);
@@ -140,7 +156,7 @@ nav ul a:hover {
 
 @media only screen and (min-width: 601px) {
     #subheader-wrapper {
-        min-height: calc(100vh - 64px);
+        min-height: calc(85vh - 64px);
     }
     nav {
         transition: box-shadow 0.2s;
@@ -211,8 +227,12 @@ nav ul a:hover {
 }
 
 .services img{
-     height:100%;
-     width:auto;
+     height:auto;
+    max-width: 5rem;
+     width:85%;
+}
+#Programa .services .s3{
+    text-align:right;
 }
 
 //line to clock
@@ -240,14 +260,22 @@ nav ul a:hover {
     padding-top: 1.5rem;
 }
 nav.z-depth-0 .brand-logo{
-    color:$text-color;
+    color:transparent;
     transition: color 0.2s;
+}
+nav .brand-logo::after{
+    content: '';
+    position: absolute;
+    height: 2rem;
+    widtH: 3rem;
+    background: url('/img/components/ballon logo250hx255w.png') no-repeat right;
+    background-size: contain;
 }
 
 nav .brand-logo{
     color:$zydra;
     transition: color 0.2s;
-    background: url('/img/components/baloonwhitelogo.png') no-repeat center;
+    //background: url('/img/components/baloonwhitelogo.png') no-repeat center;
     background-size: 100% auto;
     padding: 0 10px;
     
@@ -267,6 +295,22 @@ nav .brand-logo{
 }
 
 .kaina .services img{
-    height:4rem;
-    width:auto;
+    height:auto;
+    width:100%;
+    max-width:2.5rem;
+}
+.kaina .services .col.s3{
+    text-align:right;
+}
+
+.facebook-link{
+    color:$text-color-contrast;
+}
+
+.facebook-link:hover{
+    color:$rozine;
+}
+
+.no-padding-right{
+    padding-right:0 !important;
 }
