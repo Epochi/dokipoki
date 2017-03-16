@@ -36,9 +36,10 @@ nav ul a:hover {
     color: $text-color-contrast;
     //font-size: 2rem;
     font-family: "KG Air", sans-serif;
-    background: url('/img/farticorn.png') no-repeat;
-    background-size: contain;
-    background-position: right 50%;
+    background-image: url('/img/farticorn.png');
+    background-repeat:no-repeat;
+    background-size: 50% auto;
+    background-position: right 33%;
 }
 
 #subheader-wrapper p {
@@ -319,7 +320,7 @@ nav .brand-logo{
 @media only screen and (min-width: 601px) {
     #subheader-wrapper {
         min-height: calc(85vh - 64px);
-        background:none;
+        background-image:none;
     }
     nav {
         transition: box-shadow 0.2s;
@@ -341,7 +342,7 @@ nav .brand-logo{
     }
     #subheader-wrapper {
         min-height: calc(85vh - 64px);
-        background:none;
+        background-image:none;
     }
 }
 
@@ -360,7 +361,7 @@ nav .brand-logo{
     }
      #subheader-wrapper {
         min-height: calc(85vh - 64px);
-        background:none;
+        background-image: url('/img/farticorn.png');
     }
 }
 
@@ -371,5 +372,9 @@ nav .brand-logo{
     .brand-logo{
         transform: translateX(-75%);
         height: 50px;
+    }
+    #subheader-wrapper {
+
+        background-image: url('/img/farticorn.png');
     }
 }
