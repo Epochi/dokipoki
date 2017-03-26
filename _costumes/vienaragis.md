@@ -1,4 +1,4 @@
 ---
 personazas: Vienaragis
-img: /img/personazai/vienaragis.png
+img: /img/personazai/vienaragis-personazai.png
 ---

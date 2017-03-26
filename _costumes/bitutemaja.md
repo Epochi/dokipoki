@@ -1,4 +1,4 @@
 ---
 personazas: Bitutė Maja
-img: /img/personazai/bitutemaja.png
+img: /img/personazai/bitutemaja-personazai.png
 ---

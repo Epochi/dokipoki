@@ -1,4 +1,4 @@
 ---
 personazas: Šerifė
-img: /img/personazai/serife.png
+img: /img/personazai/serife-personazai.png
 ---

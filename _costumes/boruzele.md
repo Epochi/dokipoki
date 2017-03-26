@@ -1,4 +1,4 @@
 ---
 personazas: Boružėlė
-img: /img/personazai/boruzele.png
+img: /img/personazai/boruzele-personazai.png
 ---

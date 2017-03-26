@@ -1,4 +1,4 @@
 ---
 personazas: Angelas
-img: /img/personazai/angelas.png
+img: /img/personazai/angelas-personazai.png
 ---

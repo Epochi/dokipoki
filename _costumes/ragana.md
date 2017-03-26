@@ -1,4 +1,4 @@
 ---
 personazas: Ragana
-img: /img/personazai/ragana.png
+img: /img/personazai/ragana-personazai.png
 ---

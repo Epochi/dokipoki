@@ -1,4 +1,4 @@
 ---
 personazas: Undinėlė
-img: /img/personazai/undinele.png
+img: /img/personazai/undinele-personazai.png
 ---

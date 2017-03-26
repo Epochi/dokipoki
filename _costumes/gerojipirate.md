@@ -1,4 +1,4 @@
 ---
 personazas: Geroji Piratė
-img: /img/personazai/geroji_pirate.png
+img: /img/personazai/geroji_pirate-personazai.png
 ---

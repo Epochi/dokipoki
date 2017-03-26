@@ -1,4 +1,4 @@
 ---
 personazas: Jureivė
-img: /img/personazai/jureive.png
+img: /img/personazai/jureive-personazai.png
 ---
