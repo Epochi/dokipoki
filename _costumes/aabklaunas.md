@@ -1,4 +1,4 @@
 ---
-personazas: Pelytė Minė
-img: /img/personazai/mine-personazai.png
+personazas: Klounė
+img: /img/personazai/kloune-personazai.png
 ---
