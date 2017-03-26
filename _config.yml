@@ -26,6 +26,7 @@ sass:
   style: expanded
 gems:
   - jekyll-feed
+  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
