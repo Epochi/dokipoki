@@ -63,6 +63,9 @@ nav ul a:hover {
     background-size: 100% 100%;
 }
 
+#company-name{
+    font-size:4.2rem;
+}
 
 #subheader {
     margin-top: 20vh;
@@ -82,7 +85,9 @@ nav ul a:hover {
     margin: 0.89rem 0 0.712rem 0;
     
 }
-
+h2.section-header{
+    font-size: 4.2rem;
+}
 .section-header {
     font-family:  Amatic SC, sans-serif;
     color:$text-color-contrast;
