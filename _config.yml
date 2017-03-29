@@ -25,7 +25,6 @@ sass:
   sass_dir: _sass
   style: expanded
 gems:
-  - jekyll-feed
   - jekyll-sitemap
 exclude:
   - Gemfile
