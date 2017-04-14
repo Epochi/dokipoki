@@ -1,4 +1,4 @@
 ---
 personazas: Linksma Mergaitė
-img: /img/personazai/kakemake-personazai.png
+img: /img/personazai/ne-kakemake-personazai.png
 ---
