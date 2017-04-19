@@ -1,4 +1,4 @@
 ---
 personazas: Elza
-img: /img/personazai/elza-personazai.png
+img: elza-personazai.png
 ---

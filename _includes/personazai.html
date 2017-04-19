@@ -8,9 +8,17 @@
     <div id="Personazai"  class="row  section scrollspy personazai">
         {% for costume in site.costumes %}
         <div class="personazai-wrapper col m4 s6">
-            <img alt="{{ costume.personazas }}" src="{{ costume.img }}">
-            <h4>{{ costume.personazas }}</h4>
+            <img alt="{{ costume.personazas }}" src="{{ site.baseurl }}{{ costume.img_root }}{{ costume.img }}">
+            <h4><a class="cursor-default" href="#{{ costume.personazas }}">{{ costume.personazas }}</a></h4>
+        </div>
+        
+        <div id="#{{ costume.personazas }}" class="modal">
+            <div class="modal-content">
+                <h4>{{ costume.personazas }}</h4>
+                <p>{{ costume.content }}</p>
+            </div>
         </div>
         {% endfor %}
     </div>
 </div>
+

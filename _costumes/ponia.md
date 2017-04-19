@@ -1,4 +1,4 @@
 ---
 personazas: Ponia
-img: /img/personazai/ponia-personazai.png
+img: ponia-personazai.png
 ---

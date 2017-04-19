@@ -23,7 +23,7 @@ url: "http://dokipoki.lt" # the base hostname & protocol for your site, e.g. htt
 markdown: kramdown
 sass:
   sass_dir: _sass
-  style: expanded
+  style: compress
 gems:
   - jekyll-sitemap
 exclude:
@@ -31,3 +31,27 @@ exclude:
   - Gemfile.lock
 collections:
   costumes:
+defaults:
+  - scope:
+      path: ""
+      type: costumes
+    values:
+      img_root: /img/personazai/
+prose:
+  root_url: '_costumes'
+  media: 'img/personazai'
+  ignore:
+    - '/_includes'
+    - 'index.md'
+    - '/css'
+    - '/js'
+    - '/fonts'
+    - '/img'
+  metadata:
+    _costumes:
+      - name: "personazas"
+        field:
+          element: "text"
+          label: "Personažo pavadinimas"
+          placeholder: "Blogoji Piratė"
+          alterable: true

@@ -1,4 +1,4 @@
 ---
 personazas: Kaubojė
-img: /img/personazai/kauboje-personazai.png
+img: kauboje-personazai.png
 ---

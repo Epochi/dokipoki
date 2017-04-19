@@ -415,6 +415,11 @@ nav .brand-logo{
     }
 }
 
+.cursor-default{
+    color: $text-color-contrast;
+    cursor: default;
+}
+
 /*
     min-height: calc(85vh - 64px);
     background-image: url(/img/components/burtu-lazdele.png);

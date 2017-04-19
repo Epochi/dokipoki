@@ -1,4 +1,4 @@
 ---
 personazas: Kosmonautė
-img: /img/personazai/kosmonaute-personazai.png
+img: kosmonaute-personazai.png
 ---

@@ -1,4 +1,4 @@
 ---
 personazas: Snieguolė
-img: /img/personazai/snieguole-personazai.png
+img: snieguole-personazai.png
 ---

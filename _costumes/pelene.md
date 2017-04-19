@@ -1,4 +1,4 @@
 ---
 personazas: Pelenė
-img: /img/personazai/pelene-personazai.png
+img: pelene-personazai.png
 ---

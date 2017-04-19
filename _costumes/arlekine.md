@@ -1,4 +1,4 @@
 ---
 personazas: Arlekinė
-img: /img/personazai/arlekine-personazai.png
+img: arlekine-personazai.png
 ---
