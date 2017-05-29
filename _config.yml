@@ -42,7 +42,6 @@ prose:
   media: 'img/personazai'
   ignore:
     - '/_includes'
-    - 'index.md'
     - '/css'
     - '/js'
     - '/fonts'
