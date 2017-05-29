@@ -41,7 +41,8 @@ prose:
   root_url: '_costumes'
   media: 'img/personazai'
   ignore:
-    - 'index.md
+    - '/_includes'
+    - 'index.md'
     - '/css'
     - '/js'
     - '/fonts'
