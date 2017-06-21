@@ -46,7 +46,6 @@ prose:
     - '/css'
     - '/js'
     - '/fonts'
-    - '/img'
   metadata:
     _costumes:
       - name: "personazas"
