@@ -13,6 +13,22 @@ $zalia:#a9ddd4;
 .rozine{
     background-color:$rozine !important;
 }
+.title-background{
+    padding: 110px 40px 85px;
+    // background-image: url('/img/components/baloon_logo250hx255w.png');
+    background-image:url('data:image/png;base64,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') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.baloon-line::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        margin-top: -5%;
+        margin-left: -224px;
+    }
+
 nav .brand-logo {
     font-family: "KG Air", sans-serif;
     font-weight: 600;
@@ -54,12 +70,6 @@ nav ul a:hover {
 .retro-banner {
     padding: 10px 40px;
     background: url('/img/components/retro-banner.png') no-repeat center;
-    background-size: 100% 100%;
-}
-.title-background{
-    padding: 110px 40px 85px;
-    background: url('/img/components/ballon logo250hx255w.png') no-repeat;
-    background-position: center;
     background-size: 100% 100%;
 }
 
@@ -248,7 +258,7 @@ nav .brand-logo::after{
     position: absolute;
     height: 2rem;
     widtH: 3rem;
-    background: url('/img/components/ballon logo250hx255w.png') no-repeat right;
+    background: url('/img/components/baloon_logo250hx255w.png') no-repeat right;
     background-size: contain;
 }
 
@@ -264,7 +274,7 @@ nav .brand-logo{
 #brand-logo-img{
     height:2.5rem;
     width:2.5rem;
-    background: url('/img/components/ballon logo250hx255w.png') no-repeat;
+    background: url('/img/components/baloon_logo250hx255w.png') no-repeat;
     background-position: center;
     background-size: 100% 100%;
 }
@@ -395,6 +405,14 @@ nav .brand-logo{
         min-height: calc(85vh - 64px);
             background-image: url('/img/farticorn.png');
     }
+    .baloon-line::before {
+        min-height: 160px;
+        width: 224px;
+        background-image: url(/img/components/burtu-lazdelex2.png);
+        background-size: 151px;
+        background-position: 0% 0%;
+        background-repeat: no-repeat;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -413,7 +431,9 @@ nav .brand-logo{
         height: calc((70vw / 12) * 4 * 1.33);
         width:auto;
     }
+
 }
+
 
 .cursor-default{
     color: $text-color-contrast;

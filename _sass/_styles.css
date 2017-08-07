@@ -1,0 +1,344 @@
+.rausva {
+  background-color: #f4b0b8 !important; }
+
+.rozine {
+  background-color: #fdf1f2 !important; }
+
+nav .brand-logo {
+  font-family: "KG Air", sans-serif;
+  font-weight: 600;
+  font-size: 1.625rem;
+  color: #fff; }
+
+nav ul a {
+  color: #fff;
+  font-size: 1.25rem;
+  font-family: "KG Kindergarden", sans-serif; }
+
+nav ul a:hover {
+  color: #333;
+  background-color: transparent; }
+
+#subheader-wrapper {
+  min-height: 100vh;
+  color: #333;
+  font-family: "KG Air", sans-serif;
+  background-image: url("/img/farticorn.png");
+  background-repeat: no-repeat;
+  background-size: 50% auto;
+  background-position: right 33%; }
+
+#subheader-wrapper p {
+  margin: 0; }
+
+#subheader-wrapper > .container,
+#subheader-wrapper > .container > .row {
+  height: 100%; }
+
+.retro-banner {
+  padding: 10px 40px;
+  background: url("/img/components/retro-banner.png") no-repeat center;
+  background-size: 100% 100%; }
+
+#company-name {
+  font-size: 4.2rem; }
+
+#subheader {
+  margin-top: 20vh; }
+
+#subheader h3 {
+  font-weight: bold; }
+
+#subheader h2,
+#subheader h1 {
+  margin: 0.89rem 0 0.712rem 0; }
+
+h2.section-header {
+  font-size: 4.2rem; }
+
+.section-header {
+  font-family: Amatic SC, sans-serif;
+  color: #333;
+  font-weight: 400;
+  position: relative; }
+
+.stars-comp {
+  position: relative; }
+
+.stars-comp::after {
+  content: '';
+  display: inline-block;
+  transform: rotate(-30deg);
+  position: absolute;
+  background-color: inherit;
+  top: 0.5rem;
+  margin-left: 1rem;
+  height: 2rem;
+  width: 2rem;
+  background: url(/img/components/star-redl2-64.png) no-repeat center;
+  background-size: 100% 100%; }
+
+.stars-comp::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background-color: inherit;
+  top: 0.5rem;
+  left: -3rem;
+  height: 2rem;
+  width: 2rem;
+  background: url(/img/components/star-redl2-64.png) no-repeat center;
+  background-size: 100% 100%; }
+
+.ribbon-divider > img {
+  position: absolute;
+  transform: translateY(-80%);
+  width: 100%; }
+
+.ribbon-divider {
+  width: 100%;
+  background-image: url("/img/components/party-ribbon-1920x110.png");
+  max-height: 110px;
+  /* height: 8vh; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(100vw * 0.053); }
+
+.debeselis-divider > img {
+  position: absolute;
+  transform: translateY(-80%);
+  width: 100%; }
+
+.debeselis-divider {
+  width: 100%;
+  background-image: url("/img/components/debeseliai.png");
+  max-height: 110px;
+  /* height: 8vh; */
+  background-position: center;
+  background-repeat: repeat-x;
+  padding: 60px 0;
+  background-size: auto 100%;
+  min-height: calc(100vw * 0.053); }
+
+.empty-divider {
+  max-height: 110px;
+  min-height: calc(100vw * 0.053); }
+
+.phone-nubmer {
+  color: #333; }
+
+.subheader.sub-title {
+  margin-top: 70px !important;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: #333;
+  font-family: Amatic SC;
+  font-weight: 300; }
+
+.baloon-line {
+  background: url("/img/components/baloon-line.png") no-repeat;
+  background-position: 50% 30%;
+  background-size: 233px 385px; }
+
+/*
+#Programa .section-header::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 80vw;
+    left: calc(10vw - 15px);
+    top: 120%;
+    //border-bottom: 2px solid #444;
+    border-radius: 54px;
+}*/
+.programa h4, .kaina h4, .personazai-wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Amatic SC, sans-serif; }
+
+.programa .services div, .kaina .services div {
+  font-family: "KG Kindergarden";
+  font-size: 0.75rem; }
+
+.programa .services, .kaina .services {
+  padding-bottom: 30px;
+  position: relative; }
+
+.services img {
+  height: auto;
+  max-width: 5rem;
+  width: 85%; }
+
+#Programa .services .s3 {
+  text-align: right; }
+
+/*.services.row::before{
+    content:"";
+    position:absolute;
+    
+}*/
+.kaina h4 span {
+  margin-right: -0.15em; }
+
+.kontaktai .row {
+  margin-bottom: 0; }
+
+.kontaktai {
+  background-color: #aedfdc;
+  padding-bottom: 100px; }
+
+.nav-wrapper li a.active {
+  color: #444; }
+
+#Programa {
+  margin-top: -1.5rem;
+  padding-top: 1.5rem; }
+
+nav.z-depth-0 .brand-logo {
+  color: transparent;
+  transition: color 0.2s; }
+
+nav .brand-logo::after {
+  content: '';
+  position: absolute;
+  height: 2rem;
+  widtH: 3rem;
+  background: url("/img/components/ballon logo250hx255w.png") no-repeat right;
+  background-size: contain; }
+
+nav .brand-logo {
+  color: #aedfdc;
+  transition: color 0.2s;
+  background-size: 100% auto;
+  padding: 0 10px; }
+
+#brand-logo-img {
+  height: 2.5rem;
+  width: 2.5rem;
+  background: url("/img/components/ballon logo250hx255w.png") no-repeat;
+  background-position: center;
+  background-size: 100% 100%; }
+
+.no-padding-sides {
+  padding-left: 0px !important;
+  padding-right: 0px !important; }
+
+.kaina .services img {
+  height: auto;
+  width: 100%;
+  max-width: 2.5rem; }
+
+.kaina .services .col.s3 {
+  text-align: right; }
+
+.facebook-link {
+  color: #333; }
+
+.facebook-link:hover {
+  color: #fdf1f2; }
+
+.no-padding-right {
+  padding-right: 0 !important; }
+
+#mobile-nav {
+  font-family: Amatic SC, sans-serif; }
+
+#mobile-nav li a {
+  font-size: 2.5rem; }
+
+.personazai-wrapper h4 {
+  margin-top: 0px; }
+
+.personazai-wrapper {
+  text-align: center;
+  padding-bottom: 50px !important; }
+
+.personazai-wrapper div {
+  border: 6px #aedfdc solid;
+  border-radius: 5px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.personazai-wrapper img {
+  border: 6px #aedfdc solid;
+  border-radius: 5px;
+  max-height: 440px;
+  max-width: 300px;
+  height: 440px;
+  width: auto; }
+
+@media only screen and (max-width: 600px) {
+  .phone-nubmer {
+    color: #039be5; }
+
+  .brand-logo {
+    transform: translateX(0%); }
+
+  nav .brand-logo::after {
+    content: none; }
+
+  #subheader-wrapper {
+    min-height: calc(85vh - 64px);
+    background-image: none; }
+
+  .debeselis-divider {
+    padding: 30px 0; }
+
+  .personazai-wrapper img {
+    height: calc((90vw / 12) * 6 * 1.33);
+    width: auto; } }
+@media only screen and (min-width: 601px) {
+  #subheader-wrapper {
+    min-height: calc(85vh - 64px);
+    background-image: none; }
+
+  nav {
+    transition: box-shadow 0.2s; }
+
+  nav .brand-logo::after {
+    content: none; }
+
+  .personazai-wrapper img {
+    height: calc((85vw / 12) * 4 * 1.33);
+    width: auto; } }
+@media only screen and (min-width: 0px) {
+  html {
+    font-size: 12px; } }
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 18px; }
+
+  .brand-logo {
+    transform: translateX(-50%); }
+
+  #subheader-wrapper {
+    min-height: calc(85vh - 64px);
+    background-image: url("/img/farticorn.png"); } }
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 20px; }
+
+  .brand-logo {
+    transform: translateX(-75%);
+    height: 50px; }
+
+  #subheader-wrapper {
+    background-image: url("/img/farticorn.png"); }
+
+  .personazai-wrapper img {
+    height: calc((70vw / 12) * 4 * 1.33);
+    width: auto; } }
+.cursor-default {
+  color: #333;
+  cursor: default; }
+
+/*
+    min-height: calc(85vh - 64px);
+    background-image: url(/img/components/burtu-lazdele.png);
+    background-size: 151px;
+    background-position: 18% 80%;
+    */
+
+/*# sourceMappingURL=_styles.css.map */
