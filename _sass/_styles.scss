@@ -26,7 +26,7 @@ $zalia:#a9ddd4;
         display: inline-block;
         position: absolute;
         margin-top: -5%;
-        margin-left: -224px;
+        margin-left: calc(-224px - 10%)''
     }
 
 nav .brand-logo {
@@ -407,9 +407,8 @@ nav .brand-logo{
     }
     .baloon-line::before {
         min-height: 160px;
-        width: 224px;
+        min-width: 224px;
         background-image: url(/img/components/burtu-lazdelex2.png);
-        background-size: 151px;
         background-position: 0% 0%;
         background-repeat: no-repeat;
     }
