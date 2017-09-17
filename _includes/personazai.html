@@ -8,7 +8,7 @@
     <div id="Personazai"  class="row  section scrollspy personazai">
         {% for costume in site.costumes %}
         <div class="personazai-wrapper col m4 s6">
-            <img alt="{{ costume.personazas }}" src="{{ site.baseurl }}{{ costume.img_root }}{{ costume.img }}">
+            <img class="materialboxed" alt="{{ costume.personazas }}" src="{{ site.baseurl }}{{ costume.img_root }}{{ costume.img }}">
             <h4><a class="cursor-default" href="#{{ costume.personazas }}">{{ costume.personazas }}</a></h4>
         </div>
         

@@ -6,7 +6,9 @@ $(document).ready(function() {
     $('.scrollspy').scrollSpy();
 
     
-    $('.modal').modal();
+    // $('.modal').modal();
+
+    $('.materialboxed').materialbox();
 
 $(window).scroll(function() {
     if(document.body.scrollTop == 0) {
