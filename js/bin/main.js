@@ -8,7 +8,7 @@ $(document).ready(function() {
     
     // $('.modal').modal();
 
-    $('.materialboxed').materialbox();
+    // $('.materialboxed').materialbox();
 
 $(window).scroll(function() {
     if(document.body.scrollTop == 0) {

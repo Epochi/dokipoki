@@ -319,25 +319,28 @@ nav .brand-logo{
     text-align:center;
     padding-bottom: 50px !important;
 }
-.personazai-wrapper div{
+// .personazai-wrapper div{
+//     border: 6px #aedfdc solid;
+//     border-radius: 5px;
+//     //height: 22rem;
+//     //width: 15rem;
+//     //background-size:cover;
+//     //background-position: center;
+//     //background-repeat: no-repeat;
+//     max-width: 100%;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+.personazai-wrapper img {
     border: 6px #aedfdc solid;
     border-radius: 5px;
-    //height: 22rem;
-    //width: 15rem;
-    //background-size:cover;
-    //background-position: center;
-    //background-repeat: no-repeat;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 
-.personazai-wrapper img{
-    border: 6px #aedfdc solid;
-    border-radius: 5px;
+.personazai-wrapper img:not(.active) {
     max-height:440px;
     max-width:300px;
-   
     //height:auto;
     //width:100%;
     height:440px;
