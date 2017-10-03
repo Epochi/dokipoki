@@ -1,5 +1,5 @@
 ---
 published: false
-img: piratas-personazai.png
+img: teletabis.jpg
 personazas: Teletabis Tinkis Vinkis
 ---
