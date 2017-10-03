@@ -64,3 +64,8 @@ prose:
           label: "Personažo pavadinimas"
           placeholder: "Blogoji Piratė"
           alterable: true
+      - name: "img"
+        field:
+          element: "text"
+          label: "nuotrauka"
+          placeholder: "blogoji-pirate.png"
