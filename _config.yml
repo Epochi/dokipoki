@@ -47,6 +47,15 @@ prose:
     - '/js'
     - '/fonts'
     - '/img'
+    - '/_layouts'
+    - '/_sass'
+    - '.gitignore'
+    - 'CNAME'
+    - 'Gemfile'
+    - 'Gemfile.lock'
+    - '_config.yml'
+    - 'favicon.ico'
+    - 'google4005b707fd19d3b0.md'
   metadata:
     _costumes:
       - name: "personazas"
