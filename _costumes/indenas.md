@@ -1,6 +1,6 @@
 ---
 published: false
 personazas: Indėnas
-img: indenas-personazai.png
+img: indenas-personazai.jpg
 ---
-![indenas-personazai.jpg]({{site.baseurl}}/img/personazai/indenas-personazai.jpg)
+
