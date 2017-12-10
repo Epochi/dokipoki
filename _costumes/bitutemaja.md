@@ -1,5 +1,5 @@
 ---
 personazas: Bitutė Maja
-img: bitutemaja-personazai.png
+img: bitute-personazai.png
 published: true
 ---
