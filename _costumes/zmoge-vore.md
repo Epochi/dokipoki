@@ -1,5 +1,5 @@
 ---
 published: true
-img: zmoge-vore-personazai.png
+img: spiderman-personazai.png
 personazas: Žmogė Vorė
 ---
