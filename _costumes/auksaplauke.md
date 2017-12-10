@@ -1,5 +1,6 @@
 ---
 published: false
-personazas: Auksaplauke
+personazas: Auksaplaukė
 img: auksaplauke-personazai.png
 ---
+
