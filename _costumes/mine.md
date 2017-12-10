@@ -1,6 +1,5 @@
 ---
 personazas: Pelytė Minė
-img: mine-personazai.png
+img: pelytemine-personazai.png
 published: true
 ---
-
