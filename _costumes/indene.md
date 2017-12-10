@@ -1,5 +1,5 @@
 ---
 published: true
 personazas: Indėnė
-img: indene-personazai.jpg
+img: indene-personazai.png
 ---
