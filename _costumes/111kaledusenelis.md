@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Kalėdų Senelis
 img: kaledusenelis-personazai.png
 ---
