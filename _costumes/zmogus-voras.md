@@ -1,6 +1,5 @@
 ---
 published: true
-img: zmogus-voras-personazai.png
+img: zmogusvoras-personazai.png
 personazas: Žmogus Voras
 ---
-
