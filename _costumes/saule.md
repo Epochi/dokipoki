@@ -1,6 +1,5 @@
 ---
 personazas: Saulė
-img: saule-personazai.png
+img: princesesaule-personazai.png
 published: true
 ---
-
