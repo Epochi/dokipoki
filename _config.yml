@@ -18,7 +18,7 @@ title: Personažai vaikams | DokiPoki
 description: > # this means to ignore newlines until "baseurl:"
   Personažai, tokie kaip Kakė Makė, Princesė Elza, Snieguolė, Žmogus Voras, Piratas, Klounas. Vaiko gimtadieniui, Darželio išleistuvėms, Krikštynoms.
 baseulr: ""
-url: "http://dokipoki.lt" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://dokipoki.lt" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
