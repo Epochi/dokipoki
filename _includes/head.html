@@ -5,6 +5,13 @@
     <title>{{ site.title }}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+    <link rel="preload" href="/img/components/baloon_logo250hx255w.png" as="image">
+    <link rel="preload" href="/img/components/baloon-line.png" as="image">
+    <link rel="preload" href="/css/main.css" as="style">
+    <link rel="preload" href="/js/bin/main.js" as="script">
+    <link rel="preload" href="/js/bin/materialize.js" as="script">
+    
+    
     <link type="text/css" rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" media="screen,projection">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
