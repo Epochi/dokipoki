@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Ana
 img: anna_personazai.jpg
 ---
