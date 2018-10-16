@@ -1,7 +1,8 @@
 ---
 published: false
 personazas: Raganaitė
-img: personazas_ragana.jpg
+img: raganaite_personazai.jpg
 ---
+![raganaite_personazai.jpg]({{site.baseurl}}/img/personazai/raganaite_personazai.jpg)
 ![personazas_ragana.jpg]({{site.baseurl}}/img/personazai/personazas_ragana.jpg)
 ![]({{site.baseurl}}/img/personazai/personazas_ragana.jpg)
