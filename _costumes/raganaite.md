@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Raganaitė
 img: raganaite_personazai.jpg
 ---
