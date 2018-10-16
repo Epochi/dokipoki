@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Šoklusis klounas
 img: klounas_personazai.jpg
 ---
