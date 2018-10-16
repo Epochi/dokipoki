@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Frėja
 img: feja_personazai.jpg
 ---
