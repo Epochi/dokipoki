@@ -1,7 +1,5 @@
 ---
-published: false
+published: true
 personazas: Kosmonautas
 img: kosmonautas-personazai.png
 ---
-
-
