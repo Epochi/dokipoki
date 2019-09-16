@@ -4,19 +4,26 @@
 
  <div class="slick-gallery">
 	 {% for image in site.static_files %}
-    {% if image.path contains '_gallery/' %}
+    {% if image.path contains '_gallery' %}
+	webxample
 	<img
 		class="materialboxed responsive-img"
 		src="{{ site.baseurl }}{{ image.path }}">
-        <!-- <img src="{{ site.baseurl }}{{ image.path }}" alt="image" /> -->
+
     {% endif %}
+{% endfor %}
+
+{% assign image_files = site.static_files | where: "gallery_image", true %}
+{% for image in image_files %}
+ololo
+  <img
+		class="materialboxed responsive-img"
+		src="{{ site.baseurl }}{{ image.path }}">
 {% endfor %}
 
 
 
-
-
-	 {% for gallery in site.costumes %}
+	 {% for gallery in site.gallery %}
 	 	<!-- <div>		
 			
 			  <img data-caption="{{ costume.personazas }}"
