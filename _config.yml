@@ -34,10 +34,10 @@ collections:
   costumes:
 defaults:
   - scope:
-      path: ""
-      type: costumes
+      path: "_costumes"
+      type: "costumes"
     values:
-      img_root: /img/personazai/
+      img_root: "/img/personazai/"
 prose:
   root_url: '_costumes'
   media: 'img/personazai'

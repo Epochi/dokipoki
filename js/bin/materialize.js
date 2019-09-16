@@ -1048,7 +1048,7 @@ if (jQuery) {
       var ancestor;
       origin.wrap(placeholder);
 
-
+	   if (!$(this).hasClass('no-click')) {
       origin.on('click', function(){
         var placeholder = origin.parent('.material-placeholder');
         var windowWidth = window.innerWidth;
@@ -1204,6 +1204,7 @@ if (jQuery) {
         }
 
       }); // End origin on click
+	   }
 
 
       // Return on scroll
