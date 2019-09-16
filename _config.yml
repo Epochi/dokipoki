@@ -32,18 +32,12 @@ exclude:
   - Gemfile.lock
 collections:
   costumes:
-  gallery:
 defaults:
   - scope:
       path: "_costumes"
       type: "costumes"
     values:
       img_root: "/img/personazai/"
-  - scope:
-      path: "_gallery"
-      type: "gallery"
-    values:
-      gallery_image: true
 prose:
   root_url: '_costumes'
   media: 'img/personazai'

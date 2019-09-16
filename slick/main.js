@@ -1,11 +1,11 @@
 $(document).ready(function(){
   $('.slick-gallery').slick({
-	// lazyLoad: 'ondemand',
+	lazyLoad: 'ondemand',
 	arrows: true,
 	dots: true,
 	// infinite: true,
   	// speed: 300,
   	// slidesToShow: 1,
-  	// adaptiveHeight: true
+  	adaptiveHeight: false
   });
 });

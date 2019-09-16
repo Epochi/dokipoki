@@ -1,38 +1,13 @@
  <div class="container">
-    <div class="row ">
-    <div class="col s12">
-
- <div class="slick-gallery">
-	 {% for image in site.static_files %}
-    {% if image.path contains '_gallery' %}
-	webxample
-	<img
-		class="materialboxed responsive-img"
-		src="{{ site.baseurl }}{{ image.path }}">
-
-    {% endif %}
-{% endfor %}
-
-{% assign image_files = site.static_files | where: "gallery_image", true %}
-{% for image in image_files %}
-ololo
-  <img
-		class="materialboxed responsive-img"
-		src="{{ site.baseurl }}{{ image.path }}">
-{% endfor %}
-
-
-
-	 {% for gallery in site.gallery %}
-	 	<!-- <div>		
-			
-			  <img data-caption="{{ costume.personazas }}"
-			  	 class="materialboxed responsive-img"
-				alt="{{ costume.personazas }}"
-				src="{{ site.baseurl }}{{ costume.img_root }}{{ costume.img }}">
-		 </div>				 -->
-	 {% endfor %}
-  </div>
-  </div>
-  </div>
-  </div>
+ 	<div class="row ">
+ 		<div class="col s12">
+ 			<div class="slick-gallery gallery-wrapper">
+ 				{% for image in site.static_files %}
+ 					{% if image.path contains 'img/gallery' %}
+ 					<img class="materialboxed responsive-img" src="{{ site.baseurl }}{{ image.path }}">
+ 					{% endif %}
+ 				{% endfor %}
+ 			</div>
+ 		</div>
+ 	</div>
+ </div>
