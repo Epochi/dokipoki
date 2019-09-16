@@ -375,7 +375,7 @@ nav .brand-logo{
     width:auto;
 }
 
-.gallery-wrapper img:not(.active) {
+.gallery-wrapper img {
     max-height:440px;
     height:440px;
     width:auto;
@@ -488,4 +488,12 @@ nav .brand-logo{
 .slick-prev:before,
 .slick-next:before {
     color: $violetine;
+}
+
+.slick-slide {
+	outline-style: none;
+}
+
+.materialboxed.no-click:hover {
+	cursor: pointer;
 }

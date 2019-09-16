@@ -3,8 +3,8 @@
  		<div class="col s12">
  			<div class="slick-gallery gallery-wrapper">
  				{% for image in site.static_files %}
- 					{% if image.path contains 'img/gallery' %}
- 					<img class="materialboxed responsive-img" src="{{ site.baseurl }}{{ image.path }}">
+ 					{% if image.path contains 'gallery' %}
+ 						<img class="materialboxed responsive-img no-click" src="{{ site.baseurl }}{{ image.path }}">
  					{% endif %}
  				{% endfor %}
  			</div>

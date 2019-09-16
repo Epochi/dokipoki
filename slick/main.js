@@ -5,7 +5,10 @@ $(document).ready(function(){
 	dots: true,
 	// infinite: true,
   	// speed: 300,
-  	// slidesToShow: 1,
-  	adaptiveHeight: false
+  	slidesToShow: 1,
+	centerMode: false,
+  	adaptiveHeight: false,
+	// variableWidth: true,
+	centerPadding: '50%'
   });
 });
