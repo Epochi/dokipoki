@@ -8,14 +8,20 @@
       {% include subheader.html %}
       {% include debeselis-divider.html %}
       {% include paslaugos.html %}
+
+	  {% include gallery.html %}
+
+	  {% comment %}
       {% include video-facebook.html %}
       {% include video-kaledu-senelis.html %}
+		{% endcomment %}
+
       {% include ribbon-divider.html %}
       {% include kaina.html %}
       {% include debeselis-divider.html %}
       {% include personazai.html %}
       {% include divider.html %}
-      <!--{% include gallery.html %}-->
+      
       <!--{% include divider.html %}-->
       {% include kontaktai.html %}
       
@@ -23,6 +29,11 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>    
       <script type="text/javascript" src="{{ "/js/bin/materialize.js" | prepend: site.baseurl }}"></script>  
       <script type="text/javascript" src="{{ "/js/bin/main.js" | prepend: site.baseurl }}"></script>  
+
+	  	<!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="/slick/slick.min.js"></script>
+	<script type="text/javascript" src="/slick/main.js"></script>
   </body>
 
 </html>

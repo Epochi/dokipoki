@@ -8,6 +8,7 @@ $rozine: #fff6f6;
 // $rozine-original:#fdf1f2;
 $geltona:#f7f1b3;
 $zalia:#a9ddd4;
+$violetine:#bdadd6;
 .rausva{
     background-color:$rausva !important;
 }
@@ -457,3 +458,8 @@ nav .brand-logo{
     background-size: 151px;
     background-position: 18% 80%;
     */
+
+.slick-prev:before,
+.slick-next:before {
+    color: $violetine;
+}
