@@ -1,0 +1,17 @@
+ <div id="Galerija" class="container scrollspy galerija">
+ 	<div class="row">
+ 		<div class="col s12">
+			<div class="grid">
+				<div class="grid-sizer"></div>
+				{% for image in site.static_files %}
+				{% if image.path contains 'gallery' %}
+						<div class="grid-item">
+							<img src="{{ site.baseurl }}{{ image.path }}" />
+						</div>
+						{% endif %}
+					{% endfor %}
+			</div>
+ 		</div>
+ 	</div>
+ </div>
+

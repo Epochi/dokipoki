@@ -18,4 +18,19 @@ $(document).ready(function () {
 		event.stopPropagation();
 		return;
 	});
+
+	// init Masonry
+	var $grid = $('.grid').masonry({
+		itemSelector: '.grid-item',
+		percentPosition: true,
+		// fitWidth: true,
+		// horizontalOrder: true,
+		columnWidth: '.grid-sizer',
+		// resize: true
+		// columnWidth: $grid.find('.grid-sizer')[0]
+	});
+	// layout Masonry after each image loads
+	$grid.imagesLoaded().progress( function() {
+		$grid.masonry('layout');
+	});  
 });

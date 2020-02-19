@@ -362,9 +362,9 @@ nav .brand-logo{
     margin: auto;
 }
 
-.gallery-wrapper img {
-    margin: auto;
-}
+// .gallery-wrapper img {
+//     margin: auto;
+// }
 
 .personazai-wrapper img:not(.active) {
     max-height:440px;
@@ -380,6 +380,32 @@ nav .brand-logo{
     height:440px;
     width:auto;
 }
+
+/* ---- MASONRY grid ---- */
+
+  /* clear fix */
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  /* ---- MASONRY .grid-item ---- */
+  
+  .grid-sizer,
+  .grid-item
+   {
+    width: 33.333%;
+  }
+  
+  .grid-item {
+    float: left;
+  }
+  
+  .grid-item img {
+    display: block;
+    max-width: 100%;
+  }
 
 @media only screen and (max-width: 600px) {
     .phone-nubmer{
@@ -403,6 +429,11 @@ nav .brand-logo{
         height: calc((90vw / 12) * 6 * 1.33);
         width:auto;
     }
+
+    .grid-sizer,
+    .grid-item {
+      width: 100%;
+    }
 }
 
 
@@ -421,6 +452,11 @@ nav .brand-logo{
 	.gallery-wrapper img {
         height: calc((85vw / 12) * 4 * 1.33);
         width:auto;
+    }
+
+    .grid-sizer,
+    .grid-item {
+      width: 50%;
     }
 }
 
@@ -449,6 +485,11 @@ nav .brand-logo{
         background-image: url(/img/components/burtu-lazdelex2.png);
         background-position: 0% 0%;
         background-repeat: no-repeat;
+    }
+    .grid-sizer,
+    .grid-item
+     {
+      width: 33.333%;
     }
 }
 
@@ -485,15 +526,16 @@ nav .brand-logo{
     background-position: 18% 80%;
     */
 
-.slick-prev:before,
-.slick-next:before {
-    color: $violetine;
-}
+// .slick-prev:before,
+// .slick-next:before {
+//     color: $violetine;
+// }
 
-.slick-slide {
-	outline-style: none;
-}
+// .slick-slide {
+// 	outline-style: none;
+// }
 
 .materialboxed.no-click:hover {
 	cursor: pointer;
 }
+
