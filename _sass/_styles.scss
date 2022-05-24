@@ -207,24 +207,35 @@ h2.section-header{
 .programa h4,
 .kaina h4,
 .personazai-wrapper,
-.gallery-wrapper {
+.gallery-wrapper,
+.instagram-wrapper {
     margin-top:0;
     margin-bottom:0;
     font-family: Amatic SC, sans-serif;
 }
+
+
+
 .programa .services div, .kaina .services div{
     font-family:"KG Kindergarden";
     font-size: 0.75rem;
 }
+
+
 .programa .services,.kaina .services{
     padding-bottom:30px;
     position:relative;
 }
 
 .services img{
-     height:auto;
+    height:auto;
     max-width: 5rem;
-     width:85%;
+    width:85%;
+}
+.instagram-wrapper img{
+    height:auto;
+    max-width: 2rem;
+    width:85%;
 }
 #Programa .services .s3{
     text-align:right;
@@ -298,8 +309,13 @@ nav .brand-logo{
     text-align:right;
 }
 
-.facebook-link{
+.facebook-link, .instagram-link{
     color:$text-color-contrast;
+}
+
+
+.instagram-link:hover{
+    color:$violetine;
 }
 
 .facebook-link:hover{
