@@ -6,15 +6,9 @@
 <body class="rozine">
 	{% include navbar.html %}
 
-    <div class="container">
+	{% include blog-home.html %}
 
-        <div id="Blog"  class="row section scrollspy blog post">
-            <div class="col s8 offset-s2">
-	            {{ content | markdownify }}
-            </div>
-        </div>
-
-    </div>
+	<!--{% include divider.html %}-->
 	{% include kontaktai.html %}
 
 

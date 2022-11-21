@@ -30,14 +30,21 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+permalink: /blog/:title
 collections:
   costumes:
+  posts:
 defaults:
   - scope:
       path: "_costumes"
       type: "costumes"
     values:
       img_root: "/img/personazai/"
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
 prose:
   root_url: '_costumes'
   media: 'img/personazai'

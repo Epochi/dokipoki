@@ -555,3 +555,15 @@ nav .brand-logo{
 	cursor: pointer;
 }
 
+.post {
+    font-family: Amatic SC;
+    font-size: 1.8rem;
+    ul {
+          padding-left: 3rem;
+          list-style-type: disc;
+          li {
+            list-style-type: disc;
+          }
+
+      }
+}

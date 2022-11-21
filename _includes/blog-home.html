@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row ">
+        <div class="col s12">
+            <h2 class="section-header center-align">Blogas</h2>
+        </div>
+    </div>
+    
+    <div id="blog"  class="row section scrollspy blogas blog">
+        {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </div>
+</div>
+
