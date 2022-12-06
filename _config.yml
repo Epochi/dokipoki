@@ -45,6 +45,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+excerpt_separator: <!--more-->
 prose:
   root_url: '_costumes'
   media: 'img/personazai'
