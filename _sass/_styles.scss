@@ -9,11 +9,16 @@ $rozine: #fff6f6;
 $geltona:#f7f1b3;
 $zalia:#a9ddd4;
 $violetine:#bdadd6;
+$melyna-link:#039be5;
 .rausva{
     background-color:$rausva !important;
 }
 .rozine{
     background-color:$rozine !important;
+}
+.melyna-link{
+    color: $melyna;
+    font-weight: 600;
 }
 .title-background{
     padding: 110px 40px 85px;
@@ -555,3 +560,71 @@ nav .brand-logo{
 	cursor: pointer;
 }
 
+.post {
+    font-family: Quicksand;
+    font-size: 20px;
+
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 28px;
+    }
+    h4 {
+        font-size: 24px;
+    }
+    h5 {
+        font-size: 20px;
+    }
+    h6 {
+        font-size: 16px;
+    }
+
+    ul {
+          padding-left: 3rem;
+          list-style-type: disc;
+          li {
+            list-style-type: disc;
+          }
+
+      }
+}
+
+.blog {
+    font-family: Quicksand;
+    font-size: 16px;
+    .card {
+        background-color: #fdfafa
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    h6 {
+        font-size: 12px;
+    }
+
+    ul {
+          padding-left: 3rem;
+          list-style-type: disc;
+          li {
+            list-style-type: disc;
+          }
+
+      }
+}

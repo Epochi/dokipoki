@@ -6,16 +6,9 @@
 <body class="rozine">
 	{% include navbar.html %}
 
-    <div class="container">
+	{% include blog-home.html %}
 
-        <div id="Blog"  class="row section scrollspy blog post">
-            <div class="col m8 offset-m2 s12">
-				<h1>{{page.title}}</h1>
-	            {{ content | markdownify }}
-            </div>
-        </div>
-
-    </div>
+	<!--{% include divider.html %}-->
 	{% include kontaktai.html %}
 
 
@@ -27,7 +20,7 @@
 
 	<!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
 	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<!-- <script src="https://player.vimeo.com/api/player.js"></script> -->
+	<script src="https://player.vimeo.com/api/player.js"></script>
 	<!-- <script type="text/javascript" src="/slick/slick.min.js"></script>
 	<script type="text/javascript" src="/slick/main.js"></script> -->
 
