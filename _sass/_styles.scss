@@ -9,11 +9,16 @@ $rozine: #fff6f6;
 $geltona:#f7f1b3;
 $zalia:#a9ddd4;
 $violetine:#bdadd6;
+$melyna-link:#039be5;
 .rausva{
     background-color:$rausva !important;
 }
 .rozine{
     background-color:$rozine !important;
+}
+.melyna-link{
+    color: $melyna;
+    font-weight: 600;
 }
 .title-background{
     padding: 110px 40px 85px;
@@ -591,6 +596,9 @@ nav .brand-logo{
 .blog {
     font-family: Quicksand;
     font-size: 16px;
+    .card {
+        background-color: #fdfafa
+    }
 
     h1 {
         font-size: 32px;
