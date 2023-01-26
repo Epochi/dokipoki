@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Kaip suplanuoti nepamirštamą šventę vaikams iki 3 metukų?
 ---
 Turbūt nenuostabu, kad vaiko gimtadienio, krikštynų ar kitų švenčių planavimas tampa iššūkiu kiekvienam tėveliui. DokiPoki personažų animatorių komanda siunčia keletą patarimų, padėsiančių išsirinkti geriausią programą, personažus ir apmąstyti kitas detales, Jūsų mažylio šventei:
