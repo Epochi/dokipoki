@@ -43,7 +43,8 @@ Programą veda burtininkai Haris Poteris ir Hermiona.
 # Taip pat kiekvieną šventę padaryti dar įspūdingesne galite užsisakę papildomų pramogų:
 *	__Putų patrankos__ sukurs išskirtinę atmosferą šokiams putose
 *	Įvairiausi __batutai__ pralinksmins visus vaikus
-*	__Spragėsių ir cukraus vatos aparatai__ pasaldins kiekvieną šventę
+*	__Spragėsių ir cukraus vatos aparatai__ pasaldins kiekvieną šventę  
+
 # Kiti patarimai:
 *	Nepamirškite užsisakyti animatorių kuo anksčiau, geriausia prieš 2-3 mėnesius. Darželio išleistuvių panašiu metu tikrai vyksta labai daug, todėl geriau užsisakyti iš anksto, kad galėtumėte gauti norimus personažus būtent Jums tinkamu laiku. 
 *	Jeigu norite pasirūpinti vaišėmis, tai rekomenduojame nepersistengti su įvairių patiekalų ruošimu, nes tikrai užtenka lengvų užkandžių, vaisių ir gaiviųjų gėrimų. 
