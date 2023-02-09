@@ -78,3 +78,12 @@ prose:
           element: "text"
           label: "nuotrauka"
           placeholder: "blogoji-pirate.png"
+    _posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "published"
