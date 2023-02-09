@@ -11,14 +11,16 @@ Pasitinkant vasarą daugelis vaikų atsisveikina su labai svarbia vaikystės vie
 *	darysime sprogimus
 *	išbandysime kosminius burbulų tunelius 
 *	šoksime kosminį žvaigždžių šokį
-*	ragausime kosminius garuojančius kukurūzus
+*	ragausime kosminius garuojančius kukurūzus  
+
 Šią programą veda du ką tik į žemę nusileidę Kosmonautai. 
 ## DARŽELIO IŠLIESTUVĖS SU PAŠĖLUSIAIS KLOUNAIS
 *	žaisime smagiausius žaidimus
 *	lankstysime balionus
 *	šoksime tarp spalvotų dūmų
 *	pūsime didžiulius muilo burbulus
-*	dalyvausime pačiame linksmiausiame spalvotų miltelių mūšyje
+*	dalyvausime pačiame linksmiausiame spalvotų miltelių mūšyje  
+
 Programą veda du nutrūktgalviai Klounai. 
 ## HOGVARTSO IŠLEISTUVĖS
 *	gaminsime spalvotą ugnį
@@ -26,13 +28,15 @@ Programą veda du nutrūktgalviai Klounai.
 *	gaminsime dramblio pastą
 *	stebuklingai atsidursime muilo burbule
 *	ieškosime paslėptų horokrusų
-*	žaisime kvidičą 
+*	žaisime kvidičą  
+
 Programą veda burtininkai Haris Poteris ir Hermiona. 
 ## DARŽELIO IŠLEISTUVĖS SU MYLIMIAUSIAIS PERSONAŽAIS
 *	lankstysime balionus
 *	žaisime smagiausius žaidimus
 *	darysime didžiulius muilo burbulus
-*	šoksime tarp spalvotų dūmų
+*	šoksime tarp spalvotų dūmų  
+
 Šią programą veda du bet kurie Jūsų pasirinkti personažai (pvz. Žmogus Voras ir Vienaragė, Indėnai, Elza ir Supermenas ir t.t.).   
 
 
