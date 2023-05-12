@@ -54,4 +54,4 @@ Programą veda burtininkai Haris Poteris ir Hermiona.
 
 Tikimės, kad šios idėjos palengvins Jums išleistuvių organizavimą ir padės sukurti nepamirštamas šventes vaikučiams!  
 
-Su meile, DokiPoki personažai!
+Su 🤍 DokiPoki personažai!
