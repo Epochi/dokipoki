@@ -8,4 +8,4 @@ Artėjant magiškam Kalėdų laikotarpiui, pradedame sukti galvą, kokias geriau
 
 Dar viena nuostabi dovana ir būdas, kaip išsaugoti tikėjimą Kalėdų stebuklu, ir skatinti vaiką tikėti gerumu yra pasikviesti nuostabų autentišką Kalėdų Senelį į savo namus! Žinoma, svarbiausia ne Kalėdų Senelio dovanų maišo dydis, o  būtent skatinimas patikėti svajonių išsipildymu! Sulaukę tokio svečio vaikai pasijaučia ypatingi, neužmiršti, mylimi ir susilaukia daug dėmesio ir šilumos iš pasakose aprašomo visų pasaulio vaikų herojaus. 
 
-Su meile, DokiPoki personažai!
+Su 🤍 DokiPoki personažai!
