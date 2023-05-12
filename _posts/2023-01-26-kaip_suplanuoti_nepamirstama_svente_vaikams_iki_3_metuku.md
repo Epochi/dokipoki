@@ -36,4 +36,4 @@ Taip pat siūlome daug įvairiausių veiklų Jūsų vaiko šventei, todėl svarb
 
 Tikimės šie patarimai padės sukurti nuostabią šventę Jūsų mažyliams!
 
-Su meile, DokiPoki personažai
+Su 🤍 DokiPoki personažai
