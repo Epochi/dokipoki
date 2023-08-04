@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Mokslo ir žinių diena kitaip!
 ---
 Mokslo ir žinių diena kiekvienam vaikui yra tikrai ypatinga ir simbolizuoja naują pradžią, naujus nuotykius ir kartais naujus draugus. Tėveliams ir mokytojams tenka svarbi užduotis – sukurti gražią ir smagią šventę vaikams ir auklėtiniams. Doki Poki personažai skuba Jums į pagalbą su interaktyviomis programomis, kurių metu animatoriai sukurs nepamirštamą ir įspūdžių kupiną renginį! 
@@ -34,4 +34,3 @@ Mokslo ir žinių diena kiekvienam vaikui yra tikrai ypatinga ir simbolizuoja na
 Susitikime Rugsėjo pirmosios šventėje ir drauge sukurkime tikrą vakarėlį, kad naujus mokslo metus pradėtumėte su trenksmu!
 
 Su 🤍 DokiPoki personažai!
-
