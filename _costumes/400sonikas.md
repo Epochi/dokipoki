@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Sonikas
 img: 400sonikas.jpg.jpg
 ---
