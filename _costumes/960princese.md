@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Princesė
 img: 960princese.jpg.jpg
 ---
