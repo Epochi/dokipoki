@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 img: 1050pelene.jpg.jpg
 personazas: Pelenė
 ---
