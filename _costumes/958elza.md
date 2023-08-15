@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Elza
 img: 958elza.jpg.jpg
 ---
