@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Velniukai
 img: 300velniukai.jpg.jpg
 ---
