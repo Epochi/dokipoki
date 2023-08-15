@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Lenktynininkas
 img: 953lenktynininkas.jpg.jpg
 ---
