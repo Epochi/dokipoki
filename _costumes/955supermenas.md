@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Supermenas
 img: 955supermenas.jpg.jpg
 ---
