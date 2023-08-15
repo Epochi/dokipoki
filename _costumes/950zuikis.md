@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Zuikis
 img: 950zuikis.jpg.jpg
 ---
