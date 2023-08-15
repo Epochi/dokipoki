@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 img: 963pirate.jpg.jpg
 personazas: Piratė
 ---
