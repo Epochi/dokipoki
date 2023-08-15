@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Indėnas
 img: 700indenas.jpg.jpg
 ---
