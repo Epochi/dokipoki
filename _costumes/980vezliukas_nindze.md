@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 img: 980vezliukas_nindze.jpg.jpg
 personazas: Vežliukas Nindzė
 ---
