@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 img: 975pelyte_mine.jpg.jpg
 personazas: Pelytė Minė
 ---
