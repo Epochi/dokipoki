@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 img: 993kaledu_senelis
 personazas: Kalėdų Senelis
 ---
