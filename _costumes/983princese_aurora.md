@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 img: 983princese_aurora.jpg.jpg
 personazas: Princesė Aurora
 ---
