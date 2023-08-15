@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 img: 957statybininkas.jpg.jpg
 personazas: Statybininkas
 ---
