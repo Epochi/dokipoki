@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Betmenas
 img: 973betmenas.jpg.jpg
 ---
