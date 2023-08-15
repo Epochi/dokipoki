@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Princesė Žvaigždė
 img: 550princese_zvaigzde.jpg.jpg
 ---
