@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 img: 965zmogus_voras.jpg.jpg
 personazas: Žmogus Voras
 ---
