@@ -1,6 +1,6 @@
 ---
 published: true
 personazas: Balerina
-img: 954balerina.jpg.jpg
+img: 960balerina.jpg.jpg
 ---
-![954balerina.jpg.jpg]({{site.baseurl}}/img/personazai/954balerina.jpg.jpg)
+![960balerina.jpg.jpg]({{site.baseurl}}/img/personazai/960balerina.jpg.jpg)
