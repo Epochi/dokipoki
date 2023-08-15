@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Princesė Barbė
 img: 450princese_barbe.jpg.jpg
 ---
