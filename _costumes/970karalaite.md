@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 img: 970karalaite.jpg.jpg
 personazas: Karalaitė
 ---
