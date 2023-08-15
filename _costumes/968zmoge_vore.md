@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 img: 968zmoge_vore.jpg.jpg
 personazas: Žmogė Vorė
 ---
