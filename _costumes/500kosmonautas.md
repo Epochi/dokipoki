@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Kosmonautas
 img: 500kosmonautas.jpg.jpg
 ---
