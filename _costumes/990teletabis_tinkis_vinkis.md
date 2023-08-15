@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Teletabis Tinkis Vinkis
 img: 990teletabis_tinkis_vinkis.jpg.jpg
 ---
