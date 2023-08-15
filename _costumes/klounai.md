@@ -1,0 +1,7 @@
+---
+published: false
+personazas: Klounai
+img: 180klounai.jpg.jpg
+---
+![]({{site.baseurl}}/img/personazai/180klounai.jpg.jpg)
+
