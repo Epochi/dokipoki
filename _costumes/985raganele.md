@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 img: 985raganele.jpg.jpg
 personazas: Raganėlė
 ---
