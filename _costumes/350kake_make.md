@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Kakė Makė
 img: 350kake_make.jpg.jpg
 ---
