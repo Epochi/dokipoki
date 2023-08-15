@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Haris Poteris
 img: 800haris_poteris.jpg.jpg
 ---
