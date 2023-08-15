@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Vienaragis
 img: 988vienaragis.jpg.jpg
 ---
