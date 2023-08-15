@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 img: 770treciadiene.jpg.jpg
 personazas: Trečiadienė
 ---
