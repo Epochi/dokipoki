@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Balerina
 img: 954balerina.jpg.jpg
 ---
