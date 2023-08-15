@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Nasa Kosmonautas
 img: 600nasa_kosmonautas.jpg.jpg
 ---
