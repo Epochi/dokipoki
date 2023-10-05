@@ -3,7 +3,7 @@ published: true
 title: KALĖDOS SU DOKIPOKI!
 ---
 
-Kalėdų Senelis kartu su pašėlusiais Kosmonautais, išdykėliais Elfais, patrakėliu Grinču, Hariu Poteriu ir Hermiona visus metus ruošė unikalias programas Jūsų kalėdinei šventei. Šios programos yra pritaikytos tiek mažiems ir dideliems, tiek aktyviems ir ramesniems vaikams, tad visų norai bus išpildyti su kaupu! Kalėdų Senelis jau traukia savo šventinį kostiumą iš spintos, ruošia roges kelionei ir kartu su draugais yra pasiruošęs atvykti į Jūsų šeimų, darželių ar įmonių renginukus!
+Kalėdų Senelis kartu su pašėlusiais Kosmonautais, išdykėliais Elfais, patrakėliu Grinču, Hariu Poteriu ir Hermiona visus metus ruošė unikalias programas Jūsų Kalėdų šventei. Šios programos yra pritaikytos tiek mažiems ir dideliems, tiek aktyviems ir ramesniems vaikams, tad visų norai bus išpildyti su kaupu! Kalėdų Senelis jau traukia savo šventinį kostiumą iš spintos, ruošia roges kelionei ir kartu su draugais yra pasiruošęs atvykti į Jūsų šeimų, darželių ar įmonių renginukus!
 
 # **KOSMINĖS KALĖDOS**
 
@@ -28,7 +28,7 @@ Kalėdų Senelis kartu su pašėlusiais Kosmonautais, išdykėliais Elfais, patr
 - žaisime kvidičą
 - ragausime kartu pagamintus spalvotus ledus
 
-Šią programą veda Kalėdų Senelis kartu su burtininkais Hariu Poteriu ir Hermiona. 
+Šią programą veda Kalėdų Senelis kartu su Hariu Poteriu ir Hermiona. 
 
 # **KAIP GRINČAS VOGĖ KALĖDAS**
 
@@ -50,6 +50,6 @@ Kalėdų Senelis kartu su pašėlusiais Kosmonautais, išdykėliais Elfais, patr
 
 Šią programą veda Kalėdų Senelis su smagiaisiais Elfu ir Elfe. 
 
-Kalėdų Senelis su savo draugais nekantrauja Jus visus pamatyti, apkabinti ir drauge sukurti kalėdinį stebuklą!
+Kalėdų Senelis su savo draugais nekantrauja Jus visus pamatyti, apkabinti ir drauge sukurti Kalėdų stebuklą!
 
 Su 🤍 DokiPoki personažai!
