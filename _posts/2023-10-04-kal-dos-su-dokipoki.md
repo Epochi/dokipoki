@@ -5,7 +5,7 @@ title: KALĖDOS SU DOKIPOKI!
 
 Kalėdų Senelis kartu su pašėlusiais Kosmonautais, išdykėliais Elfais, patrakėliu Grinču, Hariu Poteriu ir Hermiona visus metus ruošė unikalias programas Jūsų Kalėdų šventei. Šios programos yra pritaikytos tiek mažiems ir dideliems, tiek aktyviems ir ramesniems vaikams, tad visų norai bus išpildyti su kaupu! Kalėdų Senelis jau traukia savo šventinį kostiumą iš spintos, ruošia roges kelionei ir kartu su draugais yra pasiruošęs atvykti į Jūsų šeimų, darželių ar įmonių renginukus!
 
-# **KOSMINĖS KALĖDOS**
+## KOSMINĖS KALĖDOS
 
 - laikysime rankose ugnį
 - pagaminsime milžiniškus debesis
@@ -17,8 +17,7 @@ Kalėdų Senelis kartu su pašėlusiais Kosmonautais, išdykėliais Elfais, patr
 
 Šią programą veda Kalėdų Senelis ir pašėlę Kosmonautai. 
 
-# **HOGVARTSO KALĖDOS**
-
+## HOGVARTSO KALĖDOS
 
 - gaminsime spalvotą ugnį
 - darysime lipnųjį slaimą
@@ -30,8 +29,7 @@ Kalėdų Senelis kartu su pašėlusiais Kosmonautais, išdykėliais Elfais, patr
 
 Šią programą veda Kalėdų Senelis kartu su Hariu Poteriu ir Hermiona. 
 
-# **KAIP GRINČAS VOGĖ KALĖDAS**
-
+## KAIP GRINČAS VOGĖ KALĖDAS
 
 - dalyvausime sudėtingiausiuose Grinčo išbandymuose
 - ragausime pašėlusius spalvotus guminukus
@@ -40,8 +38,7 @@ Kalėdų Senelis kartu su pašėlusiais Kosmonautais, išdykėliais Elfais, patr
 
 Šią programą veda Kalėdų Senelis ir Grinčas.
 
-# **KALĖDŲ SENELIS IR ELFAI**
-
+## KALĖDŲ SENELIS IR ELFAI
 
 - važinėsime Kalėdų Senelio rogėmis
 - darysime kalėdinį traukinuką
