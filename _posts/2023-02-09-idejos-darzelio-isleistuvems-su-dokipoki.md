@@ -14,7 +14,7 @@ Pasitinkant vasarą daugelis vaikų atsisveikina su labai svarbia vaikystės vie
 *	ragausime kosminius garuojančius kukurūzus  
 
 Šią programą veda du ką tik į žemę nusileidę Kosmonautai. 
-## DARŽELIO IŠLIESTUVĖS SU PAŠĖLUSIAIS KLOUNAIS
+## DARŽELIO IŠLEISTUVĖS SU PAŠĖLUSIAIS KLOUNAIS
 *	žaisime smagiausius žaidimus
 *	lankstysime balionus
 *	šoksime tarp spalvotų dūmų
