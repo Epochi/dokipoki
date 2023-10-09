@@ -24,7 +24,7 @@ Taip pat siūlome daug įvairiausių veiklų Jūsų vaiko šventei, todėl svarb
 - **Balionų lankstymas** - ypač mažiesiems tai būna tikras stebuklas. Stebėti, kaip iš paprasto baliono pagaminamas šuniukas, triušis ar kardas, gali būti tikrai magiška. Taip pat, vaikui būna svarbu, kad jis gali parsinešti tokią dovaną namo ir džiaugtis ja net ir pasibaigus šventei.
 - **Muilo burbulų fiesta** – milžiniškų burbulų darymas kartu su animatoriumi vaikučius labai žavi, todėl visada rekomenduojame šią veiklą jei tik yra galybė atsižvelgiant į šventės vietą.
 
-### Šventės vieta
+## Šventės vieta
 
 
 - **Namai** – jeigu turite vietos žaidimams namuose, tai apsvarstykite šį šventės variantą, nes galbūt tai mažamečiui bus jaukesnė erdvė, kurioje jis bus apsuptas tik pačių artimiausių žmonių ir jausis drąsiau bendraujant su personažu.
