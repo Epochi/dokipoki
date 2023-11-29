@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 personazas: Fėja Maja
 img: 100feja_maja.jpg.jpg
 ---
