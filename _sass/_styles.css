@@ -125,6 +125,7 @@ h2.section-header {
   max-height: 110px;
   min-height: calc(100vw * 0.053); }
 
+.email-link,
 .phone-nubmer {
   color: #333; }
 
