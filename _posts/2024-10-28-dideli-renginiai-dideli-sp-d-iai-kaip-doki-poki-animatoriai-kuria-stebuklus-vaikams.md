@@ -1,8 +1,8 @@
 ---
-published: false
 title: >-
   Dideli renginiai, dideli įspūdžiai: kaip Doki Poki animatoriai kuria stebuklus
   vaikams
+published: false
 ---
 
 Neretai susilaukiame klausimų, ar galime surengti nepamirštamą renginuką įmonių darbuotojų vaikams ar miesto šventės svečiams. Žinoma, tvirtai atsakome TAIP! Doki Poki personažai turi daug patirties dirbant su dideliu vaikų skaičiumi ir puikiai prisitaiko prie klientų bei vaikučių poreikių. Paruošėme Jums  keletą patarimų, kad didelės šventės praeitų kuo sklandžiau ir smagiau! 
@@ -32,4 +32,3 @@ Neretai susilaukiame klausimų, ar galime surengti nepamirštamą renginuką įm
 Tikimės, kad šie patarimai pagelbės Jums organizuojant didelius renginukus!
 
 Su 🤍 DokiPoki personažai!
-
