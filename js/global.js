@@ -151,3 +151,11 @@ if (jQuery) {
 } else {
   Vel = Velocity;
 }
+// Global lazy-loading for all images
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('img').forEach(function (img) {
+    if (!img.hasAttribute('loading')) {
+      img.setAttribute('loading', 'lazy');
+    }
+  });
+});
