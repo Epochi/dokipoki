@@ -7,22 +7,30 @@
 
     <link rel="preload" href="/img/components/baloon_logo250hx255w.png" as="image">
     <link rel="preload" href="/img/components/baloon-line.png" as="image">
-    <link rel="preload" href="/fonts/kg-kindergarden/KGMissKindergarten.ttf" as="font">
-    <link rel="preload" href="/fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-regular.woff2" as="font">
-    <link rel="preload" href="/fonts/kg-air/KGThrowMyHandsUpintheAir.ttf" as="font">
+
+    <!-- vietiniai fontai su type + crossorigin (techninis fix, UI nesikeičia) -->
+    <link rel="preload" href="/fonts/kg-kindergarden/KGMissKindergarten.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/kg-air/KGThrowMyHandsUpintheAir.ttf" as="font" type="font/ttf" crossorigin>
+
     <link rel="preload" href="/css/main.css" as="style">
     <link rel="preload" href="/js/bin/main.js" as="script">
     <link rel="preload" href="/js/bin/materialize.js" as="script">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
 
-	<!-- slick -->
-	<!-- <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/> -->
+    <!-- teisingas preconnect šriftams -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- slick (kol kas išjungta) -->
+    <!-- <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/> -->
     
     <link type="text/css" rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" media="screen,projection">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700" rel="stylesheet">
+
+    <!-- Google fontai su display=swap: UI tas pats, tik tekstas pasirodo greičiau -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
     <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
     {% include googleanalytics.html %}
     {% comment %}
