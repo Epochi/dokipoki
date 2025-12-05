@@ -1,105 +1,139 @@
 $sketch-block-font-path: "../fonts/sketch-block/" !default;
 
-
+/* -----------------------------
+   BLOCK SKETCH
+--------------------------------*/
 @font-face {
     font-family: "Block Sketch";
     src: url("#{$sketch-block-font-path}Sketch_Block.ttf") format("truetype");
     font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-
+/* -----------------------------
+   KG AIR
+--------------------------------*/
 @font-face {
     font-family: "KG Air";
     src: url('../fonts/kg-air/KGThrowMyHandsUpintheAir.ttf') format('truetype');
     font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
+/* -----------------------------
+   KG KINDERGARDEN
+--------------------------------*/
 @font-face {
     font-family: "KG Kindergarden";
     src: url('../fonts/kg-kindergarden/KGMissKindergarten.ttf') format('truetype');
     font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-/* londrina-sketch-regular - latin-ext */
-
-
+/* -----------------------------
+   LONDRINA SKETCH
+--------------------------------*/
 @font-face {
 	font-family: 'Londrina Sketch';
 	src: url('../fonts/londrina-sketch/subset-LondrinaSketch-Regular.eot');
-	src: url('../fonts/londrina-sketch/subset-LondrinaSketch-Regular.eot?#iefix') format('embedded-opentype'),
+	src:
+		url('../fonts/londrina-sketch/subset-LondrinaSketch-Regular.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/londrina-sketch/subset-LondrinaSketch-Regular.woff2') format('woff2'),
 		url('../fonts/londrina-sketch/subset-LondrinaSketch-Regular.woff') format('woff'),
 		url('../fonts/londrina-sketch/subset-LondrinaSketch-Regular.ttf') format('truetype'),
 		url('../fonts/londrina-sketch/subset-LondrinaSketch-Regular.svg#LondrinaSketch-Regular') format('svg');
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 
-
-/* special-elite-regular - latin */
+/* -----------------------------
+   SPECIAL ELITE
+--------------------------------*/
 @font-face {
-  font-family: 'Special Elite';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/special-elite/special-elite-v6-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Special Elite'), local('SpecialElite-Regular'),
-       url('../fonts/special-elite/special-elite-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/special-elite/special-elite-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/special-elite/special-elite-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/special-elite/special-elite-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/special-elite/special-elite-v6-latin-regular.svg#SpecialElite') format('svg'); /* Legacy iOS */
+	font-family: 'Special Elite';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/special-elite/special-elite-v6-latin-regular.eot');
+	src:
+		local('Special Elite'), local('SpecialElite-Regular'),
+		url('../fonts/special-elite/special-elite-v6-latin-regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/special-elite/special-elite-v6-latin-regular.woff2') format('woff2'),
+		url('../fonts/special-elite/special-elite-v6-latin-regular.woff') format('woff'),
+		url('../fonts/special-elite/special-elite-v6-latin-regular.ttf') format('truetype'),
+		url('../fonts/special-elite/special-elite-v6-latin-regular.svg#SpecialElite') format('svg');
+	font-display: swap;
 }
 
-
-
+/* -----------------------------
+   CABIN SKETCH – REGULAR
+--------------------------------*/
 @font-face {
 	font-family: 'Cabin Sketch';
 	src: url('../fonts/cabin-sketch/subset-CabinSketch-Regular.eot');
-	src: url('../fonts/cabin-sketch/subset-CabinSketch-Regular.eot?#iefix') format('embedded-opentype'),
+	src:
+		url('../fonts/cabin-sketch/subset-CabinSketch-Regular.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/cabin-sketch/subset-CabinSketch-Regular.woff2') format('woff2'),
 		url('../fonts/cabin-sketch/subset-CabinSketch-Regular.woff') format('woff'),
 		url('../fonts/cabin-sketch/subset-CabinSketch-Regular.ttf') format('truetype'),
 		url('../fonts/cabin-sketch/subset-CabinSketch-Regular.svg#CabinSketch-Regular') format('svg');
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 
+/* -----------------------------
+   CABIN SKETCH – BOLD
+--------------------------------*/
 @font-face {
 	font-family: 'Cabin Sketch';
 	src: url('../fonts/cabin-sketch/subset-CabinSketch-Bold.eot');
-	src: url('../fonts/cabin-sketch/subset-CabinSketch-Bold.eot?#iefix') format('embedded-opentype'),
+	src:
+		url('../fonts/cabin-sketch/subset-CabinSketch-Bold.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/cabin-sketch/subset-CabinSketch-Bold.woff2') format('woff2'),
 		url('../fonts/cabin-sketch/subset-CabinSketch-Bold.woff') format('woff'),
 		url('../fonts/cabin-sketch/subset-CabinSketch-Bold.ttf') format('truetype'),
 		url('../fonts/cabin-sketch/subset-CabinSketch-Bold.svg#CabinSketch-Bold') format('svg');
 	font-weight: bold;
 	font-style: normal;
+	font-display: swap;
 }
 
-
-/* amatic-sc-regular - latin_latin-ext */
+/* -----------------------------
+   AMATIC SC – REGULAR
+--------------------------------*/
 @font-face {
-  font-family: 'Amatic SC';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-regular.eot'); /* IE9 Compat Modes */
-  src: local('Amatic SC Regular'), local('AmaticSC-Regular'),
-       url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-regular.svg#AmaticSC') format('svg'); /* Legacy iOS */
+	font-family: 'Amatic SC';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-regular.eot');
+	src:
+		local('Amatic SC Regular'), local('AmaticSC-Regular'),
+		url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-regular.woff2') format('woff2'),
+		url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-regular.woff') format('woff'),
+		url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-regular.ttf') format('truetype'),
+		url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-regular.svg#AmaticSC') format('svg');
+	font-display: swap;
 }
-/* amatic-sc-700 - latin_latin-ext */
+
+/* -----------------------------
+   AMATIC SC – BOLD
+--------------------------------*/
 @font-face {
-  font-family: 'Amatic SC';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-700.eot'); /* IE9 Compat Modes */
-  src: local('Amatic SC Bold'), local('AmaticSC-Bold'),
-       url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-700.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-700.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-700.svg#AmaticSC') format('svg'); /* Legacy iOS */
+	font-family: 'Amatic SC';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-700.eot');
+	src:
+		local('Amatic SC Bold'), local('AmaticSC-Bold'),
+		url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-700.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-700.woff2') format('woff2'),
+		url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-700.woff') format('woff'),
+		url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-700.ttf') format('truetype'),
+		url('../fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-700.svg#AmaticSC') format('svg');
+	font-display: swap;
 }

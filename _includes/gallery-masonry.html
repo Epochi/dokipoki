@@ -6,7 +6,11 @@
 				{% for image in site.static_files %}
 				{% if image.path contains 'gallery' %}
 						<div class="grid-item">
-							<img src="{{ site.baseurl }}{{ image.path }}" />
+							<img
+							src="{{ site.baseurl }}{{ image.path }}"
+  							alt="{{ image.name | replace: '-', ' ' | replace: '_', ' ' }}"
+  							loading="lazy"
+							/>
 						</div>
 						{% endif %}
 					{% endfor %}
