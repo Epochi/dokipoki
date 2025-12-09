@@ -1,24 +1,50 @@
 <div class="container">
     <div class="row ">
-    <div class="col s12">
-        <h2 class="section-header center-align">Personažai</h2>
-    </div>
+        <div class="col s12">
+            <h2 class="section-header center-align">Personažai</h2>
+        </div>
     </div>
     
-    <div id="Personazai"  class="row section scrollspy personazai">
-        {% for costume in site.costumes %}
+    <div id="Personazai" class="row section scrollspy personazai">
+        
+        {% assign costumes_home = site.costumes | slice: 0, 3 %}
+        {% for costume in costumes_home %}
+
         <div class="personazai-wrapper col xl4 l6 m6 s12">
-            <img data-caption="{{ costume.personazas }}" class="materialboxed responsive-img" alt="{{ costume.personazas }}" src="{{ site.baseurl }}{{ costume.img_root }}{{ costume.img }}">
-            <h4><a class="cursor-default" href="#{{ costume.personazas }}">{{ costume.personazas }}</a></h4>
+            <img
+                data-caption="{{ costume.personazas }}"
+                class="materialboxed responsive-img"
+                alt="{{ costume.personazas }}"
+                src="{{ site.baseurl }}{{ costume.img_root }}{{ costume.img }}"
+                loading="lazy"
+                decoding="async"
+                width="300"
+                height="400"
+            >
+            <h4>
+                <a class="cursor-default" href="#{{ costume.personazas }}">
+                    {{ costume.personazas }}
+                </a>
+            </h4>
         </div>
         
-        <div id="#{{ costume.personazas }}" class="modal">
+        <div id="{{ costume.personazas }}" class="modal">
             <div class="modal-content">
                 <h4>{{ costume.personazas }}</h4>
                 <p>{{ costume.content }}</p>
             </div>
         </div>
+
         {% endfor %}
+
+        <!-- ⭐ SHOW MORE BUTTON ⭐ -->
+        <div class="col s12 center-align" style="margin-top: 40px;">
+            <a href="{{ site.baseurl }}/visi-personazai/" 
+               class="btn-large waves-effect waves-light" 
+               style="background-color: #f4b0b8; border-radius: 8px;">
+                Visi personažai →
+            </a>
+        </div>
+
     </div>
 </div>
-
