@@ -39,7 +39,7 @@ $(document).ready(function () {
   // =========================
   // GALERIJA: RODYTI DAUGIAU / MAŽIAU
   // =========================
-  var $btn = $("#toggle-gallery");
+  var $btn = $("#show-toggle-gallery");
   if ($btn.length) {
     var expanded = false;
 
