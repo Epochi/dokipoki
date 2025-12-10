@@ -2,59 +2,79 @@
   <div id="#top-shadow"></div>
   <nav class="rausva z-depth-0" id="nav">
     <div class="container">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">DokiPoki</a>
-      <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down center">
-        {% if page.layout == 'home' %}
-        <li><a href="#Programa">Programa</a></li>
-        <li><a href="#Personazai">Personažai</a></li>
-        <li><a href="#Kaina">Kaina</a></li>
-        <li><a href="#Galerija">Galerija</a></li>
-        <li><a href="/blog">Blogas</a></li>
-        <li><a href="#Kontaktai">Kontaktai</a></li>
-        {% elsif page.layout == 'post' %}
-        <li><a href="/#Programa">Programa</a></li>
-        <li><a href="/#Personazai">Personažai</a></li>
-        <li><a href="/#Kaina">Kaina</a></li>
-        <li><a href="/#Galerija">Galerija</a></li>
-        <li><a href="/blog">Blogas</a></li>
-        <li><a href="/#Kontaktai">Kontaktai</a></li>
-        {% elsif page.layout == 'blog' %}
-        <li><a href="/#Programa">Programa</a></li>
-        <li><a href="/#Personazai">Personažai</a></li>
-        <li><a href="/#Kaina">Kaina</a></li>
-        <li><a href="/#Galerija">Galerija</a></li>
-        <li><a href="#blog">Blogas</a></li>
-        <li><a href="/#Kontaktai">Kontaktai</a></li>
-        {% endif %}
-      </ul>
-    </div>
+      <div class="nav-wrapper">
+
+        <!-- Logo -->
+        <a href="/" class="brand-logo">DokiPoki</a>
+
+        <!-- Mobile burger (RIGHT SIDE) -->
+        <a href="#" data-activates="mobile-nav" class="button-collapse right">
+          <i class="material-icons">menu</i>
+        </a>
+
+        <!-- DESKTOP MENU -->
+        <ul class="right hide-on-med-and-down center">
+          {% if page.layout == 'home' %}
+            <!-- Home page -->
+            <li><a href="#Programa">Programa</a></li>
+            <li><a href="{{ site.baseurl }}/visi-personazai/">Personažai</a></li>
+            <li><a href="#Kaina">Kaina</a></li>
+            <li><a href="#Galerija">Galerija</a></li>
+            <li><a href="/blog">Blogas</a></li>
+            <li><a href="#Kontaktai">Kontaktai</a></li>
+
+          {% elsif page.layout == 'blog' %}
+            <!-- Blog page -->
+            <li><a href="/#Programa">Programa</a></li>
+            <li><a href="{{ site.baseurl }}/visi-personazai/">Personažai</a></li>
+            <li><a href="/#Kaina">Kaina</a></li>
+            <li><a href="/#Galerija">Galerija</a></li>
+            <li><a href="#blog">Blogas</a></li>
+            <li><a href="/#Kontaktai">Kontaktai</a></li>
+
+          {% else %}
+            <!-- Other pages (post, visi-personazai, etc.) -->
+            <li><a href="/#Programa">Programa</a></li>
+            <li><a href="{{ site.baseurl }}/visi-personazai/">Personažai</a></li>
+            <li><a href="/#Kaina">Kaina</a></li>
+            <li><a href="/#Galerija">Galerija</a></li>
+            <li><a href="/blog">Blogas</a></li>
+            <li><a href="/#Kontaktai">Kontaktai</a></li>
+          {% endif %}
+        </ul>
+
+      </div>
     </div>
   </nav>
-  </div>
+</div>
 
-  <ul class="side-nav rozine" id="mobile-nav">
-        {% if page.layout == 'home' %}
-        <li><a href="#Programa">Programa</a></li>
-        <li><a href="#Personazai">Personažai</a></li>
-        <li><a href="#Kaina">Kaina</a></li>
-        <li><a href="#Galerija">Galerija</a></li>
-        <li><a href="/blog">Blogas</a></li>
-        <li><a href="#Kontaktai">Kontaktai</a></li>
-        {% elsif page.layout == 'post' %}
-        <li><a href="/#Programa">Programa</a></li>
-        <li><a href="/#Personazai">Personažai</a></li>
-        <li><a href="/#Kaina">Kaina</a></li>
-        <li><a href="/#Galerija">Galerija</a></li>
-        <li><a href="/blog">Blogas</a></li>
-        <li><a href="/#Kontaktai">Kontaktai</a></li>
-        {% elsif page.layout == 'blog' %}
-        <li><a href="/#Programa">Programa</a></li>
-        <li><a href="/#Personazai">Personažai</a></li>
-        <li><a href="/#Kaina">Kaina</a></li>
-        <li><a href="/#Galerija">Galerija</a></li>
-        <li><a href="#blog">Blogas</a></li>
-        <li><a href="/#Kontaktai">Kontaktai</a></li>
-        {% endif %}
-      </ul>
+<!-- MOBILE MENU (RIGHT SIDE) -->
+<ul id="mobile-nav" class="side-nav right-align rozine">
+  {% if page.layout == 'home' %}
+    <!-- Mobile – home -->
+    <li><a href="#Programa">Programa</a></li>
+    <li><a href="{{ site.baseurl }}/visi-personazai/">Personažai</a></li>
+    <li><a href="#Kaina">Kaina</a></li>
+    <li><a href="#Galerija">Galerija</a></li>
+    <li><a href="/blog">Blogas</a></li>
+    <li><a href="#Kontaktai">Kontaktai</a></li>
+
+  {% elsif page.layout == 'blog' %}
+    <!-- Mobile – blog -->
+    <li><a href="/#Programa">Programa</a></li>
+    <li><a href="{{ site.baseurl }}/visi-personazai/">Personažai</a></li>
+    <li><a href="/#Kaina">Kaina</a></li>
+    <li><a href="/#Galerija">Galerija</a></li>
+    <li><a href="#blog">Blogas</a></li>
+    <li><a href="/#Kontaktai">Kontaktai</a></li>
+
+  {% else %}
+    <!-- Mobile – kiti puslapiai -->
+    <li><a href="/#Programa">Programa</a></li>
+    <li><a href="{{ site.baseurl }}/visi-personazai/">Personažai</a></li>
+    <li><a href="/#Kaina">Kaina</a></li>
+    <li><a href="/#Galerija">Galerija</a></li>
+    <li><a href="/blog">Blogas</a></li>
+    <li><a href="/#Kontaktai">Kontaktai</a></li>
+  {% endif %}
+</ul>
