@@ -1,39 +1,113 @@
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
-    <title>{{ site.title }}</title>
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
 
-    <link rel="preload" href="/img/components/baloon_logo250hx255w.png" as="image">
-    <link rel="preload" href="/img/components/baloon-line.png" as="image">
+  {%- comment -%}
+  TITLE LOGIC:
+  1) page.seo_title — jei nustatyta puslapyje
+  2) page.title + site.title
+  3) tik site.title
+  {%- endcomment -%}
+  <title>
+    {% if page.seo_title %}
+      {{ page.seo_title }}
+    {% elsif page.title %}
+      {{ page.title }} | {{ site.title }}
+    {% else %}
+      {{ site.title }}
+    {% endif %}
+  </title>
 
-    <!-- vietiniai fontai su type + crossorigin (techninis fix, UI nesikeičia) -->
-    <link rel="preload" href="/fonts/kg-kindergarden/KGMissKindergarten.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="/fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/kg-air/KGThrowMyHandsUpintheAir.ttf" as="font" type="font/ttf" crossorigin>
+  {%- comment -%}
+  DESCRIPTION LOGIC:
+  1) page.description
+  2) page.excerpt
+  3) site.description
+  {%- endcomment -%}
+  {% capture meta_description %}
+    {% if page.description %}
+      {{ page.description }}
+    {% elsif page.excerpt %}
+      {{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}
+    {% else %}
+      {{ site.description }}
+    {% endif %}
+  {% endcapture %}
+  <meta name="description" content="{{ meta_description | strip }}"/>
 
-    <link rel="preload" href="/css/main.css" as="style">
-    <link rel="preload" href="/js/bin/main.js" as="script">
-    <link rel="preload" href="/js/bin/materialize.js" as="script">
+  {%- comment -%}
+  Robots (optional per page)
+  {%- endcomment -%}
+  {% if page.noindex %}
+    <meta name="robots" content="noindex, nofollow">
+  {% else %}
+    <meta name="robots" content="index, follow">
+  {% endif %}
 
-    <!-- teisingas preconnect šriftams -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {%- comment -%}
+  CANONICAL URL
+  {%- endcomment -%}
+  {% assign canonical_url = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
+  <link rel="canonical" href="{{ canonical_url }}"/>
 
-    <!-- slick (kol kas išjungta) -->
-    <!-- <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/> -->
-    
-    <link type="text/css" rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" media="screen,projection">
+  {%- comment -%}
+  SOCIAL META — Open Graph
+  {%- endcomment -%}
+  <meta property="og:locale" content="lt_LT">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{{ meta_description | strip }}">
+  <meta property="og:url" content="{{ canonical_url }}">
 
-    <!-- Google fontai su display=swap: UI tas pats, tik tekstas pasirodo greičiau -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  {%- comment -%}
+  OG / Twitter image:
+  1) page.og_image, jei yra
+  2) site.og_image iš _config.yml
+  3) fallback: /img/social/og-default.png
+  {%- endcomment -%}
+  {% assign og_image = page.og_image | default: site.og_image | default: '/img/social/og-default.png' %}
+  <meta property="og:image" content="{{ og_image | prepend: site.baseurl | prepend: site.url }}"/>
 
-    <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
-    {% include googleanalytics.html %}
-    {% comment %}
-    <link href="http://www.dokipoki.lt" hreflang="lt" >
-    {% endcomment %}
+  {%- comment -%}
+  TWITTER META
+  {%- endcomment -%}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.twitter_title %}{{ page.twitter_title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{{ meta_description | strip }}">
+  <meta name="twitter:image" content="{{ og_image | prepend: site.baseurl | prepend: site.url }}">
+
+  {%- comment -%}
+  Preload pagrindinių assetų
+  {%- endcomment -%}
+  <link rel="preload" href="{{ '/img/components/baloon_logo250hx255w.png' | prepend: site.baseurl }}" as="image">
+  <link rel="preload" href="{{ '/img/components/baloon-line.png' | prepend: site.baseurl }}" as="image">
+
+  <!-- Fonts -->
+  <link rel="preload" href="{{ '/fonts/kg-kindergarden/KGMissKindergarten.ttf' | prepend: site.baseurl }}" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="{{ '/fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-regular.woff2' | prepend: site.baseurl }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/fonts/kg-air/KGThrowMyHandsUpintheAir.ttf' | prepend: site.baseurl }}" as="font" type="font/ttf" crossorigin>
+
+  <!-- Assets -->
+  <link rel="preload" href="{{ '/css/main.css' | prepend: site.baseurl }}" as="style">
+  <link rel="preload" href="{{ '/js/bin/main.js' | prepend: site.baseurl }}" as="script">
+  <link rel="preload" href="{{ '/js/bin/materialize.js' | prepend: site.baseurl }}" as="script">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Main CSS -->
+  <link type="text/css" rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}" media="screen,projection">
+
+  <!-- Google fonts with display=swap -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="{{ '/img/favicon.png' | prepend: site.baseurl }}">
+
+  <!-- Analytics -->
+  {% include googleanalytics.html %}
 </head>

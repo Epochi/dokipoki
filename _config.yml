@@ -17,8 +17,9 @@
 title: DOKIPOKI | Personažai vaikams
 description: > # this means to ignore newlines until "baseurl:"
   Charizmatiški, jauni ir energingi personažai, atvyks į Jūsų šventę pradžiuginti mažuosius!
-baseulr: ""
+baseurl: ""
 url: "https://dokipoki.lt" # the base hostname & protocol for your site, e.g. http://example.com
+og_image: "/img/social/og-default.png"
 
 # Build settings
 markdown: kramdown
