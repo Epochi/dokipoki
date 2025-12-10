@@ -1,24 +1,62 @@
 <div class="container">
-    <div class="row ">
+  <div class="row">
     <div class="col s12">
-        <h2 class="section-header center-align">Personažai</h2>
+      <h2 class="section-header center-align">Personažai</h2>
     </div>
-    </div>
-    
-    <div id="Personazai"  class="row section scrollspy personazai">
-        {% for costume in site.costumes %}
-        <div class="personazai-wrapper col xl4 l6 m6 s12">
-            <img data-caption="{{ costume.personazas }}" class="materialboxed responsive-img" alt="{{ costume.personazas }}" src="{{ site.baseurl }}{{ costume.img_root }}{{ costume.img }}">
-            <h4><a class="cursor-default" href="#{{ costume.personazas }}">{{ costume.personazas }}</a></h4>
-        </div>
-        
-        <div id="#{{ costume.personazas }}" class="modal">
-            <div class="modal-content">
-                <h4>{{ costume.personazas }}</h4>
-                <p>{{ costume.content }}</p>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</div>
+  </div>
 
+  <div id="Personazai" class="row section scrollspy personazai">
+
+    {%- comment -%}
+    Pasiimam sąrašą failų pavadinimų iš _data/home_characters.yml
+    ir pagal juos susirandam kostiumų dokumentus kolekcijoje `site.costumes`.
+    {%- endcomment -%}
+
+    {% assign featured_files = site.data.home_characters.home_characters %}
+    {% assign costumes_home = "" | split: "" %}
+
+    {% for filename in featured_files %}
+      {% assign doc = site.costumes | where: "name", filename | first %}
+      {% if doc %}
+        {% assign costumes_home = costumes_home | push: doc %}
+      {% endif %}
+    {% endfor %}
+
+    {% for costume in costumes_home %}
+      <div class="personazai-wrapper col xl4 l6 m6 s12">
+        <img
+          data-caption="{{ costume.personazas }}"
+          class="materialboxed responsive-img"
+          alt="{{ costume.personazas }}"
+          src="{{ site.baseurl }}{{ costume.img_root }}{{ costume.img }}"
+          loading="lazy"
+          decoding="async"
+          width="300"
+          height="400"
+        >
+        <h4>
+          <a class="cursor-default" href="#{{ costume.personazas }}">
+            {{ costume.personazas }}
+          </a>
+        </h4>
+      </div>
+
+      <div id="{{ costume.personazas }}" class="modal">
+        <div class="modal-content">
+          <h4>{{ costume.personazas }}</h4>
+          <p>{{ costume.content }}</p>
+        </div>
+      </div>
+    {% endfor %}
+
+    <!-- ⭐ VISI PERSONAŽAI BUTTON ⭐ -->
+    <div class="col s12 center-align" style="margin-top: 40px;">
+      <a href="{{ site.baseurl }}/visi-personazai/"
+         class="btn-large waves-effect waves-light"
+         style="background-color: #f4b0b8; border-radius: 8px;">
+        Visi personažai →
+      </a>
+    </div>
+
+  </div>
+</div>

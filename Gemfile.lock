@@ -3,8 +3,11 @@ GEM
   specs:
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
+    base64 (0.3.0)
+    bigdecimal (3.3.1)
     colorator (1.1.0)
     concurrent-ruby (1.1.10)
+    csv (3.3.5)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -70,18 +73,23 @@ GEM
     webrick (1.8.2)
 
 PLATFORMS
+  x64-mingw-ucrt
   x86_64-linux
 
 DEPENDENCIES
+  base64
+  bigdecimal
+  csv
   jekyll (= 4.3.1)
   jekyll-feed (~> 0.16.0)
   jekyll-sitemap (~> 1.4.0)
   minima (~> 2.5.1)
+  rexml
   tzinfo-data
   webrick
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 3.4.7p58
 
 BUNDLED WITH
    2.3.14
