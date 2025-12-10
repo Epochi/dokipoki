@@ -1,14 +1,21 @@
 $(document).ready(function () {
-  // MOBILE MENIU
+  // =========================
+  // MOBILE MENIU (ATSIDARO IŠ DEŠINĖS)
+  // =========================
   $(".button-collapse").sideNav({
-    closeOnClick: true,
+    edge: "right",      // meniu slankioja iš dešinės
+    closeOnClick: true, // užsidaro paspaudus ant nuorodos
     draggable: true
   });
 
+  // =========================
   // SCROLLSPY
+  // =========================
   $(".scrollspy").scrollSpy();
 
+  // =========================
   // NAVBAR SHADOW ON SCROLL
+  // =========================
   $(window).scroll(function () {
     if (document.body.scrollTop === 0 && document.documentElement.scrollTop === 0) {
       $("#nav").addClass("z-depth-0");
@@ -17,7 +24,9 @@ $(document).ready(function () {
     }
   });
 
+  // =========================
   // GALERIJOS MATERIALBOX CLICK FIX
+  // =========================
   $(".gallery-wrapper .materialboxed").click(function (event) {
     event.stopImmediatePropagation();
     event.stopPropagation();
@@ -37,7 +46,7 @@ $(document).ready(function () {
     });
   }
 
-  // MASONRY LAYOUT PO KIEKVIENOS FOTO UŽKROVIMO (jei pluginas yra)
+  // MASONRY LAYOUT PO KIEKVIENOS FOTO UŽKROVIMO
   if ($grid.length && typeof $grid.imagesLoaded === "function") {
     $grid.imagesLoaded().progress(function () {
       if ($grid.data("masonry")) {
@@ -53,10 +62,9 @@ $(document).ready(function () {
 
   if ($btn.length) {
     var expanded = false;
-    // visi itemai (jei nėra Masonry, vis tiek veiks)
     var $items = $grid.length ? $grid.find(".grid-item") : $(".grid-item");
 
-    // užtikrinam, kad >6 būtų paslėpti
+    // pradinė būsena – rodom tik pirmas 6
     $items.each(function (index) {
       if (index >= 6) {
         $(this).addClass("hidden-gallery");
@@ -81,7 +89,7 @@ $(document).ready(function () {
         expanded = false;
         $btn.text("Rodyti daugiau");
 
-        // Scrolliname atgal prie galerijos viršaus
+        // Scrollinam atgal prie galerijos viršaus
         var $gal = $("#Galerija");
         if ($gal.length) {
           $("html, body").animate(
