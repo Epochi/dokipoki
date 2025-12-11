@@ -10,3 +10,58 @@
 .hidden-gallery {
   display: none;
 }
+
+/* Personazų pavadinimams – rodom hand-pointer, nes tai nuoroda */
+.personazai h4 a {
+  cursor: pointer !important;
+}
+
+/* GLOBAL DOKIPOKI BUTTON STYLE*/
+.dp-btn {
+  background-color: #f4b0b8 !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  text-transform: none !important;
+}
+
+/* Mobile: plonesni mygtukai visiems .btn-large.dp-btn,
+   išlaikant tą patį šriftą ir horizontalų padding */
+@media only screen and (max-width: 600px) {
+  .btn-large.dp-btn {
+    height: 44px !important;      /* mažiau nei default ~54px */
+    line-height: 44px !important; /* išlaiko vertikalų centravimą */
+  }
+}
+/* Visi personažai – tvarkingas flex išdėstymas, be keistų tarpų */
+#VisiPersonazai {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Atjungiame Materialize float’ą ir nustatom flex pločius */
+#VisiPersonazai .personazai-wrapper {
+  float: none;              /* perimam kontrolę iš grid’o */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Desktop: 3 stulpeliai */
+@media only screen and (min-width: 993px) {
+  #VisiPersonazai .personazai-wrapper {
+    width: 33.3333%;
+  }
+}
+
+/* Tablet / mažesni ekranai: 2 stulpeliai */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  #VisiPersonazai .personazai-wrapper {
+    width: 50%;
+  }
+}
+
+/* Mobile: 1 stulpelis – kaip ir buvo */
+@media only screen and (max-width: 600px) {
+  #VisiPersonazai .personazai-wrapper {
+    width: 100%;
+  }
+}

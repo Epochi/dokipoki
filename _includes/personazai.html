@@ -15,31 +15,57 @@
     kad viskas veiktų tiek lokaliai, tiek GitHub Pages.
     {%- endcomment -%}
 
-    {% assign featured_files = site.data.home_characters.home_characters %}
+    {%- assign featured_files = site.data.home_characters.home_characters -%}
 
     {%- for filename in featured_files -%}
       {%- for costume in site.costumes -%}
         {%- assign costume_filename = costume.path | split:'/' | last -%}
         {%- if costume_filename == filename -%}
 
+          {% assign has_page = costume.has_page | default: false %}
+
           <div class="personazai-wrapper col xl4 l6 m6 s12">
-            <img
-              data-caption="{{ costume.personazas }}"
-              class="materialboxed responsive-img"
-              alt="{{ costume.personazas }}"
-              src="{{ site.baseurl }}{{ costume.img_root }}{{ costume.img }}"
-              loading="lazy"
-              decoding="async"
-              width="300"
-              height="400"
-            >
-            <h4>
-              <a class="cursor-default" href="#{{ costume.personazas }}">
-                {{ costume.personazas }}
+            {% if has_page %}
+              <!-- JEI yra personažo puslapis – einam į jį -->
+              <a href="{{ costume.url }}">
+                <img
+                  class="responsive-img"
+                  alt="{{ costume.personazas }}"
+                  src="{{ site.baseurl }}{{ costume.img_root }}{{ costume.img }}"
+                  loading="lazy"
+                  decoding="async"
+                  width="300"
+                  height="400"
+                >
               </a>
+            {% else %}
+              <!-- JEI nėra personažo puslapio – paliekam dabartinį full-screen variantą -->
+              <img
+                data-caption="{{ costume.personazas }}"
+                class="materialboxed responsive-img"
+                alt="{{ costume.personazas }}"
+                src="{{ site.baseurl }}{{ costume.img_root }}{{ costume.img }}"
+                loading="lazy"
+                decoding="async"
+                width="300"
+                height="400"
+              >
+            {% endif %}
+
+            <h4>
+              {% if has_page %}
+                <a href="{{ costume.url }}" class="cursor-default">
+                  {{ costume.personazas }}
+                </a>
+              {% else %}
+                <span class="cursor-default">
+                  {{ costume.personazas }}
+                </span>
+              {% endif %}
             </h4>
           </div>
 
+          <!-- Esami modalai gali likti, jei ateity naudosi -->
           <div id="{{ costume.personazas }}" class="modal">
             <div class="modal-content">
               <h4>{{ costume.personazas }}</h4>
@@ -54,11 +80,9 @@
     <!-- ⭐ VISI PERSONAŽAI BUTTON ⭐ -->
     <div class="col s12 center-align" style="margin-top: 40px;">
       <a href="{{ site.baseurl }}/visi-personazai/"
-         class="btn-large waves-effect waves-light"
-         style="background-color: #f4b0b8; border-radius: 8px;">
+        class="btn-large waves-effect waves-light dp-btn">
         Visi personažai →
       </a>
     </div>
-
   </div>
 </div>

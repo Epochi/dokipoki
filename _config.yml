@@ -1,40 +1,44 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-# title: Pasakų personažai vaikų gimtadieniams ir šventėms - DokiPoki
-title: DOKIPOKI | Personažai vaikams
-description: > # this means to ignore newlines until "baseurl:"
+title: "DOKIPOKI | Personažai vaikams"
+description: >-
   Charizmatiški, jauni ir energingi personažai, atvyks į Jūsų šventę pradžiuginti mažuosius!
 baseurl: ""
-url: "https://dokipoki.lt" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://dokipoki.lt"
 og_image: "/img/social/og-default.png"
+
+# Global contact / social settings (naudok visur per {{ site.* }})
+contact_email: "info@dokipoki.lt"
+
+contact_phone_raw: "+37068886006"        # tel: href
+contact_phone_display: "+370 6888 6006"  # rodomas tekstas
+
+instagram_url: "https://www.instagram.com/dokipoki_personazai/"
+facebook_url: "https://www.facebook.com/DokiPoki-409734166085755/"
+messenger_url: "https://m.me/personazaidokipoki"
 
 # Build settings
 markdown: kramdown
+
 sass:
   sass_dir: _sass
   style: compress
+
 gems:
   - jekyll-sitemap
+
 exclude:
   - Gemfile
   - Gemfile.lock
+
 permalink: /blog/:title
+
 collections:
   costumes:
+    output: true
+    permalink: /personazai/:name/
   posts:
+
+
 defaults:
   - scope:
       path: "_costumes"
@@ -46,26 +50,28 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
 excerpt_separator: <!--more-->
+
 prose:
-  root_url: '_costumes'
-  media: 'img/personazai'
+  root_url: "_costumes"
+  media: "img/personazai"
   ignore:
-    - '/_includes'
-    - 'index.md'
-    - '/css'
-    - '/js'
-    - '/fonts'
-    - '/img'
-    - '/_layouts'
-    - '/_sass'
-    - '.gitignore'
-    - 'CNAME'
-    - 'Gemfile'
-    - 'Gemfile.lock'
-    - '_config.yml'
-    - 'favicon.ico'
-    - 'google4005b707fd19d3b0.md'
+    - "/_includes"
+    - "index.md"
+    - "/css"
+    - "/js"
+    - "/fonts"
+    - "/img"
+    - "/_layouts"
+    - "/_sass"
+    - ".gitignore"
+    - "CNAME"
+    - "Gemfile"
+    - "Gemfile.lock"
+    - "_config.yml"
+    - "favicon.ico"
+    - "google4005b707fd19d3b0.md"
   metadata:
     _costumes:
       - name: "personazas"
