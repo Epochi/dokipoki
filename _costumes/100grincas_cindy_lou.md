@@ -6,11 +6,11 @@ personazas: Grinčas ir Cindy Lou
 has_page: true
 permalink: /personazai/grincas-cindy-lou/
 
-seo_title: "Grinčas ir Cindy Lou – kalėdinis personažų duetas vaikų šventėms Vilniuje ir Kaune"
-description: "Kai Grinčas niurzga, Cindy Lou šypsosi – kartu jie užkuria nepamirštamą kalėdinę programą vaikams Vilniuje ir Kaune!"
+seo_title: "Grinčas ir Cindy Lou – kalėdiniai animatoriai vaikams | Programos Vilniuje ir Kaune"
+description: "Grinčas ir Cindy Lou – TOP kalėdinis duetas vaikų šventėms. Žaidimai, išdaigos, burbulai, gera nuotaika ir tikra kalėdinė magija Vilniuje, Kaune ir visoje Lietuvoje."
 og_image: "/img/personazai/100grincas_cindy_lou.jpg"
 ---
 
-Grinčas su Cindy Lou į jūsų šventę atkeliauja kaip tikras kalėdinis duetas – vienas surūgęs ir pilnas išdaigų, kita šilta ir kupina gerumo. Vaikai su jais išgyvena tikrą kalėdinį nuotykį: juokiasi, sprendžia užduotis, padeda „išgelbėti“ šventę ir galiausiai įkalbina Grinčą patikėti Kalėdomis.
+Grinčas ir Cindy Lou į jūsų šventę atkeliauja kaip nepakeičiamas kalėdinis duetas – vienas niurzga ir rezga išdaigas, kita skleidžia šilumą, gerumą ir Kalėdų dvasią. Vaikai kartu su jais patiria tikrą nuotykį: žaidžia, sprendžia šventines užduotis, padeda „išgelbėti Kalėdas“ ir galiausiai priverčia net Grinčą nusišypsoti.
 
-Programa puikiai tinka kalėdinėms šventėms, darželių renginiams, vaikų gimtadieniams ir šeimų kalėdiniams susitikimams. Veiklos gali būti lengvai pritaikytos pagal vaikų amžių ir šventės trukmę – nuo trumpų pasirodymų iki pilnos valandos animacijos su žaidimais, išdaigomis ir bendra nuotrauka su personažais.
+Ši programa puikiai tinka darželiams, mokykloms, šeimos šventėms ir kalėdiniams renginiams. Veiklos gali būti pritaikytos pagal vaikų amžių ir šventės trukmę – nuo trumpų apsilankymų iki pilnos valandos animacijos su žaidimais, šokiais, personažų išdaigomis ir bendra fotosesija.
