@@ -21,21 +21,44 @@ description: "DokiPoki personažai vaikams: Kalėdų senelis, elfai, princesės 
 
     <div id="VisiPersonazai" class="row section personazai">
       {% for costume in site.costumes %}
-        <div class="personazai-wrapper col xl4 l6 m6 s12">
-          <img
-            data-caption="{{ costume.personazas }}"
-            class="materialboxed responsive-img"
-            alt="{{ costume.personazas }}"
-            src="{{ site.baseurl }}{{ costume.img_root }}{{ costume.img }}"
-            loading="lazy"
-            decoding="async"
-          >
-          <h4>
-            <span class="cursor-default">
-              {{ costume.personazas }}
-            </span>
-          </h4>
-        </div>
+        {% assign has_page = costume.has_page | default: false %}
+
+        {% if costume.personazas and costume.img %}
+          <div class="personazai-wrapper col xl4 l6 m6 s12">
+            {% if has_page %}
+              <a href="{{ costume.url }}">
+                <img
+                  class="responsive-img"
+                  alt="{{ costume.personazas }}"
+                  src="{{ site.baseurl }}{{ costume.img_root }}{{ costume.img }}"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </a>
+            {% else %}
+              <img
+                data-caption="{{ costume.personazas }}"
+                class="materialboxed responsive-img"
+                alt="{{ costume.personazas }}"
+                src="{{ site.baseurl }}{{ costume.img_root }}{{ costume.img }}"
+                loading="lazy"
+                decoding="async"
+              >
+            {% endif %}
+
+            <h4>
+              {% if has_page %}
+                <a href="{{ costume.url }}" class="cursor-default">
+                  {{ costume.personazas }}
+                </a>
+              {% else %}
+                <span class="cursor-default">
+                  {{ costume.personazas }}
+                </span>
+              {% endif %}
+            </h4>
+          </div>
+        {% endif %}
       {% endfor %}
     </div>
   </div>

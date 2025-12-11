@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+{% include head.html %}
+
+<body class="rozine">
+  {% include navbar.html %}
+
+  <div class="container personazas-page">
+    <!-- Antraštė + atgal į visus personažus -->
+    <div class="row" style="margin-top: 32px;">
+      <div class="col s12 center-align">
+        <p style="margin-bottom: 8px;">
+          <a href="{{ site.baseurl }}/visi-personazai/" class="grey-text text-darken-1" style="font-size: 0.9rem;">
+            ← Visi personažai
+          </a>
+        </p>
+        <h1 class="section-header">
+          {{ page.personazas }}
+        </h1>
+      </div>
+    </div>
+
+    <!-- Pagrindinis turinys -->
+    <div class="row" style="margin-top: 16px; margin-bottom: 40px;">
+      <!-- FOTO -->
+      <div class="col m5 s12 center-align">
+        <img
+          src="{{ site.baseurl }}{{ page.img_root | default: '/img/personazai/' }}{{ page.img }}"
+          alt="{{ page.personazas }}"
+          class="responsive-img z-depth-2"
+          loading="lazy"
+          decoding="async"
+          style="border-radius: 12px;"
+        >
+      </div>
+
+            <!-- APRAŠYMAS + CTA -->
+      <div class="col m7 s12">
+        <div class="section" style="padding-top: 0;">
+
+          <!-- VISA TEKSTO TIPOGRAFIJA KONTROLIUOJAMA ČIA -->
+          <div
+            class="personazas-text"
+            style="font-family: 'Roboto', sans-serif; font-size: 1.0rem; line-height: 1.6;"
+          >
+            <div class="personazas-content" style="margin-top: 8px;">
+              {{ content }}
+            </div>
+          </div>
+
+
+          <!-- CTA zona -->
+          <div class="section center-align" style="margin-top: 24px; padding-top: 0;">
+          <!-- Messenger CTA -->
+          <a
+            href="{{ site.messenger_url }}"
+            class="btn-large waves-effect waves-light dp-btn"
+            target="_blank"
+            rel="noopener"
+          >
+            Susisiekti per Messenger →
+          </a>
+
+          <!-- ARBA separatorius -->
+          <div style="margin: 10px 0 6px 0; font-size: 0.85rem; color: #666;">
+            arba
+          </div>
+
+          <!-- Skambinti CTA -->
+          <div>
+            <a
+              href="tel:{{ site.contact_phone_raw }}"
+              class="btn-flat waves-effect"
+              style="font-weight: 500;"
+            >
+              ☎ Skambinti {{ site.contact_phone_display }}
+            </a>
+          </div>
+        </div>
+
+          <p class="grey-text text-darken-1" style="margin-top: 8px; font-size: 0.95rem; text-align: center;">
+            Dirbame Vilniuje ir Kaune, bet atvykstame ir į kitus Lietuvos miestus.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include kontaktai.html %}
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="{{ "/js/bin/materialize.js" | prepend: site.baseurl }}"></script>
+  <script type="text/javascript" src="{{ "/js/bin/main.js" | prepend: site.baseurl }}"></script>
+</body>
+</html>
