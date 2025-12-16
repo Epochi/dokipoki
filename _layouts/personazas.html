@@ -11,10 +11,15 @@
     <div class="row" style="margin-top: 32px;">
       <div class="col s12 center-align">
         <p style="margin-bottom: 8px;">
-          <a href="{{ site.baseurl }}/visi-personazai/" class="grey-text text-darken-1" style="font-size: 0.9rem;">
+          <a
+            href="{{ site.baseurl }}/visi-personazai/"
+            class="grey-text text-darken-1 kg-font kg-font--small"
+          >
             ← Visi personažai
           </a>
         </p>
+
+        <!-- H1 – Amatic SC (per section-header) -->
         <h1 class="section-header">
           {{ page.personazas }}
         </h1>
@@ -35,53 +40,51 @@
         >
       </div>
 
-            <!-- APRAŠYMAS + CTA -->
+      <!-- APRAŠYMAS + CTA -->
       <div class="col m7 s12">
         <div class="section" style="padding-top: 0;">
 
-          <!-- VISA TEKSTO TIPOGRAFIJA KONTROLIUOJAMA ČIA -->
-          <div
-            class="personazas-text"
-            style="font-family: 'Roboto', sans-serif; font-size: 1.0rem; line-height: 1.6;"
-          >
+          <!-- TURINYS -->
+          <div class="personazas-text kg-font kg-font--normal" style="line-height: 1.6;">
             <div class="personazas-content" style="margin-top: 8px;">
               {{ content }}
             </div>
           </div>
 
-
           <!-- CTA zona -->
           <div class="section center-align" style="margin-top: 24px; padding-top: 0;">
-          <!-- Messenger CTA -->
-          <a
-            href="{{ site.messenger_url }}"
-            class="btn-large waves-effect waves-light dp-btn"
-            target="_blank"
-            rel="noopener"
-          >
-            Susisiekti per Messenger →
-          </a>
 
-          <!-- ARBA separatorius -->
-          <div style="margin: 10px 0 6px 0; font-size: 0.85rem; color: #666;">
-            arba
-          </div>
-
-          <!-- Skambinti CTA -->
-          <div>
+            <!-- Messenger CTA – Amatic SC -->
             <a
-              href="tel:{{ site.contact_phone_raw }}"
-              class="btn-flat waves-effect"
-              style="font-weight: 500;"
+              href="{{ site.messenger_url }}"
+              class="btn-large waves-effect waves-light dp-btn section-header"
+              target="_blank"
+              rel="noopener"
             >
-              ☎ Skambinti {{ site.contact_phone_display }}
+              Susisiekti per Messenger →
             </a>
-          </div>
-        </div>
 
-          <p class="grey-text text-darken-1" style="margin-top: 8px; font-size: 0.95rem; text-align: center;">
+            <!-- ARBA separatorius – KG -->
+            <div class="kg-font kg-font--small grey-text" style="margin: 10px 0 6px 0;">
+              arba
+            </div>
+
+            <!-- Skambinti CTA – Amatic SC -->
+            <div>
+              <a
+                href="tel:{{ site.contact_phone_raw }}"
+                class="btn-flat waves-effect section-header"
+              >
+                Skambinti {{ site.contact_phone_display }}
+              </a>
+            </div>
+          </div>
+
+          <!-- Lokacija – KG -->
+          <p class="grey-text text-darken-1 kg-font kg-font--normal center-align" style="margin-top: 8px;">
             Dirbame Vilniuje ir Kaune, bet atvykstame ir į kitus Lietuvos miestus.
           </p>
+
         </div>
       </div>
     </div>
@@ -89,8 +92,8 @@
 
   {% include kontaktai.html %}
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="{{ "/js/bin/materialize.js" | prepend: site.baseurl }}"></script>
-  <script type="text/javascript" src="{{ "/js/bin/main.js" | prepend: site.baseurl }}"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{{ "/js/bin/materialize.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/js/bin/main.js" | prepend: site.baseurl }}"></script>
 </body>
 </html>
