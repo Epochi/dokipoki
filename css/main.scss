@@ -3,65 +3,128 @@
 
 @charset "utf-8";
 
+/* ================================
+   IMPORTAI
+   ================================ */
 @import "fonts";
 @import "materialize";
 @import "styles.scss";
+
+/* ================================
+   GLOBAL UTILITIES
+   ================================ */
 
 .hidden-gallery {
   display: none;
 }
 
-/* Personazų pavadinimams – rodom hand-pointer, nes tai nuoroda */
-.personazai h4 a {
-  cursor: pointer !important;
+/* KG Kindergarden – body / UI tekstams */
+.kg-font {
+  font-family: 'KG Kindergarden', sans-serif !important;
+  letter-spacing: 0.2px;
 }
 
-/* GLOBAL DOKIPOKI BUTTON STYLE*/
+.kg-font--small   { font-size: 0.95rem; }
+.kg-font--normal  { font-size: 1rem; }
+.kg-font--large   { font-size: 1.05rem; }
+
+/* ================================
+   HEADINGS – AMATIC SC
+   ================================ */
+
+.section-header {
+  font-family: 'Amatic SC', cursive !important;
+  letter-spacing: 1px;
+}
+
+/* ================================
+   BUTTONS
+   ================================ */
+
+/* Global DokiPoki button base */
 .dp-btn {
   background-color: #f4b0b8 !important;
   color: #ffffff !important;
   border-radius: 8px !important;
   text-transform: none !important;
+
+  /* Default font (UI) */
+  font-family: 'KG Kindergarden', sans-serif;
+  letter-spacing: 0.2px;
+  font-weight: 500 !important;
 }
 
-/* Mobile: plonesni mygtukai visiems .btn-large.dp-btn,
-   išlaikant tą patį šriftą ir horizontalų padding */
-@media only screen and (max-width: 600px) {
-  .btn-large.dp-btn {
-    height: 44px !important;      /* mažiau nei default ~54px */
-    line-height: 44px !important; /* išlaiko vertikalų centravimą */
-  }
+/* CTA su Amatic (Messenger, Skambinti) */
+.dp-btn.section-header,
+.btn-flat.section-header {
+  font-family: 'Amatic SC', cursive !important;
+  letter-spacing: 1px;
+  text-transform: none;
 }
-/* Visi personažai – tvarkingas flex išdėstymas, be keistų tarpų */
+
+/* CTA dydžiai */
+.dp-btn.section-header {
+  font-size: 1.6rem;
+}
+
+.btn-flat.section-header {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+/* Hover / focus – neleidžiam Materialize perrašyti */
+.dp-btn:hover,
+.dp-btn:focus {
+  background-color: #f4b0b8 !important;
+  color: #ffffff !important;
+}
+
+/* ================================
+   PERSONAŽŲ GRID
+   ================================ */
+
+/* Rodyklė ant personažų pavadinimų */
+.personazai h4 a {
+  cursor: pointer !important;
+}
+
+/* Visi personažai – flex layout */
 #VisiPersonazai {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
 }
 
-/* Atjungiame Materialize float’ą ir nustatom flex pločius */
+/* Kortelės wrapper */
 #VisiPersonazai .personazai-wrapper {
-  float: none;              /* perimam kontrolę iš grid’o */
+  float: none;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
-/* Desktop: 3 stulpeliai */
+/* Desktop – 3 stulpeliai */
 @media only screen and (min-width: 993px) {
   #VisiPersonazai .personazai-wrapper {
     width: 33.3333%;
   }
 }
 
-/* Tablet / mažesni ekranai: 2 stulpeliai */
+/* Tablet – 2 stulpeliai */
 @media only screen and (min-width: 601px) and (max-width: 992px) {
   #VisiPersonazai .personazai-wrapper {
     width: 50%;
   }
 }
 
-/* Mobile: 1 stulpelis – kaip ir buvo */
+/* Mobile – 1 stulpelis + plonesni CTA */
 @media only screen and (max-width: 600px) {
   #VisiPersonazai .personazai-wrapper {
     width: 100%;
+  }
+
+  .btn-large.dp-btn {
+    height: 44px !important;
+    line-height: 44px !important;
   }
 }
