@@ -4,26 +4,60 @@
       <div class="grid">
         <div class="grid-sizer"></div>
 
-        {% assign gallery_images = site.static_files | where_exp: "image", "image.path contains 'gallery'" %}
+        {%- assign top_images = site.static_files | where_exp: "img", "img.path contains '/gallery/top/'" -%}
+        {%- assign all_images = site.static_files | where_exp: "img", "img.path contains '/gallery/'" -%}
 
-        {% for image in gallery_images %}
-          <div class="grid-item {% if forloop.index > 6 %}hidden-gallery{% endif %}">
+        {%- comment -%}
+        1) TOP rodom iškart (pažymim data-gallery="top", kad JS galėtų 100% tiksliai slėpti tik ne-top)
+        {%- endcomment -%}
+        {%- for image in top_images -%}
+          {%- assign alt_text = image.name
+            | split: '.'
+            | first
+            | replace: '-', ' '
+            | replace: '_', ' '
+          -%}
+          <div class="grid-item" data-gallery="top">
             <img
+              class="gallery-img"
               src="{{ site.baseurl }}{{ image.path }}"
-              alt="{{ image.name | replace: '-', ' ' | replace: '_', ' ' }}"
+              alt="{{ alt_text }}"
               loading="lazy"
-            />
+              decoding="async"
+            >
           </div>
-        {% endfor %}
+        {%- endfor -%}
+
+        {%- comment -%}
+        2) Likusios /gallery nuotraukos (išskyrus /gallery/top/) – hidden + deferred
+        {%- endcomment -%}
+        {%- for image in all_images -%}
+          {%- unless image.path contains '/gallery/top/' -%}
+            {%- assign alt_text = image.name
+              | split: '.'
+              | first
+              | replace: '-', ' '
+              | replace: '_', ' '
+            -%}
+            <div class="grid-item hidden-gallery" data-gallery="rest">
+              <img
+                class="gallery-img"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                data-src="{{ site.baseurl }}{{ image.path }}"
+                alt="{{ alt_text }}"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+          {%- endunless -%}
+        {%- endfor -%}
       </div>
 
-      <!-- MYGTUKAS -->
       <div class="center-align" style="margin-top: 20px;">
         <a id="show-more-gallery" class="btn waves-effect waves-light rausva">
           Rodyti daugiau
         </a>
       </div>
-
     </div>
   </div>
 </div>

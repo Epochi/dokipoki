@@ -2,43 +2,41 @@ $(document).ready(function () {
   // =========================
   // MOBILE MENIU (ATSIDARO IŠ DEŠINĖS)
   // =========================
-  $(".button-collapse").sideNav({
-    edge: "right",      // meniu slankioja iš dešinės
-    closeOnClick: true, // užsidaro paspaudus ant nuorodos
-    draggable: true
-  });
+  if ($.fn.sideNav) {
+    $(".button-collapse").sideNav({
+      edge: "right",
+      closeOnClick: true,
+      draggable: true
+    });
+  }
 
   // =========================
   // SCROLLSPY
   // =========================
-  $(".scrollspy").scrollSpy();
+  if ($.fn.scrollSpy) {
+    $(".scrollspy").scrollSpy();
+  }
 
   // =========================
   // NAVBAR SHADOW ON SCROLL
   // =========================
-  $(window).scroll(function () {
-    if (document.body.scrollTop === 0 && document.documentElement.scrollTop === 0) {
-      $("#nav").addClass("z-depth-0");
-    } else {
-      $("#nav").removeClass("z-depth-0");
-    }
+  $(window).on("scroll", function () {
+    var atTop =
+      document.body.scrollTop === 0 &&
+      document.documentElement.scrollTop === 0;
+
+    $("#nav").toggleClass("z-depth-0", atTop);
   });
 
   // =========================
-  // GALERIJOS MATERIALBOX CLICK FIX
-  // =========================
-  $(".gallery-wrapper .materialboxed").click(function (event) {
-    event.stopImmediatePropagation();
-    event.stopPropagation();
-    return;
-  });
-
-  // =========================
-  // MASONRY INIT (saugiai)
+  // GALERIJA: MASONRY INIT (SAUGIAI)
   // =========================
   var $grid = $(".grid");
+  var hasGrid = $grid.length > 0;
+  var hasMasonry = hasGrid && !!$.fn.masonry;
+  var hasImagesLoaded = hasGrid && typeof $grid.imagesLoaded === "function";
 
-  if ($grid.length && $.fn.masonry) {
+  if (hasMasonry) {
     $grid.masonry({
       itemSelector: ".grid-item",
       percentPosition: true,
@@ -46,63 +44,90 @@ $(document).ready(function () {
     });
   }
 
-  // MASONRY LAYOUT PO KIEKVIENOS FOTO UŽKROVIMO
-  if ($grid.length && typeof $grid.imagesLoaded === "function") {
-    $grid.imagesLoaded().progress(function () {
-      if ($grid.data("masonry")) {
-        $grid.masonry("layout");
-      }
-    });
+  function layoutMasonry() {
+    if (hasMasonry && $grid.data("masonry")) {
+      $grid.masonry("layout");
+    }
+  }
+
+  function layoutAfterImages($container) {
+    if (!$container || !$container.length) return;
+
+    if (hasImagesLoaded) {
+      $container.imagesLoaded().always(function () {
+        layoutMasonry();
+      });
+    } else {
+      setTimeout(layoutMasonry, 200);
+      setTimeout(layoutMasonry, 600);
+      setTimeout(layoutMasonry, 1200);
+    }
   }
 
   // =========================
-  // GALERIJA: RODYTI DAUGIAU / MAŽIAU
+  // GALERIJA: TOP + RODYTI DAUGIAU / MAŽIAU (100% be heuristikų)
+  // Reikalavimas HTML'e:
+  // - TOP: <div class="grid-item" data-gallery="top">
+  // - REST: <div class="grid-item hidden-gallery" data-gallery="rest"> su <img data-src="...">
   // =========================
   var $btn = $("#show-more-gallery");
 
-  if ($btn.length) {
+  if ($btn.length && hasGrid) {
     var expanded = false;
-    var $items = $grid.length ? $grid.find(".grid-item") : $(".grid-item");
 
-    // pradinė būsena – rodom tik pirmas 6
-    $items.each(function (index) {
-      if (index >= 6) {
-        $(this).addClass("hidden-gallery");
-      }
-    });
+    var $topItems = $grid.find('.grid-item[data-gallery="top"]');
+    var $restItems = $grid.find('.grid-item[data-gallery="rest"]');
+
+    // Startas: top matomi, rest paslėpti (jei HTML jau taip padarė – nieko blogo)
+    $topItems.removeClass("hidden-gallery");
+    $restItems.addClass("hidden-gallery");
+
+    function loadDeferredImages($scope) {
+      var $root = $scope && $scope.length ? $scope : $grid;
+      var $deferredImgs = $root.find("img[data-src]");
+      if (!$deferredImgs.length) return;
+
+      $deferredImgs.each(function () {
+        var $img = $(this);
+        var realSrc = $img.attr("data-src");
+        if (!realSrc) return;
+
+        $img.attr("src", realSrc);
+        $img.removeAttr("data-src");
+      });
+    }
 
     $btn.on("click", function (e) {
       e.preventDefault();
 
       if (!expanded) {
-        // RODYTI DAUGIAU – parodyti visas
-        $items.removeClass("hidden-gallery");
+        // RODYTI DAUGIAU: parodom rest + užkraunam tik dabar
+        $restItems.removeClass("hidden-gallery");
+        loadDeferredImages($restItems);
+
         expanded = true;
         $btn.text("Rodyti mažiau");
+
+        layoutAfterImages($grid);
+        layoutMasonry();
       } else {
-        // RODYTI MAŽIAU – palikti tik pirmas 6
-        $items.each(function (index) {
-          if (index >= 6) {
-            $(this).addClass("hidden-gallery");
-          }
-        });
+        // RODYTI MAŽIAU: slepiam TIK rest, top paliekam
+        $restItems.addClass("hidden-gallery");
+        $topItems.removeClass("hidden-gallery");
+
         expanded = false;
         $btn.text("Rodyti daugiau");
 
-        // Scrollinam atgal prie galerijos viršaus
+        layoutMasonry();
+
         var $gal = $("#Galerija");
         if ($gal.length) {
-          $("html, body").animate(
-            { scrollTop: $gal.offset().top - 80 },
-            400
-          );
+          $("html, body").animate({ scrollTop: $gal.offset().top - 80 }, 400);
         }
       }
-
-      // PERLAYOUTINAM MASONRY, jei jis aktyvus
-      if ($grid.length && $grid.data("masonry")) {
-        $grid.masonry("layout");
-      }
     });
+
+    // Pirmas layout po pradinio įkrovimo (top nuotraukoms)
+    layoutAfterImages($grid);
   }
 });
