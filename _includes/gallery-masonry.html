@@ -5,7 +5,7 @@
         <div class="grid-sizer"></div>
 
         {%- comment -%}
-        TOP: /gallery/top/ (rodyti iškart)
+        TOP: /gallery/top/ (rodyti iškart) – BE lazy, kad Masonry nesusimaišytų
         {%- endcomment -%}
         {%- for image in site.static_files -%}
           {%- if image.path contains '/gallery/top/' and image.extname != '.webp' -%}
@@ -19,10 +19,9 @@
                   <source type="image/webp" srcset="{{ site.baseurl }}{{ webp_path }}">
                 {%- endif -%}
                 <img
-                  class="gallery-img materialboxed"
+                  class="gallery-img"
                   src="{{ site.baseurl }}{{ image.path }}"
                   alt="{{ alt_text }}"
-                  loading="lazy"
                   decoding="async"
                 >
               </picture>
@@ -31,7 +30,7 @@
         {%- endfor -%}
 
         {%- comment -%}
-        REST: /gallery/ (kas ne /top/) – hidden + deferred
+        REST: /gallery/ (kas ne /top/) – hidden + deferred + lazy
         {%- endcomment -%}
         {%- for image in site.static_files -%}
           {%- if image.path contains '/gallery/' and image.extname != '.webp' -%}
@@ -50,7 +49,7 @@
                     >
                   {%- endif -%}
                   <img
-                    class="gallery-img materialboxed"
+                    class="gallery-img"
                     src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
                     data-src="{{ site.baseurl }}{{ image.path }}"
                     alt="{{ alt_text }}"
@@ -71,3 +70,18 @@
     </div>
   </div>
 </div>
+
+<style>
+  /* Stabilus vaizdų renderis Masonry */
+  #Galerija .gallery-img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Visiškai išjungiam interakciją ant galerijos nuotraukų */
+  #Galerija .gallery-img {
+    pointer-events: none;
+    cursor: default !important;
+  }
+</style>

@@ -25,13 +25,6 @@ $(document).ready(function () {
     }
   });
 
-  // Prevent materialboxed click from re-triggering Masonry / other handlers
-  $(".gallery-wrapper .materialboxed").on("click", function (event) {
-    event.stopImmediatePropagation();
-    event.stopPropagation();
-    return;
-  });
-
   // Init Masonry
   var $grid = $(".grid").masonry({
     itemSelector: ".grid-item",
@@ -39,18 +32,32 @@ $(document).ready(function () {
     columnWidth: ".grid-sizer"
   });
 
-  // Layout after images load
+  function layoutMasonry() {
+    $grid.masonry("reloadItems");
+    $grid.masonry("layout");
+  }
+
+  // Layout after images load (TOP images load immediately)
   if ($.fn.imagesLoaded) {
     $grid.imagesLoaded().progress(function () {
-      $grid.masonry("layout");
+      layoutMasonry();
+    });
+    $grid.imagesLoaded().always(function () {
+      layoutMasonry();
     });
   }
 
-  function initMaterialbox() {
-    if ($.fn.materialbox) {
-      $(".materialboxed").materialbox();
-    }
-  }
+  // Extra safety: after full window load (hard refresh randomness fix)
+  $(window).on("load", function () {
+    layoutMasonry();
+    setTimeout(layoutMasonry, 150);
+    setTimeout(layoutMasonry, 400);
+  });
+
+  // Also relayout on resize/orientation changes
+  $(window).on("resize orientationchange", function () {
+    setTimeout(layoutMasonry, 80);
+  });
 
   function loadDeferredInVisibleItems() {
     // Load deferred JPG/PNG
@@ -77,18 +84,14 @@ $(document).ready(function () {
   function reloadAndLayout() {
     loadDeferredInVisibleItems();
 
-    // Wait a bit for browser to start fetching, then layout
+    // wait for browser to start fetching, then layout again
     setTimeout(function () {
       if ($.fn.imagesLoaded) {
         $grid.imagesLoaded(function () {
-          $grid.masonry("reloadItems");
-          $grid.masonry("layout");
-          initMaterialbox();
+          layoutMasonry();
         });
       } else {
-        $grid.masonry("reloadItems");
-        $grid.masonry("layout");
-        initMaterialbox();
+        layoutMasonry();
       }
     }, 50);
   }
@@ -101,13 +104,11 @@ $(document).ready(function () {
     var $restItems = $('.grid-item[data-gallery="rest"]');
 
     if (!expanded) {
-      // Expand
       $restItems.removeClass("hidden-gallery");
       expanded = true;
       $btn.text("Rodyti mažiau");
       reloadAndLayout();
     } else {
-      // Collapse
       $restItems.addClass("hidden-gallery");
       expanded = false;
       $btn.text("Rodyti daugiau");
@@ -119,7 +120,4 @@ $(document).ready(function () {
       }
     }
   });
-
-  // Init once
-  initMaterialbox();
 });
