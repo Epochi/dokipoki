@@ -4,59 +4,69 @@
       <div class="grid">
         <div class="grid-sizer"></div>
 
-        {%- assign top_images = site.static_files | where_exp: "img", "img.path contains '/gallery/top/'" -%}
-        {%- assign all_images = site.static_files | where_exp: "img", "img.path contains '/gallery/'" -%}
-
         {%- comment -%}
-        1) TOP rodom iškart (pažymim data-gallery="top", kad JS galėtų 100% tiksliai slėpti tik ne-top)
+        TOP: /gallery/top/ (rodyti iškart)
         {%- endcomment -%}
-        {%- for image in top_images -%}
-          {%- assign alt_text = image.name
-            | split: '.'
-            | first
-            | replace: '-', ' '
-            | replace: '_', ' '
-          -%}
-          <div class="grid-item" data-gallery="top">
-            <img
-              class="gallery-img"
-              src="{{ site.baseurl }}{{ image.path }}"
-              alt="{{ alt_text }}"
-              loading="lazy"
-              decoding="async"
-            >
-          </div>
-        {%- endfor -%}
+        {%- for image in site.static_files -%}
+          {%- if image.path contains '/gallery/top/' and image.extname != '.webp' -%}
+            {%- assign alt_text = image.name | split: '.' | first | replace: '-', ' ' | replace: '_', ' ' -%}
+            {%- assign webp_path = image.path | replace: image.extname, '.webp' -%}
+            {%- assign has_webp = site.static_files | where: "path", webp_path | size -%}
 
-        {%- comment -%}
-        2) Likusios /gallery nuotraukos (išskyrus /gallery/top/) – hidden + deferred
-        {%- endcomment -%}
-        {%- for image in all_images -%}
-          {%- unless image.path contains '/gallery/top/' -%}
-            {%- assign alt_text = image.name
-              | split: '.'
-              | first
-              | replace: '-', ' '
-              | replace: '_', ' '
-            -%}
-            <div class="grid-item hidden-gallery" data-gallery="rest">
-              <img
-                class="gallery-img"
-                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                data-src="{{ site.baseurl }}{{ image.path }}"
-                alt="{{ alt_text }}"
-                loading="lazy"
-                decoding="async"
-              >
+            <div class="grid-item" data-gallery="top">
+              <picture>
+                {%- if has_webp > 0 -%}
+                  <source type="image/webp" srcset="{{ site.baseurl }}{{ webp_path }}">
+                {%- endif -%}
+                <img
+                  class="gallery-img materialboxed"
+                  src="{{ site.baseurl }}{{ image.path }}"
+                  alt="{{ alt_text }}"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </picture>
             </div>
-          {%- endunless -%}
+          {%- endif -%}
         {%- endfor -%}
+
+        {%- comment -%}
+        REST: /gallery/ (kas ne /top/) – hidden + deferred
+        {%- endcomment -%}
+        {%- for image in site.static_files -%}
+          {%- if image.path contains '/gallery/' and image.extname != '.webp' -%}
+            {%- unless image.path contains '/gallery/top/' -%}
+              {%- assign alt_text = image.name | split: '.' | first | replace: '-', ' ' | replace: '_', ' ' -%}
+              {%- assign webp_path = image.path | replace: image.extname, '.webp' -%}
+              {%- assign has_webp = site.static_files | where: "path", webp_path | size -%}
+
+              <div class="grid-item hidden-gallery" data-gallery="rest">
+                <picture>
+                  {%- if has_webp > 0 -%}
+                    <source
+                      type="image/webp"
+                      srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                      data-srcset="{{ site.baseurl }}{{ webp_path }}"
+                    >
+                  {%- endif -%}
+                  <img
+                    class="gallery-img materialboxed"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                    data-src="{{ site.baseurl }}{{ image.path }}"
+                    alt="{{ alt_text }}"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </picture>
+              </div>
+            {%- endunless -%}
+          {%- endif -%}
+        {%- endfor -%}
+
       </div>
 
       <div class="center-align" style="margin-top: 20px;">
-        <a id="show-more-gallery" class="btn waves-effect waves-light rausva">
-          Rodyti daugiau
-        </a>
+        <a id="show-more-gallery" class="btn waves-effect waves-light rausva">Rodyti daugiau</a>
       </div>
     </div>
   </div>

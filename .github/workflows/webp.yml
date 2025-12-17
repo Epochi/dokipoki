@@ -16,17 +16,30 @@ jobs:
       - name: Install cwebp
         run: sudo apt-get update && sudo apt-get install -y webp
 
-      - name: Generate WebP in gallery/
+      - name: Generate WebP in gallery (only if missing)
         run: |
-          find gallery -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | while read img; do
-            webp="${img%.*}.webp"
-            if [ ! -f "$webp" ]; then
-              cwebp -q 82 "$img" -o "$webp"
-            fi
-          done
+          set -e
+
+          # Generate .webp next to originals (only if webp doesn't exist)
+          find gallery -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) ! -iname "*.webp" -print0 \
+          | while IFS= read -r -d '' f; do
+              out="${f%.*}.webp"
+              if [ ! -f "$out" ]; then
+                cwebp -q 80 "$f" -o "$out"
+                echo "created $out"
+              else
+                echo "skip (exists) $out"
+              fi
+            done
 
       - name: Commit generated WebP
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: auto-generate webp for gallery"
-          file_pattern: "gallery/**/*.webp"
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add gallery/**/*.webp
+            git commit -m "chore: generate WebP for gallery"
+            git push
+          else
+            echo "No changes to commit."
+          fi

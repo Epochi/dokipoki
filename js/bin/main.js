@@ -1,7 +1,5 @@
 $(document).ready(function () {
-  // =========================
-  // MOBILE MENIU (ATSIDARO IŠ DEŠINĖS)
-  // =========================
+  // MOBILE MENIU
   if ($.fn.sideNav) {
     $(".button-collapse").sideNav({
       edge: "right",
@@ -10,124 +8,118 @@ $(document).ready(function () {
     });
   }
 
-  // =========================
   // SCROLLSPY
-  // =========================
   if ($.fn.scrollSpy) {
     $(".scrollspy").scrollSpy();
   }
 
-  // =========================
   // NAVBAR SHADOW ON SCROLL
-  // =========================
   $(window).on("scroll", function () {
-    var atTop =
+    if (
       document.body.scrollTop === 0 &&
-      document.documentElement.scrollTop === 0;
-
-    $("#nav").toggleClass("z-depth-0", atTop);
+      document.documentElement.scrollTop === 0
+    ) {
+      $("#nav").addClass("z-depth-0");
+    } else {
+      $("#nav").removeClass("z-depth-0");
+    }
   });
 
-  // =========================
-  // GALERIJA: MASONRY INIT (SAUGIAI)
-  // =========================
-  var $grid = $(".grid");
-  var hasGrid = $grid.length > 0;
-  var hasMasonry = hasGrid && !!$.fn.masonry;
-  var hasImagesLoaded = hasGrid && typeof $grid.imagesLoaded === "function";
+  // Prevent materialboxed click from re-triggering Masonry / other handlers
+  $(".gallery-wrapper .materialboxed").on("click", function (event) {
+    event.stopImmediatePropagation();
+    event.stopPropagation();
+    return;
+  });
 
-  if (hasMasonry) {
-    $grid.masonry({
-      itemSelector: ".grid-item",
-      percentPosition: true,
-      columnWidth: ".grid-sizer"
+  // Init Masonry
+  var $grid = $(".grid").masonry({
+    itemSelector: ".grid-item",
+    percentPosition: true,
+    columnWidth: ".grid-sizer"
+  });
+
+  // Layout after images load
+  if ($.fn.imagesLoaded) {
+    $grid.imagesLoaded().progress(function () {
+      $grid.masonry("layout");
     });
   }
 
-  function layoutMasonry() {
-    if (hasMasonry && $grid.data("masonry")) {
-      $grid.masonry("layout");
+  function initMaterialbox() {
+    if ($.fn.materialbox) {
+      $(".materialboxed").materialbox();
     }
   }
 
-  function layoutAfterImages($container) {
-    if (!$container || !$container.length) return;
-
-    if (hasImagesLoaded) {
-      $container.imagesLoaded().always(function () {
-        layoutMasonry();
-      });
-    } else {
-      setTimeout(layoutMasonry, 200);
-      setTimeout(layoutMasonry, 600);
-      setTimeout(layoutMasonry, 1200);
-    }
-  }
-
-  // =========================
-  // GALERIJA: TOP + RODYTI DAUGIAU / MAŽIAU (100% be heuristikų)
-  // Reikalavimas HTML'e:
-  // - TOP: <div class="grid-item" data-gallery="top">
-  // - REST: <div class="grid-item hidden-gallery" data-gallery="rest"> su <img data-src="...">
-  // =========================
-  var $btn = $("#show-more-gallery");
-
-  if ($btn.length && hasGrid) {
-    var expanded = false;
-
-    var $topItems = $grid.find('.grid-item[data-gallery="top"]');
-    var $restItems = $grid.find('.grid-item[data-gallery="rest"]');
-
-    // Startas: top matomi, rest paslėpti (jei HTML jau taip padarė – nieko blogo)
-    $topItems.removeClass("hidden-gallery");
-    $restItems.addClass("hidden-gallery");
-
-    function loadDeferredImages($scope) {
-      var $root = $scope && $scope.length ? $scope : $grid;
-      var $deferredImgs = $root.find("img[data-src]");
-      if (!$deferredImgs.length) return;
-
-      $deferredImgs.each(function () {
-        var $img = $(this);
-        var realSrc = $img.attr("data-src");
-        if (!realSrc) return;
-
-        $img.attr("src", realSrc);
+  function loadDeferredInVisibleItems() {
+    // Load deferred JPG/PNG
+    $(".grid-item:not(.hidden-gallery) img[data-src]").each(function () {
+      var $img = $(this);
+      var src = $img.attr("data-src");
+      if (src) {
+        $img.attr("src", src);
         $img.removeAttr("data-src");
-      });
-    }
-
-    $btn.on("click", function (e) {
-      e.preventDefault();
-
-      if (!expanded) {
-        // RODYTI DAUGIAU: parodom rest + užkraunam tik dabar
-        $restItems.removeClass("hidden-gallery");
-        loadDeferredImages($restItems);
-
-        expanded = true;
-        $btn.text("Rodyti mažiau");
-
-        layoutAfterImages($grid);
-        layoutMasonry();
-      } else {
-        // RODYTI MAŽIAU: slepiam TIK rest, top paliekam
-        $restItems.addClass("hidden-gallery");
-        $topItems.removeClass("hidden-gallery");
-
-        expanded = false;
-        $btn.text("Rodyti daugiau");
-
-        layoutMasonry();
-
-        var $gal = $("#Galerija");
-        if ($gal.length) {
-          $("html, body").animate({ scrollTop: $gal.offset().top - 80 }, 400);
-        }
       }
     });
 
-    // Pirmas layout po pradinio įkrovimo (top nuotraukoms)
-    layoutAfterImages($grid);
+    // Load deferred WEBP srcset
+    $(".grid-item:not(.hidden-gallery) source[data-srcset]").each(function () {
+      var $source = $(this);
+      var srcset = $source.attr("data-srcset");
+      if (srcset) {
+        $source.attr("srcset", srcset);
+        $source.removeAttr("data-srcset");
+      }
+    });
   }
+
+  function reloadAndLayout() {
+    loadDeferredInVisibleItems();
+
+    // Wait a bit for browser to start fetching, then layout
+    setTimeout(function () {
+      if ($.fn.imagesLoaded) {
+        $grid.imagesLoaded(function () {
+          $grid.masonry("reloadItems");
+          $grid.masonry("layout");
+          initMaterialbox();
+        });
+      } else {
+        $grid.masonry("reloadItems");
+        $grid.masonry("layout");
+        initMaterialbox();
+      }
+    }, 50);
+  }
+
+  // Show more / collapse
+  var expanded = false;
+
+  $("#show-more-gallery").on("click", function () {
+    var $btn = $(this);
+    var $restItems = $('.grid-item[data-gallery="rest"]');
+
+    if (!expanded) {
+      // Expand
+      $restItems.removeClass("hidden-gallery");
+      expanded = true;
+      $btn.text("Rodyti mažiau");
+      reloadAndLayout();
+    } else {
+      // Collapse
+      $restItems.addClass("hidden-gallery");
+      expanded = false;
+      $btn.text("Rodyti daugiau");
+      reloadAndLayout();
+
+      var $gal = $("#Galerija");
+      if ($gal.length) {
+        $("html, body").animate({ scrollTop: $gal.offset().top - 80 }, 400);
+      }
+    }
+  });
+
+  // Init once
+  initMaterialbox();
 });
