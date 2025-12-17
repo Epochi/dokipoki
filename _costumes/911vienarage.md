@@ -11,9 +11,9 @@ description: "Vienaragė – pastelinis, svajingas ir švelnus personažas, suku
 og_image: "/img/personazai/951vienarage.jpg.jpg"
 ---
 
-Vienaragė – tai personažas, kuris į vaikų šventę atneša švelnumo, spalvų ir tikros pasakos magijos. Ji pasirodo taip, lyg ateitų tiesiai iš svajonių šalies, kur viskas spindi, o kiekvienas vaikas yra ypatingas. Vienaragė padrąsina mažąsias princeses ir princus tikėti savimi, kurti, svajoti ir džiaugtis savo fantazijos galia.
+Vienaragė – tai personažas, kuris į vaikų šventę atneša švelnumo, spalvų ir tikros pasakos magijos. Ji pasirodo tarsi iš svajonių pasaulio, kuriame viskas šviesu, ramu ir kupina fantazijos. Vienaragė padrąsina vaikus tikėti savimi, drąsiai svajoti ir džiaugtis savo unikalumu.
 
-Programa apima minkštus žaidimus, spalvotas užduotis, lengvus šokio judesius ir veiklas, kurios leidžia vaikams pasijusti lyg pasakoje. Šias veiklas švelniai veda animatorė, gebanti perteikti vienaragės ramybę, fantaziją ir magišką atmosferą taip natūraliai, kad vaikai akimirksniu pasineria į stebuklingą nuotykį.
+Vienaragės programa vaikams paremta švelniomis, ramų džiaugsmą kuriančiomis veiklomis. Vaikai įsitraukia į minkštus žaidimus, spalvotas kūrybines užduotis, lengvus šokio judesius ir pasakiškas veiklas, kurios leidžia pasijusti lyg stebuklingoje istorijoje. Animatorė subtiliai veda programą, išlaikydama ramų tempą ir jaukią atmosferą, todėl vaikai jaučiasi saugiai ir atsipalaidavę.
 
-Kiekvienas susitikimas su Vienarage palieka šiltą emociją — vaikai išsineša ne tik šypsenas, bet ir mintį, kad kiekvieno viduje slypi mažas stebuklas. Tai programa, pripildanti šventę grožio, fantazijos ir ramios, jaukios magijos.
+Kiekvienas susitikimas su Vienarage palieka šiltą emociją – vaikai išsineša ne tik šypsenas, bet ir jausmą, kad kiekvieno viduje slypi mažas stebuklas. Tai programa, kuri puikiai tinka švelnioms, svajingoms vaikų šventėms, kuriose svarbi ramybė, fantazija ir pasakiška nuotaika.
 
