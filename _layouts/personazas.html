@@ -3,6 +3,37 @@
 
 {% include head.html %}
 
+{% if page.personazas %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "{{ page.personazas | escape }}",
+  "image": "https://dokipoki.lt{% if page.og_image %}{{ page.og_image }}{% else %}{{ page.img_root | default: '/img/personazai/' }}{{ page.img }}{% endif %}",
+  "description": "{% if page.description %}{{ page.description | strip_html | escape }}{% else %}{{ page.personazas | escape }} - vaikų švenčių personažas. Programa pritaikoma pagal jūsų poreikius.{% endif %}",
+  "brand": {
+    "@type": "Brand",
+    "name": "DokiPoki"
+  },
+  "category": [
+    "Vaikų švenčių personažas",
+    "Animatorius"
+  ],
+  "areaServed": [
+    { "@type": "City", "name": "Vilnius" },
+    { "@type": "City", "name": "Kaunas" },
+    { "@type": "Country", "name": "Lietuva" }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "url": "https://dokipoki.lt/#Kaina",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+{% endif %}
+
 <body class="rozine">
   {% include navbar.html %}
 
