@@ -5,9 +5,9 @@
 
   {%- comment -%}
   TITLE LOGIC:
-  1) page.seo_title — jei nustatyta puslapyje
+  1) page.seo_title
   2) page.title + site.title
-  3) tik site.title
+  3) site.title
   {%- endcomment -%}
   <title>
     {% if page.seo_title %}
@@ -37,7 +37,7 @@
   <meta name="description" content="{{ meta_description | strip }}"/>
 
   {%- comment -%}
-  Robots (optional per page)
+  Robots
   {%- endcomment -%}
   {% if page.noindex %}
     <meta name="robots" content="noindex, nofollow">
@@ -46,67 +46,170 @@
   {% endif %}
 
   {%- comment -%}
-  CANONICAL URL
+  Canonical
   {%- endcomment -%}
-  {% assign canonical_url = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
-  <link rel="canonical" href="{{ canonical_url }}"/>
+  {% assign canonical = page.canonical_url | default: page.url %}
+  <link rel="canonical" href="{{ canonical | absolute_url }}"/>
 
   {%- comment -%}
-  SOCIAL META — Open Graph
+  Open Graph
   {%- endcomment -%}
   <meta property="og:locale" content="lt_LT">
   <meta property="og:site_name" content="{{ site.title }}">
-  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
-  <meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% elsif page.layout == 'personazas' %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% elsif page.seo_title %}{{ page.seo_title }}{% elsif page.personazas %}{{ page.personazas }} | {{ site.title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{{ meta_description | strip }}">
-  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:url" content="{{ canonical | absolute_url }}">
 
   {%- comment -%}
-  OG / Twitter image:
-  1) page.og_image, jei yra
-  2) site.og_image iš _config.yml
-  3) fallback: /img/social/og-default.png
+  OG image
   {%- endcomment -%}
   {% assign og_image = page.og_image | default: site.og_image | default: '/img/social/og-default.png' %}
-  <meta property="og:image" content="{{ og_image | prepend: site.baseurl | prepend: site.url }}"/>
+  <meta property="og:image" content="{{ og_image | absolute_url }}"/>
 
   {%- comment -%}
-  TWITTER META
+  Twitter
   {%- endcomment -%}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% if page.twitter_title %}{{ page.twitter_title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:title" content="{% if page.twitter_title %}{{ page.twitter_title }}{% elsif page.seo_title %}{{ page.seo_title }}{% elsif page.personazas %}{{ page.personazas }} | {{ site.title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{{ meta_description | strip }}">
-  <meta name="twitter:image" content="{{ og_image | prepend: site.baseurl | prepend: site.url }}">
+  <meta name="twitter:image" content="{{ og_image | absolute_url }}">
 
   {%- comment -%}
-  Preload pagrindinių assetų
+  STRUCTURED DATA (JSON-LD)
+  1) Breadcrumb + Product for persona pages (layout: personazas)
+  2) ItemList for /visi-personazai/
   {%- endcomment -%}
-  <link rel="preload" href="{{ '/img/components/baloon_logo250hx255w.png' | prepend: site.baseurl }}" as="image">
-  <link rel="preload" href="{{ '/img/components/baloon-line.png' | prepend: site.baseurl }}" as="image">
+
+  {% if page.layout == "personazas" and page.personazas %}
+    {%- capture product_image -%}
+      {% if page.og_image %}
+        {{ page.og_image | absolute_url }}
+      {% else %}
+        {{ page.img_root | default: '/img/personazai/' | append: page.img | absolute_url }}
+      {% endif %}
+    {%- endcapture -%}
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "DokiPoki",
+          "item": "{{ '/' | absolute_url }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Personažai",
+          "item": "{{ '/visi-personazai/' | absolute_url }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "{{ page.personazas | escape }}",
+          "item": "{{ page.url | absolute_url }}"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "{{ page.personazas | escape }}",
+      "url": "{{ page.url | absolute_url }}",
+      "image": "{{ product_image | strip }}",
+      "description": "{% if page.description %}{{ page.description | strip_html | escape }}{% else %}{{ page.personazas | escape }} - vaikų švenčių personažas. Programa pritaikoma pagal jūsų poreikius.{% endif %}",
+      "brand": {
+        "@type": "Brand",
+        "name": "DokiPoki"
+      },
+      "category": [
+        "Vaikų švenčių personažas",
+        "Animatorius"
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "Vilnius" },
+        { "@type": "City", "name": "Kaunas" },
+        { "@type": "Country", "name": "Lietuva" }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "{{ '/#Kaina' | absolute_url }}",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+  {% endif %}
+
+  {% if page.url == "/visi-personazai/" or page.permalink == "/visi-personazai/" %}
+    {%- assign items = site.costumes | where_exp: "p", "p.has_page == true" -%}
+    {%- if items == empty -%}
+      {%- assign items = site.personazai | where_exp: "p", "p.has_page == true" -%}
+    {%- endif -%}
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "DokiPoki personažai",
+      "itemListElement": [
+        {% for p in items %}
+          {% capture img_path %}
+            {% if p.og_image %}
+              {{ p.og_image }}
+            {% else %}
+              {{ p.img_root | default: '/img/personazai/' }}{{ p.img }}
+            {% endif %}
+          {% endcapture %}
+          {
+            "@type": "ListItem",
+            "position": {{ forloop.index }},
+            "url": "{{ p.url | absolute_url }}",
+            "name": "{{ p.personazas | default: p.title | escape }}",
+            "image": "{{ img_path | strip | absolute_url }}"
+          }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+    </script>
+  {% endif %}
+
+  {%- comment -%}
+  Preload assets
+  {%- endcomment -%}
+  <link rel="preload" href="{{ '/img/components/baloon_logo250hx255w.png' | relative_url }}" as="image">
+  <link rel="preload" href="{{ '/img/components/baloon-line.png' | relative_url }}" as="image">
 
   <!-- Fonts -->
-  <link rel="preload" href="{{ '/fonts/kg-kindergarden/KGMissKindergarten.ttf' | prepend: site.baseurl }}" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="{{ '/fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-regular.woff2' | prepend: site.baseurl }}" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{{ '/fonts/kg-air/KGThrowMyHandsUpintheAir.ttf' | prepend: site.baseurl }}" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="{{ '/fonts/kg-kindergarden/KGMissKindergarten.ttf' | relative_url }}" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="{{ '/fonts/amatic-sc/amatic-sc-v9-latin_latin-ext-regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/fonts/kg-air/KGThrowMyHandsUpintheAir.ttf' | relative_url }}" as="font" type="font/ttf" crossorigin>
 
-  <!-- Assets -->
-  <link rel="preload" href="{{ '/css/main.css' | prepend: site.baseurl }}" as="style">
-  <link rel="preload" href="{{ '/js/bin/main.js' | prepend: site.baseurl }}" as="script">
-  <link rel="preload" href="{{ '/js/bin/materialize.js' | prepend: site.baseurl }}" as="script">
+  <!-- CSS & JS preload -->
+  <link rel="preload" href="{{ '/css/main.css' | relative_url }}" as="style">
+  <link rel="preload" href="{{ '/js/bin/main.js' | relative_url }}" as="script">
+  <link rel="preload" href="{{ '/js/bin/materialize.js' | relative_url }}" as="script">
 
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Main CSS -->
-  <link type="text/css" rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}" media="screen,projection">
+  <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}" media="screen,projection">
 
-  <!-- Google fonts with display=swap -->
+  <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/png" href="{{ '/img/favicon.png' | prepend: site.baseurl }}">
+  <link rel="shortcut icon" type="image/png" href="{{ '/img/favicon.png' | relative_url }}">
 
   <!-- Analytics -->
   {% include googleanalytics.html %}

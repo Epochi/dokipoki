@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="lt">
 
-<head>
-    {% include head.html %}
-</head>
+{% include head.html %}
 
 <body class="rozine">
 	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJQTVTV2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJQTVTV2"
+		        height="0"
+		        width="0"
+		        style="display:none;visibility:hidden"></iframe>
+	</noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
-    {% include navbar.html %}
+	{% include navbar.html %}
 
-    <main>
-        {% include subheader.html %}
-        {% include debeselis-divider.html %}
-        {% include paslaugos.html %}
+	<main>
+		{% include subheader.html %}
+		{% include debeselis-divider.html %}
+		{% include paslaugos.html %}
 
-        {% include divider.html %}
-        {% include ribbon-divider.html %}
+		{% include divider.html %}
+		{% include ribbon-divider.html %}
 
-        {% include divider.html %}
-        {% include personazai.html %}
-        {% include divider.html %}
+		{% include divider.html %}
+		{% include personazai.html %}
+		{% include divider.html %}
 
-        {% include ribbon-divider.html %}
-        {% include instagram-link.html %}
-        {% include debeselis-divider.html %}
-        {% include kaina.html %}
+		{% include ribbon-divider.html %}
+		{% include instagram-link.html %}
+		{% include debeselis-divider.html %}
+		{% include kaina.html %}
 
-        {% include debeselis-divider.html %}
-        
-        {% include divider.html %}
-        {% include gallery-masonry.html %}
-        {% include divider.html %}
+		{% include debeselis-divider.html %}
 
-        {% include kontaktai.html %}
-    </main>
+		{% include divider.html %}
+		{% include gallery-masonry.html %}
+		{% include divider.html %}
 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript" src="{{ "/js/bin/materialize.js" | prepend: site.baseurl }}"></script>
-	<script type="text/javascript" src="{{ "/js/masonry/masonry.min.js" | prepend: site.baseurl }}"></script>
-	<script type="text/javascript" src="{{ "/js/masonry/imagesloaded.min.js" | prepend: site.baseurl }}"></script>
-	<script type="text/javascript" src="{{ "/js/bin/main.js" | prepend: site.baseurl }}"></script>
+		{% include kontaktai.html %}
+	</main>
 
-	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="{{ '/js/bin/materialize.js' | relative_url }}"></script>
+	<script src="{{ '/js/masonry/masonry.min.js' | relative_url }}"></script>
+	<script src="{{ '/js/masonry/imagesloaded.min.js' | relative_url }}"></script>
+	<script src="{{ '/js/bin/main.js' | relative_url }}"></script>
+
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="https://player.vimeo.com/api/player.js"></script>
 </body>
-
 </html>
