@@ -7,14 +7,25 @@
 
   <div id="Kontaktai" class="row scrollspy section">
     <div class="services col s12 center-align">
+
       <h4>
-        <a class="email-link" href="mailto:{{ site.contact_email }}">
+        <a
+          class="email-link cta-btn"
+          href="mailto:{{ site.contact_email }}"
+          data-cta-scope="global"
+          data-cta-type="email"
+        >
           {{ site.contact_email }}
         </a>
       </h4>
 
       <h4>
-        <a class="phone-number" href="tel:{{ site.contact_phone_raw }}">
+        <a
+          class="phone-number cta-btn"
+          href="tel:{{ site.contact_phone_raw }}"
+          data-cta-scope="global"
+          data-cta-type="call"
+        >
           {{ site.contact_phone_display }}
         </a>
       </h4>
@@ -22,16 +33,31 @@
       <br>
 
       <h4>
-        <a class="facebook-link" target="_blank" href="{{ site.instagram_url }}">
+        <a
+          class="facebook-link cta-btn"
+          target="_blank"
+          rel="noopener"
+          href="{{ site.instagram_url }}"
+          data-cta-scope="global"
+          data-cta-type="instagram"
+        >
           Instagram
         </a>
       </h4>
 
       <h4>
-        <a class="facebook-link" target="_blank" href="{{ site.facebook_url }}">
+        <a
+          class="facebook-link cta-btn"
+          target="_blank"
+          rel="noopener"
+          href="{{ site.facebook_url }}"
+          data-cta-scope="global"
+          data-cta-type="facebook"
+        >
           Facebook
         </a>
       </h4>
+
     </div>
   </div>
 </div>
