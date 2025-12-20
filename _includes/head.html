@@ -77,8 +77,9 @@
 
   {%- comment -%}
   STRUCTURED DATA (JSON-LD)
-  1) Breadcrumb + Product for persona pages (layout: personazas)
-  2) ItemList for /visi-personazai/
+  1) Breadcrumb for persona pages (layout: personazas)
+  2) Product schema for persona pages (layout: personazas) WITH PRICE (100 EUR / hour from _data/pricing.yml)
+  3) ItemList for /visi-personazai/
   {%- endcomment -%}
 
   {% if page.layout == "personazas" and page.personazas %}
@@ -141,8 +142,11 @@
       "offers": {
         "@type": "Offer",
         "url": "{{ '/#Kaina' | absolute_url }}",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock"
+        "price": "{{ site.data.pricing.hour_price | default: 100 }}",
+        "priceCurrency": "{{ site.data.pricing.currency | default: 'EUR' }}",
+        "unitCode": "HUR",
+        "availability": "https://schema.org/InStock",
+        "description": "Kaina nurodyta už 1 valandą."
       }
     }
     </script>

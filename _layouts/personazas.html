@@ -6,27 +6,6 @@
 <body class="rozine">
   {% include navbar.html %}
 
-  <!-- Product schema (kaina 100 €/val iš vieno šaltinio: _data/pricing.yml) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "{{ page.personazas | escape }}",
-    "image": "{{ site.url }}{{ site.baseurl }}{{ page.img_root | default: '/img/personazai/' }}{{ page.img }}",
-    "description": "{{ page.description | default: page.excerpt | strip_html | strip_newlines | escape }}",
-    "brand": { "@type": "Brand", "name": "DokiPoki" },
-    "offers": {
-      "@type": "Offer",
-      "price": "{{ site.data.pricing.hour_price | default: 100 }}",
-      "priceCurrency": "{{ site.data.pricing.currency | default: 'EUR' }}",
-      "unitCode": "HUR",
-      "availability": "https://schema.org/InStock",
-      "url": "{{ site.url }}{{ page.url }}",
-      "description": "Kaina nurodyta už 1 valandą."
-    }
-  }
-  </script>
-
   <div class="container personazas-page">
     <!-- Antraštė + atgal į visus personažus -->
     <div class="row" style="margin-top: 32px;">
