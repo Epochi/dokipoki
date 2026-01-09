@@ -10,13 +10,13 @@
   3) site.title
   {%- endcomment -%}
   <title>
-    {% if page.seo_title %}
+    {%- if page.seo_title -%}
       {{ page.seo_title }}
-    {% elsif page.title %}
+    {%- elsif page.title -%}
       {{ page.title }} | {{ site.title }}
-    {% else %}
+    {%- else -%}
       {{ site.title }}
-    {% endif %}
+    {%- endif -%}
   </title>
 
   {%- comment -%}
@@ -24,47 +24,48 @@
   1) page.description
   2) page.excerpt
   3) site.description
+  (Always cleaned for meta tag)
   {%- endcomment -%}
-  {% capture meta_description %}
-    {% if page.description %}
-      {{ page.description }}
-    {% elsif page.excerpt %}
-      {{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}
-    {% else %}
-      {{ site.description }}
-    {% endif %}
-  {% endcapture %}
-  <meta name="description" content="{{ meta_description | strip }}"/>
+  {%- capture meta_description -%}
+    {%- if page.description -%}
+      {{ page.description | strip_html | strip_newlines | strip }}
+    {%- elsif page.excerpt -%}
+      {{ page.excerpt | strip_html | strip_newlines | truncate: 160 | strip }}
+    {%- else -%}
+      {{ site.description | strip_html | strip_newlines | strip }}
+    {%- endif -%}
+  {%- endcapture -%}
+  <meta name="description" content="{{ meta_description }}"/>
 
   {%- comment -%}
   Robots
   {%- endcomment -%}
-  {% if page.noindex %}
+  {%- if page.noindex -%}
     <meta name="robots" content="noindex, nofollow">
-  {% else %}
+  {%- else -%}
     <meta name="robots" content="index, follow">
-  {% endif %}
+  {%- endif -%}
 
   {%- comment -%}
   Canonical
   {%- endcomment -%}
-  {% assign canonical = page.canonical_url | default: page.url %}
+  {%- assign canonical = page.canonical_url | default: page.url -%}
   <link rel="canonical" href="{{ canonical | absolute_url }}"/>
+
+  {%- comment -%}
+  Social image (OG/Twitter)
+  {%- endcomment -%}
+  {%- assign og_image = page.og_image | default: site.og_image | default: '/img/social/og-default.png' -%}
 
   {%- comment -%}
   Open Graph
   {%- endcomment -%}
   <meta property="og:locale" content="lt_LT">
   <meta property="og:site_name" content="{{ site.title }}">
-  <meta property="og:type" content="{% if page.layout == 'post' %}article{% elsif page.layout == 'personazas' %}article{% else %}website{% endif %}">
+  <meta property="og:type" content="{% if page.layout == 'post' or page.layout == 'personazas' %}article{% else %}website{% endif %}">
   <meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% elsif page.seo_title %}{{ page.seo_title }}{% elsif page.personazas %}{{ page.personazas }} | {{ site.title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta property="og:description" content="{{ meta_description | strip }}">
+  <meta property="og:description" content="{{ meta_description }}">
   <meta property="og:url" content="{{ canonical | absolute_url }}">
-
-  {%- comment -%}
-  OG image
-  {%- endcomment -%}
-  {% assign og_image = page.og_image | default: site.og_image | default: '/img/social/og-default.png' %}
   <meta property="og:image" content="{{ og_image | absolute_url }}"/>
 
   {%- comment -%}
@@ -72,23 +73,22 @@
   {%- endcomment -%}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{% if page.twitter_title %}{{ page.twitter_title }}{% elsif page.seo_title %}{{ page.seo_title }}{% elsif page.personazas %}{{ page.personazas }} | {{ site.title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta name="twitter:description" content="{{ meta_description | strip }}">
+  <meta name="twitter:description" content="{{ meta_description }}">
   <meta name="twitter:image" content="{{ og_image | absolute_url }}">
 
   {%- comment -%}
   STRUCTURED DATA (JSON-LD)
-  1) Breadcrumb for persona pages (layout: personazas)
-  2) Product schema for persona pages (layout: personazas) WITH PRICE (100 EUR / hour from _data/pricing.yml)
-  3) ItemList for /visi-personazai/
+  1) Breadcrumb + Product schema for persona pages (layout: personazas)
+  2) ItemList for /visi-personazai/
   {%- endcomment -%}
 
-  {% if page.layout == "personazas" and page.personazas %}
+  {%- if page.layout == "personazas" and page.personazas -%}
     {%- capture product_image -%}
-      {% if page.og_image %}
+      {%- if page.og_image -%}
         {{ page.og_image | absolute_url }}
-      {% else %}
+      {%- else -%}
         {{ page.img_root | default: '/img/personazai/' | append: page.img | absolute_url }}
-      {% endif %}
+      {%- endif -%}
     {%- endcapture -%}
 
     <script type="application/ld+json">
@@ -125,7 +125,7 @@
       "name": "{{ page.personazas | escape }}",
       "url": "{{ page.url | absolute_url }}",
       "image": "{{ product_image | strip }}",
-      "description": "{% if page.description %}{{ page.description | strip_html | escape }}{% else %}{{ page.personazas | escape }} - vaikų švenčių personažas. Programa pritaikoma pagal jūsų poreikius.{% endif %}",
+      "description": "{% if page.description %}{{ page.description | strip_html | strip_newlines | escape }}{% else %}{{ page.personazas | escape }} - vaikų švenčių personažas. Programa pritaikoma pagal jūsų poreikius.{% endif %}",
       "brand": {
         "@type": "Brand",
         "name": "DokiPoki"
@@ -142,7 +142,7 @@
       "offers": {
         "@type": "Offer",
         "url": "{{ '/#Kaina' | absolute_url }}",
-        "price": "{{ site.data.pricing.hour_price | default: 100 }}",
+        "price": {{ site.data.pricing.hour_price | default: 100 | plus: 0 }},
         "priceCurrency": "{{ site.data.pricing.currency | default: 'EUR' }}",
         "unitCode": "HUR",
         "availability": "https://schema.org/InStock",
@@ -150,9 +150,9 @@
       }
     }
     </script>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.url == "/visi-personazai/" or page.permalink == "/visi-personazai/" %}
+  {%- if page.url == "/visi-personazai/" or page.permalink == "/visi-personazai/" -%}
     {%- assign items = site.costumes | where_exp: "p", "p.has_page == true" -%}
     {%- if items == empty -%}
       {%- assign items = site.personazai | where_exp: "p", "p.has_page == true" -%}
@@ -164,26 +164,26 @@
       "@type": "ItemList",
       "name": "DokiPoki personažai",
       "itemListElement": [
-        {% for p in items %}
-          {% capture img_path %}
-            {% if p.og_image %}
+        {%- for p in items -%}
+          {%- capture img_path -%}
+            {%- if p.og_image -%}
               {{ p.og_image }}
-            {% else %}
+            {%- else -%}
               {{ p.img_root | default: '/img/personazai/' }}{{ p.img }}
-            {% endif %}
-          {% endcapture %}
+            {%- endif -%}
+          {%- endcapture -%}
           {
             "@type": "ListItem",
             "position": {{ forloop.index }},
             "url": "{{ p.url | absolute_url }}",
             "name": "{{ p.personazas | default: p.title | escape }}",
             "image": "{{ img_path | strip | absolute_url }}"
-          }{% unless forloop.last %},{% endunless %}
-        {% endfor %}
+          }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
       ]
     }
     </script>
-  {% endif %}
+  {%- endif -%}
 
   {%- comment -%}
   Preload assets
