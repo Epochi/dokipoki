@@ -1,28 +1,15 @@
 <!DOCTYPE html>
 <html lang="lt">
-
 {% include head.html %}
 
 <body class="rozine">
   {% include navbar.html %}
 
   <div class="container personazas-page">
-    <!-- Antraštė + atgal į visus personažus -->
+    <!-- Antraštė -->
     <div class="row" style="margin-top: 32px;">
       <div class="col s12 center-align">
-        <p style="margin-bottom: 8px;">
-          <a
-            href="{{ site.baseurl }}/visi-personazai/"
-            class="grey-text text-darken-1 kg-font kg-font--small"
-          >
-            ← Visi personažai
-          </a>
-        </p>
-
-        <!-- H1 – Amatic SC (per section-header) -->
-        <h1 class="section-header">
-          {{ page.personazas }}
-        </h1>
+        <h1 class="section-header">{{ page.personazas }}</h1>
       </div>
     </div>
 
@@ -40,7 +27,7 @@
         >
       </div>
 
-      <!-- APRAŠYMAS + CTA -->
+      <!-- APRAŠYMAS + NAV + CTA -->
       <div class="col m7 s12">
         <div class="section" style="padding-top: 0;">
 
@@ -51,10 +38,65 @@
             </div>
           </div>
 
-          <!-- CTA zona -->
-          <div class="section center-align" style="margin-top: 24px; padding-top: 0;">
+          {% comment %}
+          Ciklinė personažų navigacija:
+          - jei nėra previous → šokam į paskutinį
+          - jei nėra next → šokam į pirmą
+          Rodom tik: Ankstesnis | Visi personažai | Sekantis
+          {% endcomment %}
 
-            <!-- Messenger CTA – persona -->
+          {% assign personas = site.costumes | where_exp: "p", "p.has_page == true" %}
+          {% assign total = personas | size %}
+
+          {% assign current_index = nil %}
+          {% for p in personas %}
+            {% if p.url == page.url %}
+              {% assign current_index = forloop.index0 %}
+            {% endif %}
+          {% endfor %}
+
+          {% if current_index != nil and total > 1 %}
+            {% assign prev_index = current_index | minus: 1 %}
+            {% assign next_index = current_index | plus: 1 %}
+
+            {% if prev_index < 0 %}
+              {% assign prev_index = total | minus: 1 %}
+            {% endif %}
+
+            {% if next_index >= total %}
+              {% assign next_index = 0 %}
+            {% endif %}
+
+            {% assign prev_persona = personas[prev_index] %}
+            {% assign next_persona = personas[next_index] %}
+
+            <!-- NAV: vienoje eilutėje, CTA šriftu, be ikonų -->
+            <div class="section center-align" style="margin-top: 22px; margin-bottom: 10px; padding-top: 0;">
+              <div
+                class="section-header"
+                style="white-space: nowrap; font-size: 1.1rem; line-height: 1.2;"
+              >
+                <span class="dp-nav-item">
+                  <a href="{{ prev_persona.url }}" class="dp-nav-link">← Ankstesnis</a>
+                </span>
+
+                <span class="dp-nav-sep">|</span>
+
+                <span class="dp-nav-item">
+                  <a href="{{ site.baseurl }}/personazai/" class="dp-nav-link">Visi personažai</a>
+                </span>
+
+                <span class="dp-nav-sep">|</span>
+
+                <span class="dp-nav-item">
+                  <a href="{{ next_persona.url }}" class="dp-nav-link">Sekantis →</a>
+                </span>
+              </div>
+            </div>
+          {% endif %}
+
+          <!-- CTA zona -->
+          <div class="section center-align" style="margin-top: 14px; padding-top: 0;">
             <a
               href="{{ site.messenger_url }}"
               class="btn-large waves-effect waves-light dp-btn section-header cta-btn"
@@ -67,12 +109,10 @@
               Susisiekti per Messenger →
             </a>
 
-            <!-- ARBA separatorius – KG -->
             <div class="kg-font kg-font--small grey-text" style="margin: 10px 0 6px 0;">
               arba
             </div>
 
-            <!-- Skambinti CTA – persona -->
             <div>
               <a
                 href="tel:{{ site.contact_phone_raw }}"
@@ -86,7 +126,7 @@
             </div>
           </div>
 
-          <!-- Lokacija – KG -->
+          <!-- Lokacija -->
           <p class="grey-text text-darken-1 kg-font kg-font--normal center-align" style="margin-top: 8px;">
             Dirbame Vilniuje ir Kaune, bet atvykstame ir į kitus Lietuvos miestus.
           </p>
@@ -97,6 +137,33 @@
   </div>
 
   {% include kontaktai.html %}
+
+  <!-- NAV stiliai: nuimam mėlyną spalvą, underline ir VISAS Materialize ikonas/pseudo -->
+  <style>
+    .personazas-page .dp-nav-link {
+      color: #000 !important;
+      text-decoration: none !important;
+      display: inline-block;
+    }
+    .personazas-page .dp-nav-link:hover,
+    .personazas-page .dp-nav-link:focus {
+      color: #000 !important;
+      text-decoration: none !important;
+      outline: none;
+    }
+
+    /* jei kažkur globaliai prideda pseudo/ikonas linkams */
+    .personazas-page .dp-nav-link::before,
+    .personazas-page .dp-nav-link::after {
+      content: none !important;
+      display: none !important;
+    }
+
+    .personazas-page .dp-nav-sep {
+      margin: 0 8px;
+      color: #000;
+    }
+  </style>
 
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="{{ "/js/bin/materialize.js" | prepend: site.baseurl }}"></script>

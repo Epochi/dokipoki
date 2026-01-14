@@ -79,8 +79,22 @@
   {%- comment -%}
   STRUCTURED DATA (JSON-LD)
   1) Breadcrumb + Product schema for persona pages (layout: personazas)
-  2) ItemList for /visi-personazai/
+  2) ItemList for /personazai/ and legacy /visi-personazai/
+  3) Service schema for /personazai/ (hub)
   {%- endcomment -%}
+
+  {%- comment -%}
+  HUB flags (A variant): /personazai/ is the main hub
+  {%- endcomment -%}
+  {%- assign is_personazai_hub = false -%}
+  {%- if page.url == "/personazai/" or page.permalink == "/personazai/" -%}
+    {%- assign is_personazai_hub = true -%}
+  {%- endif -%}
+
+  {%- assign is_visi_personazai = false -%}
+  {%- if page.url == "/visi-personazai/" or page.permalink == "/visi-personazai/" -%}
+    {%- assign is_visi_personazai = true -%}
+  {%- endif -%}
 
   {%- if page.layout == "personazas" and page.personazas -%}
     {%- capture product_image -%}
@@ -106,7 +120,7 @@
           "@type": "ListItem",
           "position": 2,
           "name": "Personažai",
-          "item": "{{ '/visi-personazai/' | absolute_url }}"
+          "item": "{{ '/personazai/' | absolute_url }}"
         },
         {
           "@type": "ListItem",
@@ -152,7 +166,32 @@
     </script>
   {%- endif -%}
 
-  {%- if page.url == "/visi-personazai/" or page.permalink == "/visi-personazai/" -%}
+  {%- if is_personazai_hub -%}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Personažai vaikų šventėms",
+      "serviceType": "Animatorių personažai vaikų gimtadieniams",
+      "provider": {
+        "@type": "Organization",
+        "name": "DokiPoki",
+        "url": "{{ '/' | absolute_url }}"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Lithuania"
+      },
+      "audience": {
+        "@type": "PeopleAudience",
+        "suggestedMinAge": "2",
+        "suggestedMaxAge": "12"
+      }
+    }
+    </script>
+  {%- endif -%}
+
+  {%- if is_personazai_hub or is_visi_personazai -%}
     {%- assign items = site.costumes | where_exp: "p", "p.has_page == true" -%}
     {%- if items == empty -%}
       {%- assign items = site.personazai | where_exp: "p", "p.has_page == true" -%}

@@ -1,0 +1,86 @@
+---
+title: "Personažai"
+seo_title: "Personažai vaikų šventėms ir gimtadieniams | Doki Poki"
+permalink: /personazai/
+description: "Personažai vaikų šventėms su profesionaliais animatoriais. Doki Poki siūlo pasakų, herojų ir teminius personažus vaikų gimtadieniams visoje Lietuvoje."
+---
+
+<!DOCTYPE html>
+<html lang="lt">
+
+{% include head.html %}
+
+<body class="rozine">
+  {% include navbar.html %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <h2 class="section-header center-align">Personažai</h2>
+      </div>
+    </div>
+
+    <!-- Minimalus SEO tekstas: švarus ir trumpas, nesugadina minimalizmo -->
+    <div class="row">
+      <div class="col s12">
+        <p
+        class="center-align kg-font kg-font--normal"
+        style="max-width: 820px; margin: 0 auto 20px auto;"
+        >
+        Doki Poki - personažai vaikų šventėms ir gimtadieniams. Pasirinkite herojų, o mūsų animatoriai pasirūpins visa programa ir nepamirštama atmosfera.
+        </p>
+      </div>
+    </div>
+
+    <div id="Personazai" class="row section personazai">
+      {% for costume in site.costumes %}
+        {% assign has_page = costume.has_page | default: false %}
+
+        {% if costume.personazas and costume.img %}
+          <div class="personazai-wrapper col xl4 l6 m6 s12">
+            {% if has_page %}
+              <a href="{{ costume.url }}">
+                <img
+                  class="responsive-img"
+                  alt="{{ costume.personazas }} – personažas vaikų šventėms"
+                  src="{{ site.baseurl }}{{ costume.img_root }}{{ costume.img }}"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </a>
+            {% else %}
+              <img
+                data-caption="{{ costume.personazas }}"
+                class="materialboxed responsive-img"
+                alt="{{ costume.personazas }} – personažas vaikų šventėms"
+                src="{{ site.baseurl }}{{ costume.img_root }}{{ costume.img }}"
+                loading="lazy"
+                decoding="async"
+              >
+            {% endif %}
+
+            <h4>
+              {% if has_page %}
+                <a href="{{ costume.url }}" class="cursor-default">
+                  {{ costume.personazas }}
+                </a>
+              {% else %}
+                <span class="cursor-default">
+                  {{ costume.personazas }}
+                </span>
+              {% endif %}
+            </h4>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {% include kontaktai.html %}
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="{{ "/js/bin/materialize.js" | prepend: site.baseurl }}"></script>
+  <script type="text/javascript" src="{{ "/js/bin/main.js" | prepend: site.baseurl }}"></script>
+</body>
+
+</html>
