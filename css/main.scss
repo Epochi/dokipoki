@@ -135,3 +135,63 @@
   display: block;
 }
 
+/* === SUBHEADER RESET === */
+#subheader-wrapper{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#subheader{
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* === BALLOON CONTAINER === */
+#company-name{
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 0 !important; /* labai svarbu */
+}
+
+/* === BALLOON ITSELF === */
+#company-name .title-background{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 312px !important;
+  height: 307px !important;
+
+  background: url("/img/components/baloon_logo250hx255w.png") no-repeat center !important;
+  background-size: 100% 100% !important;
+
+  font-family: "KG Air", sans-serif !important;
+  font-size: 75.6px !important;
+  line-height: 1 !important;
+
+  padding: 0 !important;   /* <- panaikinam pseudo centravimą */
+  box-sizing: border-box !important;
+}
+
+/* === ROPE / LINE === */
+h1.baloon-line{
+  position: relative;
+  top: -72px; /* labai subtilu, 5–15px */
+}
+
+/* priverstinis baliono centravimas */
+#company-name{
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+#company-name .title-background{
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* baliono nuleidimas žemyn */
+#company-name .title-background{
+  margin-top: 100px; /* keisk 30–60px pagal skonį */
+}
