@@ -251,8 +251,18 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/png" href="{{ '/img/favicon.png' | relative_url }}">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/img/favicon-16.png?v=20260114' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/img/favicon-32.png?v=20260114' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ '/img/favicon-192.png?v=20260114' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="512x512" href="{{ '/img/favicon-512.png?v=20260114' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/img/favicon-192.png?v=20260114' | relative_url }}">
+
+  <!-- Safari / iOS (Apple naudoja apple-touch-icon, geriausia turėti 180x180) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/img/favicon-192.png' | relative_url }}">
+
+  <!-- PWA / Android (jei neturi manifest, vistiek paliekam – nekenkia, bet geriausia turėti manifest.json) -->
+  <meta name="theme-color" content="#7F95A8">
 
   <!-- Analytics -->
   {% include googleanalytics.html %}
