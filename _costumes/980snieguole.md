@@ -6,8 +6,8 @@ personazas: Snieguolė
 has_page: true
 permalink: /personazai/snieguole/
 
-seo_title: "Snieguolė – švelni ir pasakiška programa vaikų šventėms"
-description: "Snieguolė – švelni, draugiška ir visiems pažįstama pasakų princesė, kurianti jaukią ir magišką atmosferą vaikų šventėse."
+seo_title: "Snieguolė – animatorė vaikams Vilniuje ir visoje Lietuvoje"
+description: "Snieguolė – švelni ir draugiška animatorė vaikams, kurianti jaukią, magišką pasakų princesės atmosferą vaikų šventėse Vilniuje ir visoje Lietuvoje."
 og_image: "/img/personazai/978snieguole.jpg.jpg"
 ---
 

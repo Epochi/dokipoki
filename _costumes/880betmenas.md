@@ -6,8 +6,8 @@ personazas: Betmenas
 has_page: true
 permalink: /personazai/betmenas/
 
-seo_title: "Betmenas – drąsus ir paslaptingas superherojus vaikų šventėms"
-description: "Betmenas – legendinis superherojus, kuriantis aktyvią, nuotykių kupiną ir herojų misijomis paremtą programą vaikams."
+seo_title: "Betmenas – animatorius vaikams Vilniuje"
+description: "Betmenas – drąsus ir paslaptingas superherojus, kuriantis aktyvią, nuotykių kupiną ir herojų misijomis paremtą programą vaikų šventėms."
 og_image: "/img/personazai/973betmenas.jpg.jpg"
 ---
 

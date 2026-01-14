@@ -6,8 +6,8 @@ personazas: Pelenė
 has_page: true
 permalink: /personazai/pelene/
 
-seo_title: "Pelenė – klasikinė pasakų princesė vaikų šventėms"
-description: "Pelenė – švelni, elegantiška ir visiems atpažįstama pasakų princesė, kuri sukuria magišką atmosferą vaikų šventėse."
+seo_title: "Pelenė – princesė animatorė vaikams Vilniuje"
+description: "Pelenė – švelni ir elegantiška animatorė vaikams, kuri sukuria magišką pasakų princesės atmosferą vaikų šventėse Vilniuje."
 og_image: "/img/personazai/952pelene.jpg.jpg"
 ---
 

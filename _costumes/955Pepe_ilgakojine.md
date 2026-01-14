@@ -6,8 +6,8 @@ personazas: Pepė Ilgakojinė
 has_page: true
 permalink: /personazai/pepe-ilgakojine/
 
-seo_title: "Pepė Ilgakojinė – linksma ir pašėlusi programa vaikų šventėms"
-description: "Pepė Ilgakojinė – drąsi, linksma ir išradinga personažė, kuri sukuria aktyvią ir juoko kupiną šventę vaikams."
+seo_title: "Pepė Ilgakojinė – animatorė vaikams Vilniuje"
+description: "Pepė Ilgakojinė – drąsi ir linksma animatorė vaikams, kurianti aktyvią, žaidimų ir juoko kupiną programą vaikų šventėse Vilniuje."
 og_image: "/img/personazai/955Pepe_ilgakojine.jpg"
 ---
 

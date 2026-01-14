@@ -6,8 +6,8 @@ personazas: Raganėlė
 has_page: true
 permalink: /personazai/raganele/
 
-seo_title: "Raganėlė – linksma ir stebuklinga programa vaikų šventėms"
-description: "Raganėlė – žaismingas ir draugiškas personažas, kuriantis magišką, linksmą ir įtraukiančią programą vaikams."
+seo_title: "Raganėlė – animatorė vaikams Vilniuje ir visoje Lietuvoje"
+description: "Raganėlė – linksma ir žaisminga animatorė vaikams, kurianti magišką, įtraukiančią ir juoko kupiną programą vaikų šventėse Vilniuje ir visoje Lietuvoje."
 og_image: "/img/personazai/985raganele.jpg.jpg"
 ---
 

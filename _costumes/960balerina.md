@@ -7,8 +7,8 @@ personazas: Balerina
 has_page: true
 permalink: /personazai/balerina/
 
-seo_title: "Balerina – elegantiška ir švelni programa vaikų šventėms"
-description: "Balerina – grakštus ir svajingas personažas, kuriantis ramią, estetišką ir įkvepiančią atmosferą vaikų šventėse."
+seo_title: "Balerina – animatorė vaikams Vilniuje"
+description: "Balerina – švelni ir elegantiška animatorė vaikams, kurianti estetišką, ramią ir įkvepiančią baleto tematikos programą vaikų šventėse Vilniuje."
 og_image: "/img/personazai/960balerina.jpg.jpg"
 ---
 

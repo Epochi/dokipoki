@@ -6,8 +6,8 @@ personazas: Karalaitė
 has_page: true
 permalink: /personazai/karalaite/
 
-seo_title: "Karalaitė – švelni ir pasakiška programa vaikų šventėms"
-description: "Karalaitė – elegantiškas ir šiltas pasakų personažas, kuriantis jaukią, svajingą atmosferą vaikų šventėse."
+seo_title: "Karalaitė – animatorė vaikams Vilniuje ir visoje Lietuvoje"
+description: "Karalaitė – švelni ir elegantiška animatorė vaikams, kurianti jaukią, svajingą ir pasakišką atmosferą vaikų šventėse Vilniuje ir visoje Lietuvoje."
 og_image: "/img/personazai/970karalaite.jpg.jpg"
 ---
 

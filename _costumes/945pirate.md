@@ -6,7 +6,7 @@ personazas: Piratė
 has_page: true
 permalink: /personazai/pirate/
 
-seo_title: "Piratė – nuotykių ir linksmybių kupina piratų programa vaikams"
+seo_title: "Piratė – animatorė vaikams Vilniuje"
 description: "Piratė – drąsi ir linksma personažė, kviečianti vaikus į smagią piratų nuotykių programą vaikų šventėse."
 og_image: "/img/personazai/963pirate.jpg.jpg"
 ---
