@@ -47,5 +47,4 @@ Kiekviena šventė yra unikali, todėl nėra vieno teisingo sprendimo – svarbi
 
 DokiPoki personažai visada pasiruošę padėti išsirinkti tinkamiausią variantą ir pritaikyti programą būtent Jūsų šventei 💫
 
-Su 🤍  
-DokiPoki personažai!
+Su 🤍 DokiPoki personažai!

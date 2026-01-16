@@ -4,7 +4,7 @@
 @charset "utf-8";
 
 /* ================================
-   IMPORTAI
+   IMPORTS
    ================================ */
 @import "fonts";
 @import "materialize";
@@ -18,22 +18,21 @@
   display: none;
 }
 
-/* KG Kindergarden – body / UI tekstams */
+/* Helper class: KG Kindergarden (UI tekstams kur prireiks) */
 .kg-font {
-  font-family: 'KG Kindergarden', sans-serif !important;
+  font-family: "KG Kindergarden", sans-serif !important;
   letter-spacing: 0.2px;
 }
-
-.kg-font--small   { font-size: 0.95rem; }
-.kg-font--normal  { font-size: 1rem; }
-.kg-font--large   { font-size: 1.05rem; }
+.kg-font--small  { font-size: 0.95rem; }
+.kg-font--normal { font-size: 1rem; }
+.kg-font--large  { font-size: 1.05rem; }
 
 /* ================================
-   HEADINGS – AMATIC SC
+   GLOBAL HEADINGS – AMATIC SC
    ================================ */
 
 .section-header {
-  font-family: 'Amatic SC', cursive !important;
+  font-family: "Amatic SC", cursive !important;
   letter-spacing: 1px;
 }
 
@@ -49,7 +48,7 @@
   text-transform: none !important;
 
   /* Default font (UI) */
-  font-family: 'KG Kindergarden', sans-serif;
+  font-family: "KG Kindergarden", sans-serif;
   letter-spacing: 0.2px;
   font-weight: 500 !important;
 }
@@ -57,7 +56,7 @@
 /* CTA su Amatic (Messenger, Skambinti) */
 .dp-btn.section-header,
 .btn-flat.section-header {
-  font-family: 'Amatic SC', cursive !important;
+  font-family: "Amatic SC", cursive !important;
   letter-spacing: 1px;
   text-transform: none;
 }
@@ -135,26 +134,38 @@
   display: block;
 }
 
-/* === SUBHEADER RESET === */
-#subheader-wrapper{
+/* ================================
+   SUBHEADER RESET
+   ================================ */
+
+#subheader-wrapper {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
 
-#subheader{
+#subheader {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
-/* === BALLOON CONTAINER === */
-#company-name{
+/* ================================
+   HERO / BALLOON TITLE
+   ================================ */
+
+/* Balloon container */
+#company-name {
   margin: 0 !important;
   padding: 0 !important;
   line-height: 0 !important; /* labai svarbu */
+
+  /* priverstinis baliono centravimas */
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
 }
 
-/* === BALLOON ITSELF === */
-#company-name .title-background{
+/* Balloon itself */
+#company-name .title-background {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -169,67 +180,86 @@
   font-size: 75.6px !important;
   line-height: 1 !important;
 
-  padding: 0 !important;   /* <- panaikinam pseudo centravimą */
+  padding: 0 !important; /* panaikinam pseudo centravimą */
   box-sizing: border-box !important;
-}
 
-/* === ROPE / LINE === */
-h1.baloon-line{
-  position: relative;
-  top: -72px; /* labai subtilu, 5–15px */
-}
-
-/* priverstinis baliono centravimas */
-#company-name{
-  width: 100% !important;
-  display: flex !important;
-  justify-content: center !important;
-}
-
-#company-name .title-background{
   margin-left: auto !important;
   margin-right: auto !important;
-}
 
-/* baliono nuleidimas žemyn */
-#company-name .title-background{
+  /* baliono nuleidimas žemyn */
   margin-top: 100px; /* keisk 30–60px pagal skonį */
 }
 
+/* Rope / line */
+h1.baloon-line {
+  position: relative;
+  top: -72px; /* labai subtilu */
+}
+
 /* ================================
-   BLOG ONLY – KG KINDERGARDEN
-   (Keičiam šriftą tik bloguose)
+   BLOG ONLY – TYPOGRAPHY PACKAGE
+   (Keičiam tik bloguose: šriftas + heading hierarchija + spalvos)
    ================================ */
 
-/* Blog list puslapis (/blog) */
+/* Base font blogams (list + post content) */
 .blog,
 .blogas,
 .blog.blogas,
 .blog .card-content,
 .blogas .card-content {
-  font-family: 'KG Kindergarden', sans-serif !important;
+  font-family: "KG Kindergarden", sans-serif !important;
   letter-spacing: 0.2px;
+  color: #4f4f4f; /* tamsiai pilka vietoj juodos */
 }
 
-/* Antraštės blogo kortelėse (post title) */
-.blog .card-content h1,
-.blog .card-content h2,
-.blog .card-content h3,
-.blog .card-content h4,
-.blogas .card-content h1,
-.blogas .card-content h2,
-.blogas .card-content h3,
-.blogas .card-content h4 {
-  font-family: 'KG Kindergarden', sans-serif !important;
-}
-
-/* Tekstas ir sąrašai bloguose */
+/* Užtikrinam, kad blogo turinys nepaveldės kitų fontų */
 .blog .card-content p,
 .blogas .card-content p,
 .blog .card-content li,
 .blogas .card-content li,
 .blog .card-content a,
 .blogas .card-content a {
-  font-family: 'KG Kindergarden', sans-serif !important;
+  font-family: "KG Kindergarden", sans-serif !important;
+  color: #4f4f4f;
 }
 
+/* Headings hierarchija bloguose:
+   H1 = CAPS (didžiausias)
+   H2 = normal case (subheaderiai)
+   H3 = dar mažesnis
+*/
+.blog h1,
+.blogas h1 {
+  font-family: "KG Kindergarden", sans-serif !important;
+  font-size: 2.3rem;
+  text-transform: uppercase; /* H1 CAPS */
+  letter-spacing: 1.2px;
+  color: #3f3f3f;
+
+  margin-top: 0;
+  margin-bottom: 2.6rem; /* daugiau oro po title */
+}
+
+.blog h2,
+.blogas h2 {
+  font-family: "KG Kindergarden", sans-serif !important;
+  font-size: 1.55rem;
+  text-transform: none; /* H2 normal case */
+  letter-spacing: 0.3px;
+  color: #444444;
+
+  margin-top: 3.2rem; /* daugiau oro prieš sekciją */
+  margin-bottom: 1.1rem;
+}
+
+.blog h3,
+.blogas h3 {
+  font-family: "KG Kindergarden", sans-serif !important;
+  font-size: 1.25rem;
+  text-transform: none;
+  letter-spacing: 0.25px;
+  color: #4a4a4a;
+
+  margin-top: 2.2rem;
+  margin-bottom: 0.8rem;
+}
