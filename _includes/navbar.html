@@ -1,5 +1,6 @@
 <div class="navbar-fixed">
   <div id="#top-shadow"></div>
+
   <nav class="rausva z-depth-0" id="nav">
     <div class="container">
       <div class="nav-wrapper">
@@ -8,7 +9,7 @@
         <a href="/" class="brand-logo">DokiPoki</a>
 
         <!-- Mobile burger (RIGHT SIDE) -->
-        <a href="#" data-activates="mobile-nav" class="button-collapse right">
+        <a href="#" data-activates="mobile-nav" class="button-collapse right" aria-label="Meniu">
           <i class="material-icons">menu</i>
         </a>
 
@@ -40,6 +41,23 @@
             <li><a href="/#Galerija">Galerija</a></li>
             <li><a href="/blog">Blogas</a></li>
             <li><a href="/#Kontaktai">Kontaktai</a></li>
+          {% endif %}
+
+          {%- comment -%}
+          ŠVARUS VARIANTAS:
+          Desktop'e 🔍 yra normalus navbar punktas, bet rodom tik /personazai/ puslapyje.
+          Mobile'e 🔍 mygtuką toliau įterpia main.js šalia burgerio.
+          {%- endcomment -%}
+          {% if page.permalink == '/personazai/' or page.url == '/personazai/' %}
+            <li class="personazai-search-nav-item">
+              <a
+                href="#"
+                id="personazaiSearchToggleDesktop"
+                class="personazai-search-nav-link"
+                aria-label="Atidaryti paiešką"
+                title="Ieškoti personažo"
+              >⌕</a>
+            </li>
           {% endif %}
         </ul>
 
