@@ -195,3 +195,41 @@ h1.baloon-line{
 #company-name .title-background{
   margin-top: 100px; /* keisk 30–60px pagal skonį */
 }
+
+/* ================================
+   BLOG ONLY – KG KINDERGARDEN
+   (Keičiam šriftą tik bloguose)
+   ================================ */
+
+/* Blog list puslapis (/blog) */
+.blog,
+.blogas,
+.blog.blogas,
+.blog .card-content,
+.blogas .card-content {
+  font-family: 'KG Kindergarden', sans-serif !important;
+  letter-spacing: 0.2px;
+}
+
+/* Antraštės blogo kortelėse (post title) */
+.blog .card-content h1,
+.blog .card-content h2,
+.blog .card-content h3,
+.blog .card-content h4,
+.blogas .card-content h1,
+.blogas .card-content h2,
+.blogas .card-content h3,
+.blogas .card-content h4 {
+  font-family: 'KG Kindergarden', sans-serif !important;
+}
+
+/* Tekstas ir sąrašai bloguose */
+.blog .card-content p,
+.blogas .card-content p,
+.blog .card-content li,
+.blogas .card-content li,
+.blog .card-content a,
+.blogas .card-content a {
+  font-family: 'KG Kindergarden', sans-serif !important;
+}
+
