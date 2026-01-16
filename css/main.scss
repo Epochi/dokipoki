@@ -172,7 +172,7 @@ body.page-personazai #nav .personazai-search-toggle{
 body.page-personazai .personazai-search-panel{
   position: sticky;
   top: 56px;          /* mobile nav aukštis */
-  z-index: 999;
+  z-index: 10;
 
   display: none;      /* rodom tik kai .is-open */
   padding: 8px 0 16px;
