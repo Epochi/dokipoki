@@ -1,7 +1,5 @@
 ---
 layout: personazas
-published: true
-
 personazas: Princesė Aurora
 img: 983princese_aurora.jpg.jpg
 
