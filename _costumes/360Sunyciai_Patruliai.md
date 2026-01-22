@@ -6,9 +6,10 @@ personazas: Šunyčiai Patruliai
 has_page: true
 permalink: /personazai/sunyciai-patruliai/
 
-seo_title: "Šunyčiai Patruliai – Paw Patrol animatoriai vaikams"
-description: "Šunyčiai Patruliai (Paw Patrol) – net 4 populiarūs animacinio serialo personažai vienoje aktyvioje ir įtraukiančioje programoje vaikams."
+seo_title: "Šunyčiai Patruliai – Paw Patrol animatoriai vaikų šventėms Vilniuje"
+description: "Šunyčiai Patruliai – net 4 Paw Patrol animatoriai vaikų šventėms Vilniuje. Aktyvi, komandinė ir labai įtraukianti programa."
 og_image: "/img/personazai/360Sunyciai_Patruliai.jpg"
+img_alt: "Šunyčiai Patruliai – Paw Patrol animatoriai vaikų šventei Vilniuje"
 ---
 
 Šunyčiai Patruliai – tai vaikams puikiai pažįstami personažai iš itin populiaraus animacinio serialo Paw Patrol. Vienoje šventėje vaikai sutinka net keturis herojus, kurie kartu kuria nuotykių, pagalbos ir komandinio darbo atmosferą.

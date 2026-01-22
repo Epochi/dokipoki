@@ -6,13 +6,14 @@ personazas: Haris Poteris
 has_page: true
 permalink: /personazai/haris-poteris/
 
-seo_title: "Haris Poteris – animatorius vaikams | Harry Potter personažas"
-description: "Haris Poteris (Harry Potter) – legendinis burtininkas vaikų šventėms. Animatorius kuria magišką ir įtraukiančią programą."
+seo_title: "Haris Poteris – animatorius vaikų šventėms Vilniuje | Burtininkų programa"
+description: "Haris Poteris – legendinis animatorius vaikų šventėms Vilniuje. Magiška, įtraukianti burtininkų programa gimtadieniams."
 og_image: "/img/personazai/800haris_poteris.jpg.jpg"
+img_alt: "Haris Poteris – burtininkas animatorius vaikų šventei Vilniuje"
 ---
 
-Haris Poteris – vienas atpažįstamiausių personažų iš pasaulinio populiarumo sulaukusios „Harry Potter“ istorijos. Šis personažas vaikams į šventę atneša magijos, paslapčių ir tikro burtininkų pasaulio nuotaiką. Animatorius nuo pirmų minučių įtraukia vaikus į stebuklingą istoriją, kurioje svarbiausi tampa smalsumas, drąsa ir vaizduotė.
+Haris Poteris – vienas atpažįstamiausių burtininkų pasaulio personažų, kuris į vaikų šventę atneša magiją, paslaptį ir tikro nuotykio jausmą. Šį herojų įkūnijantis animatorius Vilniuje nuo pirmų minučių įtraukia vaikus į stebuklingą istoriją, kurioje svarbūs smalsumas, drąsa ir vaizduotė.
 
-Hario Poterio programa vaikams paremta magijos tematika – vaikai dalyvauja smagiose užduotyse, išbando burtininkų iššūkius ir kartu su personažu leidžiasi į nuotykių kupiną kelionę. Programa pritaikoma pagal vaikų amžių, todėl ji išlieka suprantama, saugi ir labai įtraukianti.
+Hario Poterio programa vaikų šventėms paremta magijos tematika: vaikai dalyvauja smagiose užduotyse, sprendžia burtininkų iššūkius ir kartu leidžiasi į nuotykių kupiną kelionę. Animatorius vaikams prisitaiko prie amžiaus ir grupės energijos, todėl veiklos išlieka suprantamos, saugios ir labai įtraukiančios.
 
-Haris Poteris gali būti kviečiamas ir kartu su [Hermiona](/personazai/hermiona/), taip sukuriant dar stipresnę „Harry Potter“ pasaulio atmosferą. Du personažai vienoje šventėje leidžia vaikams patirti bendrą burtininkų nuotykį, kuriame susijungia drąsa, žinios ir komandinė dvasia. Haris Poteris puikiai tinka gimtadieniams ir teminėms vaikų šventėms, kuriose norisi magijos ir nepamirštamų įspūdžių.
+Šis personažas ypač tinka vaikų gimtadieniams ir „Harry Potter“ tematikos šventėms. Harį Poterį galima kviesti kartu su [Hermiona](/personazai/hermiona/), taip sukuriant dar turtingesnę burtininkų pasaulio patirtį, kurioje dera magija, žinios ir komandinė dvasia.

@@ -6,13 +6,14 @@ personazas: Piratas
 has_page: true
 permalink: /personazai/piratas/
 
-seo_title: "Piratas – nuotykių ir veiksmo kupina piratų programa vaikams"
-description: "Piratas – charizmatiškas ir linksmas personažas, vedantis vaikus į smagią piratų nuotykių programą."
+seo_title: "Piratas – animatorius vaikų šventėms Vilniuje | Nuotykių programa"
+description: "Piratas – charizmatiškas animatorius vaikų šventėms Vilniuje. Aktyvi piratų nuotykių programa vaikams ir gimtadieniams."
 og_image: "/img/personazai/950Piratas.jpg"
+img_alt: "Piratas – nuotykių animatorius vaikų šventei Vilniuje, piratų tematikos programa"
 ---
 
-Piratas – tai charizmatiškas, energingas ir nuotykių kupinas personažas, kuris į vaikų šventę atneša jūrų istorijas, misijas ir smagų veiksmą. Jis kviečia vaikus tapti savo komandos dalimi ir kartu leistis į tikrą piratišką nuotykį.
+Piratas – charizmatiškas ir energingas personažas, kuris į vaikų šventę atneša nuotykius, jūrų istorijas ir smagų veiksmą. Šį herojų įkūnijantis animatorius Vilniuje kviečia vaikus tapti piratų komandos dalimi ir kartu leistis į tikrą nuotykių kelionę.
 
-Programa sudaryta iš aktyvių žaidimų, komandinių užduočių, lobių paieškų ir smagių išbandymų, kurie skatina bendradarbiavimą ir įsitraukimą. Piratas lengvai prisitaiko prie vaikų amžiaus ir grupės dydžio, todėl veiksmas išlieka saugus ir įtraukiantis.
+Pirato programa vaikų šventėms sudaryta iš aktyvių žaidimų, komandinių užduočių, lobių paieškų ir smagių išbandymų. Animatorius vaikams lengvai prisitaiko prie jų amžiaus ir grupės dydžio, todėl veiksmas išlieka saugus, įtraukiantis ir kupinas juoko.
 
-Piratas puikiai pasirodo tiek vienas, tiek kartu su **[Pirate]({{ site.baseurl }}/personazai/pirate/)**. Dviejų piratų komanda sukuria dar stipresnį įspūdį ir leidžia vaikams pasinerti į tikrą jūrų nuotykių istoriją. Tai idealus pasirinkimas gimtadieniams ir teminėms vaikų šventėms, kuriose norisi veiksmo, juoko ir nuotykių.
+Piratas puikiai pasirodo tiek vienas, tiek kartu su [Pirate]({{ site.baseurl }}/personazai/pirate/), kai dviejų piratų komanda sukuria dar stipresnį įspūdį. Tai puikus pasirinkimas vaikų gimtadieniams ir teminėms vaikų šventėms. 

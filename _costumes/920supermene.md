@@ -6,13 +6,14 @@ personazas: Supermenė
 has_page: true
 permalink: /personazai/supermene/
 
-seo_title: "Supermenė – stipri ir įkvepianti herojė vaikų šventėms"
-description: "Supermenė – energinga ir pozityvi superherojė, kuri vaikų šventėse kuria aktyvią, įtraukiančią ir herojų kupiną programą."
+seo_title: "Supermenė – animatorė vaikų gimtadieniams Vilniuje | Superherojų programa"
+description: "Supermenė – energinga animatorė vaikų gimtadieniams Vilniuje. Aktyvi superherojų programa vaikams su judriomis ir komandinėmis užduotimis."
 og_image: "/img/personazai/956supermene.jpg.jpg"
+img_alt: "Supermenė – superherojų animatorė vaikų gimtadieniui Vilniuje"
 ---
 
-Supermenė – tai stipri, drąsi ir pozityvi superherojė, kuri vaikams parodo, kad tikra galia slypi pasitikėjime savimi, gerume ir gebėjime padėti kitiems. Ji į šventę atneša energiją, judesį ir tikro herojaus nuotaiką.
+Supermenė – stipri, drąsi ir pozityvi superherojė, kuri vaikams parodo, kad tikra galia slypi pasitikėjime savimi, gerume ir gebėjime padėti kitiems. Šį personažą įkūnijanti animatorė Vilniuje į vaikų šventę atneša daug energijos, judesio ir tikro herojaus nuotaiką.
 
-Programoje vaikai dalyvauja aktyviose herojų užduotyse, judriuose žaidimuose ir komandiniuose iššūkiuose. Supermenė skatina vaikus bendradarbiauti, palaikyti vieni kitus ir drąsiai imtis naujų užduočių.
+Supermenės programa vaikų gimtadieniams paremta aktyviomis herojų užduotimis, judriais žaidimais ir komandiniais iššūkiais. Animatorė vaikams skatina bendradarbiauti, palaikyti vieni kitus ir drąsiai imtis naujų užduočių, kuriant įtraukiančią ir motyvuojančią šventės atmosferą.
 
-Supermenę galima užsakyti ir **kartu su [Supermenu](/personazai/supermenas/)** – ši herojų pora sukuria dar stipresnę dinamiką, leidžia įtraukti daugiau vaikų ir paverčia šventę tikru superherojų nuotykiu.
+Supermenę galima kviesti ir kartu su [Supermenu](/personazai/supermenas/), kai herojų pora sukuria dar stipresnę dinamiką ir leidžia įtraukti daugiau vaikų.

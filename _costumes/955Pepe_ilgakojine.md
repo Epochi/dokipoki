@@ -6,13 +6,14 @@ personazas: Pepė Ilgakojinė
 has_page: true
 permalink: /personazai/pepe-ilgakojine/
 
-seo_title: "Pepė Ilgakojinė – animatorė vaikams Vilniuje"
-description: "Pepė Ilgakojinė – drąsi ir linksma animatorė vaikams, kurianti aktyvią, žaidimų ir juoko kupiną programą vaikų šventėse Vilniuje."
+seo_title: "Pepė Ilgakojinė – animatorė vaikų gimtadieniams Vilniuje | Linksma programa"
+description: "Pepė Ilgakojinė – drąsi animatorė vaikų gimtadieniams Vilniuje. Aktyvi, žaidimų ir juoko kupina programa vaikams ir šventėms."
 og_image: "/img/personazai/955Pepe_ilgakojine.jpg"
+img_alt: "Pepė Ilgakojinė – linksma ir energinga animatorė vaikų gimtadieniui Vilniuje"
 ---
 
-Pepė Ilgakojinė – tai išskirtinė, drąsi ir nepaprastai linksma personažė, kuri į vaikų šventę atneša laisvę būti savimi, daug juoko ir netikėtumų. Ji gyvena pagal savo taisykles, todėl vaikai akimirksniu ją pamilsta ir drąsiai įsitraukia į bendrą nuotykį.
+Pepė Ilgakojinė – išskirtinė, drąsi ir be galo linksma personažė, kuri į vaikų šventę atneša laisvę būti savimi, daug juoko ir netikėtumų. Šį personažą įkūnijanti animatorė Vilniuje akimirksniu užmezga ryšį su vaikais ir kviečia juos į pašėlusį, žaismingą nuotykį.
 
-Programa kupina judrių žaidimų, kūrybinių užduočių, smagių iššūkių ir pašėlusio humoro. Pepė bendrauja su vaikais atvirai ir betarpiškai, skatindama juos nebijoti klysti, fantazuoti ir džiaugtis akimirka. Kiekvienas vaikas čia tampa svarbia nuotykio dalimi.
+Pepės Ilgakojinės programa vaikų gimtadieniams kupina judrių žaidimų, kūrybinių užduočių, smagių iššūkių ir gero humoro. Animatorė vaikams bendrauja atvirai ir betarpiškai, skatina nebijoti klysti, fantazuoti ir džiaugtis kiekviena akimirka.
 
-Susitikimas su Pepe Ilgakojine palieka lengvą, džiugią emociją ir daug šypsenų. Tai puikus pasirinkimas gimtadieniams ir vaikų šventėms, kuriose norisi judesio, juoko ir tikros, nevaržomos vaikystės dvasios.
+Šis personažas puikiai tinka vaikų gimtadieniams ir aktyvioms vaikų šventėms. 

@@ -6,9 +6,10 @@ personazas: Pimpačkiukai
 has_page: true
 permalink: /personazai/pimpackiukai/
 
-seo_title: "Pimpačkiukai – animatoriai vaikams | Minions personažai"
-description: "Pimpačkiukai (Minions, Despicable Me) – itin linksmi personažai vaikams. Profesionalūs animatoriai kuria juoko kupiną programą."
+seo_title: "Pimpačkiukai – animatoriai vaikų šventėms Vilniuje | Linksma Minions programa"
+description: "Pimpačkiukai – itin linksmi animatoriai vaikų šventėms Vilniuje. Juoko, judesio ir žaismingų situacijų kupina programa."
 og_image: "/img/personazai/540Pimpackiukai.jpg"
+img_alt: "Pimpačkiukai – linksmi animatoriai vaikų šventei Vilniuje"
 ---
 
 Pimpačkiukai – linksmi, išdykę ir vaikams akimirksniu atpažįstami personažai iš animacinių filmų Minions ir Despicable Me. Šiuos personažus įkūnijantys animatoriai vaikams sukuria daug juoko, judesio ir žaismingų situacijų, kurios greitai įtraukia visą grupę.

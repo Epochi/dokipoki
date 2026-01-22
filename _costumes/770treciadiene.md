@@ -6,13 +6,14 @@ personazas: Trečiadienė
 has_page: true
 permalink: /personazai/treciadiene/
 
-seo_title: "Trečiadienė – animatorė vaikams | Wednesday Addams įkvėpta programa"
-description: "Trečiadienė – paslaptinga animatorė vaikams, įkvėpta serialo „Wednesday“. Originali, žaisminga ir įtraukianti programa vaikų šventėms."
+seo_title: "Trečiadienė – animatorė vaikų šventėms Vilniuje | Wednesday įkvėpta programa"
+description: "Trečiadienė – paslaptinga animatorė vaikų šventėms Vilniuje. Originali, žaisminga ir įtraukianti programa vyresniems vaikams."
 og_image: "/img/personazai/770treciadiene.jpg.jpg"
+img_alt: "Trečiadienė – Wednesday įkvėpta animatorė vaikų šventei Vilniuje"
 ---
 
-Trečiadienė – paslaptinga, charizmatiška ir išskirtinė personažė vaikams, įkvėpta populiaraus „Netflix“ serialo „Wednesday“ (Addams Family). Šis personažas iškart atpažįstamas dėl savo unikalaus stiliaus, rimtos išraiškos ir netikėto humoro, kuris itin patinka vyresniems vaikams.
+Trečiadienė – paslaptinga, charizmatiška ir išskirtinė personažė, įkvėpta „Wednesday“ pasaulio estetikos. Šį personažą įkūnijanti animatorė Vilniuje iškart patraukia vaikų dėmesį unikaliu stiliumi, rimta išraiška ir subtiliu, netikėtu humoru, kuris ypač patinka vyresniems vaikams.
 
-Programos metu Trečiadienė kviečia vaikus į neįprastą, bet smagią veiklą – loginius iššūkius, kūrybines užduotis, judrius žaidimus ir komandines veiklas su lengvu paslaptingumo prieskoniu. Animatorė puikiai jaučia vaikų auditoriją ir pritaiko programą pagal jų amžių, išlaikydama balansą tarp žaidimo, humoro ir įtraukimo.
+Trečiadienės programa vaikų šventėms orientuota į loginius iššūkius, kūrybines užduotis, judrius žaidimus ir komandines veiklas su lengvu paslaptingumo prieskoniu. Animatorė vaikams puikiai jaučia auditoriją ir pritaiko programą pagal amžių, išlaikydama balansą tarp žaidimo, humoro ir įtraukimo.
 
-Trečiadienė ypač tinka gimtadieniams, teminėms vaikų šventėms ir renginiams, kuriuose norisi kažko kitokio nei klasikiniai personažai. Tai animatorė vaikams, kuri šventei suteikia stiliaus, charakterio ir įsimintiną atmosferą.
+Šis personažas ypač tinka vaikų gimtadieniams ir teminėms šventėms, kuriose norisi kažko kitokio nei klasikiniai herojai. Trečiadienę galima derinti su kitais paslaptingais personažais, pavyzdžiui su [Raganėle](/personazai/raganele/), taip sukuriant dar įdomesnę ir charakteringesnę šventės atmosferą.

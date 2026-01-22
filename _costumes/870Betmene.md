@@ -6,13 +6,14 @@ personazas: Betmenė
 has_page: true
 permalink: /personazai/betmene/
 
-seo_title: "Betmenė – drąsi ir charizmatiška superherojė vaikų šventėms"
-description: "Betmenė – paslaptinga ir stipri superherojė, kurianti aktyvią, įtraukiančią ir nuotykių kupiną programą vaikams."
+seo_title: "Betmenė – animatorė vaikų šventėms Vilniuje | Superherojų programa"
+description: "Betmenė – drąsi animatorė vaikų šventėms Vilniuje. Aktyvi superherojų programa vaikams, gimtadieniams ir komandinėms misijoms."
 og_image: "/img/personazai/870Betmene.jpg"
+img_alt: "Betmenė – superherojė animatorė vaikų šventei Vilniuje"
 ---
 
-Betmenė – tai drąsi ir charizmatiška superherojė, kuri vaikų šventėje sukuria stiprų nuotykių ir herojų komandos jausmą. Ji greitai užmezga ryšį su vaikais, kviečia juos veikti kartu ir pasijusti tikrais herojais.
+Betmenė – drąsi ir charizmatiška superherojė, kuri vaikų šventėje sukuria stiprų nuotykių, pasitikėjimo savimi ir herojų komandos jausmą. Šį personažą įkūnijanti animatorė Vilniuje greitai užmezga ryšį su vaikais ir kviečia juos veikti kartu kaip tikrus herojus.
 
-Programoje gausu aktyvių užduočių, komandinių žaidimų ir judrių herojų misijų. Betmenė skatina vaikus pasitikėti savimi, palaikyti vieni kitus ir drąsiai priimti iššūkius, todėl programa išlieka dinamiška ir labai įtraukianti.
+Betmenės programa vaikų šventėms paremta aktyviomis herojų misijomis, judriais komandiniais žaidimais ir smagiais iššūkiais. Animatorė vaikams skatina bendradarbiavimą, palaikymą ir drąsą priimti naujus išbandymus, todėl programa išlieka dinamiška ir labai įtraukianti.
 
-Betmenę galima užsakyti ir **kartu su [Betmenu](/personazai/betmenas/)** – ši herojų pora sukuria dar stipresnę dinamiką ir paverčia šventę tikru superherojų nuotykiu.
+Betmenę galima kviesti ir kartu su [Betmenu](/personazai/betmenas/), kai dviejų herojų komanda sukuria dar stipresnę dinamiką ir leidžia įtraukti daugiau vaikų.

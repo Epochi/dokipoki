@@ -6,13 +6,14 @@ personazas: Sonikas
 has_page: true
 permalink: /personazai/sonikas/
 
-seo_title: "Sonikas – animatorius vaikams | Sonic the Hedgehog personažas"
-description: "Sonikas (Sonic the Hedgehog) – itin energingas personažas vaikams. Profesionalus animatorius kuria aktyvią, judrią ir įtraukiančią programą."
+seo_title: "Sonikas – animatorius vaikų šventėms Vilniuje | Sonic įkvėpta programa"
+description: "Sonikas – itin energingas animatorius vaikų šventėms Vilniuje. Greičio, judesio ir reakcijos kupina Sonic tematikos programa."
 og_image: "/img/personazai/400sonikas.jpg.jpg"
+img_alt: "Sonikas – greičio ir judesio animatorius vaikų šventei Vilniuje"
 ---
 
-Sonikas – greitas, energingas ir vaikams puikiai atpažįstamas personažas vaikams iš visame pasaulyje žinomo animacinio filmo ir žaidimų serijos Sonic the Hedgehog. Šis personažas asocijuojasi su greičiu, judesiu ir nuolatiniu veiksmu, todėl vaikų šventėje iškart sukuria dinamišką ir aktyvią atmosferą. Soniką įkūnijantis animatorius vaikams nuo pirmų minučių kviečia judėti, lenktyniauti ir įsitraukti į bendrą veiksmą.
+Sonikas – greitas, energingas ir vaikams puikiai atpažįstamas personažas, kuris į vaikų šventę atneša nuolatinį veiksmą, judesį ir azartą. Šį herojų įkūnijantis animatorius Vilniuje nuo pirmų minučių kviečia vaikus judėti, lenktyniauti ir aktyviai įsitraukti.
 
-Soniko programa vaikams paremta greičio, reakcijos ir judrių žaidimų principais, įkvėptais Sonic the Hedgehog pasaulio. Vaikai kartu su Soniku atlieka smagias užduotis, dalyvauja komandinėse misijose ir išbando savo vikrumą bei greitą reakciją. Animatorius prisitaiko prie vaikų amžiaus ir grupės energijos, todėl programa išlieka saugi, aiški ir labai įtraukianti.
+Soniko programa vaikų šventėms paremta greičio, reakcijos ir judrių žaidimų principais. Vaikai dalyvauja smagiose užduotyse, komandinėse misijose ir išbando savo vikrumą bei greitą reakciją. Animatorius prisitaiko prie vaikų amžiaus ir grupės energijos, todėl veiklos išlieka saugios, aiškios ir labai įtraukiančios.
 
-Šis personazas puikiai tinka gimtadieniams, teminėms vaikų šventėms ir renginiams, kuriuose svarbus aktyvumas ir veiksmas. Sonikas – tai animatorius vaikams, kuris sukuria greitą, linksmą ir įsimintiną šventės patirtį, kupiną judesio, azarto ir gerų emocijų.
+Šis personažas ypač tinka vaikų gimtadieniams ir teminėms šventėms, kuriose svarbus aktyvumas ir veiksmas. Soniką galima derinti su [Lenktynininku](/personazai/lenktynininkas/), kai norisi dar daugiau greičio ir sportinio azarto.

@@ -6,13 +6,14 @@ personazas: Kalėdų Senelis
 has_page: true
 permalink: /personazai/kaledu-senelis/
 
-seo_title: "Kalėdų Senelis – šventinė programa vaikams Vilniuje ir Kaune"
-description: "Kalėdų Senelis – įkvepiantis ir šventinę nuotaiką kuriantis personažas, atnešantis vaikams džiaugsmą, stebuklus ir tikėjimą Kalėdomis Vilniuje ir Kaune."
+seo_title: "Kalėdų Senelis – animatorius vaikų šventėms Vilniuje ir Kaune"
+description: "Kalėdų Senelis – šventinis animatorius vaikų šventėms Vilniuje ir Kaune. Žaidimai, užduotys, palinkėjimai ir tikra Kalėdų magija."
 og_image: "/img/personazai/110Kaledu_senelis.jpg"
+img_alt: "Kalėdų Senelis – šventinis animatorius vaikų šventei Vilniuje ir Kaune"
 ---
 
-Kalėdų Senelis – tai personažas, kurį atgaivina patyręs ir nuostabus animatorius, primenantis vaikams, kad šventės yra laikas tikėti stebuklais, kurti gerumą ir džiaugtis mažomis akimirkomis. Jis atkeliauja su šilta šypsena, stebuklinga maišo istorija ir užduotimis, kurios įkvepia vaikus būti drąsiems, kūrybiškiems ir draugiškiems.
+Kalėdų Senelis – klasikinis ir visada laukiamas personažas, kuris vaikų šventėje sukuria tikrą Kalėdų stebuklą. Šį personažą įkūnijantis patyręs animatorius atkeliauja su šilta šypsena, pasakojimais ir veiklomis, kurios primena vaikams apie gerumą, draugystę ir tikėjimą stebuklais.
 
-Programa apima šventinius žaidimus, kalėdines užduotis, gerumo misijas ir, žinoma, ypatingą susitikimą prie eglutės. Kalėdų Senelis mielai fotografuojasi, dalina palinkėjimus ir sukuria atmosferą, kurioje vaikai jaučiasi pastebėti, ypatingi ir mylimi.
+Kalėdų Senelio programa vaikų šventėms apima šventinius žaidimus, kalėdines užduotis, gerumo misijas ir ypatingas akimirkas prie eglutės. Vaikai aktyviai dalyvauja, bendrauja su personažu, gauna asmeninius palinkėjimus ir džiaugiasi jaukia, šventine atmosfera. Programa pritaikoma pagal vaikų amžių ir šventės formatą, todėl išlieka natūrali ir labai įtraukianti.
 
-Ši programa puikiai tinka darželiams, mokykloms, šeimos šventėms ir kalėdiniams renginiams. Veiklos gali būti pritaikytos pagal vaikų amžių ir šventės trukmę – nuo trumpų apsilankymų iki valandos animacijos ir veiklų ar net ilgiau!
+Ši programa puikiai tinka darželiams, mokykloms, šeimos šventėms ir kalėdiniams renginiams. Galimi skirtingi formatai – nuo trumpų apsilankymų iki pilnos valandos ar ilgesnės animacijos. Kalėdų Senelis sukuria šiltą, įsimintiną ir vaikams labai artimą šventės patirtį.

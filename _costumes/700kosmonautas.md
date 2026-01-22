@@ -6,13 +6,14 @@ personazas: Kosmonautas
 has_page: true
 permalink: /personazai/kosmonautas/
 
-seo_title: "Kosmonautas – animatorius vaikams Vilniuje | Nuotykių personažas"
-description: "Kosmonautas – smalsus ir įkvepiantis personažas vaikams. Profesionalus animatorius Vilniuje kuria žaismingą, tyrinėjimais paremtą programą."
+seo_title: "Kosmonautas – animatorius vaikų šventėms Vilniuje | Kosmoso nuotykiai"
+description: "Kosmonautas – smalsus ir įkvepiantis animatorius vaikų šventėms Vilniuje. Žaisminga, tyrinėjimais ir misijomis paremta kosmoso programa."
 og_image: "/img/personazai/700kosmonautas.jpg.jpg"
+img_alt: "Kosmonautas – kosmoso nuotykių animatorius vaikų šventei Vilniuje"
 ---
 
-Kosmonautas – smalsus, drąsus ir vaikams itin patrauklus personažas, kviečiantis leistis į kosmoso nuotykių kupiną kelionę. Šį personažą įkūnijantis animatorius vaikams sukuria tyrinėjimo ir atradimų atmosferą, kurioje vaikai tampa mažaisiais astronautais.
+Kosmonautas – smalsus ir drąsus personažas, kviečiantis vaikus leistis į kosmoso nuotykių kupiną kelionę. Šį herojų įkūnijantis animatorius Vilniuje sukuria tyrinėjimo ir atradimų atmosferą, kurioje vaikai pasijunta mažaisiais astronautais.
 
-Kosmonauto programa vaikams paremta vaizduote, judriais žaidimais ir teminėmis užduotimis. Vaikai kartu su kosmonautu „keliauja“ po planetas, atlieka smagias misijas, mokosi bendradarbiauti ir drąsiai spręsti iššūkius. Animatorius prisitaiko prie vaikų amžiaus ir grupės dinamikos, todėl veiklos išlieka aiškios, saugios ir labai įtraukiančios.
+Kosmonauto programa vaikų šventėms paremta vaizduote, judriais žaidimais ir teminėmis misijomis. Vaikai „keliauja“ po planetas, atlieka smagias užduotis, mokosi bendradarbiauti ir drąsiai spręsti iššūkius. Animatorius prisitaiko prie vaikų amžiaus ir grupės dinamikos, todėl veiklos išlieka aiškios, saugios ir labai įtraukiančios.
 
-Šis personažas puikiai tinka gimtadieniams, darželių renginiams ir teminėms vaikų šventėms. Kosmonautas – tai animatorius Vilniuje, kuris vaikams sukuria įkvepiančią, žaismingą ir ilgai įsimenančią šventės patirtį, pilną atradimų ir gerų emocijų.
+Šis personažas puikiai tinka vaikų gimtadieniams, darželių renginiams ir teminėms šventėms, kuriose norisi tyrinėjimo ir judesio. Kosmonautą galima derinti su [NASA kosmonautu](/personazai/nasa-kosmonautas/), taip sukuriant dar platesnę kosminę programą su misijomis ir atradimais.

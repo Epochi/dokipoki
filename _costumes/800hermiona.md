@@ -6,13 +6,14 @@ personazas: Hermiona
 has_page: true
 permalink: /personazai/hermiona/
 
-seo_title: "Hermiona – animatorė vaikams | Harry Potter personažas"
-description: "Hermiona (Harry Potter) – išmintinga ir drąsi burtininkė vaikų šventėms. Animatorė kuria magišką ir įtraukiančią programą."
+seo_title: "Hermiona – animatorė vaikų šventėms Vilniuje | Burtininkės programa"
+description: "Hermiona – išmintinga animatorė vaikų šventėms Vilniuje. Magiška, įtraukianti burtininkės programa gimtadieniams ir teminėms šventėms."
 og_image: "/img/personazai/850hermiona.jpg.jpg"
+img_alt: "Hermiona – burtininkė animatorė vaikų šventei Vilniuje"
 ---
 
-Hermiona – viena svarbiausių personažių iš „Harry Potter“ pasaulio, puikiai pažįstama vaikams dėl savo sumanumo, drąsos ir meilės magijai. Šis personažas vaikams suteikia galimybę pasijusti tikrais burtininkais ir kartu leistis į stebuklingą nuotykį, kupiną atradimų ir iššūkių.
+Hermiona – viena ryškiausių ir vaikams puikiai pažįstamų burtininkių, kuri į vaikų šventę atneša magiją, sumanumą ir atradimų džiaugsmą. Šį personažą įkūnijanti animatorė Vilniuje kviečia vaikus pasijusti tikrais burtininkais ir kartu leistis į stebuklingą nuotykį.
 
-Hermionos programa vaikams orientuota į kūrybiškumą, logiką ir bendradarbiavimą. Vaikai dalyvauja magiškose užduotyse, sprendžia smagias mįsles ir kartu su personažu kuria burtininkų pasaulio istoriją. Animatorė prisitaiko prie vaikų amžiaus ir grupės dinamikos, todėl programa išlieka įtraukianti ir labai smagi.
+Hermionos programa vaikų šventėms orientuota į kūrybiškumą, logiką ir bendradarbiavimą. Vaikai dalyvauja magiškose užduotyse, sprendžia smagias mįsles, atlieka burtininkų iššūkius ir kuria bendrą istoriją. Animatorė vaikams prisitaiko prie amžiaus ir grupės dinamikos, todėl veiklos išlieka įtraukiančios, bet aiškios ir smagios.
 
-Hermiona gali būti kviečiama ir kartu su [Hariu Poteriu](/personazai/haris-poteris/), sukuriant pilną „Harry Potter“ teminę programą. Du personažai vienoje šventėje leidžia vaikams patirti bendrą burtininkų nuotykį, kuriame dera magija, draugystė ir komandinis darbas. Hermiona puikiai tinka gimtadieniams ir teminėms vaikų šventėms, kuriose norisi išskirtinės magiškos atmosferos.
+Šis personažas ypač tinka vaikų gimtadieniams ir „Harry Potter“ tematikos šventėms. Hermioną galima kviesti kartu su [Hariu Poteriu](/personazai/haris-poteris/), taip sukuriant pilną burtininkų pasaulio programą, kurioje dera magija, draugystė ir komandinis nuotykis.

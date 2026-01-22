@@ -1,18 +1,19 @@
 ---
 layout: personazas
 img: 980vezliukas_nindze.jpg.jpg
-personazas: Vežliukas Nindzė
+personazas: Vėžliukas Nindzė
 
 has_page: true
 permalink: /personazai/vezliukas-nindze/
 
-seo_title: "Vėžliukas Nindzė – aktyvi nindzių programa vaikų šventėms"
-description: "Vėžliukas Nindzė – drąsus ir energingas personažas iš Teenage Mutant Ninja Turtles pasaulio, kuriantis aktyvią ir veiksmo kupiną programą vaikams."
+seo_title: "Vėžliukas Nindzė – animatorius vaikų šventėms Vilniuje | Nindzių programa"
+description: "Vėžliukas Nindzė – drąsus ir energingas animatorius vaikų šventėms Vilniuje. Aktyvi, judri ir veiksmo kupina nindzių programa."
 og_image: "/img/personazai/980vezliukas_nindze.jpg.jpg"
+img_alt: "Vėžliukas Nindzė – nindzių animatorius vaikų šventei Vilniuje"
 ---
 
-Vėžliukas Nindzė – tai vienas iš visame pasaulyje atpažįstamų herojų iš animacinio serialo Teenage Mutant Ninja Turtles. Šis personažas į vaikų šventę atneša nindzių drąsą, judesį ir tikrą veiksmo nuotaiką, kuri akimirksniu įtraukia vaikus.
+Vėžliukas Nindzė – drąsus, energingas ir vaikams puikiai atpažįstamas herojus, įkvėptas nindzių pasaulio. Šis personažas vaikų šventėje akimirksniu sukuria veiksmo, judesio ir nuotykių kupiną atmosferą, kuri ypač patinka aktyviems vaikams. Vėžliuką Nindzę įkūnijantis animatorius Vilniuje nuo pirmų minučių įtraukia vaikus į dinamišką veiklą.
 
-Programa paremta aktyviomis nindzių misijomis, judriais žaidimais, reakcijos ir vikrumo išbandymais. Vaikai kartu su Vėžliuku Nindze mokosi veikti kaip komanda, greitai priimti sprendimus ir drąsiai įveikti smagius iššūkius. Animatorius palaiko aukštą energijos lygį ir užtikrina, kad visi dalyviai būtų įtraukti į veiksmą.
+Vėžliuko Nindzės programa vaikų šventėms paremta aktyviomis nindzių misijomis, judriais žaidimais, reakcijos ir vikrumo išbandymais. Vaikai mokosi veikti kaip komanda, greitai priimti sprendimus ir drąsiai įveikti smagius iššūkius. Animatorius palaiko aukštą energijos lygį ir užtikrina, kad visi dalyviai būtų įtraukti saugiai ir aiškiai.
 
-Vėžliukas Nindzė puikiai tinka gimtadieniams ir teminėms vaikų šventėms, kuriose svarbus aktyvumas, judesys ir herojų nuotykiai. Tai personažas, kuris vaikams leidžia pasijusti tikrais nindzėmis ir sukuria stiprią, įsimintiną šventės patirtį.
+Šis personažas ypač tinka vaikų gimtadieniams ir teminėms šventėms, kuriose svarbus aktyvumas, judesys ir herojų nuotykiai. Vėžliukas Nindzė leidžia vaikams pasijusti tikrais nindzėmis ir sukuria stiprią, įsimintiną šventės patirtį.

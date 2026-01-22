@@ -6,13 +6,14 @@ personazas: Simba ir Nala
 has_page: true
 permalink: /personazai/simba-ir-nala/
 
-seo_title: "Simba ir Nala – animatoriai vaikams | Liūtas karalius personažai"
-description: "Simba ir Nala (Liūtas karalius) – du mylimi animacinio filmo personažai vaikams. Profesionalūs animatoriai kuria nuotykių ir judesio kupiną programą."
+seo_title: "Simba ir Nala – animatoriai vaikų šventėms Vilniuje | Liūto karaliaus personažai"
+description: "Simba ir Nala – du mylimi animatoriai vaikų šventėms Vilniuje. Nuotykių, judesio ir draugystės kupina Liūto karaliaus tematikos programa."
 og_image: "/img/personazai/660Liutukai.jpg"
+img_alt: "Simba ir Nala – Liūto karaliaus animatoriai vaikų šventei Vilniuje"
 ---
 
-Simba ir Nala – vaikams puikiai atpažįstami personažai iš legendinio animacinio filmo Liūtas karalius. Šie du liūtukai simbolizuoja draugystę, drąsą ir augimą, todėl vaikų šventėje iškart sukuria šiltą, nuotykių kupiną atmosferą. Personažus įkūnijantys animatoriai vaikams padeda pasinerti į spalvingą, žaismingą istoriją.
+Simba ir Nala – vaikams puikiai atpažįstami liūtukai, kurie į vaikų šventę atneša draugystės, drąsos ir augimo istoriją. Šiuos personažus įkūnijantys animatoriai Vilniuje sukuria šiltą, nuotykių kupiną atmosferą, kurioje vaikai noriai įsitraukia ir juda kartu.
 
-Simba ir Nalos programa vaikams paremta judriais žaidimais, komandiniu darbu ir smagiomis misijomis. Vaikai kartu su personažais juda, atlieka užduotis, mokosi pasitikėti savimi ir veikti drauge. Animatorius prisitaiko prie vaikų amžiaus ir grupės dinamikos, todėl programa išlieka aiški, saugi ir labai įtraukianti.
+Simba ir Nalos programa vaikų šventėms paremta judriais žaidimais, komandinėmis užduotimis ir smagiomis misijomis. Vaikai kartu su personažais juda, mokosi veikti drauge, pasitikėti savimi ir džiaugtis bendru rezultatu. Animatoriai prisitaiko prie vaikų amžiaus ir grupės dinamikos, todėl veiklos išlieka aiškios, saugios ir labai įtraukiančios.
 
-Šie personažai puikiai tinka gimtadieniams ir teminėms vaikų šventėms. Simba ir Nala – tai animatoriai vaikams, kurie sukuria emocingą, nuotykių kupiną ir ilgai įsimenančią šventės patirtį.
+Šie personažai ypač tinka vaikų gimtadieniams ir teminėms šventėms, kuriose norisi daugiau judesio ir nuotykių. Simba ir Nala dažnai pasirenkami kaip dviejų personažų programa, leidžianti įtraukti didesnę vaikų grupę ir sukurti dar ryškesnę, emocingą šventės patirtį.

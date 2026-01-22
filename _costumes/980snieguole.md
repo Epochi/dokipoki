@@ -6,13 +6,14 @@ personazas: Snieguolė
 has_page: true
 permalink: /personazai/snieguole/
 
-seo_title: "Snieguolė – animatorė vaikams Vilniuje ir visoje Lietuvoje"
-description: "Snieguolė – švelni ir draugiška animatorė vaikams, kurianti jaukią, magišką pasakų princesės atmosferą vaikų šventėse Vilniuje ir visoje Lietuvoje."
+seo_title: "Snieguolė – animatorė vaikų šventėms Vilniuje | Pasakų princesė"
+description: "Snieguolė – švelni animatorė vaikų šventėms Vilniuje. Jauki, pasakiška programa vaikams, gimtadieniams ir darželių šventėms."
 og_image: "/img/personazai/978snieguole.jpg.jpg"
+img_alt: "Snieguolė – pasakų princesė animatorė vaikų šventei Vilniuje"
 ---
 
-Snieguolė – tai klasikinė pasakų princesė, kuri į vaikų šventę atneša švelnumą, nuoširdumą ir ramų pasakišką džiaugsmą. Ji bendrauja labai natūraliai, daug šypsosi ir greitai pelno vaikų pasitikėjimą, todėl puikiai tinka net ir jaunesniems dalyviams.
+Snieguolė – klasikinė pasakų princesė, į vaikų šventę atnešanti švelnumą, nuoširdumą ir ramų pasakišką džiaugsmą. Šią heroję įkūnijanti animatorė Vilniuje labai natūraliai bendrauja su vaikais, greitai pelno jų pasitikėjimą ir sukuria saugią, jaukią atmosferą.
 
-Programa paremta lengvais žaidimais, pasakiškomis užduotimis, judesiu ir švelniais šokio elementais. Snieguolė skatina vaikus būti draugiškais, padėti vieni kitiems ir džiaugtis buvimu kartu, kuriant jaukią ir saugią šventės atmosferą.
+Snieguolės programa vaikų šventėms paremta lengvais žaidimais, pasakiškomis užduotimis, judesiu ir švelniais šokio elementais. Animatorė vaikams skatina draugiškumą, bendravimą ir džiaugsmą buvimu kartu, todėl veiklos puikiai tinka ir jaunesniems dalyviams.
 
-Šis personažas puikiai tinka gimtadieniams, darželių šventėms ir teminiams pasakų renginiams. Susitikimas su Snieguole palieka šiltą emociją, ramų džiaugsmą ir tikrą pasakos pojūtį, kuris dar ilgai išlieka vaikų atmintyje.
+Šis personažas puikiai tinka vaikų gimtadieniams, darželių šventėms ir pasakų tematikos renginiams. 

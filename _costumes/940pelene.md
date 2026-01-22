@@ -6,13 +6,14 @@ personazas: Pelenė
 has_page: true
 permalink: /personazai/pelene/
 
-seo_title: "Pelenė – princesė animatorė vaikams Vilniuje"
-description: "Pelenė – švelni ir elegantiška animatorė vaikams, kuri sukuria magišką pasakų princesės atmosferą vaikų šventėse Vilniuje."
+seo_title: "Pelenė – animatorė vaikų šventėms Vilniuje | Klasikinė princesė"
+description: "Pelenė – elegantiška animatorė vaikų šventėms Vilniuje. Magiška, rami princesės programa vaikams, gimtadieniams ir darželių šventėms."
 og_image: "/img/personazai/952pelene.jpg.jpg"
+img_alt: "Pelenė – pasakų princesė animatorė vaikų šventei Vilniuje"
 ---
 
-Pelenė – tai klasikinė pasakų princesė, kuri į vaikų šventę atneša šilumos, elegancijos ir tikros pasakos jausmą. Ji žavi savo nuoširdumu, gerumu ir ramia laikysena, todėl greitai pelno vaikų simpatijas ir pasitikėjimą.
+Pelenė – klasikinė pasakų princesė, kuri į vaikų šventę atneša šilumą, eleganciją ir tikros pasakos pojūtį. Šią heroję įkūnijanti animatorė Vilniuje greitai pelno vaikų pasitikėjimą savo nuoširdumu, gerumu ir ramiu bendravimu.
 
-Programa paremta lengvomis interaktyviomis veiklomis, žaidimais, princesiškais judesiais ir smagiomis užduotimis, kurios įtraukia vaikus be skubėjimo ir triukšmo. Animatorė subtiliai veda veiklas, bendrauja su vaikais ir kuria jaukią, saugią atmosferą, kurioje kiekvienas vaikas jaučiasi pastebėtas.
+Pelenės programa vaikų šventėms paremta lengvomis interaktyviomis veiklomis, žaidimais, princesiškais judesiais ir smagiomis užduotimis. Animatorė vaikams subtiliai veda veiklas, palaiko jaukią atmosferą ir pasirūpina, kad kiekvienas vaikas jaustųsi pastebėtas ir įtrauktas.
 
-Susitikimas su Pelene palieka šiltą, pasakišką įspūdį ir leidžia vaikams pasijusti tarsi tikros pasakos dalimi. Šis personažas puikiai tinka gimtadieniams, darželių šventėms ir kitoms progoms, kuriose norisi klasikinės princesės magijos ir švelnios, gražios šventės nuotaikos.
+Šis personažas puikiai tinka vaikų gimtadieniams, darželių šventėms ir ramioms, pasakų tematikos progoms.

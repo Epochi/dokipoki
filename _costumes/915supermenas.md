@@ -6,13 +6,14 @@ personazas: Supermenas
 has_page: true
 permalink: /personazai/supermenas/
 
-seo_title: "Supermenas – herojiška ir aktyvi programa vaikų šventėms"
-description: "Supermenas – drąsus ir įkvepiantis superherojus, kuris vaikų šventėse kuria aktyvią, pozityvią ir herojų kupiną programą."
+seo_title: "Supermenas – animatorius vaikų šventėms Vilniuje | Superherojų programa"
+description: "Supermenas – drąsus animatorius vaikų šventėms Vilniuje. Aktyvi superherojų programa vaikams, gimtadieniams ir komandinėms užduotims."
 og_image: "/img/personazai/955supermenas.jpg.jpg"
+img_alt: "Supermenas – superherojų animatorius vaikų šventei Vilniuje"
 ---
 
-Supermenas – tai vienas ryškiausių superherojų, įkūnijantis drąsą, teisingumą ir norą padėti kitiems. Jo pasirodymas vaikų šventėje sukuria tikro herojaus atmosferą, kurioje vaikai įsitraukia, juda ir jaučiasi stiprūs bei svarbūs.
+Supermenas – vienas ryškiausių superherojų, įkūnijantis drąsą, teisingumą ir norą padėti kitiems. Šį personažą įkūnijantis animatorius Vilniuje vaikų šventėje sukuria tikro herojaus atmosferą, kurioje vaikai aktyviai juda, įsitraukia ir jaučiasi stiprūs bei svarbūs.
 
-Programa orientuota į aktyvias herojų misijas, judrius komandinius žaidimus ir smagius iššūkius. Vaikai kartu su Supermenu lavina vikrumą, reakciją ir mokosi veikti kaip komanda, kur kiekvienas turi savo vaidmenį.
+Supermeno programa vaikų šventėms paremta aktyviomis herojų misijomis, judriais komandiniais žaidimais ir smagiais iššūkiais. Animatorius vaikams padeda lavinti vikrumą, reakciją ir komandinį darbą, paversdamas šventę įtraukiančiu superherojų nuotykiu.
 
-Supermeną galima užsakyti ir **kartu su [Supermene](/personazai/supermene/)** – dviejų herojų komanda leidžia sukurti dar dinamiškesnę programą, daugiau užduočių ir stipresnį įspūdį vaikams. Tai puikus pasirinkimas didesnėms šventėms ar tada, kai norisi tikros superherojų komandos.
+Supermeną galima kviesti ir kartu su [Supermene](/personazai/supermene/), kai dviejų herojų komanda leidžia sukurti dar dinamiškesnę programą ir įtraukti daugiau vaikų.

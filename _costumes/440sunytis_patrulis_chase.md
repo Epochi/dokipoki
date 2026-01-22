@@ -6,9 +6,10 @@ personazas: Patrulis Chase
 has_page: true
 permalink: /personazai/patrulis-chase/
 
-seo_title: "Patrulis Chase – animatorius vaikams | Paw Patrol personažas"
-description: "Patrulis Chase (Paw Patrol) – drąsus ir atsakingas personažas vaikams. Profesionalus animatorius kuria aktyvią programą."
+seo_title: "Patrulis Chase – animatorius vaikų šventėms Vilniuje | Paw Patrol programa"
+description: "Patrulis Chase – drąsus ir atsakingas animatorius vaikų šventėms Vilniuje. Aktyvi, komandines misijas skatinanti Paw Patrol programa."
 og_image: "/img/personazai/250sunytis_patrulis_chase.jpg.jpg"
+img_alt: "Patrulis Chase – Paw Patrol animatorius vaikų šventei Vilniuje"
 ---
 
 Patrulis Chase – tai vienas pagrindinių ir vaikams geriausiai atpažįstamų Paw Patrol herojų. Jis simbolizuoja tvarką, drąsą ir atsakomybę, todėl vaikų šventėje greitai tampa lyderiu, kviečiančiu vaikus veikti kartu ir padėti vieni kitiems. Chase’ą įkūnijantis animatorius vaikams sukuria pasitikėjimo ir komandinės dvasios kupiną atmosferą.
