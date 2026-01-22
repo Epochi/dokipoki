@@ -218,6 +218,18 @@ body.page-personazai .personazai-search__icon{
   user-select: none;
 }
 
+/* ================================
+   iOS SAFARI: STOP INPUT AUTO-ZOOM
+   ================================ */
+/* iPhone Safari prizoombina input, jei font-size < 16px.
+   Fix: užtikrinam 16px+ tik iOS aplinkoje, neliečiant kitur. */
+@supports (-webkit-touch-callout: none) {
+  body.page-personazai .personazai-search__input{
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+  }
+}
+
 /* Input reset (kad Materialize neužmuštų) */
 body.page-personazai .personazai-search__input{
   width: 100% !important;
@@ -230,6 +242,10 @@ body.page-personazai .personazai-search__input{
   padding: 0 !important;
 
   box-shadow: none !important;
+
+  /* papildomai: iOS ir šiaip vizualiai stabiliau */
+  -webkit-appearance: none;
+  appearance: none;
 }
 body.page-personazai .personazai-search__input:focus{
   border: 0 !important;
