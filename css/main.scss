@@ -27,6 +27,7 @@
 
 /* ================================
    GLOBAL HEADINGS – AMATIC SC
+   (naudojama ne bloge, pvz "Kontaktai", sekcijų antraštės home ir pan.)
    ================================ */
 
 .section-header{
@@ -141,7 +142,7 @@ body.page-personazai #nav .personazai-search-toggle{
 
   border: 0;
   background: transparent;
-  color: #fff;          /* sulyginam su burger (be opacity skirtumų) */
+  color: #fff;
   cursor: pointer;
 
   opacity: 1;
@@ -163,7 +164,7 @@ body.page-personazai #nav .personazai-search-toggle{
   }
 
   body.page-personazai #nav a.personazai-search-nav-link:hover{
-    color: #333;                 /* identiška nav ul a:hover */
+    color: #333;
     background-color: transparent;
   }
 }
@@ -171,10 +172,10 @@ body.page-personazai #nav .personazai-search-toggle{
 /* STICKY panelis po navbar */
 body.page-personazai .personazai-search-panel{
   position: sticky;
-  top: 56px;          /* mobile nav aukštis */
+  top: 56px;
   z-index: 10;
 
-  display: none;      /* rodom tik kai .is-open */
+  display: none;
   padding: 8px 0 16px;
 
   background: transparent;
@@ -221,8 +222,6 @@ body.page-personazai .personazai-search__icon{
 /* ================================
    iOS SAFARI: STOP INPUT AUTO-ZOOM
    ================================ */
-/* iPhone Safari prizoombina input, jei font-size < 16px.
-   Fix: užtikrinam 16px+ tik iOS aplinkoje, neliečiant kitur. */
 @supports (-webkit-touch-callout: none) {
   body.page-personazai .personazai-search__input{
     font-size: 16px !important;
@@ -243,7 +242,6 @@ body.page-personazai .personazai-search__input{
 
   box-shadow: none !important;
 
-  /* papildomai: iOS ir šiaip vizualiai stabiliau */
   -webkit-appearance: none;
   appearance: none;
 }
@@ -346,7 +344,8 @@ h1.baloon-line{
 }
 
 /* ================================
-   BLOG ONLY – TYPOGRAPHY PACKAGE
+   BLOG – TYPOGRAPHY (SINGLE + LISTING)
+   Viskas bloge: KG Kindergarden
    ================================ */
 
 .blog,
@@ -369,39 +368,83 @@ h1.baloon-line{
   color: #4f4f4f;
 }
 
-/* Headings hierarchija bloguose */
-.blog h1,
-.blogas h1{
+/* ================================
+   BLOG – HEADINGS (H1/H2/H3) – KG
+   H1: post title
+   H2: sekcijos
+   H3: programų pavadinimai
+   ================================ */
+
+.blog h1, .blogas h1,
+.blog h2, .blogas h2,
+.blog h3, .blogas h3{
   font-family: "KG Kindergarden", sans-serif !important;
-  font-size: 2.3rem;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.4px;
+  line-height: 1.2;
   color: #3f3f3f;
+  text-transform: none;
+}
 
+/* H1 – straipsnio title */
+.blog h1, .blogas h1{
+  font-size: 2.3rem;   /* tavo senas dydis – stabilus, dera su KG */
   margin-top: 0;
-  margin-bottom: 2.6rem;
+  margin-bottom: 2.0rem;
 }
 
-.blog h2,
-.blogas h2{
-  font-family: "KG Kindergarden", sans-serif !important;
-  font-size: 1.55rem;
-  text-transform: none;
-  letter-spacing: 0.3px;
-  color: #444444;
-
-  margin-top: 3.2rem;
-  margin-bottom: 1.1rem;
+/* H2 – sekcijos */
+.blog h2, .blogas h2{
+  font-size: 1.55rem;  /* tavo senas dydis – stabilus */
+  margin-top: 2.4rem;
+  margin-bottom: 1.0rem;
 }
 
-.blog h3,
-.blogas h3{
-  font-family: "KG Kindergarden", sans-serif !important;
-  font-size: 1.25rem;
-  text-transform: none;
-  letter-spacing: 0.25px;
-  color: #4a4a4a;
-
-  margin-top: 2.2rem;
+/* H3 – programų pavadinimai */
+.blog h3, .blogas h3{
+  font-size: 1.25rem;  /* tavo senas dydis – stabilus */
+  margin-top: 1.8rem;
   margin-bottom: 0.8rem;
+}
+
+/* ================================
+   BLOG LISTING (/blog) – CARD HIERARCHY FIX
+   Tikslas: kortelėje post title turi būti didžiausias,
+   o excerpt'e esantys H2/H3 (iš turinio) – mažesni.
+   ================================ */
+
+/* Kortelės title (tas pirmas <h3> kortelėje) */
+.blogas.blog .card-content > h3{
+  font-size: 1.55rem;  /* padarom kaip H2 dydį – atrodo kaip title */
+  margin: 0 0 0.9rem;
+}
+
+/* Excerpt'e esantys headingai (iš post HTML) */
+.blogas.blog .card-content h1,
+.blogas.blog .card-content h2,
+.blogas.blog .card-content h3:not(:first-child){
+  font-family: "KG Kindergarden", sans-serif !important;
+  letter-spacing: 0.2px;
+  color: #4a4a4a;
+  text-transform: none;
+  line-height: 1.25;
+
+  margin: 1.0rem 0 0.6rem;
+}
+
+/* Excerpt'e: H1/H2 sumažinam */
+.blogas.blog .card-content h1,
+.blogas.blog .card-content h2{
+  font-size: 1.05rem;
+}
+
+/* Excerpt'e: H3 dar mažesnis */
+.blogas.blog .card-content h3:not(:first-child){
+  font-size: 1.0rem;
+}
+
+/* Mobile tweak */
+@media (max-width: 600px){
+  .blogas.blog .card-content > h3{
+    font-size: 1.4rem;
+  }
 }

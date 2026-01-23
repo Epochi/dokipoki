@@ -3,9 +3,9 @@ published: true
 title: Idėjos darželio išleistuvėms su DokiPoki
 ---
 Pasitinkant vasarą daugelis vaikų atsisveikina su labai svarbia vaikystės vieta – darželiu. Ši vieta kiekvienam vaikui per kelerius metus tampa antraisiais namais, kuriuose jis susitinka su draugais, žaidžiant kartu keliauja po svajonių šalis, mokosi pažinti save, savo pomėgius, bendrauti. Paruošėme Jums keletą pasiūlymų, kad darželio išleistuvės vaikučiams būtų įsimintiniausia, smagiausia ir gražiausių atsiminimų kupina šventė.  
-# Mūsų siūlomos programos kartu su animatoriais:
+## Mūsų siūlomos programos kartu su animatoriais:
 <!--more-->
-## KOOOSMINĖS DARŽELIO IŠLEISTUVĖS
+### KOOOSMINĖS DARŽELIO IŠLEISTUVĖS
 *	laikysime rankose ugnį 
 *	pagaminsime milžiniškus debesis
 *	darysime sprogimus
@@ -14,7 +14,7 @@ Pasitinkant vasarą daugelis vaikų atsisveikina su labai svarbia vaikystės vie
 *	ragausime kosminius garuojančius kukurūzus  
 
 Šią programą veda du ką tik į žemę nusileidę Kosmonautai. 
-## DARŽELIO IŠLEISTUVĖS SU PAŠĖLUSIAIS KLOUNAIS
+### DARŽELIO IŠLEISTUVĖS SU PAŠĖLUSIAIS KLOUNAIS
 *	žaisime smagiausius žaidimus
 *	lankstysime balionus
 *	šoksime tarp spalvotų dūmų
@@ -22,7 +22,7 @@ Pasitinkant vasarą daugelis vaikų atsisveikina su labai svarbia vaikystės vie
 *	dalyvausime pačiame linksmiausiame spalvotų miltelių mūšyje  
 
 Programą veda du nutrūktgalviai Klounai. 
-## HOGVARTSO IŠLEISTUVĖS
+### HOGVARTSO IŠLEISTUVĖS
 *	gaminsime spalvotą ugnį
 *	darysime lipnųjį slaimą
 *	gaminsime dramblio pastą
@@ -31,7 +31,7 @@ Programą veda du nutrūktgalviai Klounai.
 *	žaisime kvidičą  
 
 Programą veda burtininkai Haris Poteris ir Hermiona. 
-## DARŽELIO IŠLEISTUVĖS SU MYLIMIAUSIAIS PERSONAŽAIS
+### DARŽELIO IŠLEISTUVĖS SU MYLIMIAUSIAIS PERSONAŽAIS
 *	lankstysime balionus
 *	žaisime smagiausius žaidimus
 *	darysime didžiulius muilo burbulus
@@ -40,12 +40,12 @@ Programą veda burtininkai Haris Poteris ir Hermiona.
 Šią programą veda du bet kurie Jūsų pasirinkti personažai (pvz. Žmogus Voras ir Vienaragė, Indėnai, Elza ir Supermenas ir t.t.).   
 
 
-# Taip pat kiekvieną šventę padaryti dar įspūdingesne galite užsisakę papildomų pramogų:
+## Taip pat kiekvieną šventę padaryti dar įspūdingesne galite užsisakę papildomų pramogų:
 *	__Putų patrankos__ sukurs išskirtinę atmosferą šokiams putose
 *	Įvairiausi __batutai__ pralinksmins visus vaikus
 *	__Spragėsių ir cukraus vatos aparatai__ pasaldins kiekvieną šventę  
 
-# Kiti patarimai:
+## Kiti patarimai:
 *	Nepamirškite užsisakyti animatorių kuo anksčiau, geriausia prieš 2-3 mėnesius. Darželio išleistuvių panašiu metu tikrai vyksta labai daug, todėl geriau užsisakyti iš anksto, kad galėtumėte gauti norimus personažus būtent Jums tinkamu laiku. 
 *	Jeigu norite pasirūpinti vaišėmis, tai rekomenduojame nepersistengti su įvairių patiekalų ruošimu, nes tikrai užtenka lengvų užkandžių, vaisių ir gaiviųjų gėrimų. 
 *	Kadangi išleistuvės vyksta šiltuoju metų laiku, rekomenduojame šventę daryti lauke, nes būtent čia galime pažaisti smagiausius žaidimus ir naudoti rekvizitus, kurių viduje negalime (pavyzdžiui, spalvoti milteliai, spalvoti dūmai). Tam puikiai tinka darželio kiemas, bet jeigu ieškote įdomesnės erdvės galite organizuoti šventę prie ežero, miške, restoranų kiemuose ar terasose. 
