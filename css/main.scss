@@ -11,25 +11,44 @@
 @import "styles.scss";
 
 /* ================================
+   FONT + MOBILE STABILITY
+   ================================ */
+html{
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* KG Kindergarden – explicit face (stability) */
+@font-face{
+  font-family: "KG Kindergarden";
+  src: url("/fonts/kg-kindergarden/KGMissKindergarten.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ================================
    GLOBAL UTILITIES
    ================================ */
+.hidden-gallery{ display: none; }
 
-.hidden-gallery { display: none; }
-
-/* Helper class: KG Kindergarden (UI tekstams kur prireiks) */
 .kg-font{
   font-family: "KG Kindergarden", sans-serif !important;
   letter-spacing: 0.2px;
+  font-synthesis: none;
 }
 .kg-font--small  { font-size: 0.95rem; }
 .kg-font--normal { font-size: 1rem; }
 .kg-font--large  { font-size: 1.05rem; }
 
 /* ================================
-   GLOBAL HEADINGS – AMATIC SC
-   (naudojama ne bloge, pvz "Kontaktai", sekcijų antraštės home ir pan.)
+   GLOBAL HEADINGS (ne bloge)
    ================================ */
-
 .section-header{
   font-family: "Amatic SC", cursive !important;
   letter-spacing: 1px;
@@ -38,20 +57,18 @@
 /* ================================
    BUTTONS
    ================================ */
-
-/* Global DokiPoki button base */
 .dp-btn{
   background-color: #f4b0b8 !important;
   color: #ffffff !important;
   border-radius: 8px !important;
   text-transform: none !important;
 
-  font-family: "KG Kindergarden", sans-serif;
+  font-family: "KG Kindergarden", sans-serif !important;
   letter-spacing: 0.2px;
   font-weight: 500 !important;
+  font-synthesis: none;
 }
 
-/* CTA su Amatic (Messenger, Skambinti) */
 .dp-btn.section-header,
 .btn-flat.section-header{
   font-family: "Amatic SC", cursive !important;
@@ -59,14 +76,9 @@
   text-transform: none;
 }
 
-/* CTA dydžiai */
 .dp-btn.section-header{ font-size: 1.6rem; }
-.btn-flat.section-header{
-  font-size: 1.8rem;
-  line-height: 1.2;
-}
+.btn-flat.section-header{ font-size: 1.8rem; line-height: 1.2; }
 
-/* Hover / focus – neleidžiam Materialize perrašyti */
 .dp-btn:hover,
 .dp-btn:focus{
   background-color: #f4b0b8 !important;
@@ -76,18 +88,14 @@
 /* ================================
    PERSONAŽŲ GRID
    ================================ */
-
-/* Rodyklė ant personažų pavadinimų */
 .personazai h4 a{ cursor: pointer !important; }
 
-/* Visi personažai – flex layout */
 #VisiPersonazai{
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
 }
 
-/* Kortelės wrapper */
 #VisiPersonazai .personazai-wrapper{
   float: none;
   display: flex;
@@ -95,24 +103,15 @@
   box-sizing: border-box;
 }
 
-/* Desktop – 3 stulpeliai */
-@media only screen and (min-width: 993px){
+@media (min-width: 993px){
   #VisiPersonazai .personazai-wrapper{ width: 33.3333%; }
 }
-
-/* Tablet – 2 stulpeliai */
-@media only screen and (min-width: 601px) and (max-width: 992px){
+@media (min-width: 601px) and (max-width: 992px){
   #VisiPersonazai .personazai-wrapper{ width: 50%; }
 }
-
-/* Mobile – 1 stulpelis + plonesni CTA */
-@media only screen and (max-width: 600px){
+@media (max-width: 600px){
   #VisiPersonazai .personazai-wrapper{ width: 100%; }
-
-  .btn-large.dp-btn{
-    height: 44px !important;
-    line-height: 44px !important;
-  }
+  .btn-large.dp-btn{ height: 44px !important; line-height: 44px !important; }
 }
 
 .grid-item img{
@@ -124,12 +123,10 @@
 /* ================================
    PERSONAŽAI – SEARCH (toggle + sticky panel)
    ================================ */
-
-/* MOBILE: 🔍 mygtukas šalia burgerio (įterpia JS) */
 body.page-personazai #nav .personazai-search-toggle{
   float: right;
-
   height: 55px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,26 +147,22 @@ body.page-personazai #nav .personazai-search-toggle{
   z-index: 9999;
 }
 
-/* DESKTOP: 🔍 kaip normalus navbar item (per <li><a>) */
 @media (min-width: 993px){
   body.page-personazai #nav a.personazai-search-nav-link{
     color: #fff;
     background-color: transparent;
 
-    /* dydis/pozicija — tweakink tik šituos 4 */
     font-size: 2.0rem;
     line-height: 40px;
     padding: 0 10px;
     transform: translateY(-1px);
   }
-
   body.page-personazai #nav a.personazai-search-nav-link:hover{
     color: #333;
     background-color: transparent;
   }
 }
 
-/* STICKY panelis po navbar */
 body.page-personazai .personazai-search-panel{
   position: sticky;
   top: 56px;
@@ -181,14 +174,11 @@ body.page-personazai .personazai-search-panel{
   background: transparent;
   backdrop-filter: none;
 }
-body.page-personazai .personazai-search-panel.is-open{
-  display: block;
-}
+body.page-personazai .personazai-search-panel.is-open{ display: block; }
 @media (min-width: 993px){
   body.page-personazai .personazai-search-panel{ top: 64px; }
 }
 
-/* Search „pill“ */
 body.page-personazai .personazai-search{
   max-width: 560px;
   margin: 0 auto;
@@ -204,7 +194,6 @@ body.page-personazai .personazai-search{
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
-/* Ikona paieškoje (kairėje) */
 body.page-personazai .personazai-search__icon{
   font-size: 2.0em;
   line-height: 1;
@@ -219,9 +208,7 @@ body.page-personazai .personazai-search__icon{
   user-select: none;
 }
 
-/* ================================
-   iOS SAFARI: STOP INPUT AUTO-ZOOM
-   ================================ */
+/* iOS Safari: stop input auto zoom */
 @supports (-webkit-touch-callout: none) {
   body.page-personazai .personazai-search__input{
     font-size: 16px !important;
@@ -229,7 +216,6 @@ body.page-personazai .personazai-search__icon{
   }
 }
 
-/* Input reset (kad Materialize neužmuštų) */
 body.page-personazai .personazai-search__input{
   width: 100% !important;
   border: 0 !important;
@@ -241,7 +227,6 @@ body.page-personazai .personazai-search__input{
   padding: 0 !important;
 
   box-shadow: none !important;
-
   -webkit-appearance: none;
   appearance: none;
 }
@@ -251,7 +236,6 @@ body.page-personazai .personazai-search__input:focus{
 }
 body.page-personazai .personazai-search__input::placeholder{ opacity: 0.55; }
 
-/* Close (X) */
 body.page-personazai .personazai-search__close{
   border: 0 !important;
   background: transparent !important;
@@ -267,7 +251,6 @@ body.page-personazai .personazai-search__close{
 }
 body.page-personazai .personazai-search__close:hover{ opacity: 0.85; }
 
-/* Empty state */
 body.page-personazai .personazai-search__empty{
   max-width: 560px;
   margin: 8px auto 0;
@@ -276,8 +259,7 @@ body.page-personazai .personazai-search__empty{
   font-size: 0.95rem;
 }
 
-/* Mobile – šiek tiek platesnis */
-@media only screen and (max-width: 600px){
+@media (max-width: 600px){
   body.page-personazai .personazai-search{
     max-width: 100%;
     margin: 0 8px;
@@ -287,21 +269,12 @@ body.page-personazai .personazai-search__empty{
 /* ================================
    SUBHEADER RESET
    ================================ */
-
-#subheader-wrapper{
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-#subheader{
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
+#subheader-wrapper{ padding-top: 0 !important; padding-bottom: 0 !important; }
+#subheader{ margin-top: 0 !important; margin-bottom: 0 !important; }
 
 /* ================================
    HERO / BALLOON TITLE
    ================================ */
-
-/* Balloon container */
 #company-name{
   margin: 0 !important;
   padding: 0 !important;
@@ -312,7 +285,6 @@ body.page-personazai .personazai-search__empty{
   justify-content: center !important;
 }
 
-/* Balloon itself */
 #company-name .title-background{
   display: flex !important;
   align-items: center !important;
@@ -333,118 +305,118 @@ body.page-personazai .personazai-search__empty{
 
   margin-left: auto !important;
   margin-right: auto !important;
-
   margin-top: 100px;
 }
 
-/* Rope / line */
 h1.baloon-line{
   position: relative;
   top: -72px;
 }
 
 /* ================================
-   BLOG – TYPOGRAPHY (SINGLE + LISTING)
-   Viskas bloge: KG Kindergarden
+   BLOG – SINGLE (KG everywhere)
    ================================ */
-
 .blog,
-.blogas,
-.blog.blogas,
+.blogas{
+  font-family: "KG Kindergarden", sans-serif !important;
+  font-synthesis: none;
+  letter-spacing: 0.2px;
+  color: #4f4f4f;
+}
+
 .blog .card-content,
 .blogas .card-content{
   font-family: "KG Kindergarden", sans-serif !important;
+  font-synthesis: none;
   letter-spacing: 0.2px;
   color: #4f4f4f;
 }
 
-.blog .card-content p,
-.blogas .card-content p,
-.blog .card-content li,
-.blogas .card-content li,
-.blog .card-content a,
-.blogas .card-content a{
+.blog p, .blogas p,
+.blog li, .blogas li,
+.blog a, .blogas a{
   font-family: "KG Kindergarden", sans-serif !important;
+  font-synthesis: none;
   color: #4f4f4f;
 }
 
-/* ================================
-   BLOG – HEADINGS (H1/H2/H3) – KG
-   H1: post title
-   H2: sekcijos
-   H3: programų pavadinimai
-   ================================ */
+/* Headings (desktop) */
+.blog h1, .blogas h1{
+  font-family: "KG Kindergarden", sans-serif !important;
+  font-synthesis: none;
+  letter-spacing: 0.2px;
+  color: #3f3f3f;
+  line-height: 1.2;
 
-.blog h1, .blogas h1,
-.blog h2, .blogas h2,
+  font-size: 2.3rem;
+  margin: 0 0 2.0rem;
+}
+
+.blog h2, .blogas h2{
+  font-family: "KG Kindergarden", sans-serif !important;
+  font-synthesis: none;
+  letter-spacing: 0.2px;
+  color: #3f3f3f;
+  line-height: 1.2;
+
+  font-size: 1.55rem;
+  margin: 2.4rem 0 1.0rem;
+}
+
 .blog h3, .blogas h3{
   font-family: "KG Kindergarden", sans-serif !important;
-  letter-spacing: 0.4px;
-  line-height: 1.2;
+  font-synthesis: none;
+  letter-spacing: 0.2px;
   color: #3f3f3f;
-  text-transform: none;
+  line-height: 1.2;
+
+  font-size: 1.25rem;
+  margin: 1.8rem 0 0.8rem;
 }
 
-/* H1 – straipsnio title */
-.blog h1, .blogas h1{
-  font-size: 2.3rem;   /* tavo senas dydis – stabilus, dera su KG */
-  margin-top: 0;
-  margin-bottom: 2.0rem;
-}
-
-/* H2 – sekcijos */
-.blog h2, .blogas h2{
-  font-size: 1.55rem;  /* tavo senas dydis – stabilus */
-  margin-top: 2.4rem;
-  margin-bottom: 1.0rem;
-}
-
-/* H3 – programų pavadinimai */
-.blog h3, .blogas h3{
-  font-size: 1.25rem;  /* tavo senas dydis – stabilus */
-  margin-top: 1.8rem;
-  margin-bottom: 0.8rem;
+/* Headings (mobile) – ONLY sizes */
+@media (max-width: 600px){
+  .blog h1, .blogas h1{ font-size: 2.2rem !important; line-height: 1.25; }
+  .blog h2, .blogas h2{ font-size: 1.6rem !important; line-height: 1.3; }
+  .blog h3, .blogas h3{ font-size: 1.35rem !important; line-height: 1.3; }
 }
 
 /* ================================
-   BLOG LISTING (/blog) – CARD HIERARCHY FIX
-   Tikslas: kortelėje post title turi būti didžiausias,
-   o excerpt'e esantys H2/H3 (iš turinio) – mažesni.
+   BLOG LISTING (/blog) – show less
    ================================ */
 
-/* Kortelės title (tas pirmas <h3> kortelėje) */
+/* Title in card */
 .blogas.blog .card-content > h3{
-  font-size: 1.55rem;  /* padarom kaip H2 dydį – atrodo kaip title */
+  font-family: "KG Kindergarden", sans-serif !important;
+  font-synthesis: none;
+  color: #3f3f3f;
+  line-height: 1.15;
+
+  font-size: 1.55rem;
   margin: 0 0 0.9rem;
 }
 
-/* Excerpt'e esantys headingai (iš post HTML) */
-.blogas.blog .card-content h1,
-.blogas.blog .card-content h2,
-.blogas.blog .card-content h3:not(:first-child){
-  font-family: "KG Kindergarden", sans-serif !important;
-  letter-spacing: 0.2px;
-  color: #4a4a4a;
-  text-transform: none;
-  line-height: 1.25;
-
-  margin: 1.0rem 0 0.6rem;
-}
-
-/* Excerpt'e: H1/H2 sumažinam */
-.blogas.blog .card-content h1,
-.blogas.blog .card-content h2{
-  font-size: 1.05rem;
-}
-
-/* Excerpt'e: H3 dar mažesnis */
-.blogas.blog .card-content h3:not(:first-child){
-  font-size: 1.0rem;
-}
-
-/* Mobile tweak */
 @media (max-width: 600px){
   .blogas.blog .card-content > h3{
-    font-size: 1.4rem;
+    font-size: 2.0rem !important;
+  }
+}
+
+/* Show ONLY: title + first paragraph + Skaityti daugiau */
+.blogas.blog .card-content > *{ display: none; }
+.blogas.blog .card-content > h3{ display: block; }
+.blogas.blog .card-content > p:first-of-type{ display: block; }
+.blogas.blog .card-content > a{ display: inline-block; margin-top: 12px; }
+
+/* Optional clamp just for that first paragraph */
+.blogas.blog .card-content > p:first-of-type{
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@media (max-width: 600px){
+  .blogas.blog .card-content > p:first-of-type{
+    -webkit-line-clamp: 3;
   }
 }
