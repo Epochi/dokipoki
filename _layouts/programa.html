@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="lt">
+  {% include head.html %}
+
+  <body class="rozine {{ page.body_class }}">
+    {% include navbar.html %}
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col s12">
+          <h2 class="section-header center-align">{{ page.title }}</h2>
+        </div>
+      </div>
+
+      {% if page.intro %}
+      <div class="row">
+        <div class="col s12 center-align">
+          <p class="kg-font kg-font--normal" style="max-width: 820px; margin: 0 auto 20px auto;">
+            {{ page.intro }}
+          </p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.image %}
+      {% assign hero_src = page.image | relative_url %}
+      <div class="row">
+        <div class="col s12">
+
+          <!-- HERO: inline paliekam tik background-image, visa kita valdys CSS -->
+          <div
+            class="dp-hero-cover"
+            style="background-image: url('{{ hero_src }}');"
+            role="img"
+            aria-label="{{ page.title }}"
+          ></div>
+
+          <!-- Hidden fallback (be absolute pozicijos, kad nekirstų layout) -->
+          <img
+            src="{{ hero_src }}"
+            alt="{{ page.title }}"
+            loading="lazy"
+            decoding="async"
+            style="position: fixed; left: -99999px; top: -99999px; width: 1px; height: 1px; opacity: 0; pointer-events: none;"
+          >
+        </div>
+      </div>
+      {% endif %}
+
+      {{ content }}
+
+    </div>
+
+    {% include kontaktai.html %}
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="{{ "/js/bin/materialize.js" | prepend: site.baseurl }}"></script>
+    <script type="text/javascript" src="{{ "/js/bin/main.js" | prepend: site.baseurl }}"></script>
+  </body>
+</html>

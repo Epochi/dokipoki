@@ -6,12 +6,15 @@
   {%- comment -%}
   TITLE LOGIC:
   1) page.seo_title
-  2) page.title + site.title
-  3) site.title
+  2) home page fixed SEO title (no visual changes)
+  3) page.title + site.title
+  4) site.title
   {%- endcomment -%}
   <title>
     {%- if page.seo_title -%}
       {{ page.seo_title }}
+    {%- elsif page.url == "/" -%}
+      DOKIPOKI Personažai | Animatoriai vaikams
     {%- elsif page.title -%}
       {{ page.title }} | {{ site.title }}
     {%- else -%}
@@ -63,7 +66,7 @@
   <meta property="og:locale" content="lt_LT">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:type" content="{% if page.layout == 'post' or page.layout == 'personazas' %}article{% else %}website{% endif %}">
-  <meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% elsif page.seo_title %}{{ page.seo_title }}{% elsif page.personazas %}{{ page.personazas }} | {{ site.title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% elsif page.seo_title %}{{ page.seo_title }}{% elsif page.url == '/' %}DOKIPOKI Personažai | Animatoriai vaikams{% elsif page.personazas %}{{ page.personazas }} | {{ site.title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{{ meta_description }}">
   <meta property="og:url" content="{{ canonical | absolute_url }}">
   <meta property="og:image" content="{{ og_image | absolute_url }}"/>
@@ -72,7 +75,7 @@
   Twitter
   {%- endcomment -%}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% if page.twitter_title %}{{ page.twitter_title }}{% elsif page.seo_title %}{{ page.seo_title }}{% elsif page.personazas %}{{ page.personazas }} | {{ site.title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:title" content="{% if page.twitter_title %}{{ page.twitter_title }}{% elsif page.seo_title %}{{ page.seo_title }}{% elsif page.url == '/' %}DOKIPOKI Personažai | Animatoriai vaikams{% elsif page.personazas %}{{ page.personazas }} | {{ site.title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{{ meta_description }}">
   <meta name="twitter:image" content="{{ og_image | absolute_url }}">
 

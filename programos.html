@@ -1,0 +1,92 @@
+---
+title: "Programos"
+seo_title: "Programos vaikų šventėms | Doki Poki"
+permalink: /programos/
+description: "Doki Poki programos vaikų šventėms ir darželiams. Aiškios kainos, profesionalūs animatoriai, saugios programos."
+---
+
+<!DOCTYPE html>
+<html lang="lt">
+  {% include head.html %}
+
+  <body class="rozine page-programos">
+    {% include navbar.html %}
+
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h2 class="section-header center-align">Programos</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12">
+          <p class="center-align kg-font kg-font--normal" style="max-width: 820px; margin: 0 auto 20px auto;">
+            Daug juoko, žaidimų ir įspūdžių - išsirinkite programą savo šventei!
+          </p>
+        </div>
+      </div>
+
+      {% assign programs = site.programos %}
+
+      {% if programs and programs.size > 0 %}
+        {% assign programs_sorted = programs | sort: "order" %}
+        <div id="Programos" class="row section programos">
+          {% for program in programs_sorted %}
+
+            {% assign href = program.link | default: '/kontaktai/' %}
+            {% assign img  = program.image | default: program.img %}
+
+            <!-- 3 per eilę desktop'e: l4 (992px+), xl4 (1200px+) -->
+            <div class="programos-wrapper col s12 m6 l4 xl4">
+              <a href="{{ href }}">
+                <img
+                  class="responsive-img"
+                  alt="{{ program.title }} – programa vaikų šventei"
+                  src="{{ img }}"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </a>
+
+              <h3 class="section-header center-align">
+                <a href="{{ href }}" class="cursor-default">
+                  {{ program.title }}
+                </a>
+              </h3>
+
+              {% if program.intro %}
+                <p class="kg-font kg-font--small center-align">
+                  {{ program.intro }}
+                </p>
+              {% endif %}
+
+              <!-- SVARBU: nebededam "col s12" viduje, nes tai laužo grid'ą -->
+              <div class="center-align" style="margin-top: 14px;">
+                <a href="{{ href }}" class="btn-large waves-effect waves-light dp-btn section-header">
+                  Peržiūrėti →
+                </a>
+              </div>
+            </div>
+
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="row">
+          <div class="col s12">
+            <p class="center-align kg-font kg-font--normal">
+              Programos ruošiamos. Susisiekite ir pateiksime pasiūlymą.
+            </p>
+          </div>
+        </div>
+      {% endif %}
+
+    </div>
+
+    {% include kontaktai.html %}
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="{{ "/js/bin/materialize.js" | prepend: site.baseurl }}"></script>
+    <script type="text/javascript" src="{{ "/js/bin/main.js" | prepend: site.baseurl }}"></script>
+  </body>
+</html>

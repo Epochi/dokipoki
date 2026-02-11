@@ -420,3 +420,141 @@ h1.baloon-line{
     -webkit-line-clamp: 3;
   }
 }
+
+/* ================================
+   HERO + PROGRAMOS COVER (unified)
+   Tikslas: /programos/ (apžvalga) ir atidarius programą – identiškas vaizdas:
+   - tas pats aukštis
+   - tas pats centravimas (25%)
+   SVARBU: jei .dp-hero-cover turi inline style="background-position/height",
+   jis laimės. Ištrink iš HTML: background-position + height (palik tik background-image).
+   ================================ */
+
+:root{
+  --dp-cover-radius: 12px;
+  --dp-cover-focus-y: 25%;
+  --dp-cover-h-desktop: 240px;
+  --dp-cover-h-tablet: 240px;  /* paliekam tokį pat, kad būtų identiška */
+  --dp-cover-h-mobile: 150px;  /* imam apžvalgos mobile bazę */
+}
+
+/* HERO cover (vidiniame programos puslapyje) */
+.dp-hero-cover{
+  width: 100%;
+  height: var(--dp-cover-h-desktop);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center var(--dp-cover-focus-y) !important;
+  border-radius: var(--dp-cover-radius);
+}
+
+@media (max-width: 992px){
+  .dp-hero-cover{
+    height: var(--dp-cover-h-tablet);
+    background-position: center var(--dp-cover-focus-y) !important;
+  }
+}
+
+@media (max-width: 600px){
+  .dp-hero-cover{
+    height: var(--dp-cover-h-mobile);
+    background-position: center var(--dp-cover-focus-y) !important;
+  }
+}
+
+/* IŠMETAM specifinį darželio override – kad būtų identiška visur */
+/* body.page-programa-darzelio-isleistuves .dp-hero-cover ...  <-- TRINTI */
+
+/* ================================
+   PROGRAMOS – kortelių paveikslėliai (vidinis programos puslapis)
+   Paliekam kaip buvo (netaisom kortelių), bet suvienodinam cover logiką (25%).
+   Jei nenori liesti aukščių – nekeisk height, tik object-position.
+   ================================ */
+.page-programa .dp-grid .card-image{
+  position: relative;
+  overflow: hidden;
+}
+
+/* jei kortelės "vidiniame" puslapyje tau jau buvo OK – gali palikti 330/240.
+   Čia tik sulyginam fokusą į 25% (jei nori identiško vaizdo) */
+.page-programa .dp-grid .card-image img{
+  width: 100%;
+  height: 330px;                 /* paliekam kaip buvo */
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+
+@media (max-width: 600px){
+  .page-programa .dp-grid .card-image img{
+    height: 240px;               /* paliekam kaip buvo */
+    object-position: center 25%;
+  }
+}
+
+/* ================================
+   PROGRAMOS – GRID (chronologiškai, be masonry)
+   ================================ */
+.page-programa .dp-grid.dp-masonry{
+  column-count: unset;
+  column-gap: unset;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+
+  padding: 0;
+  margin: 0;
+}
+
+.page-programa .dp-grid.dp-masonry > .dp-item{
+  display: block;
+  width: auto;
+  margin: 0;
+
+  break-inside: auto;
+  -webkit-column-break-inside: auto;
+  page-break-inside: auto;
+}
+
+@media (max-width: 600px){
+  .page-programa .dp-grid.dp-masonry{
+    grid-template-columns: 1fr;
+  }
+}
+
+.page-programa .dp-grid.dp-masonry .card{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.page-programa .dp-grid.dp-masonry .card-content{
+  flex: 1;
+}
+
+/* ================================
+   PROGRAMOS (apžvalgos puslapis /programos/)
+   Suvienodinam aukštį + fokusą su hero cover
+   ================================ */
+body.page-programos .programos-wrapper a > img.responsive-img{
+  width: 100%;
+  height: var(--dp-cover-h-desktop);
+  object-fit: cover;
+  object-position: center var(--dp-cover-focus-y);
+  display: block;
+  border-radius: var(--dp-cover-radius);
+}
+
+@media (max-width: 992px){
+  body.page-programos .programos-wrapper a > img.responsive-img{
+    height: var(--dp-cover-h-tablet);
+    object-position: center var(--dp-cover-focus-y);
+  }
+}
+
+@media (max-width: 600px){
+  body.page-programos .programos-wrapper a > img.responsive-img{
+    height: var(--dp-cover-h-mobile);
+    object-position: center var(--dp-cover-focus-y);
+  }
+}

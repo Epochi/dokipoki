@@ -36,8 +36,10 @@ collections:
   costumes:
     output: true
     permalink: /personazai/:name/
-  posts:
 
+  programos:
+    output: true
+    permalink: /programos/:name/
 
 defaults:
   - scope:
@@ -45,6 +47,13 @@ defaults:
       type: "costumes"
     values:
       img_root: "/img/personazai/"
+
+  - scope:
+      path: "_programos"
+      type: "programos"
+    values:
+      layout: null
+
   - scope:
       path: "_posts"
       type: "posts"
