@@ -2,7 +2,7 @@
 layout: programa
 title: "Darželio išleistuvės"
 order: 1
-intro: "Atsisveikinam su darželiu garsiai, spalvingai ir su personažais! Darželio išleistuvės, kuriose net tyliausi vaikai pradeda šypsotis.."
+intro: "Darželio išleistuvės su Doki Poki personažais – daug juoko, daug energijos ir maksimaliai smagiai!"
 image: "/img/programos/darzelis/darzelio-isleistuves.jpg"
 permalink: /programos/darzelio_isleistuves/
 body_class: page-programa page-programa-darzelio-isleistuves
@@ -35,58 +35,7 @@ link: /programos/darzelio_isleistuves/
       },
       "areaServed": [
         { "@type": "Country", "name": "Lithuania" }
-      ],
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "EUR",
-        "lowPrice": "300",
-        "highPrice": "500",
-        "offerCount": "5",
-        "availability": "https://schema.org/InStock",
-        "url": "{{ page.url | absolute_url }}",
-        "offers": [
-          {
-            "@type": "Offer",
-            "name": "IŠLEISTUVĖS SU DOKI POKI PERSONAŽAIS (1 val.)",
-            "price": "300",
-            "priceCurrency": "EUR",
-            "url": "{{ page.url | absolute_url }}",
-            "availability": "https://schema.org/InStock"
-          },
-          {
-            "@type": "Offer",
-            "name": "ŠUNYČIAI PATRULIAI – MISIJA „IŠLEISTUVĖS“ (1 val.)",
-            "price": "350",
-            "priceCurrency": "EUR",
-            "url": "{{ page.url | absolute_url }}",
-            "availability": "https://schema.org/InStock"
-          },
-          {
-            "@type": "Offer",
-            "name": "IŠLEISTUVĖS SU PAŠĖLUSIAIS KLOUNAIS (1 val.)",
-            "price": "400",
-            "priceCurrency": "EUR",
-            "url": "{{ page.url | absolute_url }}",
-            "availability": "https://schema.org/InStock"
-          },
-          {
-            "@type": "Offer",
-            "name": "PIMPAČKIUKŲ IŠLEISTUVĖS (1 val.)",
-            "price": "450",
-            "priceCurrency": "EUR",
-            "url": "{{ page.url | absolute_url }}",
-            "availability": "https://schema.org/InStock"
-          },
-          {
-            "@type": "Offer",
-            "name": "KOSMINĖS IŠLEISTUVĖS (1 val.)",
-            "price": "500",
-            "priceCurrency": "EUR",
-            "url": "{{ page.url | absolute_url }}",
-            "availability": "https://schema.org/InStock"
-          }
-        ]
-      }
+      ]
     }
   ]
 }
@@ -133,9 +82,6 @@ link: /programos/darzelio_isleistuves/
               ir kiti.
             </p>
 
-            <p class="kg-font kg-font--small" style="margin-top: 12px;">
-              <strong>1 val. programos kaina – 300€*</strong>
-            </p>
           </div>
         </div>
       </div>
@@ -164,9 +110,6 @@ link: /programos/darzelio_isleistuves/
               (turime <a href="/personazai/patrulis-chase/">Chase</a>, <a href="/personazai/patrule-skye/">Skye</a>, <a href="/personazai/patrule-everesta/">Everest</a>, <a href="/personazai/patrulis-marshal/">Marshal</a>).
             </p>
 
-            <p class="kg-font kg-font--small" style="margin-top: 12px;">
-              <strong>1 val. programos kaina – 350€*</strong>
-            </p>
           </div>
         </div>
       </div>
@@ -193,9 +136,6 @@ link: /programos/darzelio_isleistuves/
               Programą veda du nutrūktgalviai <a href="/personazai/klounai/">Klounai</a>.
             </p>
 
-            <p class="kg-font kg-font--small" style="margin-top: 12px;">
-              <strong>1 val. programos kaina – 400€*</strong>
-            </p>
           </div>
         </div>
       </div>
@@ -221,9 +161,6 @@ link: /programos/darzelio_isleistuves/
               Šią programą veda du pokštininkai <a href="/personazai/pimpackiukai/">Pimpačkiukai</a>.
             </p>
 
-            <p class="kg-font kg-font--small" style="margin-top: 12px;">
-              <strong>1 val. programos kaina – 450€*</strong>
-            </p>
           </div>
         </div>
       </div>
@@ -251,21 +188,10 @@ link: /programos/darzelio_isleistuves/
               Šią programą veda du ką tik į žemę nusileidę <a href="/personazai/kosmonautas/">Kosmonautai</a>.
             </p>
 
-            <p class="kg-font kg-font--small" style="margin-top: 12px;">
-              <strong>1 val. programos kaina – 500€*</strong>
-            </p>
           </div>
         </div>
       </div>
 
     </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col s12 center-align" style="margin-top: 40px;">
-    <p class="kg-font kg-font--small" style="max-width: 820px; margin: 0 auto 14px auto;">
-      * Nurodytos kainos galioja Vilniaus mieste. Jei šventė vyksta už Vilniaus ribų – kelionę ir sąlygas deriname individualiai.
-    </p>
   </div>
 </div>

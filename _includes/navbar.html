@@ -17,7 +17,7 @@
         <ul class="right hide-on-med-and-down center">
           {% if page.layout == 'home' %}
             <!-- Home page -->
-            <li><a href="#Programa">Programa</a></li>
+            <li><a href="{{ site.baseurl }}/programos/">Programos</a></li>
             <li><a href="{{ site.baseurl }}/personazai/">Personažai</a></li>
             <li><a href="#Kaina">Kaina</a></li>
             <li><a href="#Galerija">Galerija</a></li>
@@ -26,7 +26,7 @@
 
           {% elsif page.layout == 'blog' %}
             <!-- Blog page -->
-            <li><a href="/#Programa">Programa</a></li>
+            <li><a href="{{ site.baseurl }}/programos/">Programos</a></li>
             <li><a href="{{ site.baseurl }}/personazai/">Personažai</a></li>
             <li><a href="/#Kaina">Kaina</a></li>
             <li><a href="/#Galerija">Galerija</a></li>
@@ -35,7 +35,7 @@
 
           {% else %}
             <!-- Other pages (post, personazai, etc.) -->
-            <li><a href="/#Programa">Programa</a></li>
+            <li><a href="{{ site.baseurl }}/programos/">Programos</a></li>
             <li><a href="{{ site.baseurl }}/personazai/">Personažai</a></li>
             <li><a href="/#Kaina">Kaina</a></li>
             <li><a href="/#Galerija">Galerija</a></li>
@@ -70,7 +70,7 @@
 <ul id="mobile-nav" class="side-nav right-align rozine">
   {% if page.layout == 'home' %}
     <!-- Mobile – home -->
-    <li><a href="#Programa">Programa</a></li>
+    <li><a href="{{ site.baseurl }}/programos/">Programos</a></li>
     <li><a href="{{ site.baseurl }}/personazai/">Personažai</a></li>
     <li><a href="#Kaina">Kaina</a></li>
     <li><a href="#Galerija">Galerija</a></li>
@@ -79,7 +79,7 @@
 
   {% elsif page.layout == 'blog' %}
     <!-- Mobile – blog -->
-    <li><a href="/#Programa">Programa</a></li>
+    <li><a href="{{ site.baseurl }}/programos/">Programos</a></li>
     <li><a href="{{ site.baseurl }}/personazai/">Personažai</a></li>
     <li><a href="/#Kaina">Kaina</a></li>
     <li><a href="/#Galerija">Galerija</a></li>
@@ -88,7 +88,7 @@
 
   {% else %}
     <!-- Mobile – kiti puslapiai -->
-    <li><a href="/#Programa">Programa</a></li>
+    <li><a href="{{ site.baseurl }}/programos/">Programos</a></li>
     <li><a href="{{ site.baseurl }}/personazai/">Personažai</a></li>
     <li><a href="/#Kaina">Kaina</a></li>
     <li><a href="/#Galerija">Galerija</a></li>

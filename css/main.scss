@@ -420,31 +420,39 @@ h1.baloon-line{
     -webkit-line-clamp: 3;
   }
 }
-
-/* ================================
+ /* ================================
    HERO + PROGRAMOS COVER (unified)
    Tikslas: /programos/ (apžvalga) ir atidarius programą – identiškas vaizdas:
    - tas pats aukštis
-   - tas pats centravimas (25%)
+   - tas pats kirtimas (nuo viršaus)
    SVARBU: jei .dp-hero-cover turi inline style="background-position/height",
    jis laimės. Ištrink iš HTML: background-position + height (palik tik background-image).
    ================================ */
 
 :root{
   --dp-cover-radius: 12px;
-  --dp-cover-focus-y: 25%;
+
+  /* Fokusas: 0% = nuo viršaus (TOP). Jei reikės – pakeisi pvz į 10% */
+  --dp-cover-focus-y: 18%;
+
   --dp-cover-h-desktop: 240px;
-  --dp-cover-h-tablet: 240px;  /* paliekam tokį pat, kad būtų identiška */
-  --dp-cover-h-mobile: 150px;  /* imam apžvalgos mobile bazę */
+  --dp-cover-h-tablet: 240px;  /* identiška desktop */
+  --dp-cover-h-mobile: 150px;  /* mobile bazė */
 }
 
-/* HERO cover (vidiniame programos puslapyje) */
+/* ================================
+   HERO cover (vidiniame programos puslapyje)
+   ================================ */
 .dp-hero-cover{
   width: 100%;
   height: var(--dp-cover-h-desktop);
+
   background-size: cover;
   background-repeat: no-repeat;
+
+  /* TOP crop */
   background-position: center var(--dp-cover-focus-y) !important;
+
   border-radius: var(--dp-cover-radius);
 }
 
@@ -462,33 +470,33 @@ h1.baloon-line{
   }
 }
 
-/* IŠMETAM specifinį darželio override – kad būtų identiška visur */
-/* body.page-programa-darzelio-isleistuves .dp-hero-cover ...  <-- TRINTI */
+/* IŠMETAM specifinius overrides, kad būtų identiška visur */
+/* pvz: body.page-programa-darzelio-isleistuves .dp-hero-cover { ... }  <-- TRINTI */
 
 /* ================================
    PROGRAMOS – kortelių paveikslėliai (vidinis programos puslapis)
-   Paliekam kaip buvo (netaisom kortelių), bet suvienodinam cover logiką (25%).
-   Jei nenori liesti aukščių – nekeisk height, tik object-position.
+   Suvienodinam fokusą su hero (TOP crop)
    ================================ */
 .page-programa .dp-grid .card-image{
   position: relative;
   overflow: hidden;
 }
 
-/* jei kortelės "vidiniame" puslapyje tau jau buvo OK – gali palikti 330/240.
-   Čia tik sulyginam fokusą į 25% (jei nori identiško vaizdo) */
 .page-programa .dp-grid .card-image img{
   width: 100%;
-  height: 330px;                 /* paliekam kaip buvo */
+  height: 430px;                 /* paliekam kaip buvo */
   object-fit: cover;
-  object-position: center 25%;
+
+  /* TOP crop */
+  object-position: center;
+
   display: block;
 }
 
 @media (max-width: 600px){
   .page-programa .dp-grid .card-image img{
-    height: 240px;               /* paliekam kaip buvo */
-    object-position: center 25%;
+    height: 300px;               /* paliekam kaip buvo */
+    object-position: center;
   }
 }
 
@@ -528,19 +536,22 @@ h1.baloon-line{
   display: flex;
   flex-direction: column;
 }
-.page-programa .dp-grid.dp-masonry .card-content{
+
+.page-programama .dp-grid.dp-masonry .card-content{
   flex: 1;
 }
 
 /* ================================
    PROGRAMOS (apžvalgos puslapis /programos/)
-   Suvienodinam aukštį + fokusą su hero cover
+   Suvienodinam aukštį + fokusą su hero cover (TOP crop)
    ================================ */
 body.page-programos .programos-wrapper a > img.responsive-img{
   width: 100%;
   height: var(--dp-cover-h-desktop);
+
   object-fit: cover;
   object-position: center var(--dp-cover-focus-y);
+
   display: block;
   border-radius: var(--dp-cover-radius);
 }
