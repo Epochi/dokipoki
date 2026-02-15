@@ -569,3 +569,19 @@ body.page-programos .programos-wrapper a > img.responsive-img{
     object-position: center var(--dp-cover-focus-y);
   }
 }
+
+.dp-hero-after-divider .dp-hero-lead{
+  font-family: "Amatic SC", cursive;
+  font-size: 36px;   /* ~30% didesnis */
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #333333;
+  font-weight: 400;
+  margin: 30px 0;
+}
+
+@media (max-width: 600px){
+  .dp-hero-after-divider .dp-hero-lead{
+    font-size: 24px;
+  }
+}

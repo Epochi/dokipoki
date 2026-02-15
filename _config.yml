@@ -23,7 +23,7 @@ sass:
   sass_dir: _sass
   style: compress
 
-gems:
+plugins:
   - jekyll-sitemap
 
 exclude:

@@ -151,20 +151,26 @@ $(window).on("resize orientationchange", function () {
       });
   })();
 
-  // Init Masonry
-  var $grid = $(".grid").masonry({
-    itemSelector: ".grid-item",
-    percentPosition: true,
-    columnWidth: ".grid-sizer"
-  });
+  // Init Masonry only when plugin + grid exist
+  var $grid = $(".grid");
+  var hasMasonry = !!($.fn.masonry && $grid.length);
+
+  if (hasMasonry) {
+    $grid.masonry({
+      itemSelector: ".grid-item",
+      percentPosition: true,
+      columnWidth: ".grid-sizer"
+    });
+  }
 
   function layoutMasonry() {
+    if (!hasMasonry) return;
     $grid.masonry("reloadItems");
     $grid.masonry("layout");
   }
 
   // Layout after images load (TOP images load immediately)
-  if ($.fn.imagesLoaded) {
+  if (hasMasonry && $.fn.imagesLoaded) {
     $grid.imagesLoaded().progress(function () {
       layoutMasonry();
     });
@@ -211,7 +217,7 @@ $(window).on("resize orientationchange", function () {
     loadDeferredInVisibleItems();
 
     setTimeout(function () {
-      if ($.fn.imagesLoaded) {
+      if (hasMasonry && $.fn.imagesLoaded) {
         $grid.imagesLoaded(function () {
           layoutMasonry();
         });
