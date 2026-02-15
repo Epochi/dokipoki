@@ -3,9 +3,10 @@ O <div class="container">
  		<div class="col s12">
  			<div class="slick-gallery gallery-wrapper">
  				{% for image in site.static_files %}
- 					{% if image.path contains 'gallery' %}
- 						<img class="materialboxed responsive-img no-click" src="{{ site.baseurl }}{{ image.path }}">
- 					{% endif %}
+					{% if image.path contains 'gallery' %}
+						{% assign alt_text = image.name | split: '.' | first | replace: '-', ' ' | replace: '_', ' ' %}
+						<img class="materialboxed responsive-img no-click" src="{{ site.baseurl }}{{ image.path }}" alt="{{ alt_text }}" loading="lazy" decoding="async">
+					{% endif %}
  				{% endfor %}
  			</div>
  		</div>

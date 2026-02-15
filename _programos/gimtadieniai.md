@@ -3,7 +3,7 @@ layout: programa
 title: "Gimtadieniai"
 order: 1
 intro: "Vaikų gimtadieniai su Doki Poki – daug juoko, judrių žaidimų ir nepamirštamų emocijų!"
-image: "/gallery/top/IMG_0604.jpg"
+image: "/gallery/top/IMG_0604.webp"
 permalink: /programos/gimtadieniai/
 body_class: page-programa page-programa-gimtadieniai
 link: /programos/gimtadieniai/
@@ -57,7 +57,7 @@ description: "Smagūs vaikų gimtadieniai su animatoriais: personažai, žaidima
       <div class="dp-item">
         <div class="card">
           <div class="card-image">
-            <img src="/gallery/top/IMG_0635.jpg" alt="Gimtadienio programa su aktyviais žaidimais" loading="lazy" decoding="async">
+            <img src="/gallery/top/IMG_0635.webp" alt="Gimtadienio programa su aktyviais žaidimais" loading="lazy" decoding="async" width="1500" height="1071">
           </div>
 
           <div class="card-content">
@@ -81,7 +81,7 @@ description: "Smagūs vaikų gimtadieniai su animatoriais: personažai, žaidima
       <div class="dp-item">
         <div class="card">
           <div class="card-image">
-            <img src="/gallery/geriausianimatoriai.jpg" alt="Teminis vaikų gimtadienis su personažais" loading="lazy" decoding="async">
+            <img src="/gallery/geriausianimatoriai.webp" alt="Teminis vaikų gimtadienis su personažais" loading="lazy" decoding="async" width="911" height="1500">
           </div>
 
           <div class="card-content">
