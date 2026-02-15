@@ -1,4 +1,4 @@
----
+﻿---
 layout: personazas
 img: 360Sunyciai_Patruliai.jpg
 personazas: Šunyčiai Patruliai
@@ -6,8 +6,8 @@ personazas: Šunyčiai Patruliai
 has_page: true
 permalink: /personazai/sunyciai-patruliai/
 
-seo_title: "Šunyčiai Patruliai – Paw Patrol animatoriai vaikų šventėms Vilniuje"
-description: "Šunyčiai Patruliai – net 4 Paw Patrol animatoriai vaikų šventėms Vilniuje. Aktyvi, komandinė ir labai įtraukianti programa."
+seo_title: "Šunyčiai Patruliai | Paw Patrol animatoriai vaikų šventėms Vilniuje"
+description: "Šunyčiai Patruliai – net 4 Paw Patrol animatoriai vaikų šventėms Vilniuje. Aktyvios misijos, komandiniai žaidimai ir įtraukianti programa."
 og_image: "/img/personazai/360Sunyciai_Patruliai.jpg"
 img_alt: "Šunyčiai Patruliai – Paw Patrol animatoriai vaikų šventei Vilniuje"
 ---
@@ -20,3 +20,4 @@ Programoje vaikai leidžiasi į bendras misijas, dalyvauja judriuose žaidimuose
 [Patrulis Chase](/personazai/patrulis-chase/), [Patrulė Skye](/personazai/patrule-skye/), [Patrulis Marshal](/personazai/patrulis-marshal/) ir [Patrulė Everesta](/personazai/patrule-everesta/).
 
 Šis personažų rinkinys puikiai tinka gimtadieniams ir teminėms vaikų šventėms, kuriose norisi veiksmo, judesio ir tikros Paw Patrol nuotykių dvasios.
+
