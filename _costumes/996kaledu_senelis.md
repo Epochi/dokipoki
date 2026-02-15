@@ -6,7 +6,7 @@ personazas: Kalėdų Senelis
 has_page: true
 permalink: /personazai/kaledu-senelis-3/
 
-seo_title: "Kalėdų Senelis į namus – animatorius vaikų šventėms Vilniuje"
+seo_title: "Kalėdų Senelis su žaidimais ir dovanomis | Vaikų šventėms Vilniuje"
 description: "Kalėdų Senelis į namus – patyręs animatorius vaikų šventėms Vilniuje. Žaidimai, užduotys, dovanos ir tikra Kalėdų magija."
 og_image: "/img/personazai/993kaledu_senelis.jpg.jpg"
 img_alt: "Kalėdų Senelis – animatorius vaikų šventei ir vizitui į namus Vilniuje"
