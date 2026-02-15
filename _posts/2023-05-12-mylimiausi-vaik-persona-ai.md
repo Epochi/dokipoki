@@ -1,6 +1,8 @@
 ---
 published: true
 title: Mylimiausi vaikų personažai
+seo_title: "Mylimiausi vaikų personažai: TOP 10 šventei | DokiPoki"
+description: "TOP 10 vaikų mylimiausių personažų gimtadieniams ir šventėms: nuo Žmogaus Voro ir Elzos iki Vienaragės ir kitų herojų."
 ---
 
 Kiekvienas vaikas turi vieną ar kelis mėgstamiausius super herojus ar pasakų veikėjus, su kuriais svajoja susitikti ir smagiai praleisti laiką drauge. Kartais vaikams būna sunku išsirinkti iš daugybės mūsų siūlomų personažų, todėl, kad palengvintume Jums šventės organizavimą, sudarėme dešimties personažų sąrašą, kurie metai iš metų lieka mylimiausiais įvairaus amžiaus vaikų veikėjais.

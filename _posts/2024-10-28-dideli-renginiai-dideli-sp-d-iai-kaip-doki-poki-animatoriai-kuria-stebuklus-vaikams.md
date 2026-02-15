@@ -3,6 +3,8 @@ published: true
 title: >-
   Dideli renginiai, dideli įspūdžiai: kaip Doki Poki animatoriai kuria stebuklus
   vaikams
+seo_title: "Dideli renginiai vaikams: kaip suplanuoti programą | DokiPoki"
+description: "Kaip planuoti didelius vaikų renginius: veiklų stotelės, programos, pertraukos ir patarimai, kad kiekvienas vaikas būtų įtrauktas."
 ---
 
 Neretai susilaukiame klausimų, ar galime surengti nepamirštamą renginuką įmonių darbuotojų vaikams ar miesto šventės svečiams. Žinoma, tvirtai atsakome TAIP! Doki Poki personažai turi daug patirties dirbant su dideliu vaikų skaičiumi ir puikiai prisitaiko prie klientų bei vaikučių poreikių. Paruošėme Jums  keletą patarimų, kad didelės šventės praeitų kuo sklandžiau ir smagiau! 

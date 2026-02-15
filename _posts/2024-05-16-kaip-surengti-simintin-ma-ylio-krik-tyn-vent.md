@@ -1,5 +1,7 @@
 ---
 title: Kaip surengti įsimintiną mažylio krikštynų šventę?
+seo_title: "Kaip surengti įsimintiną krikštynų šventę? | DokiPoki"
+description: "Patarimai krikštynų šventei: tinkamas personažas, vaikų veiklos, programa ir vietos pasirinkimas, kad šventė būtų sklandi ir smagi."
 ---
 
 Vaiko krikštynos yra viena svarbiausių švenčių tiek tėveliams, tiek ir mažylio giminaičiams. Dažnu atveju ši šventė reikalauja didelio pasiruošimo – svarbi tinkama šventės vieta, programa, svečių ir jų vaikų užimtumas. DokiPoki animatorių komanda pateikia keletą patarimų, kaip lengvai ir be didelių rūpesčių surengti nepamirštamą mažylio krikšto šventę!

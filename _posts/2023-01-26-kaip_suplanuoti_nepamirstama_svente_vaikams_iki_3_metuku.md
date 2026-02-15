@@ -1,6 +1,8 @@
 ---
 published: true
 title: Kaip suplanuoti nepamirštamą šventę vaikams iki 3 metukų?
+seo_title: "Kaip suplanuoti šventę vaikams iki 3 metų? | DokiPoki"
+description: "Praktiniai patarimai, kaip suplanuoti mažylio šventę: personažo pasirinkimas, programos veiklos ir tinkamiausia šventės vieta."
 ---
 Turbūt nenuostabu, kad vaiko gimtadienio, krikštynų ar kitų švenčių planavimas tampa iššūkiu kiekvienam tėveliui. DokiPoki personažų animatorių komanda siunčia keletą patarimų, padėsiančių išsirinkti geriausią programą, personažus ir apmąstyti kitas detales, Jūsų mažylio šventei:
 

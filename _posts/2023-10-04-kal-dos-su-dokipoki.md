@@ -1,6 +1,8 @@
 ---
 published: true
 title: KALĖDOS SU DOKIPOKI!
+seo_title: "Kalėdos su DokiPoki: programos vaikų šventėms"
+description: "Kalėdinės programos vaikams su Kalėdų Seneliu, Elfais, Kosmonautais, Hariu Poteriu ir Hermiona šeimų, darželių bei įmonių šventėms."
 ---
 
 Kalėdų Senelis kartu su pašėlusiais Kosmonautais, išdykėliais Elfais, patrakėliu Grinču, Hariu Poteriu ir Hermiona visus metus ruošė unikalias programas Jūsų Kalėdų šventei. Šios programos yra pritaikytos tiek mažiems ir dideliems, tiek aktyviems ir ramesniems vaikams, tad visų norai bus išpildyti su kaupu! Kalėdų Senelis jau traukia savo šventinį kostiumą iš spintos, ruošia roges kelionei ir kartu su draugais yra pasiruošęs atvykti į Jūsų šeimų, darželių ar įmonių renginukus!

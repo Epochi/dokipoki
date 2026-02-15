@@ -1,6 +1,8 @@
 ---
 published: true
 title: Idėjos darželio išleistuvėms su DokiPoki
+seo_title: "Idėjos darželio išleistuvėms: programos ir veiklos | DokiPoki"
+description: "Populiariausios darželio išleistuvių idėjos: kosminė, klounų ir Hogvartso programa su animatoriais bei aktyviomis veiklomis vaikams."
 ---
 Pasitinkant vasarą daugelis vaikų atsisveikina su labai svarbia vaikystės vieta – darželiu. Ši vieta kiekvienam vaikui per kelerius metus tampa antraisiais namais, kuriuose jis susitinka su draugais, žaidžiant kartu keliauja po svajonių šalis, mokosi pažinti save, savo pomėgius, bendrauti. Paruošėme Jums keletą pasiūlymų, kad darželio išleistuvės vaikučiams būtų įsimintiniausia, smagiausia ir gražiausių atsiminimų kupina šventė.  
 ## Mūsų siūlomos programos kartu su animatoriais:

@@ -82,7 +82,7 @@
   {%- comment -%}
   STRUCTURED DATA (JSON-LD)
   1) Breadcrumb + Product schema for persona pages (layout: personazas)
-  2) ItemList for /personazai/ and legacy /visi-personazai/
+  2) ItemList for /personazai/
   3) Service schema for /personazai/ (hub)
   {%- endcomment -%}
 
@@ -92,11 +92,6 @@
   {%- assign is_personazai_hub = false -%}
   {%- if page.url == "/personazai/" or page.permalink == "/personazai/" -%}
     {%- assign is_personazai_hub = true -%}
-  {%- endif -%}
-
-  {%- assign is_visi_personazai = false -%}
-  {%- if page.url == "/visi-personazai/" or page.permalink == "/visi-personazai/" -%}
-    {%- assign is_visi_personazai = true -%}
   {%- endif -%}
 
   {%- if page.layout == "personazas" and page.personazas -%}
@@ -194,7 +189,7 @@
     </script>
   {%- endif -%}
 
-  {%- if is_personazai_hub or is_visi_personazai -%}
+  {%- if is_personazai_hub -%}
     {%- assign items = site.costumes | where_exp: "p", "p.has_page == true" -%}
     {%- if items == empty -%}
       {%- assign items = site.personazai | where_exp: "p", "p.has_page == true" -%}

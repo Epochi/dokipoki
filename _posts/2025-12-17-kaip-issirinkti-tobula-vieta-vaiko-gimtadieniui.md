@@ -1,6 +1,8 @@
 ---
 published: true
 title: Kaip išsirinkti tobulą vietą vaiko gimtadieniui?
+seo_title: "Kaip išsirinkti vietą vaiko gimtadieniui? | DokiPoki"
+description: "Palyginame gimtadienio šventę namuose, kavinėje ir sodyboje: į ką atkreipti dėmesį renkantis vietą ir programą vaikams."
 ---
 
 Vaiko gimtadienis – viena laukiamiausių metų švenčių, kupina juoko, šypsenų ir nepamirštamų akimirkų. Tačiau neretai tėveliams kyla klausimas: **kur geriausia švęsti vaiko gimtadienį – namuose, kavinėje ar sodyboje?** DokiPoki animatorių komanda dalijasi patarimais, kurie padės lengviau apsispręsti ir sukurti šventę be streso.

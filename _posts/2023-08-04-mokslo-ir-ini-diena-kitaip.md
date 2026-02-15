@@ -1,6 +1,8 @@
 ---
 published: true
 title: Mokslo ir žinių diena kitaip!
+seo_title: "Mokslo ir žinių diena kitaip: idėjos šventei | DokiPoki"
+description: "Mokslo metų pradžios šventės idėjos vaikams: linksmybių mokykla, Hario Poterio programa ir interaktyvios veiklos su animatoriais."
 ---
 Mokslo ir žinių diena kiekvienam vaikui yra tikrai ypatinga ir simbolizuoja naują pradžią, naujus nuotykius ir kartais naujus draugus. Tėveliams ir mokytojams tenka svarbi užduotis – sukurti gražią ir smagią šventę vaikams ir auklėtiniams. Doki Poki personažai skuba Jums į pagalbą su interaktyviomis programomis, kurių metu animatoriai sukurs nepamirštamą ir įspūdžių kupiną renginį! 
 
