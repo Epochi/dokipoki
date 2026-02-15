@@ -1,7 +1,7 @@
 ---
 layout: programa
 title: "Darželio išleistuvės"
-order: 1
+order: 2
 intro: "Darželio išleistuvės su Doki Poki personažais – daug juoko, daug energijos ir maksimaliai smagiai!"
 image: "/img/programos/darzelis/darzelio-isleistuves.jpg"
 permalink: /programos/darzelio_isleistuves/
@@ -44,7 +44,7 @@ link: /programos/darzelio_isleistuves/
 <!-- TURINYS -->
 <div class="row" style="margin-top: 18px;">
   <div class="col s12">
-    <h3 class="section-header center-align">Programų variantai</h3>
+    <h2 class="section-header center-align">Programų variantai</h2>
   </div>
 </div>
 
@@ -61,7 +61,7 @@ link: /programos/darzelio_isleistuves/
           </div>
 
           <div class="card-content">
-            <h4 class="section-header">IŠLEISTUVĖS SU DOKI POKI PERSONAŽAIS</h4>
+            <h3 class="section-header">IŠLEISTUVĖS SU DOKI POKI PERSONAŽAIS</h3>
 
             <ul class="kg-font kg-font--small dp-bullets">
               <li>- Lankstysime balionus</li>
@@ -94,7 +94,7 @@ link: /programos/darzelio_isleistuves/
           </div>
 
           <div class="card-content">
-            <h4 class="section-header">ŠUNYČIAI PATRULIAI - MISIJA "IŠLEISTUVĖS"</h4>
+            <h3 class="section-header">ŠUNYČIAI PATRULIAI - MISIJA "IŠLEISTUVĖS"</h3>
 
             <ul class="kg-font kg-font--small dp-bullets">
               <li>- Šoksime Šunyčių Patrulių šokį</li>
@@ -122,7 +122,7 @@ link: /programos/darzelio_isleistuves/
           </div>
 
           <div class="card-content">
-            <h4 class="section-header">IŠLEISTUVĖS SU PAŠĖLUSIAIS KLOUNAIS</h4>
+            <h3 class="section-header">IŠLEISTUVĖS SU PAŠĖLUSIAIS KLOUNAIS</h3>
 
             <ul class="kg-font kg-font--small dp-bullets">
               <li>- Žaisime smagiausius žaidimus</li>
@@ -148,7 +148,7 @@ link: /programos/darzelio_isleistuves/
           </div>
 
           <div class="card-content">
-            <h4 class="section-header">PIMPAČKIUKŲ IŠLEISTUVĖS</h4>
+            <h3 class="section-header">PIMPAČKIUKŲ IŠLEISTUVĖS</h3>
 
             <ul class="kg-font kg-font--small dp-bullets">
               <li>- Šoksime Pimpačkiukų šokius</li>
@@ -173,7 +173,7 @@ link: /programos/darzelio_isleistuves/
           </div>
 
           <div class="card-content">
-            <h4 class="section-header">KOOOSMINĖS IŠLEISTUVĖS</h4>
+            <h3 class="section-header">KOOOSMINĖS IŠLEISTUVĖS</h3>
 
             <ul class="kg-font kg-font--small dp-bullets">
               <li>- Laikysime rankose ugnį</li>

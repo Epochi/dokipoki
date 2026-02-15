@@ -23,6 +23,23 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Keep navbar brand text visible even when nav has z-depth-0 at top */
+nav.z-depth-0 .brand-logo{
+  color: $zydra !important;
+}
+
+/* Navbar brand text sizing (separate desktop/mobile control) */
+nav .brand-logo{
+  font-size: 2.1rem !important;
+}
+
+/* Slightly smaller on desktop */
+@media (min-width: 601px){
+  nav .brand-logo{
+    font-size: 1.8rem !important;
+  }
+}
+
 /* KG Kindergarden – explicit face (stability) */
 @font-face{
   font-family: "KG Kindergarden";
@@ -47,11 +64,72 @@ body{
 .kg-font--large  { font-size: 1.05rem; }
 
 /* ================================
-   GLOBAL HEADINGS (ne bloge)
+   GLOBAL HEADINGS (single source of truth)
    ================================ */
+:root{
+  --dp-h1-size: 4rem;
+  --dp-h2-size: 3.2rem;
+  --dp-h3-size: 2.4rem;
+  --dp-h4-size: 1.95rem;
+  --dp-h5-size: 1.55rem;
+  --dp-h6-size: 1.3rem;
+}
+
+/* Keep main semantic headings predictable across the site */
+h1{ font-size: var(--dp-h1-size); line-height: 1.1; }
+h2{ font-size: var(--dp-h2-size); line-height: 1.15; }
+h3{ font-size: var(--dp-h3-size); line-height: 1.2; }
+h4{ font-size: var(--dp-h4-size); line-height: 1.25; }
+h5{ font-size: var(--dp-h5-size); line-height: 1.3; }
+h6{ font-size: var(--dp-h6-size); line-height: 1.35; }
+
 .section-header{
   font-family: "Amatic SC", cursive !important;
   letter-spacing: 1px;
+}
+
+/* Section headings use the same scale explicitly */
+h1.section-header{ font-size: var(--dp-h1-size); line-height: 1.1; }
+h2.section-header{ font-size: var(--dp-h2-size); line-height: 1.15; }
+h3.section-header{ font-size: var(--dp-h3-size); line-height: 1.2; }
+h4.section-header{ font-size: var(--dp-h4-size); line-height: 1.25; }
+h5.section-header{ font-size: var(--dp-h5-size); line-height: 1.3; }
+h6.section-header{ font-size: var(--dp-h6-size); line-height: 1.35; }
+
+/* Home "Programa" service item titles align to the same hierarchy */
+.programa .services h3{
+  font-family: "Amatic SC", cursive !important;
+  font-size: var(--dp-h4-size);
+  line-height: 1.15;
+  margin: 0 0 0.35rem 0;
+}
+
+/* Keep service rows tighter after paired-row layout */
+.programa .services{
+  padding-bottom: 10px;
+}
+
+@media (max-width: 600px){
+  :root{
+    --dp-h1-size: 3.72rem;
+    --dp-h2-size: 3rem;
+    --dp-h3-size: 2.4rem;
+    --dp-h4-size: 1.98rem;
+    --dp-h5-size: 1.62rem;
+    --dp-h6-size: 1.32rem;
+  }
+
+  .programa .services h3{
+    margin-bottom: 0.28rem;
+  }
+
+  #Programa .services-pair{
+    margin-bottom: 14px; /* 20px -> 14px (30% less) */
+  }
+
+  #Programa .services-pair:last-child{
+    margin-bottom: 0;
+  }
 }
 
 /* ================================
@@ -88,7 +166,7 @@ body{
 /* ================================
    PERSONAŽŲ GRID
    ================================ */
-.personazai h4 a{ cursor: pointer !important; }
+.personazai h3 a{ cursor: pointer !important; }
 
 #VisiPersonazai{
   display: flex;
@@ -493,6 +571,16 @@ h1.baloon-line{
   display: block;
 }
 
+/* Gimtadieniai: 2nd card image shifted upward */
+.page-programa-gimtadieniai .dp-grid .dp-item:nth-child(2) .card-image img{
+  object-position: center 25%;
+}
+
+/* Program pages: extra breathing room before Kontaktai section */
+.page-programa .dp-grid.dp-masonry{
+  margin-bottom: 28px;
+}
+
 @media (max-width: 600px){
   .page-programa .dp-grid .card-image img{
     height: 300px;               /* paliekam kaip buvo */
@@ -537,7 +625,7 @@ h1.baloon-line{
   flex-direction: column;
 }
 
-.page-programama .dp-grid.dp-masonry .card-content{
+.page-programa .dp-grid.dp-masonry .card-content{
   flex: 1;
 }
 
@@ -567,6 +655,15 @@ body.page-programos .programos-wrapper a > img.responsive-img{
   body.page-programos .programos-wrapper a > img.responsive-img{
     height: var(--dp-cover-h-mobile);
     object-position: center var(--dp-cover-focus-y);
+  }
+
+  /* Keep visible vertical rhythm between stacked cards on mobile */
+  body.page-programos #Programos .programos-wrapper{
+    margin-bottom: 26px;
+  }
+
+  body.page-programos #Programos .programos-wrapper:last-child{
+    margin-bottom: 0;
   }
 }
 
