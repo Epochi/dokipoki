@@ -1,4 +1,4 @@
-﻿---
+---
 layout: personazas
 img: 660Liutukai.jpg
 personazas: Simba ir Nala

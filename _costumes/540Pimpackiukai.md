@@ -1,4 +1,4 @@
-﻿---
+---
 layout: personazas
 img: 540Pimpackiukai.jpg
 personazas: Pimpačkiukai

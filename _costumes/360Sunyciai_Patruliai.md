@@ -1,4 +1,4 @@
-﻿---
+---
 layout: personazas
 img: 360Sunyciai_Patruliai.jpg
 personazas: Šunyčiai Patruliai
