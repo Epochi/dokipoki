@@ -80,6 +80,46 @@
   <meta name="twitter:image" content="{{ og_image | absolute_url }}">
 
   {%- comment -%}
+  GLOBAL ORGANIZATION / LOCAL BUSINESS SCHEMA
+  {%- endcomment -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "{{ '/' | absolute_url }}#organization",
+        "name": "DokiPoki",
+        "url": "{{ '/' | absolute_url }}",
+        "email": "mailto:{{ site.contact_email }}",
+        "telephone": "{{ site.contact_phone_raw }}",
+        "sameAs": [
+          "{{ site.instagram_url }}",
+          "{{ site.facebook_url }}"
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "{{ '/' | absolute_url }}#localbusiness",
+        "name": "DokiPoki",
+        "url": "{{ '/' | absolute_url }}",
+        "email": "mailto:{{ site.contact_email }}",
+        "telephone": "{{ site.contact_phone_raw }}",
+        "areaServed": [
+          { "@type": "City", "name": "Vilnius" },
+          { "@type": "City", "name": "Kaunas" },
+          { "@type": "Country", "name": "Lietuva" }
+        ],
+        "sameAs": [
+          "{{ site.instagram_url }}",
+          "{{ site.facebook_url }}"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  {%- comment -%}
   STRUCTURED DATA (JSON-LD)
   1) Breadcrumb + Product schema for persona pages (layout: personazas)
   2) ItemList for /personazai/
@@ -184,6 +224,37 @@
         "@type": "PeopleAudience",
         "suggestedMinAge": "2",
         "suggestedMaxAge": "12"
+      }
+    }
+    </script>
+  {%- endif -%}
+
+  {%- if page.layout == "post" -%}
+    {%- assign post_image = page.og_image | default: site.og_image | default: '/img/social/og-default.png' -%}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ canonical | absolute_url }}"
+      },
+      "headline": "{% if page.seo_title %}{{ page.seo_title | escape }}{% elsif page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}",
+      "description": "{{ meta_description | strip | escape }}",
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
+      "image": "{{ post_image | absolute_url }}",
+      "author": {
+        "@type": "Organization",
+        "name": "DokiPoki"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DokiPoki",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ '/img/components/baloon_logo250hx255w.png' | absolute_url }}"
+        }
       }
     }
     </script>
