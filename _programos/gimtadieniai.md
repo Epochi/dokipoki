@@ -101,6 +101,34 @@ description: "Smagūs vaikų gimtadieniai su animatoriais: personažai, žaidima
         </div>
       </div>
 
+      <div class="dp-item dp-cta-item">
+        <div class="card">
+          <div class="card-image dp-cta-logo-wrap">
+            <img src="/img/social/og-default.webp" alt="Doki Poki personažai logotipas" loading="lazy" decoding="async">
+          </div>
+
+          <div class="card-content center-align" style="padding: 28px 26px 34px 26px;">
+            <h3 class="section-header">REZERVUOKITE DATĄ</h3>
+
+            <p class="kg-font kg-font--small" style="margin: 12px 0 20px 0;">
+              Parašykite į Messenger ir padėsime išsirinkti tinkamiausią gimtadienio programą.
+            </p>
+
+            <a
+              href="{{ site.messenger_url }}"
+              class="btn-large waves-effect waves-light dp-btn section-header cta-btn"
+              data-cta-scope="programa"
+              data-cta-type="messenger"
+              data-programa="gimtadieniai"
+              target="_blank"
+              rel="noopener"
+            >
+              Susisiekti per Messenger →
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

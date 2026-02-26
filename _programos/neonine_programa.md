@@ -83,6 +83,22 @@ description: "Neoninė programa (vykdoma tamsoje): neoninė diskoteka, plaukuči
   </div>
 </div>
 
+<div class="row">
+  <div class="col s12 center-align" style="margin: 2px 0 18px 0;">
+    <a
+      href="{{ site.messenger_url }}"
+      class="btn-large waves-effect waves-light dp-btn section-header cta-btn"
+      data-cta-scope="programa"
+      data-cta-type="messenger"
+      data-programa="neonine-programa"
+      target="_blank"
+      rel="noopener"
+    >
+      Susisiekti per Messenger →
+    </a>
+  </div>
+</div>
+
 <div class="row neon-gallery">
   <div class="col s12 m6">
     <div class="neon-shot z-depth-1">
@@ -115,4 +131,3 @@ description: "Neoninė programa (vykdoma tamsoje): neoninė diskoteka, plaukuči
     </p>
   </div>
 </div>
-
