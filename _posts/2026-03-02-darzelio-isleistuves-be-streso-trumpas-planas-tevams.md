@@ -1,6 +1,6 @@
 ---
 published: true
-title: Darželio išleistuvės be streso: trumpas planas tėvams
+title: "Darželio išleistuvės be streso: trumpas planas tėvams"
 seo_title: "Darželio išleistuvės su animatoriais Vilniuje | Trumpas planas"
 description: "Kaip suplanuoti darželio išleistuves be streso: vieta, programa, animatoriai vaikams, biudžetas ir praktiniai patarimai tėvams."
 ---
