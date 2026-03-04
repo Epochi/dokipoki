@@ -35,7 +35,7 @@ description: "Originalios Doki Poki programos vaikų šventėms, gimtadieniams i
           {% for program in programs_sorted %}
 
             {% assign href = program.link | default: '/kontaktai/' %}
-            {% assign img  = program.image | default: program.img %}
+            {% assign img  = program.card_image | default: program.image | default: program.img %}
 
             <!-- 3 per eilę desktop'e: l4 (992px+), xl4 (1200px+) -->
             <div class="programos-wrapper col s12 m6 l4 xl4">

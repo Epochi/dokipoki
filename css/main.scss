@@ -651,6 +651,19 @@ body.page-programos .programos-wrapper a > img.responsive-img{
   }
 }
 
+/* Programu sarasas: add vertical gap between wrapped rows */
+@media (min-width: 993px){
+  body.page-programos #Programos .programos-wrapper:nth-child(n+4){
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 992px){
+  body.page-programos #Programos .programos-wrapper:nth-child(n+3){
+    margin-top: 24px;
+  }
+}
+
 @media (max-width: 600px){
   body.page-programos .programos-wrapper a > img.responsive-img{
     height: var(--dp-cover-h-mobile);
@@ -689,18 +702,21 @@ body.page-programos .programos-wrapper a > img.responsive-img{
   }
 }
 
-/* Neonine programa gallery: consistent visual size across desktop/mobile */
-.page-programa-neonine-programa .neon-gallery .col{
+/* Neonine + Velyku programos gallery: consistent visual size across desktop/mobile */
+.page-programa-neonine-programa .neon-gallery .col,
+.page-programa-velykos .neon-gallery .col{
   margin-bottom: 18px;
 }
 
-.page-programa-neonine-programa .neon-shot{
+.page-programa-neonine-programa .neon-shot,
+.page-programa-velykos .neon-shot{
   border-radius: 12px;
   overflow: hidden;
   aspect-ratio: 4 / 3;
 }
 
-.page-programa-neonine-programa .neon-shot img{
+.page-programa-neonine-programa .neon-shot img,
+.page-programa-velykos .neon-shot img{
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -708,7 +724,8 @@ body.page-programos .programos-wrapper a > img.responsive-img{
 }
 
 @media (max-width: 600px){
-  .page-programa-neonine-programa .neon-gallery .col{
+  .page-programa-neonine-programa .neon-gallery .col,
+  .page-programa-velykos .neon-gallery .col{
     margin-bottom: 14px;
   }
 }
