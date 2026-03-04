@@ -11,7 +11,7 @@ link: /programos/velykos/
 hide_program_header: true
 hide_program_hero: true
 seo_title: "Velykų programa vaikams su animatoriais Vilniuje | Doki Poki"
-description: "Velykų programa vaikams su Doki Poki animatoriais: pašėlusios zuikių varžybos, šokoladinių margučių paieška, ridenimas ir kūrybiniai žaidimai."
+description: "Velykų programa vaikams Vilniuje su Doki Poki animatoriais: zuikių varžybos, šokoladinių margučių paieška, ridenimas ir kūrybiniai žaidimai."
 ---
 
 <script type="application/ld+json">
@@ -39,7 +39,6 @@ description: "Velykų programa vaikams su Doki Poki animatoriais: pašėlusios z
       },
       "areaServed": [
         { "@type": "City", "name": "Vilnius" },
-        { "@type": "City", "name": "Kaunas" },
         { "@type": "Country", "name": "Lietuva" }
       ]
     }
@@ -56,7 +55,7 @@ description: "Velykų programa vaikams su Doki Poki animatoriais: pašėlusios z
 <div class="row">
   <div class="col s12">
     <p class="kg-font kg-font--normal center-align" style="max-width: 880px; margin: 0 auto 18px auto;">
-      Velykų programa vaikams su Doki Poki animatoriais Vilniuje ir Kaune kupina judesio, juoko ir kūrybos.
+      Velykų programa vaikams su Doki Poki animatoriais Vilniuje kupina judesio, juoko ir kūrybos.
       Jei ieškote Velykų idėjų vaikų šventei, ši programa padės viską įgyvendinti vienoje vietoje:
       nuo aktyvių žaidimų iki kūrybinių veiklų.
     </p>
