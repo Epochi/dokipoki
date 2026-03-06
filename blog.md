@@ -1,4 +1,4 @@
 ---
 layout: blog
-description: "Doki Poki blogas tėvams: idėjos vaikų gimtadieniams, darželio šventėms, personažų pasirinkimui ir pramogų planavimui."
+description: "Doki Poki blogas: idėjos vaikų gimtadieniams, darželio šventėms ir įmonių renginiams su premium vaikų zonos sprendimais."
 ---

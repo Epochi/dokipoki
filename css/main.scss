@@ -638,7 +638,7 @@ body.page-programos .programos-wrapper a > img.responsive-img{
   height: var(--dp-cover-h-desktop);
 
   object-fit: cover;
-  object-position: center var(--dp-cover-focus-y);
+  object-position: center var(--dp-program-card-focus-y, var(--dp-cover-focus-y));
 
   display: block;
   border-radius: var(--dp-cover-radius);
@@ -647,7 +647,7 @@ body.page-programos .programos-wrapper a > img.responsive-img{
 @media (max-width: 992px){
   body.page-programos .programos-wrapper a > img.responsive-img{
     height: var(--dp-cover-h-tablet);
-    object-position: center var(--dp-cover-focus-y);
+    object-position: center var(--dp-program-card-focus-y, var(--dp-cover-focus-y));
   }
 }
 
@@ -667,7 +667,7 @@ body.page-programos .programos-wrapper a > img.responsive-img{
 @media (max-width: 600px){
   body.page-programos .programos-wrapper a > img.responsive-img{
     height: var(--dp-cover-h-mobile);
-    object-position: center var(--dp-cover-focus-y);
+    object-position: center var(--dp-program-card-focus-y, var(--dp-cover-focus-y));
   }
 
   /* Keep visible vertical rhythm between stacked cards on mobile */
@@ -754,5 +754,16 @@ body.page-programos .programos-wrapper a > img.responsive-img{
     width: 100%;
     padding: 6px 0;
     transform: scale(1.3);
+  }
+}
+
+/* Imoniu renginiai: keep equal larger vertical spacing between all gallery photos on mobile */
+@media (max-width: 600px){
+  .page-programa-imoniu-renginiai .imoniu-gallery{
+    margin-bottom: 0;
+  }
+
+  .page-programa-imoniu-renginiai .imoniu-gallery .col{
+    margin-bottom: 18px;
   }
 }

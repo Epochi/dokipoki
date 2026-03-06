@@ -1,8 +1,8 @@
 ---
 title: "Programos"
-seo_title: "Programos vaikų šventėms ir gimtadieniams | Doki Poki"
+seo_title: "Programos vaikų šventėms, įmonių renginiams ir gimtadieniams | Doki Poki"
 permalink: /programos/
-description: "Originalios Doki Poki programos vaikų šventėms, gimtadieniams ir darželiams Vilniuje. Profesionalūs animatoriai, kūrybiški žaidimai ir nepamirštami įspūdžiai."
+description: "Originalios Doki Poki programos vaikų šventėms, įmonių renginiams, gimtadieniams ir darželiams Vilniuje bei Kaune. Profesionalūs animatoriai ir individualiai pritaikomi sprendimai."
 ---
 
 <!DOCTYPE html>
@@ -36,6 +36,7 @@ description: "Originalios Doki Poki programos vaikų šventėms, gimtadieniams i
 
             {% assign href = program.link | default: '/kontaktai/' %}
             {% assign img  = program.card_image | default: program.image | default: program.img %}
+            {% assign card_focus_y = program.card_focus_y | default: 'var(--dp-cover-focus-y)' %}
 
             <!-- 3 per eilę desktop'e: l4 (992px+), xl4 (1200px+) -->
             <div class="programos-wrapper col s12 m6 l4 xl4">
@@ -44,6 +45,7 @@ description: "Originalios Doki Poki programos vaikų šventėms, gimtadieniams i
                   class="responsive-img"
                   alt="{{ program.title }} – programa vaikų šventei"
                   src="{{ img }}"
+                  style="--dp-program-card-focus-y: {{ card_focus_y }};"
                   loading="lazy"
                   decoding="async"
                 >

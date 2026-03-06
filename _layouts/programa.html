@@ -27,13 +27,14 @@
 
       {% if page.image and page.hide_program_hero != true %}
       {% assign hero_src = page.image | relative_url %}
+      {% assign hero_focus_y = page.hero_focus_y | default: nil %}
       <div class="row">
         <div class="col s12">
 
           <!-- HERO: inline paliekam tik background-image, visa kita valdys CSS -->
           <div
             class="dp-hero-cover"
-            style="background-image: url('{{ hero_src }}');"
+            style="{% if hero_focus_y %}--dp-cover-focus-y: {{ hero_focus_y }}; {% endif %}background-image: url('{{ hero_src }}');"
             role="img"
             aria-label="{{ page.title }}"
           ></div>
