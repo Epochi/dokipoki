@@ -121,12 +121,12 @@ description: "Velykų programa vaikams Vilniuje su Doki Poki animatoriais: zuiki
 <div class="row neon-gallery">
   <div class="col s12 m6">
     <div class="neon-shot z-depth-1">
-      <img src="/img/programos/velykos/IMG_5959.webp" alt="Margučių veiklos vaikams Velykų renginyje" class="responsive-img" loading="lazy" decoding="async">
+      <img src="/img/programos/velykos/IMG_2262.webp" alt="Margučių veiklos vaikams Velykų renginyje" class="responsive-img" loading="lazy" decoding="async">
     </div>
   </div>
   <div class="col s12 m6">
     <div class="neon-shot z-depth-1">
-      <img src="/img/programos/velykos/IMG_5960.webp" alt="Velykų animatoriai vaikams" class="responsive-img" loading="lazy" decoding="async">
+      <img src="/img/programos/velykos/IMG_2265.webp" alt="Velykų animatoriai vaikams" class="responsive-img" loading="lazy" decoding="async">
     </div>
   </div>
 </div>
