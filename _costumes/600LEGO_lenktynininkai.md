@@ -6,14 +6,18 @@ personazas: LEGO Lenktynininkai
 has_page: true
 permalink: /personazai/lego-lenktynininkai/
 
-seo_title: "LEGO Lenktynininkai – animatoriai vaikų šventėms Vilniuje | LEGO Racing programa"
-description: "LEGO Lenktynininkai – energingi animatoriai vaikų šventėms Vilniuje. Greita, judri ir labai įtraukianti LEGO Racing tematikos programa."
+seo_title: "LEGO Lenktynininkai - animatoriai vaikų šventėms Vilniuje ir Kaune | Doki Poki"
+description: "LEGO Lenktynininkai - energingi animatoriai vaikų šventėms Vilniuje ir Kaune. Puikiai tinka LEGO vakarėliui, LEGO gimtadieniui ir LEGO lenktynių programai."
 og_image: "/img/personazai/600LEGO_lenktynininkai.jpg"
-img_alt: "LEGO Lenktynininkai – LEGO lenktynių animatoriai vaikų šventei Vilniuje"
+img_alt: "LEGO Lenktynininkai - LEGO lenktynių animatoriai vaikų šventei Vilniuje"
 ---
 
-LEGO Lenktynininkai – du energingi ir vaikams itin patrauklūs personažai, įkvėpti visame pasaulyje atpažįstamo LEGO stiliaus. Ryški lenktynių tematika, aiškios spalvos ir judesys sukuria veiksmo kupiną atmosferą, kuri vaikams asocijuojasi su greičiu, varžybomis ir smagiu žaidimu.
+LEGO Lenktynininkai - du energingi, ryškūs ir vaikams labai patrauklūs personažai, įkvėpti visame pasaulyje atpažįstamos LEGO estetikos. Jei ieškote personažų LEGO vakarėliui, LEGO gimtadieniui ar teminei vaikų šventei, ši pora iš karto sukuria lenktynių, azarto ir smagaus veiksmo nuotaiką.
 
-LEGO Lenktynininkų programa vaikų šventėms orientuota į judrų dalyvavimą, azartą ir komandinį veiksmą. Vaikai dalyvauja lenktynių tipo žaidimuose, atlieka greitas užduotis, mokosi reaguoti, bendradarbiauti ir siekti bendro tikslo. Animatoriai prisitaiko prie vaikų amžiaus ir grupės energijos, todėl veiklos išlieka saugios, aiškios ir labai įtraukiančios.
+Šie personažai puikiai dera su mūsų <a href="/programos/lego-lenktynes/">LEGO lenktynių programa</a>, nes padeda ne tik sukurti stiprų vizualinį įspūdį, bet ir įtraukti vaikus į judrias, azartiškas veiklas. Vaikai dalyvauja lenktynių tipo žaidimuose, atlieka greitas užduotis, bendradarbiauja ir lengvai įsitraukia į bendrą šventės ritmą.
 
-Šie personažai ypač tinka vaikų gimtadieniams ir teminėms šventėms, kuriose svarbus judesys ir veiksmas. LEGO Lenktynininkų kostiumai sukurti specialiai DokiPoki komandai, todėl tai autoriniai LEGO stiliaus personažai.
+LEGO Lenktynininkai ypač tinka vaikų gimtadieniams, prekybos centrų renginiams, šeimų dienoms ir kitoms teminėms šventėms, kuriose norisi daug judesio, ryškaus charakterio ir aiškiai atpažįstamos temos. Tai geras pasirinkimas tiems, kas ieško ne tik personažo, bet ir pilnos LEGO tematikos patirties.
+
+Jei norisi, šiuos personažus galima užsakyti ir be visos LEGO lenktynių programos. Jie puikiai tinka ir įprastai vaikų šventei, kai vaikas tiesiog labai mėgsta LEGO konstruktorius, lenktynių temą ar ryškius, žaismingus personažus.
+
+LEGO Lenktynininkų kostiumai sukurti specialiai DokiPoki komandai, todėl tai autoriniai LEGO stiliaus personažai. Galima rinktis tiek pilną <a href="/programos/lego-lenktynes/">LEGO LENKTYNIŲ programą</a>, tiek šiuos personažus kaip atskirą šventės akcentą. Daugiau idėjų rasite įraše <a href="/blog/lego-gimtadienis-kaip-suplanuoti-lego-lenktynes-vaikams">LEGO vakarėlis: kaip suplanuoti LEGO lenktynes vaikams</a>.
