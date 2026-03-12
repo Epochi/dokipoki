@@ -14,7 +14,7 @@ Tokio tipo programa gerai veikia tada, kai sujungiami du dalykai: lenktynių vei
 
 <div style="margin: 24px 0; text-align: center;">
   <div class="z-depth-1" style="max-width: 100%; height: 360px; overflow: hidden; border-radius: 12px;">
-    <img src="/img/programos/lego/Hero.jpg" alt="LEGO lenktynės vaikų renginyje" class="responsive-img" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%;">
+    <img src="/img/programos/lego/Hero.jpg" alt="LEGO lenktynės vaikų renginyje" class="responsive-img" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center 80%;">
   </div>
 </div>
 
