@@ -1,7 +1,7 @@
 ---
 layout: programa
 title: "Darželio išleistuvės"
-order: 2
+order: 3
 intro: "Darželio išleistuvės su Doki Poki personažais – daug juoko, daug energijos ir maksimaliai smagiai!"
 image: "/img/programos/darzelis/darzelio-isleistuves.jpg"
 permalink: /programos/darzelio_isleistuves/

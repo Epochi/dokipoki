@@ -1,7 +1,7 @@
 ---
 layout: programa
 title: "Velykos"
-order: 4
+order: 7
 intro: "Velykos su Doki Poki pašėlusiais zuikučiais: margučių paieška, ridenimo varžybos, kūrybinės veiklos ir smagūs žaidimai vaikams."
 image: "/img/programos/velykos/IMG_2255.webp"
 card_image: "/img/programos/velykos/geriausianimatoriai.webp"
