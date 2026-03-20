@@ -13,6 +13,24 @@ description: "Originalios Doki Poki programos vaikų šventėms, įmonių rengin
     {% include navbar.html %}
 
     <div class="container">
+      <style>
+        #Programos {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        #Programos .programos-wrapper {
+          float: none;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 28px;
+        }
+
+        #Programos .programos-intro {
+          flex-grow: 1;
+        }
+      </style>
+
       <div class="row">
         <div class="col s12">
           <h1 class="section-header center-align">Programos</h1>
@@ -58,7 +76,7 @@ description: "Originalios Doki Poki programos vaikų šventėms, įmonių rengin
               </h2>
 
               {% if program.intro %}
-                <p class="kg-font kg-font--small center-align">
+                <p class="kg-font kg-font--small center-align programos-intro">
                   {{ program.intro }}
                 </p>
               {% endif %}
