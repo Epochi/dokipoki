@@ -255,12 +255,13 @@ hide_program_hero: true
 
       <!-- 5 -->
       <div class="dp-item">
-        <div class="card">
+        <div class="card dp-featured-card">
           <div class="card-image">
             <img src="/img/programos/darzelis/kosmines.jpg" alt="Kosminės išleistuvės" loading="lazy" decoding="async">
           </div>
 
           <div class="card-content">
+            <span class="dp-badge section-header">Populiariausia</span>
             <h3 class="section-header">KOOOSMINĖS IŠLEISTUVĖS</h3>
 
             <ul class="kg-font kg-font--small dp-bullets">
@@ -322,11 +323,6 @@ hide_program_hero: true
         <h3 class="section-header">Kiek trunka programa?</h3>
         <p class="kg-font kg-font--small">
           Įprastai programa trunka 1 val., o ilgesnę programą deriname individualiai.
-        </p>
-
-        <h3 class="section-header">Kodėl kaina gali skirtis?</h3>
-        <p class="kg-font kg-font--small" style="margin-bottom: 0;">
-          Kaina priklauso nuo pasirinktos temos, vietos, vaikų skaičiaus ir pasirinktų programos elementų.
         </p>
       </div>
     </div>
