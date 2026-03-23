@@ -23,11 +23,20 @@ description: "Originalios Doki Poki programos vaikų šventėms, įmonių rengin
           float: none;
           display: flex;
           flex-direction: column;
+          align-items: stretch;
           margin-bottom: 28px;
         }
 
-        #Programos .programos-intro {
+        #Programos .programos-wrapper h2 {
           flex-grow: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 14px;
+        }
+
+        #Programos .programos-wrapper h2 a {
+          display: block;
         }
       </style>
 
@@ -74,12 +83,6 @@ description: "Originalios Doki Poki programos vaikų šventėms, įmonių rengin
                   {{ program.title }}
                 </a>
               </h2>
-
-              {% if program.intro %}
-                <p class="kg-font kg-font--small center-align programos-intro">
-                  {{ program.intro }}
-                </p>
-              {% endif %}
 
               <!-- SVARBU: nebededam "col s12" viduje, nes tai laužo grid'ą -->
               <div class="center-align" style="margin-top: 14px;">
