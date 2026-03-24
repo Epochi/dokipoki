@@ -14,6 +14,14 @@ img_alt: "Elza – Ledo karalystės princesė vaikų šventei Vilniuje"
 
 Elza – įkvepianti Ledo karalystės princesė, kuri vaikų šventėje sukuria magišką, ramią ir pasakišką atmosferą. Šį personažą įkūnijanti animatorė Vilniuje žavi vaikus savo elegancija, švelnumu ir ypatinga princesiška laikysena, kviesdama pasinerti į stebuklingą istoriją.
 
-Elzos programa vaikų gimtadieniams paremta lengvomis interaktyviomis veiklomis, judesiu, šokiu ir princesiškais išbandymais. Animatorė vaikams subtiliai veda veiklas, skatina tikėti savimi, drąsiai svajoti ir džiaugtis buvimu kartu, todėl šventės nuotaika išlieka rami, bet įtraukianti.
+Jūsų laukia:
+
+<ul>
+  <li>• žaidimai ir estafetės su Elza</li>
+  <li>• šokiai ir muzika</li>
+  <li>• princesiški iššūkiai</li>
+</ul>
+
+Pageidaujant, galima užsisakyti ir dainuojančią Elzą.
 
 Šis personažas ypač tinka vaikų gimtadieniams ir Ledo karalystės tematikos šventėms. Elzą galima derinti su jos seserimi [Ana](/personazai/ana/), sukuriant dar turtingesnę ir emociškai stipresnę pasakos patirtį.
