@@ -133,6 +133,10 @@
   {%- if page.url == "/personazai/" or page.permalink == "/personazai/" -%}
     {%- assign is_personazai_hub = true -%}
   {%- endif -%}
+  {%- assign is_programos_hub = false -%}
+  {%- if page.url == "/programos/" or page.permalink == "/programos/" -%}
+    {%- assign is_programos_hub = true -%}
+  {%- endif -%}
 
   {%- if page.layout == "personazas" and page.personazas -%}
     {%- capture product_image -%}
@@ -260,6 +264,32 @@
     </script>
   {%- endif -%}
 
+  {%- if is_programos_hub -%}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Animatorių programos vaikams",
+      "serviceType": "Animatorių programos vaikų gimtadieniams ir renginiams",
+      "provider": {
+        "@type": "Organization",
+        "name": "DokiPoki",
+        "url": "{{ '/' | absolute_url }}"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Vilnius" },
+        { "@type": "City", "name": "Kaunas" },
+        { "@type": "Country", "name": "Lietuva" }
+      ],
+      "audience": {
+        "@type": "PeopleAudience",
+        "suggestedMinAge": "2",
+        "suggestedMaxAge": "12"
+      }
+    }
+    </script>
+  {%- endif -%}
+
   {%- if is_personazai_hub -%}
     {%- assign items = site.costumes | where_exp: "p", "p.has_page == true" -%}
     {%- if items == empty -%}
@@ -286,6 +316,39 @@
             "url": "{{ p.url | absolute_url }}",
             "name": "{{ p.personazas | default: p.title | escape }}",
             "image": "{{ img_path | strip | absolute_url }}"
+          }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+      ]
+    }
+    </script>
+  {%- endif -%}
+
+  {%- if is_programos_hub -%}
+    {%- assign program_items = site.programos | sort: "order" -%}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "DokiPoki programos",
+      "itemListElement": [
+        {%- for p in program_items -%}
+          {%- capture program_img_path -%}
+            {%- if p.og_image -%}
+              {{ p.og_image }}
+            {%- elsif p.card_image -%}
+              {{ p.card_image }}
+            {%- elsif p.image -%}
+              {{ p.image }}
+            {%- else -%}
+              {{ p.img }}
+            {%- endif -%}
+          {%- endcapture -%}
+          {
+            "@type": "ListItem",
+            "position": {{ forloop.index }},
+            "url": "{{ p.url | absolute_url }}",
+            "name": "{{ p.title | escape }}",
+            "image": "{{ program_img_path | strip | absolute_url }}"
           }{%- unless forloop.last -%},{%- endunless -%}
         {%- endfor -%}
       ]

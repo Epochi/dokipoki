@@ -8,6 +8,10 @@ Turbūt nenuostabu, kad vaiko gimtadienio, krikštynų ar kitų švenčių plana
 
 ## PERSONAŽAS
 <!--more-->
+
+<p>
+Jeigu norite lengviau palyginti veiklas pagal amžių ir šventės tipą, peržiūrėkite mūsų <a href="/programos/">animatorių programas vaikams</a>.
+</p>
 Labai svarbus momentas yra išsirinkti tinkamą personažą, kuris suteiktų daugiausiai laimės mažamečiui ir jo draugams. Į ką reikėtų atkreipti dėmesį renkantis iš gausybės mūsų siūlomų kostiumų?
 
 
@@ -16,6 +20,10 @@ Labai svarbus momentas yra išsirinkti tinkamą personažą, kuris suteiktų dau
 * **Vaiko poreikiai** – nepamirškite atsižvelgti į vaiko norus! Galbūt jis nuolatos klauso ir dainuoja Kakės Makės daineles? O gal jį džiugina Teletabiai? Galbūt jo mėgstamiausia pasaka yra apie princeses ir stebuklingas būtybes kaip Vienaragiai? Atkreipkite dėmesį į vaiko pomėgius, kurie gali būti ženklas, kad sutikus mėgstamiausią personažą išsipildys jo svajonė.
 
 ## PROGRAMA
+
+<p>
+Taip pat verta iš anksto peržiūrėti mūsų <a href="/personazai/">personažai vaikams</a> puslapį, jei mažyliui svarbiausias yra konkretus herojus.
+</p>
 
 Taip pat siūlome daug įvairiausių veiklų Jūsų vaiko šventei, todėl svarbu išsirinkti tinkamiausią ir įdomiausią mažamečio šventės programą, atliepiančią vaiko poreikius ir pomėgius.
 

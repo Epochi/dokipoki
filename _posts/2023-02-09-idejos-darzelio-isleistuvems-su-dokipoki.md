@@ -7,6 +7,10 @@ description: "Populiariausios darželio išleistuvių idėjos: kosminė, klounų
 Pasitinkant vasarą daugelis vaikų atsisveikina su labai svarbia vaikystės vieta – darželiu. Ši vieta kiekvienam vaikui per kelerius metus tampa antraisiais namais, kuriuose jis susitinka su draugais, žaidžiant kartu keliauja po svajonių šalis, mokosi pažinti save, savo pomėgius, bendrauti. Paruošėme Jums keletą pasiūlymų, kad darželio išleistuvės vaikučiams būtų įsimintiniausia, smagiausia ir gražiausių atsiminimų kupina šventė.  
 ## Mūsų siūlomos programos kartu su animatoriais:
 <!--more-->
+
+<p>
+Jeigu ieškote profesionalesnio sprendimo, peržiūrėkite mūsų <a href="/programos/">animatorių programas vaikams</a>, kurias galime pritaikyti skirtingoms darželio šventėms.
+</p>
 ### KOOOSMINĖS DARŽELIO IŠLEISTUVĖS
 *	laikysime rankose ugnį 
 *	pagaminsime milžiniškus debesis
@@ -46,6 +50,10 @@ Programą veda burtininkai Haris Poteris ir Hermiona.
 *	__Putų patrankos__ sukurs išskirtinę atmosferą šokiams putose
 *	Įvairiausi __batutai__ pralinksmins visus vaikus
 *	__Spragėsių ir cukraus vatos aparatai__ pasaldins kiekvieną šventę  
+
+<p>
+Jei šventei pirmiausia renkatės herojų, pasižiūrėkite ir mūsų <a href="/personazai/">personažai vaikams</a> puslapį.
+</p>
 
 ## Kiti patarimai:
 *	Nepamirškite užsisakyti animatorių kuo anksčiau, geriausia prieš 2-3 mėnesius. Darželio išleistuvių panašiu metu tikrai vyksta labai daug, todėl geriau užsisakyti iš anksto, kad galėtumėte gauti norimus personažus būtent Jums tinkamu laiku. 

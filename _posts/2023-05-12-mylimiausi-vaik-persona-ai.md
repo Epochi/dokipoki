@@ -10,6 +10,10 @@ Kiekvienas vaikas turi vieną ar kelis mėgstamiausius super herojus ar pasakų 
 ## TOP 10 PERSONAŽŲ:
 <!--more-->
 
+<p>
+Jeigu kartu ieškote ir veiklų idėjų šventei, peržiūrėkite mūsų <a href="/programos/">animatorių programas vaikams</a>, kurios derinamos prie pasirinktos temos.
+</p>
+
 **ŽMOGUS VORAS**
 + Šis personažas yra dažniausiai pasirenkamas mūsų klientų tiek berniukų, tiek mergaičių šventėse. 
 + Niekada nepritrūkstantis jėgų ir energijos; ypatingas Žmogus Voras gali daryti triukus ir laipioti sienomis; įkvepia vaikus būti stipriais ir rasti savo super galias. 
@@ -63,6 +67,10 @@ Kiekvienas vaikas turi vieną ar kelis mėgstamiausius super herojus ar pasakų 
 + Labai tinka krikštynoms, pirmojo gimtadienio šventei.
 
 Štai ir susipažinote su mylimiausiais visų laikų personažais! Labai tikimės, kad tai padės Jums ir Jūsų vaikams lengviau išsirinkti personažą Jūsų nepamirštamai šventei ir nudžiuginti mažuosius!
+
+<p>
+Jei norite iškart pamatyti visą pasirinkimą vienoje vietoje, peržiūrėkite mūsų <a href="/personazai/">personažai vaikams</a> puslapį.
+</p>
 
 Iki susitikimo!
 

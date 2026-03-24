@@ -6,9 +6,13 @@ description: "Kaip suplanuoti LEGO gimtadienį ar LEGO lenktynes vaikams: rengin
 og_image: "/img/programos/lego/Hero.jpg"
 ---
 
-Jei planuojate **LEGO gimtadienį** ar ieškote idėjos prekybos centro, šeimų dienos ar įmonės renginio vaikų zonai, viena patraukliausių krypčių yra gerai sustyguotos **LEGO lenktynės**, su daug judesio, azarto ir spalvų!
+Jei planuojate **LEGO gimtadienį** ar ieškote idėjos prekybos centro, šeimų dienos ar įmonės renginio vaikų zonai, viena patraukliausių krypčių yra gerai sustyguotos **LEGO lenktynės**, su daug judesio, azarto ir spalvų.
 
 Tokio tipo programa gerai veikia tada, kai sujungiami du dalykai: lenktynių veiksmas ir papildoma kūrybinė veikla tarp etapų. Tuomet vaikai ne tik laukia savo eilės, bet ir viso renginio metu lieka įtraukti.
+
+<p>
+Jei lyginate skirtingas temas ir formatus, peržiūrėkite mūsų <a href="/programos/">animatorių programas vaikams</a>, kurios tinka gimtadieniams ir didesniems renginiams.
+</p>
 
 <!--more-->
 
@@ -32,7 +36,7 @@ Tokia eiga padeda išlaikyti tempą ir leidžia vaikams greitai suprasti, kas vy
 
 Jei renginyje dalyvauja daugiau vaikų, registracija tampa vienu svarbiausių elementų. Mūsų praktikoje labai pasiteisina vairuotojo pažymėjimų principas: vaikas gauna savo kortelę, su kuria dalyvauja lenktynėse, o ant jos galima žymėti bandymus ar etapų eigą.
 
-Vaikai gauna ne šiaip eilės numerį, o kiekvienas dalyvis tampa oficialiu LEGO lenktynininku!
+Vaikai gauna ne šiaip eilės numerį, o kiekvienas dalyvis tampa oficialiu LEGO lenktynininku.
 
 ## Ką veikti vaikams tarp lenktynių etapų?
 
@@ -55,6 +59,10 @@ Taip programa tampa ne viena trumpa atrakcija, o pilna vaikų užimtumo zona. Ta
 - įmonių renginiams, kuriuose reikalinga vaikų zona.
 
 Didžiausias šios temos privalumas tas, kad ją lengva suprasti skirtingo amžiaus vaikams. Veikla vizualiai ryški ir lengvai įtraukianti.
+
+<p>
+Jei prie temos norite derinti ir konkretų herojų, peržiūrėkite mūsų <a href="/personazai/">personažai vaikams</a> puslapį.
+</p>
 
 ## Ką verta apgalvoti prieš užsakant LEGO programą?
 
