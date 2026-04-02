@@ -7,8 +7,8 @@ image: "/gallery/top/IMG_0604.webp"
 permalink: /programos/gimtadieniai/
 body_class: page-programa page-programa-gimtadieniai
 link: /programos/gimtadieniai/
-seo_title: "Vaikų gimtadieniai su animatoriais Vilniuje ir Kaune | Doki Poki"
-description: "Smagūs vaikų gimtadieniai su animatoriais: personažai, žaidimai, šokiai, burbulai ir pritaikyta programa pagal vaikų amžių."
+seo_title: "Vaikų gimtadienio programa su animatoriais Vilniuje | DOKIPOKI"
+description: "Vaikų gimtadieniai su animatoriais Vilniuje: žaidimai, šokiai, veidukų piešimas, balionai ir tatuiruotės. Programą pritaikome pagal amžių ir šventės vietą."
 ---
 
 <script type="application/ld+json">
