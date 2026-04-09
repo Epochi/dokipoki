@@ -3,6 +3,9 @@ name: Generate WebP for gallery
 on:
   push:
     branches: [master]
+    paths:
+      - ".github/workflows/webp.yml"
+      - "gallery/**"
 
 jobs:
   webp:
