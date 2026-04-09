@@ -316,7 +316,7 @@ function normalizeManualPermalink(value) {
 
 function normalizeManualHtml(fallbackPermalink, html) {
   const metadata = extractManualMetadata(html);
-  const permalink = metadata.permalink || fallbackPermalink;
+  const permalink = normalizeManualPermalink(metadata.permalink || fallbackPermalink);
   const thumbUrl = metadata.thumbUrl;
   const timestamp = metadata.timestamp || null;
   const caption = normalizeText(metadata.caption);
@@ -365,8 +365,8 @@ function extractManualMetadata(html) {
   const socialJsonLd = jsonLdObjects.find((item) => item?.["@type"] === "SocialMediaPosting") || {};
 
   const permalink = (
-    extractMetaTag(html, "property", "og:url") ||
-    extractCanonicalHref(html)
+    extractCanonicalHref(html) ||
+    extractMetaTag(html, "property", "og:url")
   );
 
   const caption = (
@@ -395,6 +395,7 @@ function extractManualMetadata(html) {
     socialJsonLd?.datePublished ||
     videoJsonLd?.uploadDate ||
     primaryJsonLd?.uploadDate ||
+    extractMetaTimestamp(html) ||
     null
   );
 
@@ -402,6 +403,7 @@ function extractManualMetadata(html) {
     socialJsonLd?.identifier ||
     videoJsonLd?.identifier ||
     primaryJsonLd?.identifier ||
+    extractMediaIdFromAppUrl(extractMetaTag(html, "property", "al:ios:url")) ||
     permalink
   );
 
@@ -451,11 +453,13 @@ function extractMetaTag(html, attribute, key) {
     "i"
   );
 
-  return html.match(pattern)?.[1] || html.match(reversePattern)?.[1] || null;
+  return decodeHtmlEntities(html.match(pattern)?.[1] || html.match(reversePattern)?.[1] || null);
 }
 
 function extractCanonicalHref(html) {
-  return html.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["'][^>]*>/i)?.[1] || null;
+  return decodeHtmlEntities(
+    html.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["'][^>]*>/i)?.[1] || null
+  );
 }
 
 function firstArrayValue(value) {
@@ -465,11 +469,41 @@ function firstArrayValue(value) {
 
 function normalizeManualIdentifier(value) {
   if (!value) return null;
-  if (typeof value === "string") return value;
+  if (typeof value === "string") return decodeHtmlEntities(value);
   if (typeof value === "number") return String(value);
   if (typeof value === "object") {
     return value?.value || value?.["@id"] || value?.id || null;
   }
+  return null;
+}
+
+function extractMediaIdFromAppUrl(value) {
+  if (!value) return null;
+  const match = String(value).match(/instagram:\/\/media\?id=(\d+)/i);
+  return match?.[1] || null;
+}
+
+function extractMetaTimestamp(html) {
+  const description = extractMetaTag(html, "name", "description") ||
+    extractMetaTag(html, "property", "og:description");
+  if (!description) return null;
+
+  const humanDateMatch = description.match(/\bon\s+([A-Z][a-z]+ \d{1,2}, \d{4})\s*:/);
+  if (humanDateMatch) {
+    const parsed = Date.parse(`${humanDateMatch[1]} 12:00:00 UTC`);
+    if (!Number.isNaN(parsed)) {
+      return new Date(parsed).toISOString();
+    }
+  }
+
+  const isoDateMatch = description.match(/\b(\d{4}-\d{2}-\d{2})\b/);
+  if (isoDateMatch) {
+    const parsed = Date.parse(`${isoDateMatch[1]}T12:00:00.000Z`);
+    if (!Number.isNaN(parsed)) {
+      return new Date(parsed).toISOString();
+    }
+  }
+
   return null;
 }
 
@@ -718,9 +752,23 @@ function sanitizeId(value) {
 }
 
 function normalizeText(value) {
-  return String(value || "").replace(/\s+/g, " ").trim();
+  return decodeHtmlEntities(String(value || "")).replace(/\s+/g, " ").trim();
 }
 
 function escapeRegExp(value) {
   return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function decodeHtmlEntities(value) {
+  if (value == null) return null;
+
+  return String(value)
+    .replace(/&quot;/g, "\"")
+    .replace(/&#039;|&apos;/g, "'")
+    .replace(/&#064;/g, "@")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_, dec) => String.fromCodePoint(parseInt(dec, 10)));
 }
