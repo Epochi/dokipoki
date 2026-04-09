@@ -11,6 +11,24 @@
   {% if instagram_count > 0 %}
   <div class="row">
     <div class="col s12">
+      <h2 class="section-header center-align instagram-gallery-title">
+        Instagram Galerija
+        <a
+          href="{{ site.instagram_url }}"
+          target="_blank"
+          rel="noopener"
+          class="instagram-gallery-title__link"
+          aria-label="Atidaryti mūsų Instagram"
+          title="Atidaryti mūsų Instagram"
+        >
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4A5.8 5.8 0 0 1 16.2 22H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 1.8A4 4 0 0 0 3.8 7.8v8.4a4 4 0 0 0 4 4h8.4a4 4 0 0 0 4-4V7.8a4 4 0 0 0-4-4Z"></path>
+            <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8Z"></path>
+            <circle cx="17.35" cy="6.65" r="1.2"></circle>
+          </svg>
+        </a>
+      </h2>
+
       <div class="instagram-feed-grid">
         {% for item in instagram_feed.items %}
         {% assign media_items = item.media %}

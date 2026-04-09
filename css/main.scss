@@ -58,6 +58,32 @@ nav .brand-logo{
   margin-top: 0;
 }
 
+.instagram-gallery-title{
+  margin: 0 0 28px;
+}
+
+.instagram-gallery-title__link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-left: 10px;
+  color: inherit;
+  vertical-align: middle;
+}
+
+.instagram-gallery-title__link:hover,
+.instagram-gallery-title__link:focus{
+  color: inherit;
+}
+
+.instagram-gallery-title__link svg{
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
 .instagram-gallery-section--empty{
   display: none;
 }
@@ -1141,6 +1167,29 @@ body.page-programos .programos-wrapper a > img.responsive-img{
   margin: 30px 0;
 }
 
+body.rozine .container > .row:first-child .section-header,
+body.rozine .container-fluid > .row:first-child .section-header{
+  margin: 0 0 2rem;
+}
+
+body.rozine #Programa,
+body.rozine #Personazai,
+body.rozine #Kaina,
+body.rozine #Kontaktai{
+  margin-top: 0;
+}
+
+body.rozine #Programa,
+body.rozine #Personazai,
+body.rozine .row.kaina,
+body.rozine #Kontaktai{
+  margin-bottom: 10px;
+}
+
+body.rozine .instagram-gallery-section > .row{
+  margin-bottom: 10px;
+}
+
 .kaina-highlight{
   display: flex;
   align-items: center;
@@ -1180,22 +1229,12 @@ body.page-programos .programos-wrapper a > img.responsive-img{
   color: #5b4d52;
 }
 
-.kaina-highlight__note{
-  max-width: 760px;
-  margin: 16px auto 0;
-  text-align: center;
-  font-family: "KG Kindergarden", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: rgba(91, 77, 82, 0.82);
-}
-
 .home-messenger-cta{
   display: flex;
   justify-content: center;
   width: 100%;
   margin-top: 18px;
-  margin-bottom: -36px;
+  margin-bottom: 34px;
   position: relative;
   z-index: 2;
   transform: translateY(-50%);
@@ -1204,12 +1243,28 @@ body.page-programos .programos-wrapper a > img.responsive-img{
 @media (max-width: 600px){
   .home-messenger-cta{
     margin-top: 10px;
-    margin-bottom: -54px;
+    margin-bottom: 30px;
     transform: translateY(-100%);
   }
 
   .dp-hero-after-divider .dp-hero-lead{
     font-size: 24px;
+  }
+
+  body.rozine .container > .row:first-child .section-header,
+  body.rozine .container-fluid > .row:first-child .section-header{
+    margin-bottom: 1.5rem;
+  }
+
+  body.rozine #Programa,
+  body.rozine #Personazai,
+  body.rozine .row.kaina,
+  body.rozine #Kontaktai{
+    margin-bottom: 6px;
+  }
+
+  body.rozine .instagram-gallery-section > .row{
+    margin-bottom: 6px;
   }
 
   .kaina-highlight{
@@ -1236,11 +1291,6 @@ body.page-programos .programos-wrapper a > img.responsive-img{
     font-size: 0.98rem;
   }
 
-  .kaina-highlight__note{
-    margin-top: 14px;
-    font-size: 0.94rem;
-    padding: 0 8px;
-  }
 }
 
 /* Neonine + Velyku programos gallery: consistent visual size across desktop/mobile */
