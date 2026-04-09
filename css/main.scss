@@ -141,6 +141,40 @@ nav .brand-logo{
   fill: currentColor;
 }
 
+.instagram-grid-item--external-reel .instagram-card__media::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(circle at center, rgba(16, 16, 16, 0.22) 0, rgba(16, 16, 16, 0.22) 50px, rgba(16, 16, 16, 0) 88px),
+    linear-gradient(to top, rgba(8, 8, 8, 0.1), rgba(8, 8, 8, 0.04));
+  pointer-events: none;
+}
+
+.instagram-grid-item--external-reel .instagram-card__media::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 66px;
+  height: 66px;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background-color: rgba(12, 12, 12, 0.56);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 7.2c0-.63.68-1.02 1.22-.7l7.2 4.3c.52.31.52 1.08 0 1.39l-7.2 4.3A.81.81 0 0 1 9 15.8V7.2Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
+}
+
+.instagram-grid-item--external-reel .instagram-card__icon--reel{
+  display: none;
+}
+
 .instagram-feed__sentinel{
   width: 100%;
   height: 2px;
@@ -437,6 +471,7 @@ h6.section-header{ font-size: var(--dp-h6-size); line-height: 1.35; }
   .instagram-preview-modal__stage{
     min-height: 100vh;
   }
+
 
   .instagram-preview-modal__nav{
     width: 34px;

@@ -255,7 +255,7 @@ $(document).ready(function () {
       var item = activeMedia[activeIndex];
       if (!item) return;
 
-      if (item.kind === "video" && item.video_url) {
+      if (item.kind === "video" && isPlayableVideoUrl(item.video_url)) {
         $stage.html(
           '<video class="instagram-preview-modal__video" controls playsinline preload="metadata" poster="' +
           item.thumb_path +
@@ -326,6 +326,17 @@ $(document).ready(function () {
       revealNextBatch();
     }
 
+    $gallery.find(".instagram-grid-item").each(function () {
+      var $item = $(this);
+      var mediaItems = parseMediaData($item.attr("data-instagram-media"));
+      var firstMedia = Array.isArray(mediaItems) && mediaItems.length ? mediaItems[0] : null;
+      var isReel = $item.attr("data-instagram-post-type") === "reel";
+
+      if (isReel && firstMedia && !isPlayableVideoUrl(firstMedia.video_url)) {
+        $item.addClass("instagram-grid-item--external-reel");
+      }
+    });
+
     $(document)
       .off("click.instagramGallery")
       .on("click.instagramGallery", ".js-instagram-card", function (e) {
@@ -341,9 +352,21 @@ $(document).ready(function () {
             kind: item.kind,
             alt: item.alt,
             thumb_path: item.thumb_path ? item.thumb_path : "",
-            video_url: item.video_url || null
+            video_url: isPlayableVideoUrl(item.video_url) ? item.video_url : null
           };
         });
+
+        if (
+          mediaItems.length === 1 &&
+          mediaItems[0].kind === "video" &&
+          !mediaItems[0].video_url &&
+          permalink
+        ) {
+          if (window.confirm("Atidaryti šį įrašą Instagrame?")) {
+            window.open(permalink, "_blank", "noopener");
+          }
+          return;
+        }
 
         openMediaPreview(permalink, mediaItems);
       });
@@ -413,5 +436,32 @@ $(document).ready(function () {
       .replace(/"/g, "&quot;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;");
+  }
+
+  function isPlayableVideoUrl(value) {
+    if (!value) return false;
+
+    try {
+      var parsed = new URL(value, window.location.origin);
+      var pathname = (parsed.pathname || "").toLowerCase();
+
+      if (pathname.indexOf(".mp4") !== -1 || pathname.indexOf(".m3u8") !== -1) {
+        return true;
+      }
+
+      if (
+        pathname.indexOf(".jpg") !== -1 ||
+        pathname.indexOf(".jpeg") !== -1 ||
+        pathname.indexOf(".png") !== -1 ||
+        pathname.indexOf(".webp") !== -1 ||
+        pathname.indexOf(".gif") !== -1
+      ) {
+        return false;
+      }
+    } catch (e) {
+      return false;
+    }
+
+    return false;
   }
 });
