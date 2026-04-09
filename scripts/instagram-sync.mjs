@@ -6,6 +6,7 @@ import { spawnSync } from "node:child_process";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, "..");
 const dataPath = path.join(repoRoot, "_data", "instagram_feed.json");
+const manualPostsPath = path.join(repoRoot, "_data", "instagram_manual_posts.json");
 const cacheDir = path.join(repoRoot, "img", "instagram-cache");
 
 const accessToken = process.env.INSTAGRAM_ACCESS_TOKEN;
@@ -51,7 +52,8 @@ const normalizedPosts = rawMedia
   .filter(Boolean);
 
 const publicProfilePosts = await fetchPublicProfilePosts(process.env.INSTAGRAM_USERNAME || "dokipoki_personazai");
-const mergedPosts = mergePosts(normalizedPosts, publicProfilePosts)
+const manualPosts = await fetchManualPosts();
+const mergedPosts = mergePosts(normalizedPosts, publicProfilePosts, manualPosts)
   .sort(sortPostsByTimestampDesc)
   .slice(0, feedLimit);
 
@@ -257,6 +259,220 @@ async function fetchPublicProfilePosts(username) {
   return [];
 }
 
+async function fetchManualPosts() {
+  const manualConfig = await readJson(manualPostsPath);
+  const entries = Array.isArray(manualConfig?.items) ? manualConfig.items : [];
+  const posts = [];
+
+  for (const entry of entries) {
+    try {
+      const post = await fetchManualPost(entry);
+      if (post) posts.push(post);
+    } catch (error) {
+      console.warn(`Manual Instagram post sync skipped for ${getManualPermalink(entry)}: ${error.message}`);
+    }
+  }
+
+  return posts;
+}
+
+async function fetchManualPost(entry) {
+  const permalink = getManualPermalink(entry);
+  if (!permalink) return null;
+
+  const response = await fetch(permalink, {
+    headers: {
+      Accept: "text/html,application/xhtml+xml",
+      "User-Agent": "Mozilla/5.0",
+      Referer: "https://www.instagram.com/",
+      "Accept-Language": "en-US,en;q=0.9"
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error(`Instagram permalink fetch failed (${response.status})`);
+  }
+
+  const html = await response.text();
+  return normalizeManualHtml(permalink, html);
+}
+
+function getManualPermalink(entry) {
+  if (typeof entry === "string") return normalizeManualPermalink(entry);
+  if (entry && typeof entry.permalink === "string") return normalizeManualPermalink(entry.permalink);
+  return null;
+}
+
+function normalizeManualPermalink(value) {
+  try {
+    const url = new URL(value);
+    url.search = "";
+    url.hash = "";
+    return url.toString();
+  } catch (error) {
+    return null;
+  }
+}
+
+function normalizeManualHtml(fallbackPermalink, html) {
+  const metadata = extractManualMetadata(html);
+  const permalink = metadata.permalink || fallbackPermalink;
+  const thumbUrl = metadata.thumbUrl;
+  const timestamp = metadata.timestamp || null;
+  const caption = normalizeText(metadata.caption);
+  const mediaType = metadata.kind === "video" ? "VIDEO" : "IMAGE";
+  const mediaProductType = permalink.includes("/reel/") ? "REELS" : null;
+
+  if (!thumbUrl) {
+    return null;
+  }
+
+  const normalizedMedia = normalizeMediaItem({
+    id: metadata.id || permalink,
+    mediaType,
+    mediaProductType,
+    mediaUrl: metadata.videoUrl || thumbUrl,
+    thumbUrl,
+    caption,
+    sequence: 1
+  });
+
+  if (!normalizedMedia) {
+    return null;
+  }
+
+  return {
+    id: sanitizeId(metadata.id || permalink),
+    kind: normalizedMedia.kind,
+    label: normalizedMedia.label,
+    post_type: getPostType({
+      mediaType,
+      mediaProductType,
+      mediaCount: 1,
+      permalink
+    }),
+    alt: caption || normalizedMedia.alt,
+    permalink,
+    timestamp,
+    media: [normalizedMedia]
+  };
+}
+
+function extractManualMetadata(html) {
+  const jsonLdObjects = extractJsonLdObjects(html);
+  const primaryJsonLd = jsonLdObjects.find((item) => item && typeof item === "object") || {};
+  const videoJsonLd = jsonLdObjects.find((item) => item?.["@type"] === "VideoObject") || {};
+  const socialJsonLd = jsonLdObjects.find((item) => item?.["@type"] === "SocialMediaPosting") || {};
+
+  const permalink = (
+    extractMetaTag(html, "property", "og:url") ||
+    extractCanonicalHref(html)
+  );
+
+  const caption = (
+    socialJsonLd?.headline ||
+    socialJsonLd?.articleBody ||
+    videoJsonLd?.name ||
+    videoJsonLd?.description ||
+    primaryJsonLd?.caption ||
+    extractMetaTag(html, "property", "og:title") ||
+    extractMetaTag(html, "name", "description")
+  );
+
+  const thumbUrl = (
+    firstArrayValue(videoJsonLd?.thumbnailUrl) ||
+    extractMetaTag(html, "property", "og:image") ||
+    extractMetaTag(html, "name", "twitter:image")
+  );
+
+  const videoUrl = (
+    videoJsonLd?.contentUrl ||
+    extractMetaTag(html, "property", "og:video") ||
+    extractMetaTag(html, "property", "og:video:url")
+  );
+
+  const timestamp = (
+    socialJsonLd?.datePublished ||
+    videoJsonLd?.uploadDate ||
+    primaryJsonLd?.uploadDate ||
+    null
+  );
+
+  const identifier = (
+    socialJsonLd?.identifier ||
+    videoJsonLd?.identifier ||
+    primaryJsonLd?.identifier ||
+    permalink
+  );
+
+  return {
+    id: normalizeManualIdentifier(identifier),
+    permalink,
+    caption,
+    thumbUrl,
+    videoUrl,
+    timestamp,
+    kind: videoUrl || (permalink && permalink.includes("/reel/")) ? "video" : "image"
+  };
+}
+
+function extractJsonLdObjects(html) {
+  const matches = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi) || [];
+  const objects = [];
+
+  for (const match of matches) {
+    const body = match
+      .replace(/^<script type="application\/ld\+json">/i, "")
+      .replace(/<\/script>$/i, "")
+      .trim();
+
+    try {
+      const parsed = JSON.parse(body);
+      if (Array.isArray(parsed)) {
+        objects.push(...parsed);
+      } else {
+        objects.push(parsed);
+      }
+    } catch (error) {
+      // Ignore brittle JSON-LD blocks.
+    }
+  }
+
+  return objects;
+}
+
+function extractMetaTag(html, attribute, key) {
+  const pattern = new RegExp(
+    `<meta[^>]+${attribute}=["']${escapeRegExp(key)}["'][^>]+content=["']([^"']+)["'][^>]*>`,
+    "i"
+  );
+  const reversePattern = new RegExp(
+    `<meta[^>]+content=["']([^"']+)["'][^>]+${attribute}=["']${escapeRegExp(key)}["'][^>]*>`,
+    "i"
+  );
+
+  return html.match(pattern)?.[1] || html.match(reversePattern)?.[1] || null;
+}
+
+function extractCanonicalHref(html) {
+  return html.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["'][^>]*>/i)?.[1] || null;
+}
+
+function firstArrayValue(value) {
+  if (Array.isArray(value)) return value[0] || null;
+  return value || null;
+}
+
+function normalizeManualIdentifier(value) {
+  if (!value) return null;
+  if (typeof value === "string") return value;
+  if (typeof value === "number") return String(value);
+  if (typeof value === "object") {
+    return value?.value || value?.["@id"] || value?.id || null;
+  }
+  return null;
+}
+
 function normalizePublicProfilePayload(payload) {
   const user =
     payload?.data?.user ||
@@ -349,7 +565,7 @@ function getPublicPermalink(node) {
   return `https://www.instagram.com/${base}/${node.shortcode}/`;
 }
 
-function mergePosts(primaryPosts, supplementaryPosts) {
+function mergePosts(primaryPosts, supplementaryPosts, manualPosts = []) {
   const byPermalink = new Map();
 
   for (const post of primaryPosts) {
@@ -357,6 +573,13 @@ function mergePosts(primaryPosts, supplementaryPosts) {
   }
 
   for (const post of supplementaryPosts) {
+    if (!post?.permalink) continue;
+    if (!byPermalink.has(post.permalink)) {
+      byPermalink.set(post.permalink, post);
+    }
+  }
+
+  for (const post of manualPosts) {
     if (!post?.permalink) continue;
     if (!byPermalink.has(post.permalink)) {
       byPermalink.set(post.permalink, post);
@@ -496,4 +719,8 @@ function sanitizeId(value) {
 
 function normalizeText(value) {
   return String(value || "").replace(/\s+/g, " ").trim();
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
