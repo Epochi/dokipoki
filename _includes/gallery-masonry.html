@@ -1,87 +1,127 @@
-<div id="Galerija" class="container scrollspy galerija">
+{% assign instagram_feed = site.data.instagram_feed %}
+{% assign instagram_count = instagram_feed.items | size %}
+{% assign instagram_initial_count = instagram_feed.initial_count | default: 9 %}
+
+<div
+  id="Galerija"
+  class="container scrollspy galerija instagram-gallery-section{% if instagram_count == 0 %} instagram-gallery-section--empty{% endif %}"
+  data-gallery-source="instagram"
+  data-batch-size="{{ instagram_initial_count }}"
+>
+  {% if instagram_count > 0 %}
   <div class="row">
     <div class="col s12">
-      <div class="grid">
-        <div class="grid-sizer"></div>
+      <div class="instagram-feed-grid">
+        {% for item in instagram_feed.items %}
+        {% assign media_items = item.media %}
+        {% if media_items == nil %}
+          {% assign media_items = "" | split: "" %}
+        {% endif %}
 
-        {%- comment -%}
-        TOP: /gallery/top/ (rodyti iškart) – BE lazy, kad Masonry nesusimaišytų
-        {%- endcomment -%}
-        {%- for image in site.static_files -%}
-          {%- if image.path contains '/gallery/top/' and image.extname != '.webp' -%}
-            {%- assign alt_text = image.name | split: '.' | first | replace: '-', ' ' | replace: '_', ' ' -%}
-            {%- assign webp_path = image.path | replace: image.extname, '.webp' -%}
-            {%- assign has_webp = site.static_files | where: "path", webp_path | size -%}
-
-            <div class="grid-item" data-gallery="top">
-              <picture>
-                {%- if has_webp > 0 -%}
-                  <source type="image/webp" srcset="{{ site.baseurl }}{{ webp_path }}">
-                {%- endif -%}
+        <div
+          class="instagram-grid-item{% if forloop.index > instagram_initial_count %} hidden-gallery{% endif %}"
+          data-instagram-kind="{{ item.kind }}"
+          data-instagram-post-type="{{ item.post_type | default: item.kind }}"
+          data-instagram-permalink="{{ item.permalink | escape }}"
+          data-instagram-media='{{ media_items | jsonify | escape }}'
+          data-instagram-media-count="{{ item.media_count | default: media_items.size | default: 1 }}"
+        >
+          <button type="button" class="instagram-card js-instagram-card" aria-label="Atidaryti įrašo peržiūrą">
+            <div class="instagram-card__media">
+              {% assign cover_media = media_items.first %}
+              {% if cover_media == nil %}
                 <img
                   class="gallery-img"
-                  src="{{ site.baseurl }}{{ image.path }}"
-                  alt="{{ alt_text }}"
+                  src="{{ site.baseurl }}{{ item.thumb_path }}"
+                  alt="{{ item.alt | escape }}"
+                  loading="lazy"
                   decoding="async"
                 >
-              </picture>
+              {% else %}
+                <img
+                  class="gallery-img"
+                  src="{{ site.baseurl }}{{ cover_media.thumb_path }}"
+                  alt="{{ cover_media.alt | escape }}"
+                  loading="lazy"
+                  decoding="async"
+                >
+              {% endif %}
+
+              {% assign media_count = item.media_count | default: media_items.size | default: 1 %}
+              {% assign post_type = item.post_type | default: item.kind %}
+              {% if post_type == 'carousel' %}
+              <span class="instagram-card__icon instagram-card__icon--carousel" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                  <path d="M7 2.75A4.25 4.25 0 0 0 2.75 7v10A4.25 4.25 0 0 0 7 21.25h10A4.25 4.25 0 0 0 21.25 17V7A4.25 4.25 0 0 0 17 2.75H7Zm0 1.5h10A2.75 2.75 0 0 1 19.75 7v10A2.75 2.75 0 0 1 17 19.75H7A2.75 2.75 0 0 1 4.25 17V7A2.75 2.75 0 0 1 7 4.25Z"></path>
+                  <path d="M5.2 5.2h9.3A4.25 4.25 0 0 1 18.75 9.45v9.35h-1.5V9.45A2.75 2.75 0 0 0 14.5 6.7H5.2V5.2Z"></path>
+                </svg>
+              </span>
+              {% elsif post_type == 'reel' %}
+              <span class="instagram-card__icon instagram-card__icon--reel" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                  <path d="M6.8 2.75A4.05 4.05 0 0 0 2.75 6.8v10.4a4.05 4.05 0 0 0 4.05 4.05h10.4a4.05 4.05 0 0 0 4.05-4.05V6.8a4.05 4.05 0 0 0-4.05-4.05H6.8Zm0 1.5h1.67l1.45 2.45H6.61L5.16 4.25H6.8Zm4.87 0 1.45 2.45H10.9L9.45 4.25h2.22Zm2.98 0h2.55A2.55 2.55 0 0 1 19.75 6.8v.1h-4.26l-1.45-2.65Zm-10.4 4.15h15V17.2a2.55 2.55 0 0 1-2.55 2.55H6.8A2.55 2.55 0 0 1 4.25 17.2V8.4Zm6.3 2.1a.8.8 0 0 0-1.2.69v3.62a.8.8 0 0 0 1.2.69l3.14-1.81a.8.8 0 0 0 0-1.38l-3.14-1.81Z"></path>
+                </svg>
+              </span>
+              {% endif %}
             </div>
-          {%- endif -%}
-        {%- endfor -%}
-
-        {%- comment -%}
-        REST: /gallery/ (kas ne /top/) – hidden + deferred + lazy
-        {%- endcomment -%}
-        {%- for image in site.static_files -%}
-          {%- if image.path contains '/gallery/' and image.extname != '.webp' -%}
-            {%- unless image.path contains '/gallery/top/' -%}
-              {%- assign alt_text = image.name | split: '.' | first | replace: '-', ' ' | replace: '_', ' ' -%}
-              {%- assign webp_path = image.path | replace: image.extname, '.webp' -%}
-              {%- assign has_webp = site.static_files | where: "path", webp_path | size -%}
-
-              <div class="grid-item hidden-gallery" data-gallery="rest">
-                <picture>
-                  {%- if has_webp > 0 -%}
-                    <source
-                      type="image/webp"
-                      srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                      data-srcset="{{ site.baseurl }}{{ webp_path }}"
-                    >
-                  {%- endif -%}
-                  <img
-                    class="gallery-img"
-                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                    data-src="{{ site.baseurl }}{{ image.path }}"
-                    alt="{{ alt_text }}"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                </picture>
-              </div>
-            {%- endunless -%}
-          {%- endif -%}
-        {%- endfor -%}
-
+          </button>
+        </div>
+        {% endfor %}
       </div>
 
-      <div class="center-align" style="margin-top: 20px;">
-        <a id="show-more-gallery" class="btn waves-effect waves-light rausva">Rodyti daugiau</a>
-      </div>
+      {% if instagram_count > instagram_initial_count %}
+      <div class="instagram-feed__sentinel" data-instagram-sentinel aria-hidden="true"></div>
+      {% endif %}
     </div>
   </div>
+
+  <div id="InstagramPreviewModal" class="instagram-preview-modal" aria-hidden="true">
+    <div class="instagram-preview-modal__backdrop js-instagram-modal-close"></div>
+
+    <div class="instagram-preview-modal__panel" role="dialog" aria-modal="true" aria-label="Instagram peržiūra">
+      <div class="instagram-preview-modal__topbar">
+        <a
+          href="{{ site.instagram_url }}"
+          target="_blank"
+          rel="noopener"
+          class="instagram-preview-modal__open"
+          data-instagram-open-link
+          aria-label="Atidaryti Instagrame"
+          title="Atidaryti Instagrame"
+        >
+          <span class="instagram-preview-modal__open-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4A5.8 5.8 0 0 1 16.2 22H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 1.8A4 4 0 0 0 3.8 7.8v8.4a4 4 0 0 0 4 4h8.4a4 4 0 0 0 4-4V7.8a4 4 0 0 0-4-4Z"></path>
+              <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8Z"></path>
+              <circle cx="17.35" cy="6.65" r="1.2"></circle>
+            </svg>
+          </span>
+          <span class="sr-only">Atidaryti Instagrame</span>
+        </a>
+
+        <button type="button" class="instagram-preview-modal__close js-instagram-modal-close" aria-label="Uždaryti">&times;</button>
+      </div>
+
+      <div class="instagram-preview-modal__viewer">
+        <div class="instagram-preview-modal__frame">
+          <button type="button" class="instagram-preview-modal__nav instagram-preview-modal__nav--prev" data-instagram-nav="prev" aria-label="Ankstesnė nuotrauka">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M14.7 5.3a1 1 0 0 1 0 1.4L9.41 12l5.3 5.3a1 1 0 1 1-1.42 1.4l-6-6a1 1 0 0 1 0-1.4l6-6a1 1 0 0 1 1.42 0Z"></path>
+            </svg>
+          </button>
+
+          <div class="instagram-preview-modal__stage" data-instagram-stage></div>
+
+          <button type="button" class="instagram-preview-modal__nav instagram-preview-modal__nav--next" data-instagram-nav="next" aria-label="Kita nuotrauka">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M9.3 18.7a1 1 0 0 1 0-1.4l5.29-5.3-5.3-5.3a1 1 0 1 1 1.42-1.4l6 6a1 1 0 0 1 0 1.4l-6 6a1 1 0 0 1-1.42 0Z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="instagram-preview-modal__dots" data-instagram-dots></div>
+    </div>
+  </div>
+  {% endif %}
 </div>
-
-<style>
-  /* Stabilus vaizdų renderis Masonry */
-  #Galerija .gallery-img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  /* Visiškai išjungiam interakciją ant galerijos nuotraukų */
-  #Galerija .gallery-img {
-    pointer-events: none;
-    cursor: default !important;
-  }
-</style>

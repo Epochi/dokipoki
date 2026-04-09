@@ -1,0 +1,57 @@
+name: Instagram Feed Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */3 * * *"
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/instagram-feed.yml"
+      - "scripts/instagram-sync.mjs"
+
+jobs:
+  sync:
+    if: ${{ secrets.INSTAGRAM_ACCESS_TOKEN != '' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
+      - name: Sync Instagram feed
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          INSTAGRAM_USERNAME: dokipoki_personazai
+          INSTAGRAM_FEED_LIMIT: 36
+          INSTAGRAM_INITIAL_COUNT: 9
+        run: node scripts/instagram-sync.mjs
+
+      - name: Commit cached feed
+        run: |
+          git add _data/instagram_feed.json img/instagram-cache
+
+          if git diff --cached --quiet; then
+            echo "No Instagram feed changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh Instagram feed cache"
+          git push
