@@ -28,22 +28,26 @@ jobs:
           node-version: 20
 
       - name: Check Instagram secrets
+        id: check_secrets
         env:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
         run: |
           if [ -z "$INSTAGRAM_ACCESS_TOKEN" ]; then
             echo "INSTAGRAM_ACCESS_TOKEN is not configured. Skipping sync."
+            echo "sync_enabled=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
+          echo "sync_enabled=true" >> "$GITHUB_OUTPUT"
+
       - name: Install ImageMagick
-        if: ${{ secrets.INSTAGRAM_ACCESS_TOKEN != '' }}
+        if: ${{ steps.check_secrets.outputs.sync_enabled == 'true' }}
         run: |
           sudo apt-get update
           sudo apt-get install -y imagemagick
 
       - name: Sync Instagram feed
-        if: ${{ secrets.INSTAGRAM_ACCESS_TOKEN != '' }}
+        if: ${{ steps.check_secrets.outputs.sync_enabled == 'true' }}
         env:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
@@ -53,7 +57,7 @@ jobs:
         run: node scripts/instagram-sync.mjs
 
       - name: Commit cached feed
-        if: ${{ secrets.INSTAGRAM_ACCESS_TOKEN != '' }}
+        if: ${{ steps.check_secrets.outputs.sync_enabled == 'true' }}
         run: |
           git add _data/instagram_feed.json img/instagram-cache
 
