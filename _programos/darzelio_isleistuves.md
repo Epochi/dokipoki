@@ -113,7 +113,7 @@ hide_program_hero: true
             </ul>
 
             <p class="kg-font kg-font--small">
-              Šią programą veda du Jūsų pasirinkti personažai, pavyzdžiui: Šunyčiai Patruliai, Chase ir Skye, Indėnai, Pimpačkiukai, Kosmonautai ir kiti.
+              Šią programą veda du Jūsų pasirinkti personažai, pavyzdžiui: Drąsiųjų Šuniukų Komanda, Skraidanti Šunytė, Indėnai, Pimpačkiukai, Kosmonautai ir kiti.
             </p>
 
             <p style="margin: 18px 0 0 0;">
@@ -138,22 +138,22 @@ hide_program_hero: true
       <div class="dp-item">
         <div class="card">
           <div class="card-image">
-            <img src="/img/programos/darzelis/patruliai.jpg" alt="Šunyčiai Patruliai – misija Išleistuvės" loading="lazy" decoding="async">
+            <img src="/img/programos/darzelis/drasiuju-suniuku-komanda.jpg" alt="Drąsiųjų šuniukų komandos misija išleistuvėms" loading="lazy" decoding="async">
           </div>
 
           <div class="card-content">
-            <h3 class="section-header">ŠUNYČIAI PATRULIAI - MISIJA "IŠLEISTUVĖS"</h3>
+            <h3 class="section-header">DRĄSIŲJŲ ŠUNIUKŲ KOMANDA - MISIJA "IŠLEISTUVĖS"</h3>
 
             <ul class="kg-font kg-font--small dp-bullets">
-              <li>- Šoksime Šunyčių Patrulių šokį</li>
+              <li>- Šoksime komandos šokį</li>
               <li>- Vykdysime gelbėjimo misiją</li>
-              <li>- Dalyvausime Šunyčių Patrulių iššūkyje</li>
+              <li>- Dalyvausime komandiniame iššūkyje</li>
               <li>- Spręsime šuniukų galvosūkius</li>
               <li>- Lankstysime šuniukus iš balionų</li>
             </ul>
 
             <p class="kg-font kg-font--small">
-              Šią programą veda du Šunyčiai Patruliai. Turime Chase, Skye, Everest ir Marshal.
+              Šią programą veda du drąsiosios komandos herojai. Galite rinktis iš kelių skirtingų personažų pagal norimą nuotaiką ir vaikų amžių.
             </p>
 
             <p style="margin: 18px 0 0 0;">

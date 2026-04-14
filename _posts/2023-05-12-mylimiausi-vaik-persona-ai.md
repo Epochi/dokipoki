@@ -50,10 +50,10 @@ Jeigu kartu ieškote ir veiklų idėjų šventei, peržiūrėkite mūsų <a href
 + Labai protingas ir moka visus burtažodžius; žino, kur ieškoti horokrusų; moka skristi šluota; gali išmokyti iškviesti gynėją.
 + Labiausiai mėgstamas šiek tiek vyresnių vaikų personažas, kurie jau matė Hario Poterio filmus ar skaitė knygas.
 
-**ŠUNYČIAI PATRULIAI CHASE IR SKYE**
-+ Labai išpopuliarėję ir vis didesnio dėmesio susilaukiantys personažai. 
-+ Labai paslaugūs, padės bet kokioje bėdoje; bebaimiai; puikiai moka išlaikyti vaikų dėmesį; lavina kitų gebėjimą dirbti komandoje; gali tapti ištikimiausiais vaikų draugais.
-+ Tinka visų amžių vaikams, labiausiai rekomenduojami nuo dviejų iki penkerių metukų.
+**DRĄSIŲJŲ ŠUNIUKŲ KOMANDA**
++ Labai mėgstami personažai aktyvioms vaikų šventėms. 
++ Jie kuria judrią, komandine dvasia paremtą programą su misijomis, estafetėmis ir smagiomis užduotimis.
++ Tinka įvairaus amžiaus vaikams, ypač toms grupėms, kurioms patinka daug judesio ir aiškūs komandiniai žaidimai.
 
 **KOSMONAUTAI**
 + Labiausiai mylimi vaikų, mėgstančių eksperimentuoti ir kurti stebuklus.

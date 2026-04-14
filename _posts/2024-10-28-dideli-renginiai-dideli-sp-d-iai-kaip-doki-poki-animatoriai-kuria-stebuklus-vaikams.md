@@ -18,7 +18,7 @@ Neretai susilaukiame klausimų, ar galime surengti nepamirštamą renginuką įm
 	- Milžiniški burbulai
 	- Didžiulių spalvotų kamuolių diskoteka
 
-- Turime įvairių programų su atrinktomis smagiausiomis veiklomis: Kosminė programa, Hogvartso programa, Šunyčių Patrulių misija, Kaip Grinčas vogė Kalėdas ir dar daugiau. 
+- Turime įvairių programų su atrinktomis smagiausiomis veiklomis: Kosminė programa, Hogvartso programa, drąsiųjų šuniukų komandos misija, Kaip Grinčas vogė Kalėdas ir dar daugiau. 
 
 - Taip pat reikėtų nepamiršti skirti dėmesio **visus apjungiančioms veikloms**, kaip masiniai šokiai ir komandiniai žaidimai. 
 

@@ -15,7 +15,7 @@ Jeigu norite lengviau palyginti veiklas pagal amžių ir šventės tipą, perži
 Labai svarbus momentas yra išsirinkti tinkamą personažą, kuris suteiktų daugiausiai laimės mažamečiui ir jo draugams. Į ką reikėtų atkreipti dėmesį renkantis iš gausybės mūsų siūlomų kostiumų?
 
 
-* Mažiems vaikams svarbu matyti žmogaus emocijas ir veido išraiškas, todėl rekomenduojame rinktis personažus su tokiais kostiumais, kur matytųsi animatoriaus veidas. Net jeigu Jūsų vaikas sako, kad nebijos ir labai nori sutikti Batmaną, Vežliuką Nindzę ar Klouną, jis gali išsigąsti ir nenorėti žaisti su personažu. Todėl siūlome tokius personažus rinktis vėlesniuose vaiko gimtadieniuose.
+* Mažiems vaikams svarbu matyti žmogaus emocijas ir veido išraiškas, todėl rekomenduojame rinktis personažus su tokiais kostiumais, kur matytųsi animatoriaus veidas. Net jeigu Jūsų vaikas sako, kad nebijos ir labai nori sutikti Batmaną, nindzių herojų ar Klouną, jis gali išsigąsti ir nenorėti žaisti su personažu. Todėl siūlome tokius personažus rinktis vėlesniuose vaiko gimtadieniuose.
 
 * **Vaiko poreikiai** – nepamirškite atsižvelgti į vaiko norus! Galbūt jis nuolatos klauso ir dainuoja Kakės Makės daineles? O gal jį džiugina Teletabiai? Galbūt jo mėgstamiausia pasaka yra apie princeses ir stebuklingas būtybes kaip Vienaragiai? Atkreipkite dėmesį į vaiko pomėgius, kurie gali būti ženklas, kad sutikus mėgstamiausią personažą išsipildys jo svajonė.
 

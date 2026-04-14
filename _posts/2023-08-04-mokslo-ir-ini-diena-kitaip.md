@@ -13,7 +13,7 @@ Mokslo ir žinių diena kiekvienam vaikui yra tikrai ypatinga ir simbolizuoja na
 - didžiulių muilo burbulų fiesta
 - masiniai šokiai
 
-Šią programą gali vesti Klounai, Šunyčiai Patruliai Chase ir Skye, Vienaragė, Kakė Makė, Fėja, Žmogus Voras ir kiti pamilti personažai. 
+Šią programą gali vesti Klounai, drąsiosios šuniukų komandos herojai, Vienaragė, Kakė Makė, Fėja, Žmogus Voras ir kiti pamilti personažai. 
 
 - Programa labiau tinkama didesniam žmonių skaičiui.
 - Programą galima personalizuoti, tad būtinai papasakokite mums savo lūkesčius ir poreikius.
