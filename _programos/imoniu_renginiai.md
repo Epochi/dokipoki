@@ -2,7 +2,7 @@
 layout: programa
 title: "Įmonių renginiai"
 order: 5
-intro: "Premium vaikų užimtumo sprendimai įmonių renginiams: individualiai pritaikyta programa, aiški logistika ir patyrę animatoriai dideliems srautams."
+intro: "Vaikų zona įmonių renginiams: premium animatoriai, aiški logistika ir individualiai pritaikyta programa didesniems srautams."
 image: "/img/programos/imoniu_renginiai/0.jpg"
 card_image: "/img/programos/imoniu_renginiai/0.jpg"
 card_focus_y: "calc(var(--dp-cover-focus-y) + 25%)"
@@ -11,7 +11,7 @@ permalink: /programos/imoniu-renginiai/
 body_class: page-programa page-programa-imoniu-renginiai
 link: /programos/imoniu-renginiai/
 seo_title: "Įmonių renginiai su animatoriais vaikams | Premium sprendimai | Doki Poki"
-description: "Premium animatoriai įmonių renginiams Vilniuje ir Kaune: vaikų zonos, individualios programos, keli animatoriai, bei specialiai įmonei pritaikyti kostiumai ir rekvizitai."
+description: "Vaikų zona įmonių renginiams: premium animatoriai, individualios programos, keli animatoriai, veiklų stotelės ir įmonei pritaikyti kostiumai bei rekvizitai."
 ---
 
 <script type="application/ld+json">
@@ -58,7 +58,7 @@ description: "Premium animatoriai įmonių renginiams Vilniuje ir Kaune: vaikų 
   <div class="col s12">
     <p class="kg-font kg-font--normal center-align" style="max-width: 900px; margin: 0 auto 16px auto;">
       Kuriame individualias programas šeimų dienoms, komandos renginiams, festivaliams, prekybos centrų aktyvacijoms ir kitoms didelio srauto šventėms.
-      Mūsų tikslas - sklandi vaikų zonos eiga, saugus užimtumas ir kokybiška patirtis viso renginio metu.
+      Mūsų tikslas - sklandi vaikų zonos eiga, saugus užimtumas ir kokybiška patirtis viso renginio metu, kai organizatoriams reikia patikimo premium partnerio.
     </p>
   </div>
 </div>
@@ -106,7 +106,7 @@ description: "Premium animatoriai įmonių renginiams Vilniuje ir Kaune: vaikų 
   <div class="col s12">
     <p class="kg-font kg-font--normal center-align" style="max-width: 900px; margin: 0 auto 12px auto;">
       Norite aiškios struktūros didesniam renginiui? Peržiūrėkite mūsų trumpą gidą:
-      <a href="/blog/vaiku-zona-imones-renginyje-kaip-suplanuoti-premium-patirti/">Kaip suplanuoti premium vaikų zoną įmonės renginyje</a>.
+      <a href="/blog/vaiku-zona-imones-renginyje-kaip-suplanuoti-premium-patirti/">kaip suplanuoti premium vaikų zoną įmonės renginyje</a>.
     </p>
   </div>
 </div>

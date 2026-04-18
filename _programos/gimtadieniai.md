@@ -1,14 +1,15 @@
 ---
 layout: programa
 title: "Gimtadieniai"
+display_title: "Vaikų gimtadieniai su animatoriais"
 order: 1
-intro: "Vaikų gimtadieniai su Doki Poki – daug juoko, judrių žaidimų ir nepamirštamų emocijų!"
+intro: "Vaikų gimtadieniai su Doki Poki – daug juoko, judrių žaidimų ir lengvai pritaikoma programa pagal amžių bei šventės vietą."
 image: "/gallery/top/IMG_0604.webp"
 permalink: /programos/gimtadieniai/
 body_class: page-programa page-programa-gimtadieniai
 link: /programos/gimtadieniai/
 seo_title: "Vaikų gimtadienio programa su animatoriais Vilniuje | DOKIPOKI"
-description: "Vaikų gimtadieniai su animatoriais Vilniuje: žaidimai, šokiai, veidukų piešimas, balionai ir tatuiruotės. Programą pritaikome pagal amžių ir šventės vietą."
+description: "Vaikų gimtadienio programa su žaidimais, šokiais, veidukų piešimu, balionais ir tatuiruotėmis. Programą pritaikome pagal amžių, šventės vietą ir norimą tempą."
 ---
 
 <script type="application/ld+json">
@@ -72,7 +73,7 @@ description: "Vaikų gimtadieniai su animatoriais Vilniuje: žaidimai, šokiai, 
 
             <p class="kg-font kg-font--small">
               Programą pritaikome pagal vaikų amžių ir šventės vietą.
-              Rinktis galite iš visų mūsų <a href="/personazai/">personažų</a>.
+              Rinktis galite iš visų mūsų <a href="/personazai/">personažų vaikų gimtadieniui</a>.
             </p>
           </div>
         </div>
@@ -95,7 +96,7 @@ description: "Vaikų gimtadieniai su animatoriais Vilniuje: žaidimai, šokiai, 
             </ul>
 
             <p class="kg-font kg-font--small">
-              Padėsime Jums išsirinkti <a href="/personazai/">personažą</a>, atitinkantį šventės tematiką.
+              Padėsime Jums išsirinkti <a href="/personazai/">tinkamą personažą vaikų šventei</a>, atitinkantį šventės tematiką.
             </p>
           </div>
         </div>

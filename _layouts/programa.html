@@ -8,9 +8,9 @@
     <div class="container">
 
       {% unless page.hide_program_header %}
-      <div class="row">
+      <div class="row" style="margin-top: 32px;">
         <div class="col s12">
-          <h1 class="section-header center-align">{{ page.title }}</h1>
+          <h1 class="section-header center-align">{{ page.display_title | default: page.title }}</h1>
         </div>
       </div>
       {% endunless %}

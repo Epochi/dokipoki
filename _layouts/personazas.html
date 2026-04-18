@@ -19,7 +19,7 @@
     <!-- Antraštė -->
     <div class="row" style="margin-top: 32px;">
       <div class="col s12 center-align">
-        <h1 class="section-header">{{ page.personazas }}</h1>
+        <h1 class="section-header">{{ page.display_title | default: page.personazas }}</h1>
       </div>
     </div>
 

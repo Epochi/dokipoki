@@ -177,32 +177,26 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Product",
+      "@type": "Service",
       "name": "{{ page.personazas | escape }}",
+      "serviceType": "Animatoriaus personažo programa vaikų šventėms",
       "url": "{{ page.url | absolute_url }}",
       "image": "{{ product_image | strip }}",
       "description": "{% if page.description %}{{ page.description | strip_html | strip_newlines | escape }}{% else %}{{ page.personazas | escape }} - vaikų švenčių personažas. Programa pritaikoma pagal jūsų poreikius.{% endif %}",
-      "brand": {
-        "@type": "Brand",
-        "name": "DokiPoki"
+      "provider": {
+        "@type": "Organization",
+        "name": "DokiPoki",
+        "url": "{{ '/' | absolute_url }}"
       },
-      "category": [
-        "Vaikų švenčių personažas",
-        "Animatorius"
-      ],
       "areaServed": [
         { "@type": "City", "name": "Vilnius" },
         { "@type": "City", "name": "Kaunas" },
         { "@type": "Country", "name": "Lietuva" }
       ],
-      "offers": {
-        "@type": "Offer",
-        "url": "{{ '/#Kaina' | absolute_url }}",
-        "price": {{ site.data.pricing.hour_price | default: 100 | plus: 0 }},
-        "priceCurrency": "{{ site.data.pricing.currency | default: 'EUR' }}",
-        "unitCode": "HUR",
-        "availability": "https://schema.org/InStock",
-        "description": "Kaina nurodyta už 1 valandą."
+      "audience": {
+        "@type": "PeopleAudience",
+        "suggestedMinAge": "2",
+        "suggestedMaxAge": "12"
       }
     }
     </script>
@@ -250,7 +244,8 @@
       "image": "{{ post_image | absolute_url }}",
       "author": {
         "@type": "Organization",
-        "name": "DokiPoki"
+        "name": "DokiPoki",
+        "url": "{{ '/' | absolute_url }}"
       },
       "publisher": {
         "@type": "Organization",
@@ -399,3 +394,4 @@
   <!-- Analytics -->
   {% include googleanalytics.html %}
 </head>
+

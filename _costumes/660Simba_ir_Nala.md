@@ -7,15 +7,13 @@ has_page: true
 permalink: /personazai/simba-ir-nala/
 
 seo_title: "Simba ir Nala | Liūto karaliaus animatoriai vaikų šventėms Vilniuje"
-description: "Simba ir Nala – du mylimi Liūto karaliaus animatoriai vaikų šventėms Vilniuje. Judrūs žaidimai, komandinės užduotys ir įtraukianti programa."
+description: "Simba ir Nala – du mylimi Liūto karaliaus personažai vaikų šventėms. Safari nuotykiai, judrūs žaidimai, komandinės užduotys ir šilta, įtraukianti programa."
 og_image: "/img/personazai/660Liutukai.jpg"
 img_alt: "Simba ir Nala – Liūto karaliaus animatoriai vaikų šventei Vilniuje"
 ---
 
-Simba ir Nala – vaikams puikiai atpažįstami liūtukai, kurie į vaikų šventę atneša draugystės, drąsos ir augimo istoriją. Šiuos personažus įkūnijantys animatoriai Vilniuje sukuria šiltą, nuotykių kupiną atmosferą, kurioje vaikai noriai įsitraukia ir juda kartu.
+Simba ir Nala – vaikams puikiai atpažįstami Liūto karaliaus personažai, kurie į šventę atneša safari ir savanos nuotykio atmosferą. Šiuos personažus įkūnijantys animatoriai kuria šiltą, judrią ir lengvai įtraukiančią programą vaikų gimtadieniams bei kitoms šventėms.
 
-Simba ir Nalos programa vaikų šventėms paremta judriais žaidimais, komandinėmis užduotimis ir smagiomis misijomis. Vaikai kartu su personažais juda, mokosi veikti drauge, pasitikėti savimi ir džiaugtis bendru rezultatu. Animatoriai prisitaiko prie vaikų amžiaus ir grupės dinamikos, todėl veiklos išlieka aiškios, saugios ir labai įtraukiančios.
-
-Šie personažai ypač tinka vaikų gimtadieniams ir teminėms šventėms, kuriose norisi daugiau judesio ir nuotykių. Simba ir Nala dažnai pasirenkami kaip dviejų personažų programa, leidžianti įtraukti didesnę vaikų grupę ir sukurti dar ryškesnę, emocingą šventės patirtį.
+Simba ir Nalos programa paremta judriais žaidimais, komandinėmis užduotimis, smagiomis misijomis ir safari tematikos nuotykiais. Ji ypač tinka vaikams, kuriems patinka gyvūnai, daugiau judesio ir aiški šventės tema. Jei ieškote platesnio formato, peržiūrėkite ir <a href="/programos/gimtadieniai/">vaikų gimtadienio programą su animatoriais</a>.
 
 
