@@ -2,7 +2,7 @@
 layout: programa
 title: "Įmonių renginiai"
 order: 5
-intro: "Vaikų zona įmonių renginiams: premium animatoriai, aiški logistika ir individualiai pritaikyta programa didesniems srautams."
+intro: "Vaikų zona įmonių renginiams: aukštesnio lygio animatoriai, aiški logistika ir individualiai pritaikyta programa didesniems srautams."
 image: "/img/programos/imoniu_renginiai/0.jpg"
 card_image: "/img/programos/imoniu_renginiai/0.jpg"
 card_focus_y: "calc(var(--dp-cover-focus-y) + 25%)"
@@ -50,15 +50,15 @@ description: "Vaikų zona įmonių renginiams: premium animatoriai, individualio
 
 <div class="row" style="margin-top: 18px;">
   <div class="col s12">
-    <h2 class="section-header center-align">Premium vaikų užimtumas dideliems įmonių renginiams</h2>
+    <h2 class="section-header center-align">Aukštesnio lygio vaikų užimtumas dideliems įmonių renginiams</h2>
   </div>
 </div>
 
 <div class="row">
   <div class="col s12">
     <p class="kg-font kg-font--normal center-align" style="max-width: 900px; margin: 0 auto 16px auto;">
-      Kuriame individualias programas šeimų dienoms, komandos renginiams, festivaliams, prekybos centrų aktyvacijoms ir kitoms didelio srauto šventėms.
-      Mūsų tikslas - sklandi vaikų zonos eiga, saugus užimtumas ir kokybiška patirtis viso renginio metu, kai organizatoriams reikia patikimo premium partnerio.
+      Kuriame individualias programas šeimų dienoms, komandos renginiams, festivaliams, prekybos centrų veikloms ir kitoms didelio srauto šventėms.
+      Mūsų tikslas – sklandi vaikų zonos eiga, saugus užimtumas ir kokybiška patirtis viso renginio metu, kai organizatoriams reikia patikimo partnerio.
     </p>
   </div>
 </div>
@@ -87,8 +87,8 @@ description: "Vaikų zona įmonių renginiams: premium animatoriai, individualio
     <ul class="kg-font kg-font--normal dp-bullets">
       <li>- Įmonių šeimų dienoms ir vasaros renginiams</li>
       <li>- Kalėdiniams ir sezoniškiems įmonių renginiams</li>
-      <li>- Prekybos centrų bei viešų erdvių aktyvacijoms</li>
-      <li>- Renginiams, kuriuose svarbus premium aptarnavimo lygis</li>
+      <li>- Prekybos centrų bei viešų erdvių veikloms</li>
+      <li>- Renginiams, kuriuose svarbus aukštesnio lygio aptarnavimas</li>
     </ul>
   </div>
 </div>
@@ -106,7 +106,7 @@ description: "Vaikų zona įmonių renginiams: premium animatoriai, individualio
   <div class="col s12">
     <p class="kg-font kg-font--normal center-align" style="max-width: 900px; margin: 0 auto 12px auto;">
       Norite aiškios struktūros didesniam renginiui? Peržiūrėkite mūsų trumpą gidą:
-      <a href="/blog/vaiku-zona-imones-renginyje-kaip-suplanuoti-premium-patirti/">kaip suplanuoti premium vaikų zoną įmonės renginyje</a>.
+      <a href="/blog/vaiku-zona-imones-renginyje-kaip-suplanuoti-premium-patirti/">kaip suplanuoti aukštesnio lygio vaikų zoną įmonės renginyje</a>.
     </p>
   </div>
 </div>

@@ -1,7 +1,7 @@
 ---
 layout: personazas
 img: 360drasiuju_suniuku_komanda.jpg
-personazas: Drąsiųjų Šuniukų Komanda
+personazas: Drąsiųjų šuniukų komanda
 
 has_page: true
 permalink: /personazai/drasiuju-suniuku-komanda/
@@ -14,7 +14,7 @@ og_image: "/img/personazai/360drasiuju_suniuku_komanda.jpg"
 img_alt: "Drąsiųjų Šuniukų Komanda vaikų šventėje"
 ---
 
-Drąsiųjų Šuniukų Komanda sujungia keturis aktyvius personažus į vieną judrią, vaikams labai patinkančią programą. Šventėje netrūksta gelbėjimo misijų, komandinių iššūkių, estafečių, reakcijos užduočių ir daug juoko, todėl ši komanda ypač gerai veikia ten, kur vaikams norisi veiksmo nuo pirmų minučių.
+Drąsiųjų šuniukų komanda sujungia keturis aktyvius personažus į vieną judrią, vaikams labai patinkančią programą. Šventėje netrūksta gelbėjimo misijų, komandinių iššūkių, estafečių, reakcijos užduočių ir daug juoko, todėl ši komanda ypač gerai veikia ten, kur vaikams norisi veiksmo nuo pirmų minučių.
 
 Animatoriai greitai pagauna grupės energiją ir pritaiko tempą pagal amžių, vaikų skaičių bei šventės vietą. Programoje dažnai atsiranda balionų lankstymas, laikinos tatuiruotės ir kitos DOKI POKI veiklos, kurios padeda išlaikyti įtraukiantį ritmą viso renginio metu.
 

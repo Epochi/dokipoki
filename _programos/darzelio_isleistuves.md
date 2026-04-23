@@ -113,7 +113,7 @@ hide_program_hero: true
             </ul>
 
             <p class="kg-font kg-font--small">
-              Šią programą veda du Jūsų pasirinkti personažai, pavyzdžiui: Drąsiųjų Šuniukų Komanda, Skraidanti Šunytė, Indėnai, Pimpačkiukai, Kosmonautai ir kiti.
+              Šią programą veda du Jūsų pasirinkti personažai, pavyzdžiui: Drąsiųjų šuniukų komanda, Skraidanti Šunytė, Indėnai, Pimpačkiukai, Kosmonautai ir kiti.
             </p>
 
             <p style="margin: 18px 0 0 0;">
@@ -335,7 +335,7 @@ hide_program_hero: true
       <div class="dp-plain-section__inner">
         <h2 class="section-header">Nežinote, kuri programa tinkamiausia Jūsų grupei?</h2>
         <p class="kg-font kg-font--normal" style="max-width: 760px; margin: 0 auto 20px auto;">
-          Parašykite mums - pasiūlysime tinkamiausią programą pagal vaikų skaičių, vietą, bei Jūsų pageidavimus.
+          Parašykite mums – pasiūlysime tinkamiausią programą pagal vaikų skaičių, vietą bei Jūsų pageidavimus.
         </p>
         <p style="margin: 0;">
           <a

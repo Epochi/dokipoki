@@ -2,7 +2,7 @@
 layout: programa
 title: "Neoninė programa"
 order: 4
-intro: "Programa vaikų šventėms tamsoje: diskoteka, šviečiančios tatuiruotės, neoninis balionų mūšis ir šviečiantis slime."
+intro: "Programa vaikų šventėms tamsoje: diskoteka, šviečiančios tatuiruotės, neoninis balionų mūšis ir šviečiantis slaimas."
 image: "/img/programos/neonine-programa/Hero.webp"
 permalink: /programos/neonine-programa/
 body_class: page-programa page-programa-neonine-programa
@@ -67,7 +67,7 @@ description: "Neoninė programa (vykdoma tamsoje): neoninė diskoteka, plaukuči
       <li>- Neoniniai magiški gėrimai</li>
       <li>- Tamsoje šviečiančios tatuiruotės</li>
       <li>- Neoninis balionų mūšis</li>
-      <li>- Ryškiai šviečiančio slime gamyba</li>
+      <li>- Ryškiai šviečiančio slaimo gamyba</li>
       <li>- Piešimas ant kūno neoniniais dažais</li>
     </ul>
   </div>
