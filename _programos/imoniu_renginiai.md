@@ -2,7 +2,7 @@
 layout: programa
 title: "Įmonių renginiai"
 order: 5
-intro: "Vaikų zona įmonių renginiams: aukštesnio lygio animatoriai, aiški logistika ir individualiai pritaikyta programa didesniems srautams."
+intro: "Vaikų zona įmonių renginiams: aukštesnio lygio animatoriai, logistika ir individualiai pritaikyta programa didesniems srautams."
 image: "/img/programos/imoniu_renginiai/0.jpg"
 card_image: "/img/programos/imoniu_renginiai/0.jpg"
 card_focus_y: "calc(var(--dp-cover-focus-y) + 25%)"
@@ -50,7 +50,7 @@ description: "Vaikų zona įmonių renginiams: premium animatoriai, individualio
 
 <div class="row" style="margin-top: 18px;">
   <div class="col s12">
-    <h2 class="section-header center-align">Aukštesnio lygio vaikų užimtumas dideliems įmonių renginiams</h2>
+    <h2 class="section-header center-align">Vaikų užimtumas dideliems renginiams</h2>
   </div>
 </div>
 
@@ -71,7 +71,7 @@ description: "Vaikų zona įmonių renginiams: premium animatoriai, individualio
       <li>- Veiklų zonų modelis: aktyvios, kūrybinės ir teminės stotelės</li>
       <li>- Programos adaptavimas pagal vaikų amžių ir erdvės specifiką</li>
       <li>- Galimybė pagaminti individualius kostiumus ir rekvizitus pagal įmonės tematiką</li>
-      <li>- Aiški renginio logistika, laiko planas ir komunikacija su organizatoriais</li>
+      <li>- Renginio logistika, laiko planas ir komunikacija su organizatoriais</li>
     </ul>
   </div>
 </div>
@@ -105,7 +105,7 @@ description: "Vaikų zona įmonių renginiams: premium animatoriai, individualio
 <div class="row">
   <div class="col s12">
     <p class="kg-font kg-font--normal center-align" style="max-width: 900px; margin: 0 auto 12px auto;">
-      Norite aiškios struktūros didesniam renginiui? Peržiūrėkite mūsų trumpą gidą:
+      Norite struktūros didesniam renginiui? Peržiūrėkite mūsų trumpą gidą:
       <a href="/blog/vaiku-zona-imones-renginyje-kaip-suplanuoti-premium-patirti/">kaip suplanuoti aukštesnio lygio vaikų zoną įmonės renginyje</a>.
     </p>
   </div>
