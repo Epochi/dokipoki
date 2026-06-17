@@ -1,7 +1,7 @@
 ---
 layout: programa
 title: "Rumi Demon Hunters programa"
-order: 2
+order: 3
 intro: "Muzika, šokiai, ir slapčiausios Demonų Medžiotojų misijos."
 image: "/img/programos/rumi-demon-hunters/GV_0317 (4).webp"
 card_image: "/img/programos/rumi-demon-hunters/rumi-gimtadienis-1.webp"

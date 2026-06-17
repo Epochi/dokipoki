@@ -15,7 +15,7 @@ Kalėdų Senelis kartu su pašėlusiais Kosmonautais, išdykėliais Elfais, patr
 - išbandysime kosminius burbulų tunelius
 - šoksime žvaigždžių šokį
 - pagaminsime sniegą
-- ragausime kosminius garuojančius kukurūzus
+- ragausime kosminius garuojančius popkornus
 
 Šią programą veda Kalėdų Senelis ir pašėlę Kosmonautai. 
 

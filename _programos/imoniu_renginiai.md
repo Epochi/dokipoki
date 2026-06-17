@@ -1,7 +1,7 @@
 ---
 layout: programa
 title: "Įmonių renginiai"
-order: 5
+order: 6
 intro: "Vaikų zona įmonių renginiams: aukštesnio lygio animatoriai, logistika ir individualiai pritaikyta programa didesniems srautams."
 image: "/img/programos/imoniu_renginiai/0.jpg"
 card_image: "/img/programos/imoniu_renginiai/0.jpg"

@@ -1,0 +1,10 @@
+{
+  "siteUrl": "https://dokipoki.lt/",
+  "credentialsPath": ".seo/credentials/gsc-oauth-client.json",
+  "tokenPath": ".seo/credentials/gsc-token.json",
+  "dataDir": ".seo/gsc-data",
+  "reportPath": ".seo/latest-report.md",
+  "rowLimit": 25000,
+  "lookbackDays": 28,
+  "dataDelayDays": 3
+}

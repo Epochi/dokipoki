@@ -17,7 +17,7 @@ Jeigu ieškote profesionalesnio sprendimo, peržiūrėkite mūsų <a href="/prog
 *	darysime sprogimus
 *	išbandysime kosminius burbulų tunelius 
 *	šoksime kosminį žvaigždžių šokį
-*	ragausime kosminius garuojančius kukurūzus  
+*	ragausime kosminius garuojančius popkornus  
 
 Šią programą veda du ką tik į žemę nusileidę Kosmonautai. 
 ### DARŽELIO IŠLEISTUVĖS SU PAŠĖLUSIAIS KLOUNAIS

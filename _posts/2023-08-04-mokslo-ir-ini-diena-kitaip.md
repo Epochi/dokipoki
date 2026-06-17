@@ -6,6 +6,10 @@ description: "Mokslo metų pradžios šventės idėjos vaikams: linksmybių moky
 ---
 Mokslo ir žinių diena kiekvienam vaikui yra tikrai ypatinga ir simbolizuoja naują pradžią, naujus nuotykius ir kartais naujus draugus. Tėveliams ir mokytojams tenka svarbi užduotis – sukurti gražią ir smagią šventę vaikams ir auklėtiniams. Doki Poki personažai skuba Jums į pagalbą su interaktyviomis programomis, kurių metu animatoriai sukurs nepamirštamą ir įspūdžių kupiną renginį! 
 
+<p>
+Jeigu planuojate mokslo metų pradžios renginį darželyje, peržiūrėkite mūsų <a href="/programos/rugsejo-1/">Rugsėjo 1 programą darželiams</a>. Programa gali vykti vienai grupei arba visam darželiui.
+</p>
+
 ## LINKSMYBIŲ MOKYKLA
 <!--more-->
 

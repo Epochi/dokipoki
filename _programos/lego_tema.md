@@ -1,7 +1,7 @@
 ---
 layout: programa
 title: "LEGO LENKTYNĖS"
-order: 6
+order: 7
 intro: "LEGO lenktynės vaikų gimtadieniams ir renginiams: lenktynių trasa, konstravimo zona, vairuotojo pažymėjimai ir ryški, lengvai įtraukianti veikla vaikams."
 image: "/img/programos/lego/Hero.jpg"
 card_image: "/img/programos/lego/Hero.jpg"

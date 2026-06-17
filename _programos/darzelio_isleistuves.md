@@ -1,7 +1,7 @@
 ---
 layout: programa
 title: "Darželio išleistuvės"
-order: 3
+order: 9
 intro: "Darželio išleistuvės su Doki Poki – daug juoko, judrių veiklų ir smagios šventės visai grupei!"
 seo_title: "Darželio išleistuvių programos | Doki Poki"
 description: "Darželio išleistuvių programos su 2 animatoriais, skirtingomis temomis ir greitu suderinimu per Messenger."
@@ -230,7 +230,7 @@ hide_program_hero: true
               <li>- Darysime sprogimus</li>
               <li>- Išbandysime kosminius burbulų tunelius</li>
               <li>- Šoksime kosminį žvaigždžių šokį</li>
-              <li>- Ragausime kosminius garuojančius kukurūzus</li>
+              <li>- Ragausime kosminius garuojančius popkornus</li>
             </ul>
 
             <p class="kg-font kg-font--small">

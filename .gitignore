@@ -4,3 +4,9 @@ _site
 .jekyll-cache
 keywords_notepad.txt
 context.md
+.venv/
+__pycache__/
+.seo/config.json
+.seo/credentials/
+.seo/gsc-data/
+.seo/latest-report.md

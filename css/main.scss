@@ -518,10 +518,17 @@ h6.section-header{ font-size: var(--dp-h6-size); line-height: 1.35; }
    BUTTONS
    ================================ */
 .dp-btn{
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  box-sizing: border-box;
   background-color: #f4b0b8 !important;
   color: #ffffff !important;
   border-radius: 8px !important;
   text-transform: none !important;
+  white-space: nowrap;
+  overflow: visible;
 
   font-family: "KG Kindergarden", sans-serif !important;
   letter-spacing: 0.2px;
@@ -532,17 +539,68 @@ h6.section-header{ font-size: var(--dp-h6-size); line-height: 1.35; }
 .dp-btn.section-header,
 .btn-flat.section-header{
   font-family: "Amatic SC", cursive !important;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: none;
 }
 
-.dp-btn.section-header{ font-size: 1.6rem; }
+.dp-btn.section-header{ font-size: unquote("clamp(1.38rem, 1.12rem + 0.68vw, 1.6rem)"); }
 .btn-flat.section-header{ font-size: 1.8rem; line-height: 1.2; }
 
 .dp-btn:hover,
 .dp-btn:focus{
   background-color: #f4b0b8 !important;
   color: #ffffff !important;
+}
+
+/* ================================
+   SEASONAL PROMO
+   ================================ */
+.dp-seasonal-promo{
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+.dp-seasonal-promo__row{
+  border-top: 2px dashed rgba(0,0,0,0.08);
+  border-bottom: 2px dashed rgba(0,0,0,0.08);
+  padding: 28px 0;
+}
+
+.dp-seasonal-promo__image{
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  display: block;
+}
+
+.dp-seasonal-promo__eyebrow{
+  margin: 0 0 4px 0;
+  opacity: 0.74;
+}
+
+.dp-seasonal-promo__text{
+  max-width: 620px;
+  margin: 6px auto 8px auto;
+}
+
+.dp-seasonal-promo__note{
+  max-width: 520px;
+  margin: 0 auto;
+  opacity: 0.82;
+}
+
+@media (max-width: 600px){
+  .dp-seasonal-promo__row{
+    display: block;
+    padding: 20px 0 26px 0;
+  }
+
+  .dp-seasonal-promo__image{
+    aspect-ratio: 16 / 11;
+    margin-bottom: 18px;
+  }
 }
 
 /* ================================
@@ -579,11 +637,20 @@ h6.section-header{ font-size: var(--dp-h6-size); line-height: 1.35; }
 }
 
 .dp-card-cta{
-  font-size: 1.42rem !important;
+  font-size: unquote("clamp(1.32rem, 1.08rem + 0.52vw, 1.42rem)") !important;
+  padding-left: 1.35rem !important;
+  padding-right: 1.35rem !important;
 }
 
 .page-programa .dp-grid.dp-masonry .card-content .dp-card-cta{
   min-width: 0;
+}
+
+.page-programa .dp-grid.dp-masonry .card-content .cta-btn{
+  width: 100%;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  font-size: unquote("clamp(1.28rem, 1.02rem + 0.72vw, 1.5rem)") !important;
 }
 
 .dp-plain-section{
@@ -630,7 +697,7 @@ h6.section-header{ font-size: var(--dp-h6-size); line-height: 1.35; }
     margin-right: auto !important;
     height: 42px !important;
     line-height: 42px !important;
-    font-size: 1.52rem !important;
+    font-size: 1.44rem !important;
   }
 
   .dp-plain-section__inner{
@@ -1141,54 +1208,214 @@ h1.baloon-line{
   letter-spacing: 0.04em;
 }
 
-/* ================================
-   PROGRAMOS (apžvalgos puslapis /programos/)
-   Suvienodinam aukštį + fokusą su hero cover (TOP crop)
-   ================================ */
-body.page-programos .programos-wrapper a > img.responsive-img{
-  width: 100%;
-  height: var(--dp-cover-h-desktop);
+/* Rugsėjo 1: compact desktop selection cards. */
+@media (min-width: 901px){
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
 
-  object-fit: cover;
-  object-position: center var(--dp-program-card-focus-y, var(--dp-cover-focus-y));
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry .card{
+    flex-direction: column;
+    min-height: 0;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(70, 42, 45, 0.10);
+  }
 
-  display: block;
-  border-radius: var(--dp-cover-radius);
-}
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry .card-image{
+    flex: none;
+    max-width: none;
+  }
 
-@media (max-width: 992px){
-  body.page-programos .programos-wrapper a > img.responsive-img{
-    height: var(--dp-cover-h-tablet);
-    object-position: center var(--dp-program-card-focus-y, var(--dp-cover-focus-y));
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry .card-image img{
+    height: 176px;
+    min-height: 176px;
+    object-position: center 35%;
+  }
+
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry .card-content{
+    padding: 18px 20px 20px 20px !important;
+  }
+
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry h3.section-header{
+    min-height: 3.7rem;
+    margin: 0 0 10px 0;
+    font-size: 1.92rem;
+    line-height: 1.04;
+  }
+
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry .kg-font--small{
+    font-size: 0.78rem;
+    line-height: 1.22;
+  }
+
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry .dp-bullets{
+    margin: 0;
+  }
+
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry .dp-bullets li{
+    margin-bottom: 1px;
+  }
+
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry .card-content > p:last-child{
+    display: none;
+  }
+
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry .dp-featured-card .card-content{
+    padding-top: 18px !important;
+  }
+
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry .dp-badge{
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 0.72rem;
+  }
+
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry .dp-featured-card h3.section-header{
+    padding-right: 0;
+  }
+
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry .dp-cta-item{
+    grid-column: 1 / -1;
+  }
+
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry .dp-cta-item .card{
+    min-height: 0;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry .dp-cta-item .dp-cta-logo-wrap{
+    flex: 0 0 190px;
+    max-width: 190px;
+  }
+
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry .dp-cta-item .dp-cta-logo-wrap img{
+    height: 180px;
+    min-height: 180px;
+    object-fit: contain;
+  }
+
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry .dp-cta-item .card-content{
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry .dp-cta-item .cta-btn{
+    width: auto;
+    min-width: 240px;
+    max-width: 320px;
   }
 }
 
-/* Programu sarasas: add vertical gap between wrapped rows */
-@media (min-width: 993px){
-  body.page-programos #Programos .programos-wrapper:nth-child(n+4){
-    margin-top: 24px;
+@media (min-width: 901px) and (max-width: 1180px){
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .page-programa-rugsejo-1 .dp-grid.dp-masonry h3.section-header{
+    font-size: 1.86rem;
+  }
+}
+
+/* ================================
+   PROGRAMOS (apžvalgos puslapis /programos/)
+   Compact premium overview cards.
+   ================================ */
+body.page-programos .dp-programos-grid{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 12px;
+  margin-bottom: 34px;
+}
+
+body.page-programos .programos-wrapper{
+  min-width: 0;
+}
+
+body.page-programos .dp-programos-card{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(70, 42, 45, 0.10);
+}
+
+body.page-programos .dp-programos-card__image-link{
+  display: block;
+}
+
+body.page-programos .dp-programos-card img.responsive-img{
+  width: 100%;
+  height: 158px;
+  object-fit: cover;
+  object-position: center var(--dp-program-card-focus-y, 35%);
+  display: block;
+  border-radius: 0;
+}
+
+body.page-programos .dp-programos-card__body{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 16px 20px;
+}
+
+body.page-programos .dp-programos-card h2{
+  flex: 1;
+  min-height: 4.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 14px;
+  font-size: 2.15rem;
+  line-height: 1.04;
+}
+
+body.page-programos .dp-programos-card h2 a{
+  display: block;
+}
+
+body.page-programos .dp-programos-card__btn{
+  width: 100%;
+  height: 40px !important;
+  line-height: 40px !important;
+  font-size: 1.42rem !important;
+}
+
+@media (min-width: 993px) and (max-width: 1280px){
+  body.page-programos .dp-programos-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 601px) and (max-width: 992px){
-  body.page-programos #Programos .programos-wrapper:nth-child(n+3){
-    margin-top: 24px;
+  body.page-programos .dp-programos-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.page-programos .dp-programos-card img.responsive-img{
+    height: 190px;
   }
 }
 
 @media (max-width: 600px){
-  body.page-programos .programos-wrapper a > img.responsive-img{
-    height: var(--dp-cover-h-mobile);
-    object-position: center var(--dp-program-card-focus-y, var(--dp-cover-focus-y));
+  body.page-programos .dp-programos-grid{
+    grid-template-columns: 1fr;
+    gap: 22px;
   }
 
-  /* Keep visible vertical rhythm between stacked cards on mobile */
-  body.page-programos #Programos .programos-wrapper{
-    margin-bottom: 26px;
+  body.page-programos .dp-programos-card img.responsive-img{
+    height: 260px;
   }
 
-  body.page-programos #Programos .programos-wrapper:last-child{
-    margin-bottom: 0;
+  body.page-programos .dp-programos-card h2{
+    min-height: 0;
+    font-size: 2.35rem;
   }
 }
 

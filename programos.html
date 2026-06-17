@@ -13,39 +13,15 @@ description: "DOKIPOKI programos vaikų šventėms: gimtadieniams, darželio iš
     {% include navbar.html %}
 
     <div class="container">
-      <style>
-        #Programos {
-          display: flex;
-          flex-wrap: wrap;
-        }
-
-        #Programos .programos-wrapper {
-          float: none;
-          display: flex;
-          flex-direction: column;
-          align-items: stretch;
-          margin-bottom: 28px;
-        }
-
-        #Programos .programos-wrapper h2 {
-          flex-grow: 1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: 14px;
-        }
-
-        #Programos .programos-wrapper h2 a {
-          display: block;
-        }
-      </style>
-
       <div class="row">
         <div class="col s12">
           <h1 class="section-header center-align">Programos vaikų šventėms</h1>
           <p class="kg-font kg-font--normal center-align" style="max-width: 880px; margin: 0 auto 20px auto;">
             Animatorių programos vaikams Vilniuje – įtraukiantys žaidimai, šokiai ir misijos su profesionaliais personažais.
             Rinkitės programą gimtadieniui, darželio šventei ar kitai progai.
+          </p>
+          <p class="kg-font kg-font--normal center-align" style="max-width: 880px; margin: 0 auto 28px auto;">
+            Darželiai jau derina mokslo metų pradžios renginius - peržiūrėkite <a href="/programos/rugsejo-1/">Rugsėjo 1 programą darželiams</a>.
           </p>
         </div>
       </div>
@@ -54,38 +30,38 @@ description: "DOKIPOKI programos vaikų šventėms: gimtadieniams, darželio iš
 
       {% if programs and programs.size > 0 %}
         {% assign programs_sorted = programs | sort: "order" %}
-        <div id="Programos" class="row section programos">
+        <div id="Programos" class="section programos dp-programos-grid">
           {% for program in programs_sorted %}
 
             {% assign href = program.link | default: '/kontaktai/' %}
             {% assign img  = program.card_image | default: program.image | default: program.img %}
             {% assign card_focus_y = program.card_focus_y | default: 'var(--dp-cover-focus-y)' %}
 
-            <!-- 3 per eilę desktop'e: l4 (992px+), xl4 (1200px+) -->
-            <div class="programos-wrapper col s12 m6 l4 xl4">
-              <a href="{{ href }}">
-                <img
-                  class="responsive-img"
-                  alt="{{ program.title }} – programa vaikų šventei"
-                  src="{{ img }}"
-                  style="--dp-program-card-focus-y: {{ card_focus_y }};"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </a>
-
-              <h2 class="section-header center-align">
-                <a href="{{ href }}" class="cursor-default">
-                  {{ program.title }}
+            <div class="programos-wrapper">
+              <article class="dp-programos-card">
+                <a href="{{ href }}" class="dp-programos-card__image-link" aria-label="{{ program.title }}">
+                  <img
+                    class="responsive-img"
+                    alt="{{ program.title }} – programa vaikų šventei"
+                    src="{{ img }}"
+                    style="--dp-program-card-focus-y: {{ card_focus_y }};"
+                    loading="lazy"
+                    decoding="async"
+                  >
                 </a>
-              </h2>
 
-              <!-- SVARBU: nebededam "col s12" viduje, nes tai laužo grid'ą -->
-              <div class="center-align" style="margin-top: 14px;">
-                <a href="{{ href }}" class="btn-large waves-effect waves-light dp-btn section-header">
-                  Peržiūrėti →
-                </a>
-              </div>
+                <div class="dp-programos-card__body center-align">
+                  <h2 class="section-header">
+                    <a href="{{ href }}" class="cursor-default">
+                      {{ program.title }}
+                    </a>
+                  </h2>
+
+                  <a href="{{ href }}" class="btn-large waves-effect waves-light dp-btn section-header dp-programos-card__btn">
+                    Peržiūrėti
+                  </a>
+                </div>
+              </article>
             </div>
 
           {% endfor %}
@@ -143,10 +119,10 @@ description: "DOKIPOKI programos vaikų šventėms: gimtadieniams, darželio iš
 
               <h3 class="section-header">Kiek vaikų gali dalyvauti?</h3>
               <p class="kg-font kg-font--small">
-                Prisitaikome prie grupės dydžio.
+                Programą parenkame pagal vaikų skaičių.
               </p>
 
-              <h3 class="section-header">Ar galima pritaikyti programą?</h3>
+              <h3 class="section-header">Ar programą derinate pagal šventę?</h3>
               <p class="kg-font kg-font--small">
                 Taip, deriname pagal poreikius.
               </p>

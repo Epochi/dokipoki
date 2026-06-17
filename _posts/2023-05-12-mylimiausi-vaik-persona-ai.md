@@ -52,7 +52,7 @@ Jeigu kartu ieškote ir veiklų idėjų šventei, peržiūrėkite mūsų <a href
 
 **KOSMONAUTAI**
 + Labiausiai mylimi vaikų, mėgstančių eksperimentuoti ir kurti stebuklus.
-+ Gali atskleisti paslaptį, kaip nukeliauti į kosmosą; moka šokti kosminius šokius; gali išmokyti bendrauti su ateiviais; labai mėgsta valgyti garuojančius kukurūzus.
++ Gali atskleisti paslaptį, kaip nukeliauti į kosmosą; moka šokti kosminius šokius; gali išmokyti bendrauti su ateiviais; labai mėgsta valgyti garuojančius popkornus.
 + Tinka visų amžių vaikams, bet labiausiai sužavi vaikus nuo 4 metų.
 
 **FĖJA**
