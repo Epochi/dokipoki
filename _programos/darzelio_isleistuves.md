@@ -113,7 +113,7 @@ hide_program_hero: true
             </ul>
 
             <p class="kg-font kg-font--small">
-              Šią programą veda du Jūsų pasirinkti personažai, pavyzdžiui: Drąsiųjų šuniukų komanda, Skraidanti Šunytė, Indėnai, Pimpačkiukai, Kosmonautai ir kiti.
+              Šią programą veda du Jūsų pasirinkti personažai, pavyzdžiui: Indėnai, Pimpačkiukai, Kosmonautai, Klounai ir kiti.
             </p>
 
             <p style="margin: 18px 0 0 0;">
@@ -135,46 +135,6 @@ hide_program_hero: true
       </div>
 
       <!-- 2 -->
-      <div class="dp-item">
-        <div class="card">
-          <div class="card-image">
-            <img src="/img/programos/darzelis/drasiuju-suniuku-komanda.jpg" alt="Drąsiųjų šuniukų komandos misija išleistuvėms" loading="lazy" decoding="async">
-          </div>
-
-          <div class="card-content">
-            <h3 class="section-header">DRĄSIŲJŲ ŠUNIUKŲ KOMANDA - MISIJA "IŠLEISTUVĖS"</h3>
-
-            <ul class="kg-font kg-font--small dp-bullets">
-              <li>- Šoksime komandos šokį</li>
-              <li>- Vykdysime gelbėjimo misiją</li>
-              <li>- Dalyvausime komandiniame iššūkyje</li>
-              <li>- Spręsime šuniukų galvosūkius</li>
-              <li>- Lankstysime šuniukus iš balionų</li>
-            </ul>
-
-            <p class="kg-font kg-font--small">
-              Šią programą veda du drąsiosios komandos herojai. Galite rinktis iš kelių skirtingų personažų pagal norimą nuotaiką ir vaikų amžių.
-            </p>
-
-            <p style="margin: 18px 0 0 0;">
-              <a
-                href="{{ site.messenger_url }}"
-                class="btn-large waves-effect waves-light dp-btn section-header cta-btn dp-card-cta"
-                data-cta-scope="programa"
-                data-cta-type="messenger"
-                data-programa="darzelio-isleistuves"
-                target="_blank"
-                rel="noopener"
-              >
-                Paklausti dėl šios programos
-              </a>
-            </p>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- 3 -->
       <div class="dp-item">
         <div class="card">
           <div class="card-image">
