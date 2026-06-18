@@ -1,7 +1,7 @@
 ---
 layout: programa
 title: "Neoninė programa"
-order: 5
+order: 6
 intro: "Programa vaikų šventėms tamsoje: diskoteka, šviečiančios tatuiruotės, neoninis balionų mūšis ir šviečiantis slaimas."
 image: "/img/programos/neonine-programa/Hero.webp"
 permalink: /programos/neonine-programa/

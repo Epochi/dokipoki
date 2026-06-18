@@ -1,8 +1,8 @@
 ---
 layout: programa
 title: "Įmonių renginiai"
-order: 6
-intro: "Vaikų zona įmonių renginiams: aukštesnio lygio animatoriai, logistika ir individualiai pritaikyta programa didesniems srautams."
+order: 5
+intro: "Kuriame pilnas vaikų zonas įmonių renginiams, šeimų dienoms ir festivaliams. Nuo vieno animatoriaus iki keliolikos žmonių komandos, veiklų stotelių, eksperimentų ir didelio srauto valdymo."
 image: "/img/programos/imoniu_renginiai/0.jpg"
 card_image: "/img/programos/imoniu_renginiai/0.jpg"
 card_focus_y: "calc(var(--dp-cover-focus-y) + 25%)"
@@ -11,7 +11,7 @@ permalink: /programos/imoniu-renginiai/
 body_class: page-programa page-programa-imoniu-renginiai
 link: /programos/imoniu-renginiai/
 seo_title: "Įmonių renginiai su animatoriais vaikams | Premium sprendimai | Doki Poki"
-description: "Vaikų zona įmonių renginiams: premium animatoriai, individualios programos, keli animatoriai, veiklų stotelės ir įmonei pritaikyti kostiumai bei rekvizitai."
+description: "Vaikų zona įmonių renginiams, šeimų dienoms ir festivaliams: individualios programos, komanda, veiklų stotelės, eksperimentai ir didelio srauto valdymas."
 ---
 
 <script type="application/ld+json">
@@ -50,15 +50,19 @@ description: "Vaikų zona įmonių renginiams: premium animatoriai, individualio
 
 <div class="row" style="margin-top: 18px;">
   <div class="col s12">
-    <h2 class="section-header center-align">Vaikų užimtumas dideliems renginiams</h2>
+    <h2 class="section-header center-align">Vaikų zona įmonių renginiams</h2>
   </div>
 </div>
 
 <div class="row">
   <div class="col s12">
     <p class="kg-font kg-font--normal center-align" style="max-width: 900px; margin: 0 auto 16px auto;">
-      Kuriame individualias programas šeimų dienoms, komandos renginiams, festivaliams, prekybos centrų veikloms ir kitoms didelio srauto šventėms.
-      Mūsų tikslas – sklandi vaikų zonos eiga, saugus užimtumas ir kokybiška patirtis viso renginio metu, kai organizatoriams reikia patikimo partnerio.
+      Kuriame vaikų zonas šeimų dienai, įmonės renginiui, festivaliui, prekybos centro veikloms ir kitoms didelio srauto šventėms.
+      Mūsų tikslas – sklandi vaikų zonos eiga, saugus vaikų užimtumas renginyje ir kokybiška patirtis viso renginio metu, kai organizatoriams reikia patikimo partnerio.
+    </p>
+    <p class="kg-font kg-font--normal center-align" style="max-width: 900px; margin: 0 auto 16px auto;">
+      Galime pasirūpinti tiek nedidele vaikų erdve įmonės renginyje, tiek pilna kelių šimtų vaikų zona su keliomis veiklomis vienu metu.
+      Programą ir komandos dydį pritaikome pagal renginio formatą, vaikų amžių ir planuojamą dalyvių skaičių.
     </p>
   </div>
 </div>
@@ -111,6 +115,33 @@ description: "Vaikų zona įmonių renginiams: premium animatoriai, individualio
   </div>
 </div>
 
+<div class="row" style="margin-top: 8px;">
+  <div class="col s12">
+    <h2 class="section-header center-align">Populiariausi sprendimai įmonių renginiams</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12">
+    <p class="kg-font kg-font--normal center-align" style="max-width: 900px; margin: 0 auto 16px auto;">
+      Kiekvienam renginiui veiklas parenkame individualiai pagal vaikų amžių, dalyvių skaičių ir renginio formatą.
+      Dažniausiai įmonių renginiuose deriname aktyvias veiklas, eksperimentus, kūrybines erdves bei papildomas pramogas, tokias kaip putų šou, neoninės diskotekos, cukraus vata ar popkornai.
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12 m10 offset-m1">
+    <ul class="kg-font kg-font--normal dp-bullets">
+      <li>- Eksperimentų programa ir moksliniai pasirodymai</li>
+      <li>- Putų šou, muilo burbulai ir kiti efektai</li>
+      <li>- Kūrybinės veiklos bei dirbtuvės</li>
+      <li>- Neoninės diskotekos ir vakarinės programos</li>
+      <li>- Papildomos pramogos bei veiklų stotelės</li>
+    </ul>
+  </div>
+</div>
+
 <div class="row">
   <div class="col s12 center-align" style="margin: 4px 0 18px 0;">
     <a
@@ -120,7 +151,7 @@ description: "Vaikų zona įmonių renginiams: premium animatoriai, individualio
       data-cta-type="email"
       data-programa="imoniu-renginiai"
     >
-      Gauti pasiūlymą el. paštu →
+      Gauti pasiūlymą per 24 val. →
     </a>
   </div>
 </div>
