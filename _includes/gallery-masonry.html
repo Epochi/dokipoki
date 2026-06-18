@@ -1,12 +1,13 @@
 {% assign instagram_feed = site.data.instagram_feed %}
-{% assign instagram_count = instagram_feed.items | size %}
+{% assign instagram_preview_count = instagram_feed.preview_count | default: 33 %}
+{% assign instagram_items = instagram_feed.items | slice: 0, instagram_preview_count %}
+{% assign instagram_count = instagram_items | size %}
 {% assign instagram_initial_count = instagram_feed.initial_count | default: 9 %}
 
 <div
   id="Galerija"
   class="container scrollspy galerija instagram-gallery-section{% if instagram_count == 0 %} instagram-gallery-section--empty{% endif %}"
   data-gallery-source="instagram"
-  data-batch-size="{{ instagram_initial_count }}"
 >
   {% if instagram_count > 0 %}
   <div class="row">
@@ -30,14 +31,14 @@
       </h2>
 
       <div class="instagram-feed-grid">
-        {% for item in instagram_feed.items %}
+        {% for item in instagram_items %}
         {% assign media_items = item.media %}
         {% if media_items == nil %}
           {% assign media_items = "" | split: "" %}
         {% endif %}
 
         <div
-          class="instagram-grid-item{% if forloop.index > instagram_initial_count %} hidden-gallery{% endif %}"
+          class="instagram-grid-item"
           data-instagram-kind="{{ item.kind }}"
           data-instagram-post-type="{{ item.post_type | default: item.kind }}"
           data-instagram-permalink="{{ item.permalink | escape }}"
@@ -87,9 +88,6 @@
         {% endfor %}
       </div>
 
-      {% if instagram_count > instagram_initial_count %}
-      <div class="instagram-feed__sentinel" data-instagram-sentinel aria-hidden="true"></div>
-      {% endif %}
     </div>
   </div>
 

@@ -12,7 +12,7 @@ const cacheDir = path.join(repoRoot, "img", "instagram-cache");
 const accessToken = process.env.INSTAGRAM_ACCESS_TOKEN;
 const userId = process.env.INSTAGRAM_USER_ID;
 const apiBase = (process.env.INSTAGRAM_API_BASE || "https://graph.instagram.com").replace(/\/+$/, "");
-const feedLimit = Math.max(1, parseInt(process.env.INSTAGRAM_FEED_LIMIT || "36", 10));
+const feedLimit = Math.max(1, parseInt(process.env.INSTAGRAM_FEED_LIMIT || "33", 10));
 const initialCount = Math.max(1, parseInt(process.env.INSTAGRAM_INITIAL_COUNT || "9", 10));
 const useMagick = spawnSync("magick", ["-version"], { stdio: "ignore", windowsHide: true }).status === 0;
 const cacheVersion = 2;
