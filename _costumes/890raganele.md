@@ -14,6 +14,6 @@ img_alt: "Raganėlė – pasakų herojė animatorė vaikų šventei Vilniuje"
 
 Raganėlė – linksmas ir draugiškas personažas, kuris vaikų šventėje sukuria stebuklingą, bet kartu šiltą ir jaukią atmosferą. Šį personažą įkūnijanti animatorė Vilniuje kviečia vaikus pasinerti į fantazijos pasaulį, kuriame netrūksta juoko, netikėtų siurprizų ir žaismingų atradimų.
 
-Raganėlės programa vaikų šventėms paremta vaizduotę skatinančiais žaidimais, lengvomis „magiškomis“ misijomis ir smagiomis komandinėmis užduotimis. Animatorė vaikams nuolat bendrauja, prisitaiko prie jų amžiaus ir šventės tempo, todėl veiklos išlieka įtraukiančios, bet neperkrautos.
+Raganėlės programa vaikų šventėms paremta vaizduotę skatinančiais žaidimais, lengvomis „magiškomis“ misijomis ir smagiomis komandinėmis užduotimis. Programą vedame taip, kad vaikams būtų lengva įsitraukti, o veiklos neperkrautų grupės.
 
 Šis personažas ypač tinka vaikų gimtadieniams ir teminėms šventėms, kuriose norisi šiek tiek paslapties, daug juoko ir švelnios magijos.

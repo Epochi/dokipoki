@@ -124,7 +124,7 @@ description: "Vaikų zona įmonių renginiams, šeimų dienoms ir festivaliams: 
 <div class="row">
   <div class="col s12">
     <p class="kg-font kg-font--normal center-align" style="max-width: 900px; margin: 0 auto 16px auto;">
-      Kiekvienam renginiui veiklas parenkame individualiai pagal vaikų amžių, dalyvių skaičių ir renginio formatą.
+      Kiekvienam renginiui veiklas susidėliojame individualiai: pagal vaikų skaičių, jų amžių ir tai, kaip suplanuota pati šventė.
       Dažniausiai įmonių renginiuose deriname aktyvias veiklas, eksperimentus, kūrybines erdves bei papildomas pramogas, tokias kaip putų šou, neoninės diskotekos, cukraus vata ar popkornai.
     </p>
   </div>

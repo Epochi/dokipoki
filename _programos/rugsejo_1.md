@@ -1,11 +1,11 @@
 ---
 layout: programa
 title: "Rugsėjo 1"
-display_title: "Rugsėjo 1 programa darželiams"
+display_title: "Rugsėjo 1 programa darželiams ir mokykloms"
 order: 2
-intro: "Rugsėjo 1 šventė darželyje su Doki Poki - žaidimai, šokiai, burbulai ir smagi pradžia naujiems mokslo metams."
-seo_title: "Rugsėjo 1 programa darželiams | Animatoriai vaikams | DOKIPOKI"
-description: "Rugsėjo 1 programa darželiams su animatoriais, žaidimais, šokiais, burbulais ir veiklomis visai darželio bendruomenei. Programą suderiname pagal vaikų skaičių, amžių ir šventės vietą."
+intro: "Rugsėjo 1 šventė su Doki Poki - žaidimai, šokiai, burbulai ir smagi pradžia naujiems mokslo metams."
+seo_title: "Rugsėjo 1 programa darželiams ir mokykloms | Animatoriai vaikams | DOKIPOKI"
+description: "Rugsėjo 1 programa darželiams ir mokykloms su animatoriais, žaidimais, šokiais, burbulais ir veiklomis vaikams. Programą suderiname pagal vaikų skaičių, amžių ir šventės vietą."
 image: "/img/programos/darzelis/klounai.jpg"
 card_image: "/img/programos/darzelis/klounai.jpg"
 permalink: /programos/rugsejo-1/
@@ -46,7 +46,7 @@ hide_program_hero: true
       "audience": {
         "@type": "PeopleAudience",
         "suggestedMinAge": "2",
-        "suggestedMaxAge": "7"
+        "suggestedMaxAge": "10"
       }
     }
   ]
@@ -56,7 +56,7 @@ hide_program_hero: true
 <div class="row" style="margin-top: 18px;">
   <div class="col s12 center-align dp-hero-lite">
     <div class="dp-hero-lite__inner">
-      <h1 class="section-header">Rugsėjo 1 programa darželiams</h1>
+      <h1 class="section-header">Rugsėjo 1 programa darželiams ir mokykloms</h1>
       <p class="kg-font kg-font--normal dp-hero-lite__lead">
         Nauji mokslo metai prasideda daug smagiau, kai vaikus pasitinka personažai, žaidimai, šokiai ir šventinė nuotaika.
       </p>
@@ -85,7 +85,7 @@ hide_program_hero: true
         </a>
       </p>
       <p class="kg-font kg-font--small dp-hero-lite__note">
-        Programą vedame darželio kieme, salėje arba kelioms grupėms paeiliui. Jei oras pasikeičia, tą pačią šventę galime perkelti į vidų.
+        Programą vedame darželio ar mokyklos kieme, salėje arba kelioms grupėms ar klasėms paeiliui. Jei oras pasikeičia, tą pačią šventę galime perkelti į vidų.
       </p>
     </div>
   </div>
@@ -104,7 +104,7 @@ hide_program_hero: true
       <div class="dp-item">
         <div class="card dp-featured-card">
           <div class="card-image">
-            <img src="/img/programos/darzelis/kosmines.jpg" alt="Kosminė Rugsėjo 1-osios ekspedicija darželyje" loading="lazy" decoding="async">
+            <img src="/img/programos/darzelis/kosmines.jpg" alt="Kosminė Rugsėjo 1-osios ekspedicija vaikams" loading="lazy" decoding="async">
           </div>
 
           <div class="card-content">
@@ -130,7 +130,7 @@ hide_program_hero: true
       <div class="dp-item">
         <div class="card">
           <div class="card-image">
-            <img src="/gallery/top/635EBD0A-7A3A-47F0-84A2-D4D149D9B7CC.webp" alt="Hogvartso burtų mokykla Rugsėjo 1 šventei darželyje" loading="lazy" decoding="async">
+            <img src="/gallery/top/635EBD0A-7A3A-47F0-84A2-D4D149D9B7CC.webp" alt="Hogvartso burtų mokykla Rugsėjo 1 šventei" loading="lazy" decoding="async">
           </div>
 
           <div class="card-content">
@@ -229,7 +229,7 @@ hide_program_hero: true
       <div class="dp-item">
         <div class="card">
           <div class="card-image">
-            <img src="/img/programos/rumi-demon-hunters/rumi-gimtadienis-1.webp" alt="Rumi programa Rugsėjo 1 šventei darželyje" loading="lazy" decoding="async">
+            <img src="/img/programos/rumi-demon-hunters/rumi-gimtadienis-1.webp" alt="Rumi programa Rugsėjo 1 šventei" loading="lazy" decoding="async">
           </div>
 
           <div class="card-content">
@@ -261,7 +261,7 @@ hide_program_hero: true
             <h3 class="section-header">REZERVUOKITE RUGSĖJO 1 DATĄ</h3>
 
             <p class="kg-font kg-font--small" style="margin: 12px 0 20px 0;">
-              Parašykite, kiek vaikų dalyvaus, kur vyks šventė ir ar programa skirta vienai grupei, ar visam darželiui.
+              Parašykite, kiek vaikų dalyvaus, kur vyks šventė ir ar programa skirta vienai grupei, klasei ar visai įstaigai.
             </p>
 
             <a
@@ -291,12 +291,12 @@ hide_program_hero: true
 
         <h3 class="section-header">Kada geriausia rezervuoti Rugsėjo 1 programą?</h3>
         <p class="kg-font kg-font--small">
-          Darželiai Rugsėjo 1 šventę dažnai pradeda derinti dar vasarą. Kuo anksčiau parašysite, tuo lengviau suderinsime laiką ir tinkamą komandą.
+          Darželiai ir mokyklos Rugsėjo 1 šventę dažnai pradeda derinti dar vasarą. Kuo anksčiau parašysite, tuo lengviau suderinsime laiką ir tinkamą komandą.
         </p>
 
         <h3 class="section-header">Ar galima pasirinkti personažus?</h3>
         <p class="kg-font kg-font--small">
-          Taip, personažus parenkame pagal vaikų amžių, šventės formatą ir norimą nuotaiką. Jei nesate tikri, pasiūlysime saugiausią variantą darželio grupei.
+          Taip. Parašykite, kokio amžiaus vaikai dalyvaus ir kur vyks šventė - pasiūlysime personažus, kurie geriausiai tiks grupei ar klasei.
         </p>
 
         <h3 class="section-header">Ar atvykstate į kitus miestus?</h3>

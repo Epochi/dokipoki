@@ -3,13 +3,13 @@ layout: programa
 title: "Gimtadieniai"
 display_title: "Vaikų gimtadieniai su animatoriais"
 order: 1
-intro: "Vaikų gimtadieniai su Doki Poki – daug juoko, judrių žaidimų ir lengvai pritaikoma programa pagal amžių bei šventės vietą."
+intro: "Vaikų gimtadieniai su DOKI POKI – daug juoko, judrių žaidimų ir linksmybių visiems šventės svečiams."
 image: "/gallery/top/IMG_0604.webp"
 permalink: /programos/gimtadieniai/
 body_class: page-programa page-programa-gimtadieniai
 link: /programos/gimtadieniai/
 seo_title: "Vaikų gimtadienio programa su animatoriais Vilniuje | DOKIPOKI"
-description: "Vaikų gimtadienio programa su žaidimais, šokiais, veidukų piešimu, balionais ir tatuiruotėmis. Programą pritaikome pagal amžių, šventės vietą ir norimą tempą."
+description: "Vaikų gimtadienio programa su žaidimais, šokiais, veidukų piešimu, balionais ir tatuiruotėmis. Gimtadienio programą suderiname pagal vaikų skaičių, šventės vietą ir pasirinktą personažą."
 ---
 
 <script type="application/ld+json">
@@ -72,7 +72,7 @@ description: "Vaikų gimtadienio programa su žaidimais, šokiais, veidukų pie�
             </ul>
 
             <p class="kg-font kg-font--small">
-              Programą pritaikome pagal vaikų amžių ir šventės vietą.
+              Prieš šventę aptariame vaikų amžių, erdvę ir tai, kas vaikui labiausiai patinka.
               Rinktis galite iš visų mūsų <a href="/personazai/">personažų vaikų gimtadieniui</a>.
             </p>
           </div>
@@ -109,10 +109,10 @@ description: "Vaikų gimtadienio programa su žaidimais, šokiais, veidukų pie�
           </div>
 
           <div class="card-content center-align" style="padding: 28px 26px 34px 26px;">
-            <h3 class="section-header">REZERVUOKITE DATĄ</h3>
+            <h3 class="section-header">REZERVUOKITE GIMTADIENIO PROGRAMĄ</h3>
 
             <p class="kg-font kg-font--small" style="margin: 12px 0 20px 0;">
-              Parašykite į Messenger ir padėsime išsirinkti tinkamiausią gimtadienio programą.
+              Parašykite, kur ir kada vyks šventė, kiek vaikų dalyvaus ir kokio personažo norėtumėte.
             </p>
 
             <a
@@ -124,7 +124,7 @@ description: "Vaikų gimtadienio programa su žaidimais, šokiais, veidukų pie�
               target="_blank"
               rel="noopener"
             >
-              Susisiekti per Messenger →
+              Rašyti dėl gimtadienio →
             </a>
           </div>
         </div>

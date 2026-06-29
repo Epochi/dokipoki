@@ -30,8 +30,6 @@ Jei lyginate skirtingas temas ir formatus, peržiūrėkite mūsų <a href="/prog
 - konstravimo zona tarp startų;
 - finaliniai apdovanojimai.
 
-Tokia eiga padeda išlaikyti tempą ir leidžia vaikams greitai suprasti, kas vyksta. Organizatoriams tai taip pat patogu, nes lengviau valdyti srautus ir planuoti laiką.
-
 ## Kodėl registracija yra svarbi?
 
 Jei renginyje dalyvauja daugiau vaikų, registracija tampa vienu svarbiausių elementų. Mūsų praktikoje labai pasiteisina vairuotojo pažymėjimų principas: vaikas gauna savo kortelę, su kuria dalyvauja lenktynėse, o ant jos galima žymėti bandymus ar etapų eigą.

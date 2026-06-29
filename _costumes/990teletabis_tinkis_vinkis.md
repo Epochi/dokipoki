@@ -14,6 +14,6 @@ img_alt: "Teletabis – animatorius mažų vaikų gimtadieniui Vilniuje"
 
 Teletabis – itin gerai atpažįstamas ir vaikų mylimas personažas, sukurtas specialiai patiems mažiausiems. Šį personažą įkūnijantis animatorius Vilniuje sukuria saugią, ramią ir spalvingą aplinką, kurioje vaikai jaučiasi drąsiai ir noriai įsitraukia į bendrą veiklą.
 
-Teletabio programa vaikų gimtadieniams paremta paprastais judesiais, muzika, lengvais žaidimais ir švelniu bendravimu. Veiklos nėra per intensyvios ar sudėtingos – jos pritaikytos mažų vaikų dėmesiui, nuotaikai ir tempui. Animatorius nuolat stebi vaikų reakcijas ir natūraliai prisitaiko prie grupės.
+Teletabio programa vaikų gimtadieniams paremta paprastais judesiais, muzika, lengvais žaidimais ir švelniu bendravimu. Programą vedame taip, kad vaikams būtų lengva įsitraukti, o veiklos neperkrautų grupės.
 
 Šis personažas ypač tinka mažų vaikų gimtadieniams, darželių šventėms ir pirmosioms vaikiškoms šventėms namuose. Teletabis – tai animatorius Vilniuje, kuris sukuria jaukią, pozityvią ir vaikams artimą šventės patirtį, paliekančią daug šypsenų ir ramų džiaugsmą.

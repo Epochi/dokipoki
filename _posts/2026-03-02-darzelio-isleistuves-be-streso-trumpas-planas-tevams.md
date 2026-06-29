@@ -23,7 +23,7 @@ Jei norite greitai palyginti variantus, peržiūrėkite mūsų <a href="/program
 ## 2. Iš anksto rezervuokite programą
 
 Populiariausiu laikotarpiu geriausi laikai užsipildo greitai, todėl programą verta rezervuoti anksčiau.  
-Aiški šventės struktūra su animatoriais padeda išlaikyti vaikų dėmesį, tempą ir gerą nuotaiką nuo pradžios iki pabaigos.
+Animatoriai padeda vaikams drąsiai įsitraukti į šventę: vieni žaidžia, kiti šoka - visi randa tai, kas jiems patinka labiausiai.
 
 Jei ieškote konkrečių idėjų, peržiūrėkite mūsų [darželio išleistuvių programų aprašymus](/programos/darzelio_isleistuves/).
 
