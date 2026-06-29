@@ -12,6 +12,7 @@ body_class: page-programa page-programa-imoniu-renginiai
 link: /programos/imoniu-renginiai/
 seo_title: "Įmonių renginiai su animatoriais vaikams | Premium sprendimai | Doki Poki"
 description: "Vaikų zona įmonių renginiams, šeimų dienoms ir festivaliams: individualios programos, komanda, veiklų stotelės, eksperimentai ir didelio srauto valdymas."
+corporate_inquiry_form: true
 ---
 
 <script type="application/ld+json">
@@ -142,17 +143,113 @@ description: "Vaikų zona įmonių renginiams, šeimų dienoms ir festivaliams: 
   </div>
 </div>
 
-<div class="row">
-  <div class="col s12 center-align" style="margin: 4px 0 18px 0;">
-    <a
-      href="mailto:{{ site.contact_email }}?subject=%C4%AEmoni%C5%B3%20renginys%20-%20individualus%20pasi%C5%ABlymas"
-      class="btn-large waves-effect waves-light dp-btn section-header cta-btn"
-      data-cta-scope="programa"
-      data-cta-type="email"
-      data-programa="imoniu-renginiai"
+<div class="row corporate-inquiry-section" id="imones-renginio-uzklausa">
+  <div class="col s12 l10 offset-l1">
+    <form
+      class="corporate-inquiry-form"
+      action="https://formsubmit.co/ajax/{{ site.contact_email }}"
+      method="POST"
+      data-success-message="Ačiū! Gavome Jūsų užklausą ir netrukus susisieksime."
+      data-error-message='Nepavyko išsiųsti užklausos. Pabandykite dar kartą arba parašykite mums <a href="mailto:info@dokipoki.lt">info@dokipoki.lt</a>.'
+      novalidate
     >
-      Gauti pasiūlymą per 24 val. →
-    </a>
+      <input type="hidden" name="_subject" value="Nauja įmonių renginio užklausa – DOKI POKI" data-subject-field>
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_replyto" value="">
+      <input type="text" name="_honey" class="corporate-inquiry-form__honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="corporate-inquiry-form__intro center-align">
+        <h2 class="section-header">Gauti pasiūlymą</h2>
+      </div>
+
+      <div class="corporate-inquiry-form__grid">
+        <label>
+          <span>Vardas / kontaktinis asmuo *</span>
+          <input type="text" name="Vardas / kontaktinis asmuo" autocomplete="name" required>
+        </label>
+
+        <label>
+          <span>Įmonės pavadinimas</span>
+          <input type="text" name="Įmonės pavadinimas" autocomplete="organization">
+        </label>
+
+        <label>
+          <span>El. paštas *</span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+
+        <label>
+          <span>Telefono numeris</span>
+          <input type="tel" name="Telefono numeris" autocomplete="tel">
+        </label>
+
+        <label>
+          <span>Renginio data *</span>
+          <input
+            type="text"
+            id="corporate-event-date"
+            class="corporate-inquiry-form__date-display"
+            autocomplete="off"
+            placeholder="Pasirinkite datą"
+            data-date-field
+            required
+          >
+          <input type="hidden" name="Renginio data" data-date-submit>
+        </label>
+
+        <label>
+          <span>Renginio vieta / miestas *</span>
+          <input type="text" name="Renginio vieta / miestas" autocomplete="address-level2" required>
+        </label>
+
+        <label class="corporate-inquiry-form__wide">
+          <span>Apytikslis vaikų / svečių skaičius</span>
+          <input type="text" name="Apytikslis vaikų / svečių skaičius" inputmode="numeric">
+        </label>
+      </div>
+
+      <fieldset class="corporate-inquiry-form__needs">
+        <legend>Ko reikėtų?</legend>
+        <label><input type="checkbox" name="Ko reikėtų[]" value="Vaikų zona"><span>Vaikų zona</span></label>
+        <label><input type="checkbox" name="Ko reikėtų[]" value="Animatoriai / personažai"><span>Animatoriai / personažai</span></label>
+        <label><input type="checkbox" name="Ko reikėtų[]" value="Eksperimentai / mokslo šou"><span>Eksperimentai / mokslo šou</span></label>
+        <label><input type="checkbox" name="Ko reikėtų[]" value="Putų šou"><span>Putų šou</span></label>
+        <label><input type="checkbox" name="Ko reikėtų[]" value="Kūrybinės dirbtuvės"><span>Kūrybinės dirbtuvės</span></label>
+        <label><input type="checkbox" name="Ko reikėtų[]" value="Pilna vaikų programa"><span>Pilna vaikų programa</span></label>
+        <label><input type="checkbox" name="Ko reikėtų[]" value="Dar nežinau"><span>Dar nežinau</span></label>
+      </fieldset>
+
+      <label class="corporate-inquiry-form__message">
+        <span>Trumpai aprašykite, kokio renginio ieškote *</span>
+        <textarea
+          name="Trumpas renginio aprašymas"
+          placeholder="Pvz. įmonės šeimų diena, apie 300 dalyvių, reikia vaikų zonos 3 valandoms..."
+          required
+        ></textarea>
+      </label>
+
+      <p class="corporate-inquiry-form__validation" role="alert" aria-live="polite"></p>
+
+      <div class="corporate-inquiry-form__actions center-align">
+        <button type="submit" class="btn-large waves-effect waves-light dp-btn section-header cta-btn">
+          Gauti pasiūlymą
+        </button>
+      </div>
+    </form>
+
+    <div class="corporate-inquiry-phone center-align">
+      <span class="kg-font kg-font--small">Skubu? Galite paskambinti:</span>
+      <a
+        href="tel:{{ site.contact_phone_raw }}"
+        class="corporate-inquiry-phone__link section-header"
+        data-cta-scope="programa"
+        data-cta-type="phone"
+        data-programa="imoniu-renginiai"
+      >
+        {{ site.contact_phone_display }}
+      </a>
+    </div>
   </div>
 </div>
 

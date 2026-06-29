@@ -1624,3 +1624,374 @@ body.rozine .instagram-gallery-section > .row{
     margin-bottom: 18px;
   }
 }
+
+/* Imoniu renginiai: corporate inquiry form */
+.corporate-inquiry-section{
+  margin: 12px 0 30px;
+}
+
+.corporate-inquiry-form{
+  padding: 30px 32px 28px;
+  border: 1px solid rgba(80, 64, 68, 0.12);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(70, 42, 45, 0.08);
+}
+
+.corporate-inquiry-form__intro h2{
+  margin: 0 0 24px;
+  font-size: 3rem;
+}
+
+.corporate-inquiry-form__grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 22px;
+}
+
+.corporate-inquiry-form label,
+.corporate-inquiry-form__needs legend{
+  font-family: "KG Kindergarden", sans-serif;
+  color: #4f4f4f;
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
+}
+
+.corporate-inquiry-form label span,
+.corporate-inquiry-form__needs legend{
+  display: block;
+  margin-bottom: 8px;
+}
+
+.corporate-inquiry-form input[type="text"],
+.corporate-inquiry-form input[type="email"],
+.corporate-inquiry-form input[type="tel"],
+.corporate-inquiry-form input[type="date"],
+.corporate-inquiry-form textarea{
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid rgba(80, 64, 68, 0.18);
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: none;
+  color: #4f4f4f;
+  font-family: "KG Kindergarden", sans-serif;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.corporate-inquiry-form__date-display{
+  padding-right: 42px !important;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='%235b4d52' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 2v4'/%3E%3Cpath d='M16 2v4'/%3E%3Crect width='18' height='18' x='3' y='4' rx='2'/%3E%3Cpath d='M3 10h18'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px 20px;
+}
+
+.corporate-inquiry-form input:focus,
+.corporate-inquiry-form textarea:focus{
+  border-color: #e6809c !important;
+  box-shadow: 0 0 0 2px rgba(230, 128, 156, 0.14) !important;
+  outline: none;
+}
+
+.corporate-inquiry-form input.is-invalid,
+.corporate-inquiry-form textarea.is-invalid{
+  border-color: rgba(182, 76, 93, 0.5) !important;
+  box-shadow: 0 0 0 2px rgba(182, 76, 93, 0.08) !important;
+}
+
+.corporate-inquiry-form__wide,
+.corporate-inquiry-form__message{
+  grid-column: 1 / -1;
+}
+
+.corporate-inquiry-form__message{
+  display: block;
+  margin-top: 18px;
+}
+
+.corporate-inquiry-form textarea{
+  min-height: 118px;
+  resize: vertical;
+}
+
+.corporate-inquiry-form textarea::placeholder{
+  color: rgba(79, 79, 79, 0.48);
+}
+
+.corporate-inquiry-form__needs{
+  margin: 22px 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.corporate-inquiry-form__needs legend{
+  margin-bottom: 10px;
+}
+
+.corporate-inquiry-form__needs{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 18px;
+}
+
+.corporate-inquiry-form__needs legend{
+  grid-column: 1 / -1;
+}
+
+.corporate-inquiry-form__needs label{
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  min-height: 28px;
+}
+
+.corporate-inquiry-form__needs input[type="checkbox"]{
+  position: static;
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.corporate-inquiry-form__needs label span{
+  margin: 0;
+  line-height: 1.35;
+}
+
+.corporate-inquiry-form__honey{
+  position: absolute;
+  left: -9999px;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0;
+}
+
+.corporate-inquiry-form__validation{
+  margin: 0;
+  text-align: center;
+  font-family: "KG Kindergarden", sans-serif;
+  font-size: 0.96rem;
+  line-height: 1.45;
+}
+
+.corporate-inquiry-form__validation:empty{
+  display: none;
+}
+
+.corporate-inquiry-form__validation:not(:empty){
+  margin-top: 14px;
+}
+
+.corporate-inquiry-form__validation.is-success{
+  color: #2f7d53;
+}
+
+.corporate-inquiry-form__validation.is-error{
+  color: #b64c5d;
+}
+
+.corporate-inquiry-form__actions{
+  margin-top: 8px;
+}
+
+.corporate-inquiry-form__actions .dp-btn{
+  min-width: 210px;
+}
+
+.corporate-inquiry-phone{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin: 16px 0 0;
+  color: #5b4d52;
+}
+
+.corporate-inquiry-phone__link{
+  color: #5b4d52;
+  font-size: 2.05rem;
+  line-height: 1;
+}
+
+.corporate-inquiry-phone__link:hover,
+.corporate-inquiry-phone__link:focus{
+  color: #e6809c;
+}
+
+.page-programa-imoniu-renginiai .picker{
+  font-family: "KG Kindergarden", sans-serif;
+  color: #4f4f4f;
+}
+
+.page-programa-imoniu-renginiai .picker__holder{
+  background: transparent;
+}
+
+.page-programa-imoniu-renginiai .picker__frame{
+  width: 300px;
+  max-width: 300px;
+  max-height: 360px;
+}
+
+.page-programa-imoniu-renginiai .picker__box{
+  border: 1px solid rgba(80, 64, 68, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(70, 42, 45, 0.14);
+  overflow: hidden;
+}
+
+.page-programa-imoniu-renginiai .picker--opened .picker__holder{
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.page-programa-imoniu-renginiai .picker--opened .picker__frame{
+  top: 16%;
+  bottom: auto;
+}
+
+.page-programa-imoniu-renginiai .picker__date-display{
+  display: none;
+}
+
+.page-programa-imoniu-renginiai .picker__calendar-container{
+  padding: 0 16px 4px;
+}
+
+.page-programa-imoniu-renginiai .picker__header{
+  margin-top: 12px;
+}
+
+.page-programa-imoniu-renginiai .picker__select--month,
+.page-programa-imoniu-renginiai .picker__select--year{
+  height: 32px;
+  border: 1px solid rgba(80, 64, 68, 0.14);
+  border-radius: 6px;
+  color: #4f4f4f;
+  font-family: "KG Kindergarden", sans-serif;
+  font-size: 0.9rem;
+}
+
+.page-programa-imoniu-renginiai .picker__nav--prev,
+.page-programa-imoniu-renginiai .picker__nav--next{
+  top: 0.27em;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 6px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-programa-imoniu-renginiai .picker__nav--prev{
+  left: 0;
+}
+
+.page-programa-imoniu-renginiai .picker__nav--next{
+  right: 0;
+}
+
+.page-programa-imoniu-renginiai .picker__nav--prev:hover,
+.page-programa-imoniu-renginiai .picker__nav--next:hover,
+.page-programa-imoniu-renginiai .picker__nav--prev:focus,
+.page-programa-imoniu-renginiai .picker__nav--next:focus{
+  background: rgba(80, 64, 68, 0.06);
+}
+
+.page-programa-imoniu-renginiai .picker__nav--prev:before,
+.page-programa-imoniu-renginiai .picker__nav--next:before{
+  border-right-color: #5b4d52;
+  border-left-color: #5b4d52;
+  margin: 0;
+  transform: scale(0.82);
+}
+
+.page-programa-imoniu-renginiai .picker__table{
+  font-size: 0.92rem;
+  margin-bottom: 0.25em;
+}
+
+.page-programa-imoniu-renginiai .picker__weekday{
+  color: #5b4d52;
+  font-weight: 500;
+  font-size: 0.82rem;
+  padding-bottom: 0.32em;
+}
+
+.page-programa-imoniu-renginiai .picker__day{
+  border-radius: 999px;
+  color: #4f4f4f;
+  padding: 0.56rem 0;
+}
+
+.page-programa-imoniu-renginiai .picker__day--today{
+  color: #4f4f4f;
+  border-color: rgba(182, 76, 93, 0.2);
+}
+
+.page-programa-imoniu-renginiai .picker__day--selected,
+.page-programa-imoniu-renginiai .picker__day--selected:hover,
+.page-programa-imoniu-renginiai .picker--focused .picker__day--selected{
+  background: #f4d6de;
+  color: #4f4f4f;
+}
+
+.page-programa-imoniu-renginiai .picker__day--highlighted{
+  border-color: rgba(182, 76, 93, 0.18);
+}
+
+.page-programa-imoniu-renginiai .picker__day--outfocus{
+  color: rgba(79, 79, 79, 0.36);
+}
+
+.page-programa-imoniu-renginiai .picker__day--disabled,
+.page-programa-imoniu-renginiai .picker__day--disabled:hover,
+.page-programa-imoniu-renginiai .picker--focused .picker__day--disabled{
+  background: transparent;
+  border-color: transparent;
+  color: rgba(79, 79, 79, 0.2);
+}
+
+.page-programa-imoniu-renginiai .picker__footer{
+  display: none;
+}
+
+@media (max-width: 600px){
+  .corporate-inquiry-section{
+    margin: 8px 0 24px;
+  }
+
+  .corporate-inquiry-form{
+    padding: 24px 18px 22px;
+  }
+
+  .corporate-inquiry-form__intro h2{
+    font-size: 2.72rem;
+  }
+
+  .corporate-inquiry-form__grid,
+  .corporate-inquiry-form__needs{
+    grid-template-columns: 1fr;
+  }
+
+  .corporate-inquiry-form__actions .dp-btn{
+    width: 100%;
+  }
+
+  .corporate-inquiry-phone{
+    margin-top: 14px;
+  }
+
+  .corporate-inquiry-phone__link{
+    font-size: 1.82rem;
+  }
+}
