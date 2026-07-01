@@ -3,13 +3,7 @@ name: Instagram Feed Sync
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 */3 * * *"
-  push:
-    branches: [master]
-    paths:
-      - ".github/workflows/instagram-feed.yml"
-      - "scripts/instagram-sync.mjs"
-      - "_data/instagram_manual_posts.json"
+    - cron: "17 3 * * *"
 
 jobs:
   sync:
