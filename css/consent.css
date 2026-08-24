@@ -220,22 +220,24 @@
   transform: translateX(20px) !important;
 }
 
-.consent-settings-link {
-  margin-top: 22px;
+.kontaktai .consent-settings-link {
+  margin-top: 20px;
 }
 
-.consent-settings-link a {
-  color: #5b4d52;
-  font-family: "Quicksand", Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+.kontaktai .consent-settings-link a {
+  color: #5b4d52 !important;
+  font-family: "Amatic SC", "Quicksand", Arial, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  opacity: 0.82;
+  text-decoration: none;
 }
 
-.consent-settings-link a:hover,
-.consent-settings-link a:focus {
-  color: #e65f7d;
+.kontaktai .consent-settings-link a:hover,
+.kontaktai .consent-settings-link a:focus {
+  color: #5b4d52 !important;
+  opacity: 1;
 }
 
 @media (max-width: 600px) {
@@ -270,7 +272,7 @@
     width: 100%;
   }
 
-  .consent-settings-link a {
-    font-size: 12px;
+  .kontaktai .consent-settings-link a {
+    font-size: 1.2rem;
   }
 }
