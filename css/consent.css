@@ -108,6 +108,75 @@
   gap: 8px;
 }
 
+.klaro .cookie-modal .cm-switch,
+.klaro .context-notice .cm-switch,
+.klaro .cookie-notice .cm-switch {
+  display: inline-block !important;
+  height: 30px !important;
+  min-width: 50px !important;
+  position: relative !important;
+  width: 50px !important;
+}
+
+.klaro .cookie-modal .cm-list-input,
+.klaro .context-notice .cm-list-input,
+.klaro .cookie-notice .cm-list-input {
+  height: 30px !important;
+  left: 0 !important;
+  margin: 0 !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 50px !important;
+}
+
+.klaro .cookie-modal .cm-list-label::before,
+.klaro .cookie-modal .cm-list-label::after,
+.klaro .context-notice .cm-list-label::before,
+.klaro .context-notice .cm-list-label::after,
+.klaro .cookie-notice .cm-list-label::before,
+.klaro .cookie-notice .cm-list-label::after {
+  content: none !important;
+  display: none !important;
+}
+
+.klaro .cookie-modal .cm-list-label .cm-switch,
+.klaro .context-notice .cm-list-label .cm-switch,
+.klaro .cookie-notice .cm-list-label .cm-switch {
+  left: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+}
+
+.klaro .cookie-modal .cm-list-label .slider,
+.klaro .context-notice .cm-list-label .slider,
+.klaro .cookie-notice .cm-list-label .slider {
+  bottom: auto !important;
+  display: inline-block !important;
+  height: 30px !important;
+  left: 0 !important;
+  position: absolute !important;
+  right: auto !important;
+  top: 0 !important;
+  width: 50px !important;
+}
+
+.klaro .cookie-modal .cm-list-label .slider::before,
+.klaro .context-notice .cm-list-label .slider::before,
+.klaro .cookie-notice .cm-list-label .slider::before {
+  bottom: 5px !important;
+  height: 20px !important;
+  left: 5px !important;
+  top: auto !important;
+  width: 20px !important;
+}
+
+.klaro .cookie-modal .cm-list-input:checked + .cm-list-label .slider::before,
+.klaro .context-notice .cm-list-input:checked + .cm-list-label .slider::before,
+.klaro .cookie-notice .cm-list-input:checked + .cm-list-label .slider::before {
+  transform: translateX(20px) !important;
+}
+
 .dp-consent-preferences {
   position: fixed;
   right: 14px;
