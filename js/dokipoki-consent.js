@@ -110,18 +110,17 @@
     return false;
   }
 
-  function addPreferencesButton() {
-    if (document.querySelector('[data-consent-preferences]')) {
-      return;
-    }
+  function bindPreferencesLinks() {
+    var links = document.querySelectorAll('[data-consent-preferences]');
 
-    var button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'dp-consent-preferences';
-    button.setAttribute('data-consent-preferences', '');
-    button.textContent = 'Slapukų nustatymai';
-    button.addEventListener('click', openConsentPreferences);
-    document.body.appendChild(button);
+    links.forEach(function (link) {
+      if (link.getAttribute('data-consent-preferences-bound') === 'true') {
+        return;
+      }
+
+      link.setAttribute('data-consent-preferences-bound', 'true');
+      link.addEventListener('click', openConsentPreferences);
+    });
   }
 
   window.dokipokiConsent = {
@@ -234,11 +233,11 @@
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () {
-      addPreferencesButton();
+      bindPreferencesLinks();
       watchKlaroSwitchStyles();
     });
   } else {
-    addPreferencesButton();
+    bindPreferencesLinks();
     watchKlaroSwitchStyles();
   }
 }());
