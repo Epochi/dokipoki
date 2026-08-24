@@ -57,6 +57,46 @@
     consentUpdateTimer = window.setTimeout(updateGoogleConsent, 0);
   }
 
+  function normalizeKlaroSwitchStyles() {
+    var sliders = document.querySelectorAll('.klaro .cm-list-label .slider');
+
+    sliders.forEach(function (slider) {
+      slider.style.setProperty('bottom', 'auto', 'important');
+      slider.style.setProperty('display', 'inline-block', 'important');
+      slider.style.setProperty('float', 'none', 'important');
+      slider.style.setProperty('height', '30px', 'important');
+      slider.style.setProperty('left', '0', 'important');
+      slider.style.setProperty('line-height', '30px', 'important');
+      slider.style.setProperty('margin', '0', 'important');
+      slider.style.setProperty('max-height', '30px', 'important');
+      slider.style.setProperty('min-height', '30px', 'important');
+      slider.style.setProperty('min-width', '50px', 'important');
+      slider.style.setProperty('overflow', 'visible', 'important');
+      slider.style.setProperty('padding', '0', 'important');
+      slider.style.setProperty('position', 'absolute', 'important');
+      slider.style.setProperty('right', 'auto', 'important');
+      slider.style.setProperty('top', '0', 'important');
+      slider.style.setProperty('width', '50px', 'important');
+    });
+  }
+
+  function watchKlaroSwitchStyles() {
+    normalizeKlaroSwitchStyles();
+
+    if (typeof window.MutationObserver !== 'function') {
+      return;
+    }
+
+    var observer = new MutationObserver(function () {
+      normalizeKlaroSwitchStyles();
+    });
+
+    observer.observe(document.documentElement, {
+      childList: true,
+      subtree: true
+    });
+  }
+
   function openConsentPreferences(event) {
     if (event) {
       event.preventDefault();
@@ -64,6 +104,7 @@
 
     if (window.klaro && typeof window.klaro.show === 'function') {
       window.klaro.show(undefined, true);
+      window.setTimeout(normalizeKlaroSwitchStyles, 0);
     }
 
     return false;
@@ -192,8 +233,12 @@
   };
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', addPreferencesButton);
+    document.addEventListener('DOMContentLoaded', function () {
+      addPreferencesButton();
+      watchKlaroSwitchStyles();
+    });
   } else {
     addPreferencesButton();
+    watchKlaroSwitchStyles();
   }
 }());

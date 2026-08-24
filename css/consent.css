@@ -111,11 +111,24 @@
 .klaro .cookie-modal .cm-switch,
 .klaro .context-notice .cm-switch,
 .klaro .cookie-notice .cm-switch {
+  float: none !important;
   display: inline-block !important;
   height: 30px !important;
+  line-height: 30px !important;
+  margin: 0 !important;
+  max-height: 30px !important;
   min-width: 50px !important;
+  min-height: 30px !important;
+  overflow: visible !important;
+  padding: 0 !important;
   position: relative !important;
   width: 50px !important;
+}
+
+.klaro .cookie-modal .cm-switch-container,
+.klaro .context-notice .cm-switch-container,
+.klaro .cookie-notice .cm-switch-container {
+  padding-left: 76px !important;
 }
 
 .klaro .cookie-modal .cm-list-input,
@@ -130,6 +143,28 @@
   width: 50px !important;
 }
 
+.klaro .cookie-modal .cm-list-input + .cm-list-label,
+.klaro .context-notice .cm-list-input + .cm-list-label,
+.klaro .cookie-notice .cm-list-input + .cm-list-label,
+.klaro .cookie-modal .cm-list-label,
+.klaro .context-notice .cm-list-label,
+.klaro .cookie-notice .cm-list-label {
+  cursor: pointer !important;
+  display: block !important;
+  font-size: inherit !important;
+  height: auto !important;
+  line-height: 20px !important;
+  min-height: 30px !important;
+  padding-left: 0 !important;
+  position: static !important;
+}
+
+.klaro .cookie-modal .cm-list-input[type="checkbox"] + .cm-list-label::before,
+.klaro .cookie-modal .cm-list-input[type="checkbox"] + .cm-list-label::after,
+.klaro .context-notice .cm-list-input[type="checkbox"] + .cm-list-label::before,
+.klaro .context-notice .cm-list-input[type="checkbox"] + .cm-list-label::after,
+.klaro .cookie-notice .cm-list-input[type="checkbox"] + .cm-list-label::before,
+.klaro .cookie-notice .cm-list-input[type="checkbox"] + .cm-list-label::after,
 .klaro .cookie-modal .cm-list-label::before,
 .klaro .cookie-modal .cm-list-label::after,
 .klaro .context-notice .cm-list-label::before,
@@ -153,8 +188,16 @@
 .klaro .cookie-notice .cm-list-label .slider {
   bottom: auto !important;
   display: inline-block !important;
+  float: none !important;
   height: 30px !important;
   left: 0 !important;
+  line-height: 30px !important;
+  margin: 0 !important;
+  max-height: 30px !important;
+  min-height: 30px !important;
+  min-width: 50px !important;
+  overflow: visible !important;
+  padding: 0 !important;
   position: absolute !important;
   right: auto !important;
   top: 0 !important;
