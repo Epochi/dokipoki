@@ -1,0 +1,174 @@
+.klaro {
+  --font-family: "Quicksand", Arial, sans-serif;
+  --font-size: 15px;
+  --border-radius: 8px;
+  --dark1: #5b4d52;
+  --dark2: #7f95a8;
+  --dark3: #6a6064;
+  --light1: #fffaf8;
+  --light2: #ead8d5;
+  --light3: #7f95a8;
+  --green1: #e65f7d;
+  --green2: #f08aa0;
+  --green3: #f6b5c3;
+  --blue1: #7f95a8;
+  --blue2: #6e879b;
+  --button-text-color: #ffffff;
+  --notice-max-width: 430px;
+  --notice-right: 18px;
+  --notice-bottom: 18px;
+}
+
+.klaro,
+.klaro * {
+  box-sizing: border-box;
+}
+
+.klaro .cookie-notice:not(.cookie-modal-notice),
+.klaro .cookie-modal .cm-modal.cm-klaro {
+  background-color: #fffaf8;
+  border: 1px solid rgba(91, 77, 82, 0.14);
+  box-shadow: 0 14px 34px rgba(91, 77, 82, 0.18);
+}
+
+.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body {
+  padding: 16px;
+  width: 100%;
+}
+
+.klaro .cookie-modal .cm-modal .cm-header h1.title {
+  color: #5b4d52;
+  font-size: 1.55rem;
+  line-height: 1.2;
+}
+
+.klaro .cookie-modal p,
+.klaro .cookie-modal strong,
+.klaro .cookie-modal h1,
+.klaro .cookie-modal h2,
+.klaro .cookie-modal ul,
+.klaro .cookie-modal li,
+.klaro .context-notice p,
+.klaro .context-notice strong,
+.klaro .context-notice h1,
+.klaro .context-notice h2,
+.klaro .context-notice ul,
+.klaro .context-notice li,
+.klaro .cookie-notice p,
+.klaro .cookie-notice strong,
+.klaro .cookie-notice h1,
+.klaro .cookie-notice h2,
+.klaro .cookie-notice ul,
+.klaro .cookie-notice li {
+  color: #5b4d52;
+  overflow-wrap: anywhere;
+}
+
+.klaro .cookie-modal .cm-btn,
+.klaro .context-notice .cm-btn,
+.klaro .cookie-notice .cm-btn {
+  border-radius: 999px;
+  font-weight: 700;
+  line-height: 1.2;
+  min-height: 38px;
+  padding: 10px 16px;
+}
+
+.klaro .cookie-modal .cm-btn.cm-btn-success,
+.klaro .context-notice .cm-btn.cm-btn-success,
+.klaro .cookie-notice .cm-btn.cm-btn-success {
+  background-color: #e65f7d;
+}
+
+.klaro .cookie-modal .cm-btn.cm-btn-success-var,
+.klaro .context-notice .cm-btn.cm-btn-success-var,
+.klaro .cookie-notice .cm-btn.cm-btn-success-var {
+  background-color: #7f95a8;
+}
+
+.klaro .cookie-modal .cm-btn.cm-btn-info,
+.klaro .context-notice .cm-btn.cm-btn-info,
+.klaro .cookie-notice .cm-btn.cm-btn-info,
+.klaro .cookie-modal .cm-btn.cm-btn-close,
+.klaro .context-notice .cm-btn.cm-btn-close,
+.klaro .cookie-notice .cm-btn.cm-btn-close {
+  background-color: #5b4d52;
+}
+
+.klaro .cookie-modal .cm-modal .cm-header,
+.klaro .cookie-modal .cm-modal .cm-footer {
+  border-color: rgba(91, 77, 82, 0.14);
+}
+
+.klaro .cookie-modal .cm-modal .hide svg {
+  stroke: #5b4d52;
+}
+
+.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok {
+  gap: 8px;
+}
+
+.dp-consent-preferences {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  z-index: 998;
+  border: 1px solid rgba(91, 77, 82, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 250, 248, 0.94);
+  color: #5b4d52;
+  cursor: pointer;
+  font-family: "Quicksand", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 8px 12px;
+  box-shadow: 0 8px 20px rgba(91, 77, 82, 0.14);
+}
+
+.dp-consent-preferences:hover,
+.dp-consent-preferences:focus {
+  background: #ffffff;
+  outline: 2px solid rgba(230, 95, 125, 0.35);
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .klaro {
+    --font-size: 14px;
+    --notice-right: 0;
+    --notice-bottom: 0;
+  }
+
+  .klaro .cookie-notice:not(.cookie-modal-notice) {
+    left: 0;
+    right: 0;
+    width: 100vw;
+    max-width: none;
+  }
+
+  .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p {
+    max-width: calc(100vw - 32px);
+  }
+
+  .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons,
+  .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons button.cm-btn {
+    width: 100%;
+  }
+
+  .klaro .cookie-modal .cm-modal .cm-footer-buttons {
+    gap: 8px;
+    flex-direction: column;
+  }
+
+  .klaro .cookie-modal .cm-modal .cm-footer-buttons .cm-btn {
+    width: 100%;
+  }
+
+  .dp-consent-preferences {
+    right: 10px;
+    bottom: 10px;
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+}
