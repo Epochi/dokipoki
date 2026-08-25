@@ -1,20 +1,31 @@
 <div class="container section kaina">
   <div id="Kaina" class="row scrollspy">
     <div class="col s12">
-      <h2 class="section-header center-align">Kaina</h2>
+      <h2 class="section-header center-align">Animatorių kainos</h2>
     </div>
   </div>
 
   <div class="row kaina">
     <div class="col s12">
-      <div class="kaina-highlight">
-        <div class="kaina-highlight__tag" aria-hidden="true">
-          <img src="/img/components/price-tag-red.png" alt="" width="58" height="101" loading="lazy" decoding="async">
-        </div>
+      <div class="kaina-board">
+        <div class="kaina-board__content">
+          <div class="kaina-tiers" aria-label="Animatorių kainos">
+            {% for tier in site.data.pricing.tiers %}
+              <div class="kaina-tier{% if tier.popular %} kaina-tier--popular{% endif %}">
+                <div class="kaina-tier__tag" aria-hidden="true">
+                  <img src="/img/components/price-tag-red.png" alt="" width="58" height="101" loading="lazy" decoding="async">
+                </div>
 
-        <div class="kaina-highlight__content">
-          <div class="kaina-highlight__price">Nuo 100 Eur</div>
-          <p class="kaina-highlight__meta">Kaina galioja Vilniaus mieste, gimtadienio programoms</p>
+                {% if tier.popular %}
+                  <div class="kaina-tier__badge">Populiariausias</div>
+                {% endif %}
+                <div class="kaina-tier__content">
+                  <h3 class="kaina-tier__title">{{ tier.name }}</h3>
+                  <div class="kaina-tier__price">{{ tier.price_label }}</div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>

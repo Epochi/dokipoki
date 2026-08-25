@@ -1452,42 +1452,98 @@ body.rozine .instagram-gallery-section > .row{
   margin-bottom: 10px;
 }
 
-.kaina-highlight{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 8px 0;
+.container.section.kaina{
+  width: 96%;
+  max-width: 1360px;
 }
 
-.kaina-highlight__tag{
+.kaina-board{
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.kaina-board__content{
+  min-width: 0;
+}
+
+.kaina-tiers{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.kaina-tier{
+  position: relative;
+  display: flex;
+  min-height: 118px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 10px 8px;
+  text-align: left;
+}
+
+.kaina-tier--popular{
+  color: #e6809c;
+}
+
+.kaina-tier__tag{
   flex: 0 0 auto;
 }
 
-.kaina-highlight__tag img{
+.kaina-tier__tag img{
   display: block;
   width: 58px;
   height: auto;
 }
 
-.kaina-highlight__content{
-  text-align: left;
+.kaina-tier__badge{
+  position: absolute;
+  top: 0;
+  left: calc(58px + 22px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #e6809c;
+  color: #fff;
+  font-family: "KG Kindergarden", sans-serif;
+  font-size: 0.72rem;
+  line-height: 1;
+  white-space: nowrap;
 }
 
-.kaina-highlight__price{
+.kaina-tier__content{
+  min-width: 0;
+}
+
+.kaina-tier__title{
+  margin: 18px 0 8px;
   font-family: "Amatic SC", cursive;
-  font-size: 4rem;
-  line-height: 0.95;
+  font-size: 2.35rem;
+  line-height: 1.05;
   color: #333333;
 }
 
-.kaina-highlight__meta{
-  margin: 10px 0 0;
+@media (min-width: 993px){
+  .kaina-tier__title{
+    white-space: nowrap;
+  }
+}
+
+.kaina-tier--popular .kaina-tier__title{
+  color: #e6809c;
+}
+
+.kaina-tier__price{
   font-family: "KG Kindergarden", sans-serif;
-  font-size: 1.08rem;
-  line-height: 1.5;
+  font-size: 1.02rem;
+  line-height: 1.35;
   color: #5b4d52;
 }
 
@@ -1529,28 +1585,43 @@ body.rozine .instagram-gallery-section > .row{
     margin-bottom: 6px;
   }
 
-  .kaina-highlight{
-    flex-direction: column;
-    gap: 14px;
-    max-width: 100%;
-    padding: 4px 0;
-    text-align: center;
+  .kaina-board{
+    max-width: 360px;
   }
 
-  .kaina-highlight__content{
-    text-align: center;
+  .container.section.kaina{
+    width: 90%;
   }
 
-  .kaina-highlight__tag img{
+  .kaina-tiers{
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .kaina-tier{
+    min-height: 110px;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 8px 0;
+  }
+
+  .kaina-tier__tag img{
     width: 50px;
   }
 
-  .kaina-highlight__price{
-    font-size: 3.2rem;
+  .kaina-tier__badge{
+    left: 66px;
+    padding: 4px 10px;
+    font-size: 0.68rem;
   }
 
-  .kaina-highlight__meta{
-    font-size: 0.98rem;
+  .kaina-tier__title{
+    margin-bottom: 10px;
+    font-size: 2.35rem;
+  }
+
+  .kaina-tier__price{
+    font-size: 1.06rem;
   }
 
 }

@@ -1,2 +1,12 @@
-hour_price: 100
 currency: "EUR"
+tiers:
+  - name: "Animatorius"
+    price: 100
+    price_label: "Nuo 100 €/val."
+  - name: "KOOOSMINIS animatorius"
+    price: 150
+    price_label: "Nuo 150 €/val."
+    popular: true
+  - name: "Renginio vedėjas"
+    price: 200
+    price_label: "Nuo 200 €/val."

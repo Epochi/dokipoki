@@ -32,6 +32,8 @@
   {%- capture meta_description -%}
     {%- if page.description -%}
       {{ page.description | strip_html | strip_newlines | strip }}
+    {%- elsif page.url == "/" -%}
+      DOKI POKI animatoriai vaikų šventėms Vilniuje: personažai, programos ir animatorių kainos nuo 100 €/val.
     {%- elsif page.excerpt -%}
       {{ page.excerpt | strip_html | strip_newlines | truncate: 160 | strip }}
     {%- else -%}
@@ -280,6 +282,54 @@
         "@type": "PeopleAudience",
         "suggestedMinAge": "2",
         "suggestedMaxAge": "12"
+      }
+    }
+    </script>
+  {%- endif -%}
+
+  {%- if page.url == "/" -%}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "{{ '/' | absolute_url }}#animatoriu-kainos",
+      "name": "Animatorių paslaugos vaikų šventėms",
+      "serviceType": "Animatoriai vaikų šventėms",
+      "provider": {
+        "@type": "Organization",
+        "name": "DOKI POKI",
+        "url": "{{ '/' | absolute_url }}"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Vilnius" },
+        { "@type": "City", "name": "Kaunas" },
+        { "@type": "Country", "name": "Lietuva" }
+      ],
+      "offers": {
+        "@type": "OfferCatalog",
+        "name": "Animatorių kainos",
+        "itemListElement": [
+          {%- for tier in site.data.pricing.tiers -%}
+            {
+              "@type": "Offer",
+              "name": "{{ tier.name | escape }}",
+              "priceCurrency": "{{ site.data.pricing.currency }}",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": {{ tier.price }},
+                "priceCurrency": "{{ site.data.pricing.currency }}",
+                "unitCode": "HUR",
+                "unitText": "valanda",
+                "description": "Pradinė kaina už valandą"
+              },
+              "seller": {
+                "@type": "Organization",
+                "name": "DOKI POKI",
+                "url": "{{ '/' | absolute_url }}"
+              }
+            }{%- unless forloop.last -%},{%- endunless -%}
+          {%- endfor -%}
+        ]
       }
     }
     </script>
