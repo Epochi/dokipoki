@@ -553,57 +553,6 @@ h6.section-header{ font-size: var(--dp-h6-size); line-height: 1.35; }
 }
 
 /* ================================
-   SEASONAL PROMO
-   ================================ */
-.dp-seasonal-promo{
-  margin-top: 10px;
-  margin-bottom: 18px;
-}
-
-.dp-seasonal-promo__row{
-  border-top: 2px dashed rgba(0,0,0,0.08);
-  border-bottom: 2px dashed rgba(0,0,0,0.08);
-  padding: 28px 0;
-}
-
-.dp-seasonal-promo__image{
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 8px;
-  display: block;
-}
-
-.dp-seasonal-promo__eyebrow{
-  margin: 0 0 4px 0;
-  opacity: 0.74;
-}
-
-.dp-seasonal-promo__text{
-  max-width: 620px;
-  margin: 6px auto 8px auto;
-}
-
-.dp-seasonal-promo__note{
-  max-width: 520px;
-  margin: 0 auto;
-  opacity: 0.82;
-}
-
-@media (max-width: 600px){
-  .dp-seasonal-promo__row{
-    display: block;
-    padding: 20px 0 26px 0;
-  }
-
-  .dp-seasonal-promo__image{
-    aspect-ratio: 16 / 11;
-    margin-bottom: 18px;
-  }
-}
-
-/* ================================
    PROGRAMA HERO LITE
    ================================ */
 .dp-hero-lite{
