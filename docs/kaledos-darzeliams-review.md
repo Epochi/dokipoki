@@ -25,7 +25,7 @@ patikrintas izoliuotai, pakeitus fetch testiniu atsakymu. Tikrų laiškų nesių
 
 Aktualioje produkcinėje versijoje programų sąrašo Rugsėjo 1-osios kvietimo jau
 nebuvo, todėl Kalėdų kvietimas pridėtas. Rugsėjo 1 puslapiai nepakeisti.
-Programų išdėstymui pernaudotas išleistuvių `dp-hero-lite` ir `dp-grid dp-masonry` šablonas. Vidinei galerijai pernaudotas LEGO ir kitų programų `neon-gallery` / `neon-shot` išdėstymas.
+Viršuje naudojamas toks pats `programa` hero kaip neoninėje programoje. Programų kortelės naudoja `dp-grid dp-masonry` šabloną: darbalaukyje 2 × 2, telefone vienu stulpeliu. Vidinei galerijai pernaudotas LEGO ir kitų programų `neon-gallery` / `neon-shot` išdėstymas.
 Septynios vartotojo nuotraukos nukopijuotos iš `C:\Users\linas\Downloads\New folder` į `img/programos/kaledos-darzeliams/`; originalai nepakeisti. Sąrašo kortelei naudojama `senelis-ir-elfai.jpg`.
 
 ## Patikra
@@ -40,7 +40,7 @@ Septynios vartotojo nuotraukos nukopijuotos iš `C:\Users\linas\Downloads\New fo
 - Darželio forma nesukuria `corporate_inquiry_form_submit` įvykio.
 - 1440, 390 ir 320 px: be horizontalaus slinkimo; telefone vienas stulpelis.
 - Tikslūs programų veiklų tekstai, canonical, sitemap, programų sąrašo integracija.
-- Visos septynios galerijos nuotraukos įkeliamos, patikrintas mobilusis ir darbalaukio vaizdas.
+- Hero nuotrauka ir šešios galerijos nuotraukos įkeliamos, patikrintas mobilusis ir darbalaukio vaizdas.
 - Naujame puslapyje ir metaduomenyse nėra kainų, trukmės ar papildomų pasiūlymų.
 - `git diff --check` praėjo. Esama įmonių puslapio forma ir analitikos failai nepakeisti.
 
@@ -76,3 +76,5 @@ aplanke esančių tų pačių svetainėje naudojamų jQuery 3.7.1, migrate 3.4.1
 jQuery 2.1.1 bibliotekų iš code.jquery.com. Testas jas pateikia iš vietinės
 kopijos; formų fetch yra visiškai pakeistas testiniu. Analitikos užklausos
 blokuojamos ir CSP, ir naršyklės užklausų filtru.
+
+Hero: `senelis-su-vaikais.jpg`. Kitos šešios nuotraukos galerijoje išdėstytos trimis poromis.

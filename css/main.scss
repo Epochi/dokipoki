@@ -2022,6 +2022,9 @@ body.rozine .instagram-gallery-section > .row{
 
 /* Christmas kindergarten offer: reuse site typography, palette and form. */
 .page-kaledos-darzeliams {
+  @media (min-width: 601px) {
+    .dp-grid.dp-masonry { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
   #darzelio-uzklausa { scroll-margin-top: 90px; }
   .corporate-inquiry-form__intro p { margin-bottom: 28px; }
   select.browser-default {
