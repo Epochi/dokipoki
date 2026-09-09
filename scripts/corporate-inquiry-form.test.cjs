@@ -110,3 +110,12 @@ test('the submission lock remains held while response JSON is pending', async ()
   assert.equal(h.events().length, 0); assert.equal(h.resets(), 0);
   json.resolve({ success: true }); await flush(); acceptedOnce(h);
 });
+
+test('captured FormSubmit AJAX acceptance is recognized with one event', async () => {
+  // One authorized live request on 2026-09-09 returned HTTP 200, Content-Type
+  // text/html; charset=UTF-8, with this JSON body. Never replay it to the provider.
+  const body = fs.readFileSync(path.join(__dirname, 'fixtures/formsubmit-ajax-accepted.json'), 'utf8');
+  const h = harness(); h.submit();
+  h.requests[0].pending.resolve({ ok: true, json: async () => JSON.parse(body) });
+  await flush(); acceptedOnce(h);
+});
