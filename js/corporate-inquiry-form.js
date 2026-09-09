@@ -228,11 +228,9 @@
   }
 
   function pushTrackingEvent() {
-    if (isKindergarten) return;
-
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      event: 'corporate_inquiry_form_submit'
+      event: isKindergarten ? 'kindergarten_christmas_inquiry_submit' : 'corporate_inquiry_form_submit'
     });
   }
 

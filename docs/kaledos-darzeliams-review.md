@@ -1,7 +1,7 @@
 # Kalėdų darželiams puslapio peržiūra
 
 Šaka: `feature/kaledos-darzeliams-review`, bazė: `origin/master` (`c3137f4`).
-Puslapis nepublikuotas; nuotolinė šaka nesukurta, produkcija ir reklamos nekeistos.
+Puslapio publikavimas vartotojo patvirtintas 2026-09-09. Reklamą leidžiama tik paruošti pristabdytą.
 
 Vietinė peržiūra: http://127.0.0.1:4175/programos/kaledos-darzeliams/
 Darbo kopija: `C:\Users\linas\AppData\Local\Temp\dokipoki-kaledos-review`.
@@ -37,7 +37,7 @@ Septynios vartotojo nuotraukos nukopijuotos iš `C:\Users\linas\Downloads\New fo
 - Teigiami boolean/string atsakymai, neigiamas string atsakymas, trūkstamas
   patvirtinimas, HTTP, JSON ir tinklo klaidos; laukų išlaikymas ir pakartojimas.
 - Apsauga nuo dvigubo pateikimo iki fetch ir JSON apdorojimo pabaigos.
-- Darželio forma nesukuria `corporate_inquiry_form_submit` įvykio.
+- Darželio forma nesukuria `corporate_inquiry_form_submit` įvykio; po aiškaus tiekėjo patvirtinimo vieną kartą siunčiamas `kindergarten_christmas_inquiry_submit` į dataLayer.
 - 1440, 390 ir 320 px: be horizontalaus slinkimo; telefone vienas stulpelis.
 - Tikslūs programų veiklų tekstai, canonical, sitemap, programų sąrašo integracija.
 - Hero nuotrauka ir šešios galerijos nuotraukos įkeliamos, patikrintas mobilusis ir darbalaukio vaizdas.
@@ -78,3 +78,26 @@ kopijos; formų fetch yra visiškai pakeistas testiniu. Analitikos užklausos
 blokuojamos ir CSP, ir naršyklės užklausų filtru.
 
 Hero: `senelis-su-vaikais.jpg`. Kitos šešios nuotraukos galerijoje išdėstytos trimis poromis.
+
+## Minimalus SEO ir matavimo užbaigimas
+
+Pridėta Service schema, kurios provider nurodo esamą `https://dokipoki.lt/#organization`,
+ir BreadcrumbList. Organizacija nedubliuojama. OG/Twitter naudoja hero nuotrauką.
+Tekstai ir dizainas nepakeisti. Naršyklėje li list-style yra none, rodomas tik vienas
+brūkšnelis. Formos pateikimo mygtukas matomas ir veikia, todėl nekeistas.
+
+Matavimas: dataLayer įvykis paruoštas ir izoliuotai patikrintas. Tai dar nėra
+sukonfigūruota Ads konversija. Esama Ads jungtis neleidžia conversionAction,
+customConversionGoal ir conversionGoalCampaignConfig operacijų; GTM valdymo
+jungties nėra. Prieš paleidžiant reikia užbaigti vieną tiesioginį GTM → Ads kelią:
+
+- Sukurti WEBPAGE / SUBMIT_LEAD_FORM konversiją su One ir secondary (ne paskyros
+  numatytajam optimizavimui).
+- GTM Google Ads conversion žymą paleisti tik nuo
+  `kindergarten_christmas_inquiry_submit`, išlaikant esamą Consent Mode.
+- Tik naujai kampanijai priskirti custom goal su šia konversija; pašalinti kitus
+  jos biddable tikslus, įskaitant YouTube. Esamų kampanijų tikslų nekeisti.
+- Neimportuoti tos pačios konversijos iš GA4 kaip antro pagrindinio matavimo kelio.
+
+Pradinis Maximize Clicks nenaudoja konversijų kainų siūlymui. Formų pateikimai
+ir telefono/Messenger paspaudimai turi likti atskiros ataskaitų eilutės.

@@ -39,11 +39,19 @@ const programs = JSON.parse(fs.readFileSync(path.join(root, '_data/kaledos_darze
     assert.ok(page.url().endsWith('#darzelio-uzklausa'));
   }
   const submit=page.locator('button[type=submit]');
+  assert.equal(await submit.isVisible(),true);
+  assert.equal((await submit.textContent()).trim(),'Gauti pasiūlymą darželiui');
+  assert.equal(await page.locator('h1').count(),1);
+  const schemas=await page.locator('script[type="application/ld+json"]').allTextContents();
+  const entities=schemas.flatMap(s=>{const v=JSON.parse(s);return v['@graph']||[v]});
+  assert.equal(entities.filter(v=>v['@type']==='Organization').length,1);
+  assert.equal(entities.find(v=>v['@type']==='Service').provider['@id'],'https://dokipoki.lt/#organization');
   await submit.click();assert.equal(await page.evaluate(()=>mockRequests.length),0);
   const values={'Kontaktinis vardas':'Testas','Darželio pavadinimas':'Testinis darželis','email':'test@example.invalid','Miestas / renginio vieta':'Vilnius','Apytikslis vaikų skaičius ir amžius':'20 vaikų, 4–5 metų'};
   for(const [name,value] of Object.entries(values)) await page.locator(`[name="${name}"]`).fill(value);
   await page.locator('[name=email]').fill('invalid');await submit.click();assert.equal(await page.evaluate(()=>mockRequests.length),0);
   await page.locator('[name=email]').fill(values.email);
+  let expectedKindergartenEvents=0;
   for(const mode of ['false','missing','http','json','network','string','boolean']) {
     await submit.click();
     await page.locator('form').evaluate(f=>f.dispatchEvent(new Event('submit',{cancelable:true})));
@@ -60,6 +68,8 @@ const programs = JSON.parse(fs.readFileSync(path.join(root, '_data/kaledos_darze
     await page.waitForFunction(()=>!document.querySelector('button[type=submit]').disabled);
     assert.equal(await page.evaluate(()=>dataLayer.filter(x=>x.event==='corporate_inquiry_form_submit').length),0);
     const success=['string','boolean'].includes(mode);
+    if(success) expectedKindergartenEvents++;
+    assert.equal(await page.evaluate(()=>dataLayer.filter(x=>x.event==='kindergarten_christmas_inquiry_submit').length),expectedKindergartenEvents);
     assert.equal(await page.locator('.corporate-inquiry-form__validation').textContent(),success?'Ačiū! Jūsų užklausą gavome. Susisieksime nurodytu el. paštu. 🤍':'Užklausos išsiųsti nepavyko. Pabandykite dar kartą arba susisiekite telefonu.');
     assert.equal(await submit.textContent(),'Gauti pasiūlymą darželiui');
     for(const [name,value] of Object.entries(values)) {
