@@ -1,0 +1,60 @@
+[
+  {
+    "title": "Kosminės Kalėdos",
+    "activities": [
+      "Laikysime rankose ugnį.",
+      "Pagaminsime milžiniškus debesis.",
+      "Darysime sprogimus.",
+      "Išbandysime kosminius burbulų tunelius.",
+      "Šoksime žvaigždžių šokį.",
+      "Ragausime kosminius garuojančius kukurūzus."
+    ],
+    "hosts": "Veda: Kalėdų Senelis ir Kosmonautas arba Kosmonautė.",
+    "note": null
+  },
+  {
+    "title": "Hogvartso Kalėdos",
+    "activities": [
+      "Gaminsime spalvotą ugnį.",
+      "Darysime lipnųjį slaimą.",
+      "Gaminsime dramblio pastą.",
+      "Stebuklingai atsidursime muilo burbule.",
+      "Ieškosime paslėptų horokrusų.",
+      "Žaisime kvidičą."
+    ],
+    "hosts": "Veda: Kalėdų Senelis ir Haris Poteris arba Hermiona.",
+    "note": null
+  },
+  {
+    "title": "Šunyčių patrulių kalėdinė misija",
+    "activities": [
+      "Šoksime šunyčių patrulių šokį.",
+      "Vykdysime Kalėdų Senelio gelbėjimo misiją.",
+      "Dalyvausime Kalėdų Senelio iššūkyje.",
+      "Padėsime Kalėdų Seneliui surasti dovanas."
+    ],
+    "hosts": "Veda: Kalėdų Senelis ir vienas pasirinktas šunytis patrulis.",
+    "note": null
+  },
+  {
+    "title": "Kaip Grinčas vogė Kalėdas",
+    "activities": [
+      "Dalyvausime sudėtingiausiuose Grinčo išbandymuose.",
+      "Ragausime pašėlusius spalvotus guminukus.",
+      "Gaminsime patį žaliausią slaimą.",
+      "Ieškosime paslėpto Kalėdų Senelio ir dovanėlių."
+    ],
+    "hosts": "Veda: Kalėdų Senelis ir Grinčas.",
+    "note": null
+  },
+  {
+    "title": "Kalėdų Senelis ir elfai",
+    "activities": [
+      "Darysime kalėdinį traukinuką.",
+      "Žaisime sniego mūšį.",
+      "Šoksime ir žaisime drauge su Kalėdų Seneliu."
+    ],
+    "hosts": "Veda: Kalėdų Senelis ir Elfas arba Elfė.",
+    "note": "Šią programą taip pat gali vesti du elfai, be Kalėdų Senelio."
+  }
+]

@@ -1,0 +1,77 @@
+---
+layout: programa
+title: "Kalėdinės programos darželiams"
+seo_title: "Kalėdinės programos darželiams | DOKI POKI"
+description: "Kalėdų Senelis, elfai, Grinčas ir kiti personažai jūsų darželyje. Atraskite kalėdines programas ir gaukite pasiūlymą savo šventei."
+intro: "Kalėdų Senelis ir vaikų mylimi personažai atvyksta į jūsų darželį. Rinkitės šventę su eksperimentais, magija ar kalėdiniais žaidimais."
+permalink: /programos/kaledos-darzeliams/
+link: /programos/kaledos-darzeliams/
+order: 0
+body_class: page-programa page-kaledos-darzeliams
+card_image: /img/personazai/110Kaledu_senelis.webp
+card_focus_y: "28%"
+corporate_inquiry_form: true
+kindergarten_inquiry_form: true
+---
+
+<div class="center-align christmas-intro-cta">
+  <a class="btn-large waves-effect waves-light dp-btn section-header" href="#darzelio-uzklausa">Gauti pasiūlymą darželiui</a>
+</div>
+
+<section class="christmas-programs" aria-labelledby="christmas-programs-title">
+  <h2 id="christmas-programs-title" class="section-header center-align">Pasirinkite Kalėdų programą</h2>
+  <div class="christmas-programs__grid">
+    {% for program in site.data.kaledos_darzeliams %}
+    <article class="christmas-program">
+      <h3 class="section-header">{{ program.title }}</h3>
+      <ul class="kg-font kg-font--small">
+        {% for activity in program.activities %}
+        <li>{{ activity }}</li>
+        {% endfor %}
+      </ul>
+      <p class="kg-font kg-font--small christmas-program__hosts">{{ program.hosts }}</p>
+      {% if program.note %}<p class="kg-font kg-font--small">{{ program.note }}</p>{% endif %}
+      <a class="btn-large waves-effect waves-light dp-btn section-header" href="#darzelio-uzklausa" data-select-program="{{ program.title | escape }}">Rinktis šią programą</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="corporate-inquiry-section" id="darzelio-uzklausa" aria-labelledby="christmas-form-title">
+  <form class="corporate-inquiry-form" action="https://formsubmit.co/ajax/{{ site.contact_email }}" method="POST"
+    data-success-message="Ačiū! Jūsų užklausą gavome. Susisieksime nurodytu el. paštu. 🤍"
+    data-error-message="Užklausos išsiųsti nepavyko. Pabandykite dar kartą arba susisiekite telefonu." novalidate>
+    <input type="hidden" name="_subject" value="Kalėdų darželiams puslapio užklausa – DOKI POKI" data-subject-field>
+    <input type="hidden" name="Užklausos šaltinis" value="Kalėdų darželiams puslapis – {{ page.url | absolute_url }}">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_replyto" value="">
+    <input type="text" name="_honey" class="corporate-inquiry-form__honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="corporate-inquiry-form__intro center-align">
+      <h2 id="christmas-form-title" class="section-header">Gaukite pasiūlymą savo darželiui</h2>
+      <p class="kg-font kg-font--small">Parašykite norimą datą, vietą ir vaikų skaičių. Jei programos dar neišsirinkote, padėsime pasirinkti. 🤍</p>
+    </div>
+    <div class="corporate-inquiry-form__grid">
+      <label><span>Kontaktinis vardas *</span><input type="text" name="Kontaktinis vardas" autocomplete="name" required></label>
+      <label><span>Darželio pavadinimas *</span><input type="text" name="Darželio pavadinimas" autocomplete="organization" required></label>
+      <label><span>El. paštas *</span><input type="email" name="email" autocomplete="email" required></label>
+      <label><span>Telefono numeris</span><input type="tel" name="Telefono numeris" autocomplete="tel"></label>
+      <label><span>Pageidaujama data</span><input type="date" name="Pageidaujama data" autocomplete="off"></label>
+      <label><span>Miestas / renginio vieta *</span><input type="text" name="Miestas / renginio vieta" autocomplete="address-level2" required></label>
+      <label><span>Apytikslis vaikų skaičius ir amžius *</span><input type="text" name="Apytikslis vaikų skaičius ir amžius" autocomplete="off" required></label>
+      <label><span>Dominanti programa</span>
+        <select class="browser-default" name="Dominanti programa" id="christmas-program-choice">
+          <option value="Dar neišsirinkome">Dar neišsirinkome</option>
+          {% for program in site.data.kaledos_darzeliams %}
+          <option value="{{ program.title | escape }}">{{ program.title }}</option>
+          {% endfor %}
+        </select>
+      </label>
+    </div>
+    <label class="corporate-inquiry-form__message"><span>Papildoma informacija</span><textarea name="Papildoma informacija"></textarea></label>
+    <p class="corporate-inquiry-form__validation" role="status" aria-live="polite" aria-atomic="true"></p>
+    <div class="corporate-inquiry-form__actions center-align">
+      <button type="submit" class="btn-large waves-effect waves-light dp-btn section-header">Gauti pasiūlymą darželiui</button>
+    </div>
+  </form>
+</section>
