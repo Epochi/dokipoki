@@ -62,11 +62,20 @@ The official AJAX documentation still does not specify a complete response
 schema; this is direct observed endpoint evidence, not a new documentation claim.
 No failure request was sent, and the single submission was not retried.
 
-**Email delivery remains unverified.** The available mailbox connector is not the
-configured recipient mailbox, so receipt was not checked. Provider acceptance is
-not proof of inbox delivery. No technical blocker remains for this narrow patch
-based on the observed response and isolated tests. The site has not been published.
-The audit did not establish that the original bug caused lost inquiries.
+**Email delivery confirmed by user-provided inbox evidence.** The user supplied
+this exact test message from the DokiPoki mailbox: sender
+`submissions@formsubmit.co`, subject containing `DP-FORM-A8F27E5-20260909-01`,
+inbox display time 12:47 Europe/Vilnius, and submission timestamp
+2026-09-09 09:47 UTC. The marker and synthetic payload match the single authorized
+POST. This confirms receipt of this test email; it is user-provided evidence,
+not an independent read through the mailbox connector. Provider acceptance alone
+was not used as delivery proof.
+
+No concrete publication blocker remains for this narrow patch based on the
+observed AJAX response, the 15 isolated tests and the matching received email.
+This does not guarantee future delivery or test production analytics ingestion.
+The site has not been published. The audit did not establish that the original
+bug caused lost inquiries.
 
 ## Isolated regression tests
 
@@ -91,7 +100,8 @@ and mocked fetch/FormData. Google tags and network clients are not loaded.
 - repeated submit while JSON parsing is pending: lock remains held.
 
 The handler tests remain isolated. The separately authorized single POST confirms
-the provider acceptance response only, not email delivery or production analytics
-ingestion. No deployment,
+the provider acceptance response; the subsequently supplied matching inbox
+message confirms delivery of that one test. Production analytics ingestion was
+not tested. No deployment,
 Ads/GA4/GTM mutation, analytics identifiers, UTM fields, visual or text changes
 are included. Pre-existing untracked `test-results/` was not modified or staged.
