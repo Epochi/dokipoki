@@ -77,7 +77,6 @@ Kuo geriau apgalvoti šie pagrindai, tuo lengviau pritaikyti programą taip, kad
 
 Jei ieškote temos, kuri būtų vizualiai stipri, lengvai komunikuojama ir patiktų vaikams nuo pirmų minučių, **LEGO lenktynės** yra vienas stipriausių variantų. Jos vienu metu suteikia ir judesio, ir sklandžią renginio eigą, ir papildomą kūrybinį sluoksnį.
 
-Pačią programą galite peržiūrėti čia:  
-[LEGO LENKTYNĖS](/programos/lego-lenktynes/).
+Šiuo metu siūlomas programas rasite mūsų [programų puslapyje](/programos/).
 
 Su 🤍 DokiPoki personažai!
