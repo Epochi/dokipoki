@@ -5,6 +5,7 @@
     return;
   }
 
+  var isSubmitting = false;
   var submitButton = form.querySelector('button[type="submit"]');
   var validationMessage = form.querySelector('.corporate-inquiry-form__validation');
   var replyToInput = form.querySelector('input[name="_replyto"]');
@@ -198,6 +199,8 @@
   }
 
   function setLoading(isLoading) {
+    isSubmitting = isLoading;
+
     if (!submitButton) {
       return;
     }
@@ -234,6 +237,11 @@
 
   form.addEventListener('submit', function (event) {
     event.preventDefault();
+
+    if (isSubmitting) {
+      return;
+    }
+
     setMessage('', null);
 
     if (!validateFormFields()) {
@@ -262,7 +270,12 @@
 
         return response.json();
       })
-      .then(function () {
+      .then(function (result) {
+        // Require explicit acceptance; never treat a truthy 'false' as success.
+        if (!result || (result.success !== true && result.success !== 'true')) {
+          throw new Error('Form submission was not accepted');
+        }
+
         form.reset();
         setDateValue(null);
         pushTrackingEvent();
