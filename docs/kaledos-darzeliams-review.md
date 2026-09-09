@@ -1,4 +1,4 @@
-﻿# Kalėdų darželiams puslapio peržiūra
+# Kalėdų darželiams puslapio peržiūra
 
 Šaka: `feature/kaledos-darzeliams-review`, bazė: `origin/master` (`c3137f4`).
 Puslapis nepublikuotas; nuotolinė šaka nesukurta, produkcija ir reklamos nekeistos.
@@ -13,7 +13,7 @@ patikrintas izoliuotai, pakeitus fetch testiniu atsakymu. Tikrų laiškų nesių
 
 ## Pakeisti failai
 
-- `_data/kaledos_darzeliams.json`: penkių programų tekstai, naudojami kortelėse ir pasirinkimuose.
+- `_data/kaledos_darzeliams.json`: keturių programų tekstai, naudojami kortelėse ir pasirinkimuose.
 - `_programos/kaledos_darzeliams.html`: naujas puslapis, SEO, forma ir šaltinio žyma laiške.
 - `_layouts/programa.html`: sąlyginis programos pasirinkimo scenarijaus įkėlimas.
 - `css/main.scss`: tik šio puslapio kortelių ir mobiliojo vaizdo stiliai.
@@ -32,7 +32,7 @@ Kalėdų Senelio nuotrauka `img/personazai/110Kaledu_senelis.webp`.
 
 - Jekyll kompiliavimas sėkmingas su vietinėmis Windows suderinamumo parinktimis.
 - Visi 15 nepakeistų įmonių formos regresinių testų praėjo.
-- Naršyklė: penki pasirinkimo mygtukai, šeši formos pasirinkimai, privalomi laukai,
+- Naršyklė: keturi pasirinkimo mygtukai, penki formos pasirinkimai, privalomi laukai,
   netaisyklingas el. paštas, neprivaloma data, visi papildomai užpildyti laukai laiško duomenyse.
 - Teigiami boolean/string atsakymai, neigiamas string atsakymas, trūkstamas
   patvirtinimas, HTTP, JSON ir tinklo klaidos; laukų išlaikymas ir pakartojimas.

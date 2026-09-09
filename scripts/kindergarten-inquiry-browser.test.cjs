@@ -26,10 +26,10 @@ const programs = JSON.parse(fs.readFileSync(path.join(root, '_data/kaledos_darze
   if(await decline.isVisible()) await decline.click();
   assert.equal(await page.title(),'Kalėdinės programos darželiams | DOKI POKI');
   assert.equal(await page.locator('link[rel=canonical]').getAttribute('href'),'https://dokipoki.lt/programos/kaledos-darzeliams/');
-  assert.equal(await page.locator('.christmas-program').count(),5);
-  assert.equal(await page.locator('select option').count(),6);
+  assert.equal(await page.locator('.christmas-program').count(),4);
+  assert.equal(await page.locator('select option').count(),5);
   const html=await page.content();assert.doesNotMatch(html,/€|priceCurrency|priceSpecification|trukm|valandos|trumpesnio apsilankymo/i);
-  for (let i=0;i<5;i++) {
+  for (let i=0;i<4;i++) {
     const card=page.locator('.christmas-program').nth(i);
     assert.deepEqual(await card.locator('li').allTextContents(),programs[i].activities);
     await card.locator('a').click();
@@ -92,6 +92,6 @@ const programs = JSON.parse(fs.readFileSync(path.join(root, '_data/kaledos_darze
   assert.equal(await page.locator('.dp-programos-card a[href="/programos/kaledos-darzeliams/"]').count(),3);
   assert.match(fs.readFileSync(path.join(root,'_site/sitemap.xml'),'utf8'),/https:\/\/dokipoki.lt\/programos\/kaledos-darzeliams\//);
   assert.deepEqual(errors,[]);
-  console.log('PASS: content, metadata, sitemap, hub, 5 choices, validation, 7 provider outcomes, preserved fields, retries, double-submit guard, no corporate events, 3 viewports.');
+  console.log('PASS: content, metadata, sitemap, hub, 4 choices, validation, 7 provider outcomes, preserved fields, retries, double-submit guard, no corporate events, 3 viewports.');
   await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});
