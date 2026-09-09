@@ -16,7 +16,7 @@ patikrintas izoliuotai, pakeitus fetch testiniu atsakymu. Tikrų laiškų nesių
 - `_data/kaledos_darzeliams.json`: keturių programų tekstai, naudojami kortelėse ir pasirinkimuose.
 - `_programos/kaledos_darzeliams.html`: naujas puslapis, SEO, forma ir šaltinio žyma laiške.
 - `_layouts/programa.html`: sąlyginis programos pasirinkimo scenarijaus įkėlimas.
-- `css/main.scss`: tik šio puslapio kortelių ir mobiliojo vaizdo stiliai.
+- `css/main.scss`: esamos neon-gallery galerijos stiliai pritaikyti ir šiam puslapiui; ankstesni atskiri Kalėdų kortelių stiliai pašalinti.
 - `js/corporate-inquiry-form.js`: bendros formos darželio laiško tema, mygtuko tekstas ir įmonių įvykio netaikymas darželiui.
 - `js/kindergarten-inquiry-form.js`: programos parinkimas paspaudus kortelės mygtuką.
 - `programos.html`: sezoninis Kalėdų kvietimas; kortelė automatiškai įtraukiama iš programų kolekcijos.
@@ -25,8 +25,8 @@ patikrintas izoliuotai, pakeitus fetch testiniu atsakymu. Tikrų laiškų nesių
 
 Aktualioje produkcinėje versijoje programų sąrašo Rugsėjo 1-osios kvietimo jau
 nebuvo, todėl Kalėdų kvietimas pridėtas. Rugsėjo 1 puslapiai nepakeisti.
-Programų kortelės pateiktos be nuotraukų. Sąrašo kortelei panaudota esama
-Kalėdų Senelio nuotrauka `img/personazai/110Kaledu_senelis.webp`.
+Programų išdėstymui pernaudotas išleistuvių `dp-hero-lite` ir `dp-grid dp-masonry` šablonas. Vidinei galerijai pernaudotas LEGO ir kitų programų `neon-gallery` / `neon-shot` išdėstymas.
+Septynios vartotojo nuotraukos nukopijuotos iš `C:\Users\linas\Downloads\New folder` į `img/programos/kaledos-darzeliams/`; originalai nepakeisti. Sąrašo kortelei naudojama `senelis-ir-elfai.jpg`.
 
 ## Patikra
 
@@ -40,6 +40,7 @@ Kalėdų Senelio nuotrauka `img/personazai/110Kaledu_senelis.webp`.
 - Darželio forma nesukuria `corporate_inquiry_form_submit` įvykio.
 - 1440, 390 ir 320 px: be horizontalaus slinkimo; telefone vienas stulpelis.
 - Tikslūs programų veiklų tekstai, canonical, sitemap, programų sąrašo integracija.
+- Visos septynios galerijos nuotraukos įkeliamos, patikrintas mobilusis ir darbalaukio vaizdas.
 - Naujame puslapyje ir metaduomenyse nėra kainų, trukmės ar papildomų pasiūlymų.
 - `git diff --check` praėjo. Esama įmonių puslapio forma ir analitikos failai nepakeisti.
 

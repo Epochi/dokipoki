@@ -1578,13 +1578,15 @@ body.rozine .instagram-gallery-section > .row{
 /* Neonine + Velyku programos gallery: consistent visual size across desktop/mobile */
 .page-programa-neonine-programa .neon-gallery .col,
 .page-programa-velykos .neon-gallery .col,
-.page-programa-lego-tema .neon-gallery .col{
+.page-programa-lego-tema .neon-gallery .col,
+.page-kaledos-darzeliams .neon-gallery .col{
   margin-bottom: 18px;
 }
 
 .page-programa-neonine-programa .neon-shot,
 .page-programa-velykos .neon-shot,
-.page-programa-lego-tema .neon-shot{
+.page-programa-lego-tema .neon-shot,
+.page-kaledos-darzeliams .neon-shot{
   border-radius: 12px;
   overflow: hidden;
   aspect-ratio: 4 / 3;
@@ -1592,7 +1594,8 @@ body.rozine .instagram-gallery-section > .row{
 
 .page-programa-neonine-programa .neon-shot img,
 .page-programa-velykos .neon-shot img,
-.page-programa-lego-tema .neon-shot img{
+.page-programa-lego-tema .neon-shot img,
+.page-kaledos-darzeliams .neon-shot img{
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1602,7 +1605,8 @@ body.rozine .instagram-gallery-section > .row{
 @media (max-width: 600px){
   .page-programa-neonine-programa .neon-gallery .col,
   .page-programa-velykos .neon-gallery .col,
-  .page-programa-lego-tema .neon-gallery .col{
+  .page-programa-lego-tema .neon-gallery .col,
+.page-kaledos-darzeliams .neon-gallery .col{
     margin-bottom: 14px;
   }
 }
@@ -2018,30 +2022,6 @@ body.rozine .instagram-gallery-section > .row{
 
 /* Christmas kindergarten offer: reuse site typography, palette and form. */
 .page-kaledos-darzeliams {
-  .christmas-intro-cta { margin: 28px 0 52px; }
-  .christmas-programs { margin-bottom: 48px; }
-  .christmas-programs__grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-  }
-  .christmas-program {
-    display: flex;
-    flex-direction: column;
-    padding: 28px;
-    background: #fff;
-    border: 1px solid rgba(80, 64, 68, 0.12);
-    border-top: 5px solid #7f95a8;
-    border-radius: 8px;
-    box-shadow: 0 12px 30px rgba(70, 42, 45, 0.06);
-  }
-  .christmas-program:nth-child(even) { border-top-color: #e6809c; }
-  .christmas-program h3 { margin: 0 0 20px; font-size: 2.6rem; }
-  .christmas-program ul { padding-left: 22px; margin: 0 0 20px; }
-  .christmas-program li { list-style-type: disc; margin-bottom: 10px; }
-  .christmas-program p { margin: 0 0 20px; }
-  .christmas-program__hosts { border-top: 1px solid #eee; padding-top: 18px; }
-  .christmas-program .dp-btn { margin-top: auto; align-self: flex-start; }
   #darzelio-uzklausa { scroll-margin-top: 90px; }
   .corporate-inquiry-form__intro p { margin-bottom: 28px; }
   select.browser-default {
@@ -2055,9 +2035,6 @@ body.rozine .instagram-gallery-section > .row{
   select:focus { outline: 2px solid #e6809c; outline-offset: 2px; }
   .dp-btn { white-space: normal; height: auto !important; line-height: 1.3 !important; padding: 14px 22px; }
   @media (max-width: 600px) {
-    .christmas-programs__grid { grid-template-columns: minmax(0, 1fr); }
-    .christmas-program { padding: 22px; }
-    .christmas-program .dp-btn { align-self: stretch; }
     .corporate-inquiry-form { padding: 24px 16px; }
   }
 }

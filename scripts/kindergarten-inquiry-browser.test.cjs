@@ -26,12 +26,12 @@ const programs = JSON.parse(fs.readFileSync(path.join(root, '_data/kaledos_darze
   if(await decline.isVisible()) await decline.click();
   assert.equal(await page.title(),'Kalėdinės programos darželiams | DOKI POKI');
   assert.equal(await page.locator('link[rel=canonical]').getAttribute('href'),'https://dokipoki.lt/programos/kaledos-darzeliams/');
-  assert.equal(await page.locator('.christmas-program').count(),4);
+  assert.equal(await page.locator('.dp-grid .card').count(),4);
   assert.equal(await page.locator('select option').count(),5);
   const html=await page.content();assert.doesNotMatch(html,/€|priceCurrency|priceSpecification|trukm|valandos|trumpesnio apsilankymo/i);
   for (let i=0;i<4;i++) {
-    const card=page.locator('.christmas-program').nth(i);
-    assert.deepEqual(await card.locator('li').allTextContents(),programs[i].activities);
+    const card=page.locator('.dp-grid .card').nth(i);
+    assert.deepEqual((await card.locator('li').allTextContents()).map(text=>text.replace(/^- /,'')),programs[i].activities);
     await card.locator('a').click();
     assert.equal(await page.locator('select').inputValue(),programs[i].title);
     assert.ok(page.url().endsWith('#darzelio-uzklausa'));
@@ -78,12 +78,18 @@ const programs = JSON.parse(fs.readFileSync(path.join(root, '_data/kaledos_darze
   await page.evaluate(()=>resolveJson({success:'true'}));
   await page.waitForFunction(()=>!document.querySelector('button[type=submit]').disabled);
   await page.reload();await page.evaluate(()=>document.fonts.ready);
+  assert.equal(await page.locator('.neon-gallery img').count(),7);
+  for (const img of await page.locator('.neon-gallery img').all()) {
+    await img.scrollIntoViewIfNeeded();
+    await img.evaluate(e => e.decode());
+    assert.equal(await img.evaluate(e => e.naturalWidth > 0),true);
+  }
   fs.mkdirSync(path.join(root,'.preview/screenshots'),{recursive:true});
   for(const width of [1440,390,320]) {
     await page.setViewportSize({width,height:1000});
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,`overflow at ${width}`);
-    const columns=await page.locator('.christmas-programs__grid').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length);
-    assert.equal(columns,width<=600?1:2);
+    const columns=await page.locator('.dp-grid.dp-masonry').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length);
+    assert.equal(columns,width<=600?1:3);
     await page.evaluate(()=>scrollTo(0,0));
     await page.screenshot({path:path.join(root,`.preview/screenshots/${width}.png`),fullPage:true});
   }
