@@ -238,6 +238,15 @@
     window.dataLayer.push({
       event: isChristmas ? 'christmas_inquiry_form_submit' : (isKindergarten ? 'kindergarten_christmas_inquiry_submit' : 'corporate_inquiry_form_submit')
     });
+    if (isChristmas) {
+      // The live GTM container maps this legacy event to the existing Christmas
+      // form conversion. Keep one Ads conversion per accepted inquiry while the
+      // generic event above identifies the new page for future reporting.
+      window.dataLayer.push({
+        event: 'kindergarten_christmas_inquiry_submit',
+        lead_scope: 'christmas_hub'
+      });
+    }
   }
 
   form.querySelectorAll('input, textarea').forEach(function (input) {
@@ -269,9 +278,18 @@
 
     setLoading(true);
 
+    var payload = new FormData(form);
+    if (isChristmas) {
+      var attribution = new URLSearchParams(window.location.search);
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function (key) {
+        var value = attribution.get(key);
+        if (value) payload.set(key, value.slice(0,200));
+      });
+    }
+
     fetch(form.action, {
       method: 'POST',
-      body: new FormData(form),
+      body: payload,
       headers: {
         Accept: 'application/json'
       }
