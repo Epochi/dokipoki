@@ -1,4 +1,7 @@
 _site
+_preview/
+_baseline/
+_production-check/
 .sass-cache
 .jekyll-metadata
 .jekyll-cache

@@ -1,0 +1,35 @@
+<style>
+  .dp-seasonal-promo{margin-top:10px;margin-bottom:18px}
+  .dp-seasonal-promo__row{border-top:2px dashed rgba(0,0,0,.08);border-bottom:2px dashed rgba(0,0,0,.08);padding:28px 0}
+  .dp-seasonal-promo__image{width:100%;aspect-ratio:1.18;object-fit:cover;object-position:50% 52%;border-radius:8px;display:block}
+  .dp-seasonal-promo__eyebrow{margin:0 0 4px;opacity:.74}
+  .dp-seasonal-promo__text{max-width:620px;margin:6px auto 8px}
+  .dp-seasonal-promo__cta{margin:18px 0 0}
+  @media(max-width:600px){
+    .dp-seasonal-promo__row{display:block;padding:20px 0 26px}
+    .dp-seasonal-promo__image{margin-bottom:18px}
+  }
+</style>
+<section class="container dp-seasonal-promo" aria-labelledby="christmas-promo-title">
+  <div class="row valign-wrapper dp-seasonal-promo__row">
+    <div class="col s12 m5">
+      <a href="{{ '/kaledos/' | relative_url }}" aria-label="Atrasti Kalėdų pasiūlymus">
+        <img src="{{ '/img/kaledos/hero-senelis-zali-elfai.jpg' | relative_url }}"
+             alt="DokiPoki Kalėdų Senelis su žaliai pasipuošusiais elfais"
+             class="responsive-img dp-seasonal-promo__image"
+             width="1279" height="1919" loading="lazy" decoding="async">
+      </a>
+    </div>
+    <div class="col s12 m7 center-align">
+      <p class="kg-font kg-font--small dp-seasonal-promo__eyebrow">Sezoninis pasiūlymas</p>
+      <h2 id="christmas-promo-title" class="section-header center-align">Kalėdos prasideda čia!</h2>
+      <p class="kg-font kg-font--normal dp-seasonal-promo__text">
+        Kalėdų Senelis, smalsūs elfai ir nuotykiai jūsų šventei!
+        Atraskite kalėdines programas darželiams, šeimoms ir įmonėms.
+      </p>
+      <p class="dp-seasonal-promo__cta">
+        <a href="{{ '/kaledos/' | relative_url }}" class="btn-large waves-effect waves-light dp-btn section-header">Atrasti Kalėdų pasiūlymus</a>
+      </p>
+    </div>
+  </div>
+</section>

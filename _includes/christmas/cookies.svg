@@ -1,0 +1,15 @@
+<svg viewBox="0 0 580 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ch-cookie-art-title">
+ <title id="ch-cookie-art-title">Stilizuoti glajumi dekoruojami meduoliai ir konditerinis maišelis</title>
+ <ellipse cx="280" cy="165" rx="205" ry="115" fill="#faeeda"/>
+ <g transform="translate(83 34) rotate(-15 90 120)">
+  <path d="M89 21c-33 0-42 39-21 57L32 69C5 62-5 91 18 105l38 20-22 61c-10 30 23 39 37 14l18-33 20 33c16 25 47 10 34-17l-25-58 38-20c26-15 8-44-15-36l-31 10c22-23 11-58-21-58Z" fill="#bb7a4b" stroke="#a96841" stroke-width="3"/>
+  <path d="m36 85 34 15m43 0 29-14M58 177l13 8m36 0 14-8" stroke="#fff5e2" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <circle cx="77" cy="49" r="3" fill="#fff5e2"/><circle cx="101" cy="49" r="3" fill="#fff5e2"/><path d="M78 62q12 13 23-1" fill="none" stroke="#fff5e2" stroke-width="3" stroke-linecap="round"/>
+  <path d="m71 87 18 8 17-8v21l-17-8-18 8Z" fill="#b4d8cc"/><circle cx="89" cy="121" r="6" fill="#f3b0b8"/><circle cx="89" cy="143" r="6" fill="#f3b0b8"/>
+ </g>
+ <g transform="translate(300 143) rotate(12)"><path d="m0-76 23 47 52 8-38 36 9 52-46-24-46 24 9-52-38-36 52-8Z" fill="#bf8353" stroke="#a96c43" stroke-width="3"/><path d="m0-55 17 35 39 5-28 27 6 39-34-18-34 18 6-39-28-27 39-5Z" fill="none" stroke="#fff7e5" stroke-width="4" stroke-linejoin="round"/><circle cy="3" r="8" fill="#dca5b7"/></g>
+ <g transform="translate(424 35) rotate(26)"><path d="M0 0q37-15 69 0L44 121 26 121Z" fill="#b4d4ce" stroke="#8aaea5" stroke-width="2"/><path d="m26 121 10 30 8-30" fill="#f9f5e8" stroke="#8aaea5" stroke-width="2"/><path d="M10 15q27-9 49 0" fill="none" stroke="#eff5e8" stroke-width="3"/></g>
+ <path d="M400 226c-14 30 48 11 30 35s-71-6-87 13" fill="none" stroke="#fffaf0" stroke-width="7" stroke-linecap="round"/>
+ <g fill="#d08aa1"><circle cx="260" cy="44" r="4"/><circle cx="494" cy="201" r="4"/><circle cx="284" cy="246" r="4"/></g><g stroke="#9abeb1" stroke-width="5" stroke-linecap="round"><path d="m245 63 5 7m242 157 8 4m-265 29 7-5m-176-111 7-5"/></g>
+ <path d="m50 51 4 12 12 4-12 4-4 12-4-12-12-4 12-4Z" fill="#fff9ee"/>
+</svg>

@@ -24,7 +24,7 @@ description: "DOKIPOKI programos vaikų šventėms: gimtadieniams, darželio iš
       </div>
 
       <p class="kg-font kg-font--normal center-align">
-        <a href="{{ '/programos/kaledos-darzeliams/' | relative_url }}">Peržiūrėkite Kalėdų programas darželiams.</a>
+        <a href="{{ '/kaledos/' | relative_url }}">Atraskite Kalėdų pasiūlymus.</a>
       </p>
 
       {% assign programs = site.programos %}
@@ -34,16 +34,17 @@ description: "DOKIPOKI programos vaikų šventėms: gimtadieniams, darželio iš
         <div id="Programos" class="section programos dp-programos-grid">
           {% for program in programs_sorted %}
 
-            {% assign href = program.link | default: '/kontaktai/' %}
+            {% assign href = program.card_link | default: program.link | default: '/kontaktai/' %}
             {% assign img  = program.card_image | default: program.image | default: program.img %}
             {% assign card_focus_y = program.card_focus_y | default: 'var(--dp-cover-focus-y)' %}
+            {% assign card_title = program.card_title | default: program.title %}
 
             <div class="programos-wrapper">
               <article class="dp-programos-card">
-                <a href="{{ href }}" class="dp-programos-card__image-link" aria-label="{{ program.title }}">
+                <a href="{{ href }}" class="dp-programos-card__image-link" aria-label="{{ card_title }}">
                   <img
                     class="responsive-img"
-                    alt="{{ program.title }} – programa vaikų šventei"
+                    alt="{{ card_title }} – programa vaikų šventei"
                     src="{{ img }}"
                     style="--dp-program-card-focus-y: {{ card_focus_y }};"
                     loading="lazy"
@@ -54,7 +55,7 @@ description: "DOKIPOKI programos vaikų šventėms: gimtadieniams, darželio iš
                 <div class="dp-programos-card__body center-align">
                   <h2 class="section-header">
                     <a href="{{ href }}" class="cursor-default">
-                      {{ program.title }}
+                      {{ card_title }}
                     </a>
                   </h2>
 

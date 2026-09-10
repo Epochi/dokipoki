@@ -1,3 +1,4 @@
+{% unless site.analytics_enabled == false %}
 <link rel="stylesheet" href="{{ '/js/vendor/klaro/klaro.min.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/css/consent.css' | relative_url }}">
 
@@ -30,3 +31,4 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://ww
 
 <script defer src="{{ '/js/dokipoki-consent.js' | relative_url }}"></script>
 <script defer data-config="klaroConfig" src="{{ '/js/vendor/klaro/klaro-no-css.js' | relative_url }}"></script>
+{% endunless %}

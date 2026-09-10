@@ -4,6 +4,7 @@
 {% include head.html %}
 
 <body class="rozine">
+	{% unless site.analytics_enabled == false %}
 	<!-- Google Tag Manager (noscript) -->
 	<noscript>
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJQTVTV2"
@@ -12,12 +13,16 @@
 		        style="display:none;visibility:hidden"></iframe>
 	</noscript>
 	<!-- End Google Tag Manager (noscript) -->
+	{% endunless %}
 
 	{% include navbar.html %}
 
 	<main>
 		{% include subheader.html %}
 		{% include debeselis-divider.html %}
+
+		{% include christmas/home-promo.html %}
+		{% include divider.html %}
 
 		{% include paslaugos.html %}
 		{% include divider.html %}

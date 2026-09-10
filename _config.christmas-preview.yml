@@ -1,0 +1,13 @@
+# Opt in locally only: bundle exec jekyll serve --config _config.yml,_config.christmas-preview.yml
+url: "http://127.0.0.1:4173"
+host: 127.0.0.1
+port: 4173
+destination: _preview
+analytics_enabled: false
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - context.md
+  - _baseline
+  - _production-check
+  - _preview
