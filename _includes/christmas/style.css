@@ -115,5 +115,11 @@
 }
 
 .christmas-hub .ch-field .is-invalid{border-color:#a33249}
+/* SVG ornaments stay identical on iOS and desktop, independent of emoji fonts. */
+.christmas-hub :is(.ch-hero-star,.ch-form-star) svg{display:block;width:1em;height:1em}
+/* Constrain Safari's native date control to the same box as adjacent inputs. */
+.christmas-hub .ch-field input[type="date"]{-webkit-appearance:none;appearance:none;max-width:100%;min-height:0;max-height:49px}
+.christmas-hub .ch-field input[type="date"]::-webkit-date-and-time-value{min-width:0;text-align:left}
+.christmas-hub .ch-field input[type="date"]::-webkit-datetime-edit{min-width:0;padding:0}
 .christmas-hub #ch-status.is-error{color:#8b243a}
 .christmas-hub .ch-button:disabled{opacity:.65;cursor:wait}
