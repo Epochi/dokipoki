@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="lt">
+  {% include head.html %}
+  <body class="christmas-hub">
+    <style>{% include christmas/style.css %}</style>
+    <a class="ch-skip" href="#christmas-content">Pereiti prie turinio</a>
+    {% include navbar.html %}
+    <main id="christmas-content">{{ content }}</main>
+    {% include kontaktai.html %}
+    <script>{% include christmas/interaction.js %}</script>
+    <script src="{{ '/js/corporate-inquiry-form.js' | relative_url }}"></script>
+  </body>
+</html>

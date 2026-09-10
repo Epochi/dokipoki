@@ -378,7 +378,9 @@
       "itemListElement": [
         {%- for p in program_items -%}
           {%- capture program_img_path -%}
-            {%- if p.og_image -%}
+            {%- if p.card_link and p.card_image -%}
+              {{ p.card_image }}
+            {%- elsif p.og_image -%}
               {{ p.og_image }}
             {%- elsif p.card_image -%}
               {{ p.card_image }}
@@ -391,8 +393,8 @@
           {
             "@type": "ListItem",
             "position": {{ forloop.index }},
-            "url": "{{ p.url | absolute_url }}",
-            "name": "{{ p.title | escape }}",
+            "url": "{{ p.card_link | default: p.url | absolute_url }}",
+            "name": "{{ p.card_title | default: p.title | escape }}",
             "image": "{{ program_img_path | strip | absolute_url }}"
           }{%- unless forloop.last -%},{%- endunless -%}
         {%- endfor -%}

@@ -1,0 +1,119 @@
+.christmas-hub{--ch-ink:#343b48;--ch-muted:#626674;--ch-pink:#f4b0b8;--ch-mint:#aedfdc;--ch-lilac:#bdadd6;background:#fff6f6;color:var(--ch-ink);font-family:Roboto,sans-serif}
+.christmas-hub main{font-family:"KG Kindergarden",sans-serif;font-synthesis:none;letter-spacing:.2px;font-size:16px;line-height:1.7}
+.christmas-hub *{box-sizing:border-box}
+.christmas-hub .ch-wrap{width:calc(100% - 96px);max-width:1160px;margin-inline:auto}
+.christmas-hub main h1,.christmas-hub main h2,.christmas-hub main h3{font-family:"Amatic SC",cursive;color:var(--ch-ink);font-weight:700;margin:0;line-height:1.13;letter-spacing:1px}
+.christmas-hub main h2{font-size:48px}.christmas-hub main h3{font-size:40px;letter-spacing:1px}
+.christmas-hub main p{margin:20px 0}.christmas-hub main a{color:inherit}
+.christmas-hub [id]{scroll-margin-top:100px}
+.christmas-hub :is(a,button,input,select,textarea):focus-visible{outline:3px solid #695680;outline-offset:5px}
+.christmas-hub main [tabindex="-1"]:focus{outline:none}
+.christmas-hub .ch-eyebrow{font-size:11px;font-weight:700;letter-spacing:2px;line-height:1.6;margin:0 0 18px}
+
+.christmas-hub .ch-button{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;min-height:52px;padding:13px 22px;border:1px solid transparent;border-radius:8px;background:var(--ch-ink);color:white;font:700 24px/1.3 "Amatic SC",cursive;cursor:pointer;text-decoration:none;text-align:left;box-shadow:none}
+.christmas-hub .ch-button:hover{background:#505769}.christmas-hub .ch-button span,.christmas-hub .ch-text-link span{font-family:Arial,sans-serif;font-size:21px;font-weight:400}
+.christmas-hub .ch-button-light{background:white;color:var(--ch-ink)}.christmas-hub .ch-button-light:hover{background:#fff6f6}
+.christmas-hub .ch-button-outline{background:transparent;border-color:#a3a0a7;color:var(--ch-ink)}.christmas-hub .ch-button-outline:hover{background:#fff}
+.christmas-hub .ch-text-link{font-family:"Amatic SC",cursive;letter-spacing:1px;display:inline-flex;align-items:center;justify-content:space-between;gap:15px;min-height:48px;font-size:24px;font-weight:700;text-decoration:underline;text-underline-offset:5px;text-decoration-color:#b4a5b8}
+.christmas-hub .ch-text-link:hover{text-decoration-color:var(--ch-ink)}
+.christmas-hub .ch-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:32px}
+.christmas-hub .ch-hero{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding-block:66px 70px}
+.christmas-hub main h1{font-size:68px;letter-spacing:1px;line-height:1.13;max-width:530px}
+.christmas-hub h1>span{position:relative;display:inline-block;z-index:0}
+.christmas-hub h1>span:after{content:"";position:absolute;bottom:0;left:0;width:100%;height:12px;background:var(--ch-pink);border-radius:60% 30% 55% 40%;z-index:-1;transform:rotate(-2deg)}
+.christmas-hub .ch-lead{font-size:18px;max-width:440px;line-height:1.8;color:var(--ch-muted)}
+.christmas-hub .ch-hero-photo{position:relative;padding:12px 0 12px 12px}
+.christmas-hub .ch-hero-photo:before{content:"";position:absolute;inset:0 14px 0 0;background:var(--ch-mint);border-radius:120px 20px 20px 20px;transform:rotate(-4deg)}
+.christmas-hub .ch-hero-photo img{display:block;position:relative;width:100%;height:auto;aspect-ratio:1.18;object-fit:cover;object-position:50% 52%;border-radius:110px 16px 110px 16px}
+.christmas-hub .ch-hero-star{position:absolute;font-family:Arial,sans-serif;font-size:118px;line-height:1;color:var(--ch-lilac);right:-22px;top:-29px;transform:rotate(12deg)}
+.christmas-hub .ch-photo-doodle{position:absolute;bottom:-12px;left:2px;font:90px/1 'KG Air',sans-serif;color:#fff;background:var(--ch-pink);border-radius:50%;width:90px;height:90px;text-align:center;transform:rotate(-12deg)}
+.christmas-hub .ch-audience{padding:0 0 62px;border-bottom:1px solid #e6dade}
+.christmas-hub .ch-audience h2{font-size:34px;letter-spacing:1px;margin-bottom:25px}
+.christmas-hub .ch-audience-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.christmas-hub .ch-audience-links>a{display:block;border-top:1px solid #d4cbd0;padding:18px 0 0;text-decoration:none}
+.christmas-hub .ch-audience-links>a:hover{border-color:#88709e}.christmas-hub .ch-audience-links>a>span:last-child{display:block;font-size:13px;line-height:1.7;color:var(--ch-muted);padding-left:40px}
+.christmas-hub .ch-nav-top{display:flex;gap:12px;align-items:center;margin-bottom:8px}.christmas-hub .ch-nav-top strong{font-size:18px;flex:1}.christmas-hub .ch-nav-top>span:last-child{font-size:22px}
+.christmas-hub .ch-nav-icon{font-size:26px;line-height:1;width:28px;color:#7c658e}
+.christmas-hub .ch-offers{padding-block:70px 80px}.christmas-hub .ch-section-heading{display:flex;align-items:center;justify-content:space-between;gap:28px;margin-bottom:36px}
+.christmas-hub .ch-mail{display:grid;grid-template-columns:1fr 1fr;background:#dfd5e9;border-radius:20px;overflow:hidden}
+.christmas-hub .ch-offer-copy{padding:42px}.christmas-hub .ch-offer-copy>p:not(.ch-eyebrow){font-size:15px;line-height:1.85}.christmas-hub .ch-offer-copy h3{margin-bottom:18px}
+.christmas-hub .ch-features{padding:0;margin:22px 0}.christmas-hub .ch-features li{display:flex;gap:12px;font-size:14px;line-height:1.6;padding:5px 0;list-style:none}
+.christmas-hub .ch-offer-copy .ch-suitability{font-size:12px!important;line-height:1.7!important;color:#555a66;margin:23px 0}
+.christmas-hub .ch-mail-art{display:flex;align-items:center;justify-content:center;min-width:0;padding:25px 10px 20px 0}.christmas-hub .ch-mail-art svg{width:100%;height:auto;max-height:480px}
+.christmas-hub .ch-offer-pair{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.christmas-hub .ch-offer-pair article{border-radius:20px;overflow:hidden;display:flex;flex-direction:column}.christmas-hub .ch-academy{background:#e1eeeb}.christmas-hub .ch-cookies{background:#fbebdb}
+.christmas-hub .ch-offer-pair .ch-offer-copy{display:flex;flex-direction:column;flex:1;padding:34px 38px}.christmas-hub .ch-offer-pair h3{min-height:82px}.christmas-hub .ch-offer-pair .ch-offer-copy>p:not(.ch-eyebrow){margin-top:0}.christmas-hub .ch-offer-pair .ch-text-link{margin-top:auto;align-self:flex-start}
+.christmas-hub .ch-offer-image{height:290px;position:relative}.christmas-hub .ch-offer-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0%}
+.christmas-hub .ch-academy-seal{position:absolute;right:20px;bottom:-23px;border:1px solid #657a73;border-radius:50%;outline:6px solid #e1eeeb;background:#e1eeeb;width:96px;height:96px;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(10deg);color:#3e5d56}
+.christmas-hub .ch-academy-seal span{font-size:9px;font-weight:700;letter-spacing:1.5px}.christmas-hub .ch-academy-seal b{font-size:35px;line-height:1.1;font-weight:400}
+.christmas-hub .ch-cookie-art{height:290px;background:#f5dfc8;overflow:hidden}.christmas-hub .ch-cookie-art svg{display:block;width:100%;height:100%}
+.christmas-hub .ch-programs{padding:68px 0;background:#fff;}.christmas-hub .ch-program-heading{display:grid;grid-template-columns:1.5fr 1fr;align-items:end;gap:70px;margin-bottom:36px}.christmas-hub .ch-program-heading p{margin:0;color:var(--ch-muted);font-size:15px}.christmas-hub .ch-program-heading h2{font-size:46px}
+.christmas-hub .ch-program-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}.christmas-hub .ch-program{text-decoration:none}.christmas-hub .ch-program img{display:block;width:100%;height:272px;object-fit:cover;object-position:50% 35%;border-radius:12px}.christmas-hub .ch-program .ch-grinch{object-fit:contain;background:#f3f7f8}.christmas-hub .ch-program h3{display:flex;justify-content:space-between;gap:12px;font-size:28px;line-height:1.5;letter-spacing:1px;margin-top:16px}.christmas-hub .ch-program h3 span{font:23px/1.5 Arial,sans-serif}.christmas-hub .ch-program:hover h3{text-decoration:underline;text-underline-offset:4px}.christmas-hub .ch-center{text-align:center;margin-top:34px}
+.christmas-hub .ch-family{display:grid;grid-template-columns:1fr 1fr;gap:92px;align-items:center;padding-block:80px}
+.christmas-hub .ch-family-image{position:relative;width:100%;max-width:460px;padding:0 18px}.christmas-hub .ch-family-image img{display:block;width:100%;height:430px;object-fit:cover;object-position:50% 45%;border-radius:130px 130px 14px 14px}.christmas-hub .ch-family-image>span{position:absolute;font:100px/1 'KG Air',sans-serif;bottom:4px;right:-7px;color:#a38ab9;transform:rotate(12deg)}
+.christmas-hub .ch-family-copy>p:not(.ch-eyebrow){max-width:405px;color:var(--ch-muted);margin:24px 0 30px;font-size:17px}
+.christmas-hub .ch-inquiry{background:#e3eeec;padding-block:70px}.christmas-hub .ch-form-layout{display:grid;grid-template-columns:.8fr 1.4fr;gap:85px}.christmas-hub .ch-form-intro h2{font-size:48px}.christmas-hub .ch-form-intro p{font-size:15px;color:#555e60}.christmas-hub .ch-form-star{font:75px/1 Arial,sans-serif;display:block;color:#647e79;margin-bottom:28px}
+.christmas-hub .ch-form{display:grid;grid-template-columns:1fr 1fr;gap:19px 20px;min-width:0}.christmas-hub .ch-field{min-width:0}.christmas-hub .ch-field label{display:block;font-size:12px;font-weight:700;color:var(--ch-ink);margin-bottom:7px;line-height:1.5}
+.christmas-hub .ch-messenger{margin-top:28px}.christmas-hub .ch-messenger p{font-size:13px;margin:0 0 10px}.christmas-hub .ch-messenger .ch-button{border-color:#9aafaa;border-radius:6px;max-width:100%}
+.christmas-hub .ch-field :is(input,select,textarea){display:block;box-sizing:border-box;min-width:0;width:100%;height:49px;margin:0;padding:11px 12px;background:#fff;border:1px solid #bacdc7;border-radius:6px;box-shadow:none;color:var(--ch-ink);font:400 14px/1.5 "KG Kindergarden",sans-serif}.christmas-hub .ch-field select{padding-right:28px}.christmas-hub .ch-field textarea{height:105px;resize:vertical}.christmas-hub .ch-field-wide,.christmas-hub .ch-form-bottom{grid-column:1/-1}.christmas-hub .ch-form-bottom{display:flex;gap:20px;align-items:center;flex-wrap:wrap}.christmas-hub #ch-status{font-size:13px;margin:0;max-width:280px}
+
+
+.christmas-hub .ch-skip{position:fixed;top:-100px;left:20px;z-index:1001;background:white;color:var(--ch-ink);padding:12px 20px}.christmas-hub .ch-skip:focus{top:10px}
+.christmas-hub #mobile-nav{visibility:hidden}.christmas-hub #mobile-nav.ch-menu-open{visibility:visible;transform:translateX(0);left:auto;right:0;top:56px;height:auto;bottom:auto;padding:15px 0;max-width:85vw}
+.christmas-hub .button-collapse{min-width:44px;text-align:center}.christmas-hub .button-collapse i{font-size:0}.christmas-hub .button-collapse i:before{content:"☰";font:26px/56px Arial,sans-serif}
+@media(min-width:993px){.christmas-hub #mobile-nav.ch-menu-open{display:none}}
+@media(max-width:1100px){.christmas-hub .ch-wrap{width:calc(100% - 64px)}.christmas-hub .ch-hero{gap:32px}.christmas-hub main h1{font-size:58px}.christmas-hub .ch-actions{gap:12px}.christmas-hub .ch-offer-copy{padding:32px}.christmas-hub .ch-form-layout{gap:45px}.christmas-hub .ch-family{gap:50px}.christmas-hub .ch-program-grid{gap:16px}}
+@media(max-width:700px){
+ .christmas-hub .ch-wrap{width:calc(100% - 40px)}.christmas-hub [id]{scroll-margin-top:78px}.christmas-hub main h2{font-size:38px;letter-spacing:1px}.christmas-hub main h3{font-size:34px}.christmas-hub .ch-eyebrow{font-size:10px;letter-spacing:1.5px;margin-bottom:13px}
+ .christmas-hub .ch-hero{grid-template-columns:1fr;gap:26px;padding-block:28px 35px}.christmas-hub main h1{font-size:48px;letter-spacing:1px;max-width:350px}.christmas-hub .ch-lead{font-size:15px;line-height:1.7;margin:18px 0}.christmas-hub .ch-actions{gap:10px;flex-wrap:nowrap;margin-top:21px}.christmas-hub .ch-actions .ch-button{font-size:22px;gap:12px;padding:12px 14px}.christmas-hub .ch-actions .ch-text-link{font-size:22px;gap:6px}.christmas-hub .ch-hero-photo{padding:6px 4px 6px 8px;margin-right:4px}.christmas-hub .ch-hero-photo img{height:auto;aspect-ratio:1.18;border-radius:65px 12px 65px 12px;object-position:50% 52%}.christmas-hub .ch-hero-photo:before{border-radius:65px 12px 15px 12px}.christmas-hub .ch-hero-star{font-size:65px;right:-9px;top:-13px}.christmas-hub .ch-photo-doodle{font-size:55px;width:55px;height:55px;bottom:0}
+ .christmas-hub .ch-audience{padding-bottom:34px}.christmas-hub .ch-audience h2{font-size:34px;margin-bottom:17px}.christmas-hub .ch-audience-links{grid-template-columns:1fr 1fr;gap:18px}.christmas-hub .ch-audience-links>a{padding-top:12px}.christmas-hub .ch-nav-top{gap:7px;margin-bottom:6px}.christmas-hub .ch-nav-top strong{font-size:16px}.christmas-hub .ch-nav-icon{font-size:21px;width:23px}.christmas-hub .ch-audience-links>a>span:last-child{padding-left:0;font-size:12px}
+ .christmas-hub .ch-offers{padding-block:38px 42px}.christmas-hub .ch-section-heading{margin-bottom:24px;gap:15px}.christmas-hub .ch-section-heading h2{max-width:260px}.christmas-hub .ch-mail{grid-template-columns:1fr}.christmas-hub .ch-offer-copy{padding:27px}.christmas-hub .ch-mail-art{grid-row:1;padding:6px 25px 0;height:260px}.christmas-hub .ch-mail-art svg{height:100%;width:100%}.christmas-hub .ch-offer-copy>p:not(.ch-eyebrow){font-size:14px}.christmas-hub .ch-features li{font-size:13px}.christmas-hub .ch-offer-pair{grid-template-columns:1fr;gap:22px;margin-top:22px}.christmas-hub .ch-offer-pair .ch-offer-copy{padding:27px}.christmas-hub .ch-offer-pair h3{min-height:0}.christmas-hub .ch-offer-image,.christmas-hub .ch-cookie-art{height:235px}.christmas-hub .ch-academy-seal{width:78px;height:78px;right:16px;bottom:-15px}.christmas-hub .ch-academy-seal span{font-size:8px}.christmas-hub .ch-academy-seal b{font-size:27px}
+ .christmas-hub .ch-programs{padding-block:38px}.christmas-hub .ch-program-heading{grid-template-columns:1fr;gap:15px;margin-bottom:24px}.christmas-hub .ch-program-heading h2{font-size:38px}.christmas-hub .ch-program-heading h2 br{display:none}.christmas-hub .ch-program-heading p{font-size:14px}.christmas-hub .ch-program-grid{grid-template-columns:1fr 1fr;gap:22px 14px}.christmas-hub .ch-program img{height:190px}.christmas-hub .ch-program h3{font-size:24px;line-height:1.5;gap:5px;margin-top:10px}.christmas-hub .ch-program h3 span{font-size:18px}.christmas-hub .ch-center{margin-top:26px}.christmas-hub .ch-center .ch-button{font-size:22px;gap:14px}
+ .christmas-hub .ch-family{grid-template-columns:1fr;gap:30px;padding-block:42px}.christmas-hub .ch-family-image{max-width:310px;margin-inline:auto;padding:0 14px}.christmas-hub .ch-family-image img{height:315px;border-radius:100px 100px 14px 14px}.christmas-hub .ch-family-image>span{font-size:80px}.christmas-hub .ch-family-copy>p:not(.ch-eyebrow){font-size:15px;margin:20px 0 24px}.christmas-hub .ch-family .ch-button{font-size:22px;gap:14px}
+ .christmas-hub .ch-inquiry{padding-block:38px}.christmas-hub .ch-form-layout{grid-template-columns:1fr;gap:26px}.christmas-hub .ch-form-intro h2{font-size:38px;max-width:300px}.christmas-hub .ch-form-star{font-size:50px;margin-bottom:20px}.christmas-hub .ch-form{gap:16px 12px}.christmas-hub .ch-field:nth-child(-n+2){grid-column:1/-1}.christmas-hub .ch-field label{font-size:11px;min-height:17px}.christmas-hub .ch-field :is(input,select,textarea){font-size:16px}.christmas-hub .ch-field:nth-child(5) label{min-height:33px}.christmas-hub .ch-field:nth-child(6) label{min-height:33px;display:flex;align-items:flex-end}
+}
+@media(prefers-reduced-motion:reduce){.christmas-hub *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+
+
+/* Shared outline heart for audience links and every offer list. */
+.christmas-hub .ch-nav-icon{display:inline-flex;align-items:center;justify-content:center;flex:none}
+.christmas-hub .ch-nav-icon svg{display:block;width:21px;height:21px}
+.christmas-hub .ch-features li:before{content:"";display:block;flex:none;width:18px;height:18px;margin-top:2px;background:currentColor;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z' fill='none' stroke='black' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;color:#7c658e}
+.christmas-hub .ch-button,.christmas-hub .ch-text-link{justify-content:center;text-align:center}
+.christmas-hub .ch-button{padding-inline:24px;gap:0}
+.christmas-hub .ch-actions .ch-button{min-width:180px}
+.christmas-hub .ch-hero-eyebrow{font-size:21px;letter-spacing:2px;margin-bottom:14px;position:relative;top:0}
+.christmas-hub .ch-hero-photo{top:10px}
+.christmas-hub .ch-featured{display:grid;grid-template-columns:1fr 1.15fr;border-radius:20px;overflow:hidden;background:#e1eeeb}
+.christmas-hub .ch-academy-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center;position:relative;padding:28px 24px 28px 0;min-width:0}
+.christmas-hub .ch-academy-photos img{display:block;width:100%;height:460px;object-fit:cover;object-position:50% 58%;border-radius:100px 100px 12px 12px}
+.christmas-hub .ch-academy-photos img:nth-child(2){border-radius:12px 12px 100px 100px;object-position:50% 63%}
+.christmas-hub .ch-academy-photos .ch-academy-seal{bottom:20px;right:calc(50% - 36px)}
+.christmas-hub .ch-mail-card .ch-mail-art{height:290px;padding:10px 28px;flex:none}
+.christmas-hub .ch-mail-card .ch-mail-art svg{width:100%;height:100%}
+.christmas-hub .ch-program-heading{display:block}
+.christmas-hub .ch-program-heading h2{white-space:nowrap;margin-bottom:18px}
+.christmas-hub .ch-program-heading p{max-width:850px}
+.christmas-hub .ch-program img,.christmas-hub .ch-program .ch-grinch{height:auto;aspect-ratio:2/3;object-fit:cover;object-position:center}
+.christmas-hub .ch-family-image img{height:auto;aspect-ratio:2/3;object-fit:cover;object-position:center}
+@media(max-width:1100px){.christmas-hub .ch-academy-photos{padding:22px 18px 22px 0;gap:10px}.christmas-hub .ch-academy-photos img{height:420px}}
+@media(max-width:700px){
+ .christmas-hub .ch-hero-eyebrow{font-size:18px;top:0;margin-bottom:10px}
+ .christmas-hub .ch-hero{padding-top:20px}
+ .christmas-hub .ch-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+ .christmas-hub .ch-actions .ch-button{min-width:0;padding-inline:12px}
+ .christmas-hub .ch-featured{grid-template-columns:1fr}
+ .christmas-hub .ch-academy-photos{grid-row:1;padding:20px;gap:10px}
+ .christmas-hub .ch-academy-photos img{height:280px;border-radius:70px 70px 10px 10px}
+ .christmas-hub .ch-academy-photos img:nth-child(2){border-radius:10px 10px 70px 70px}
+ .christmas-hub .ch-academy-photos .ch-academy-seal{width:70px;height:70px;bottom:10px;right:calc(50% - 35px)}
+ .christmas-hub .ch-academy-photos .ch-academy-seal span{font-size:7px}
+ .christmas-hub .ch-academy-photos .ch-academy-seal b{font-size:25px}
+ .christmas-hub .ch-mail-card .ch-mail-art{height:235px;grid-row:auto}
+ .christmas-hub .ch-program-heading h2{white-space:normal}
+}
+
+.christmas-hub .ch-field .is-invalid{border-color:#a33249}
+.christmas-hub #ch-status.is-error{color:#8b243a}
+.christmas-hub .ch-button:disabled{opacity:.65;cursor:wait}

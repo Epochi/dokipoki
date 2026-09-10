@@ -1,5 +1,5 @@
 (function () {
-  var form = document.querySelector('.corporate-inquiry-form');
+  var form = document.querySelector('.corporate-inquiry-form, [data-christmas-inquiry]');
 
   if (!form) {
     return;
@@ -7,9 +7,10 @@
 
   var kindergartenInput = form.querySelector('input[name="Darželio pavadinimas"]');
   var isKindergarten = !!kindergartenInput;
+  var isChristmas = form.hasAttribute('data-christmas-inquiry');
   var isSubmitting = false;
   var submitButton = form.querySelector('button[type="submit"]');
-  var validationMessage = form.querySelector('.corporate-inquiry-form__validation');
+  var validationMessage = form.querySelector('.corporate-inquiry-form__validation, #ch-status');
   var replyToInput = form.querySelector('input[name="_replyto"]');
   var emailInput = form.querySelector('input[name="email"]');
   var companyInput = form.querySelector('input[name="Įmonės pavadinimas"]');
@@ -208,11 +209,16 @@
     }
 
     submitButton.disabled = isLoading;
-    submitButton.textContent = isLoading ? 'Siunčiama...' : (isKindergarten ? 'Gauti pasiūlymą darželiui' : 'Gauti pasiūlymą');
+    submitButton.textContent = isLoading ? 'Siunčiama...' : (isChristmas ? 'Aptarti šventę' : (isKindergarten ? 'Gauti pasiūlymą darželiui' : 'Gauti pasiūlymą'));
   }
 
   function updateSubject() {
     if (!subjectInput) {
+      return;
+    }
+
+    if (isChristmas) {
+      subjectInput.value = 'Kalėdų puslapio užklausa – DOKI POKI';
       return;
     }
 
@@ -230,7 +236,7 @@
   function pushTrackingEvent() {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      event: isKindergarten ? 'kindergarten_christmas_inquiry_submit' : 'corporate_inquiry_form_submit'
+      event: isChristmas ? 'christmas_inquiry_form_submit' : (isKindergarten ? 'kindergarten_christmas_inquiry_submit' : 'corporate_inquiry_form_submit')
     });
   }
 
