@@ -6,6 +6,8 @@ The layout reuses the existing navigation, contact footer, consent services and 
 
 The inquiry form uses the site's existing FormSubmit AJAX endpoint and shared `js/corporate-inquiry-form.js`. Name and email are required; planning details are optional. Failed requests retain all entered values. The form resets and emits `christmas_inquiry_form_submit` only after explicit server acceptance. Tests must intercept submission requests so no test emails are sent. Messenger uses the existing site contact URL.
 
+The live GTM container still uses `kindergarten_christmas_inquiry_submit` for the existing Christmas form conversion (`7755835822`). The new form also emits that legacy event, with `lead_scope: christmas_hub`, only after acceptance. The generic event currently has no Ads tag; do not attach a second Ads tag to it without removing the compatibility event or submissions would be counted twice. The historical Ads action name still mentions kindergartens. URL campaign UTM fields are included with the inquiry without storing them in the browser. Messenger CTA attributes identify the contact method and page in the existing tracking.
+
 For a local preview with analytics disabled:
 
 ```powershell
