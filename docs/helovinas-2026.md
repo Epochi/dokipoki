@@ -27,6 +27,8 @@ Naršyklės testui paleisti: aptarnauti `_site` per `python -m http.server 4175 
 
 Paskyra `7294988670` (Dokipoki, EUR). API validuotas kampanijos juodraštis; pritaikymui prijungtas įrankis reikalauja vietinio žmogaus patvirtinimo. Vien validacija kampanijos nesukuria.
 
+Galutinis API validuotas juodraštis: `d483d57322e34e98ba039244cd821f24`. Automatinė patvirtinimo peržiūra atmetė jo pritaikymą, nes reikalauja aiškaus šio konkretaus Ads juodraščio patvirtinimo. Kampanija ir biudžetas paskyroje nesukurti, kampanijos ID nėra; suplanuota būsena – PAUSED. Juodraščio patvirtinimas galioja ribotą laiką, todėl tęsiant gali reikėti pakartotinės validacijos.
+
 | Nustatymas | Reikšmė |
 |---|---|
 | Kampanija | Search \| Helovinas \| 2026 |
