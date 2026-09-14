@@ -44,8 +44,9 @@ description: "DOKIPOKI programos vaikų šventėms: gimtadieniams, darželio iš
                 <a href="{{ href }}" class="dp-programos-card__image-link" aria-label="{{ card_title }}">
                   <img
                     class="responsive-img"
-                    alt="{{ card_title }} – programa vaikų šventei"
+                    alt="{% if program.image_alt %}{{ program.image_alt }}{% else %}{{ card_title }} – programa vaikų šventei{% endif %}"
                     src="{{ img }}"
+                    {% if program.card_srcset %}srcset="{{ program.card_srcset }}" sizes="(max-width: 600px) 90vw, 450px"{% endif %}
                     style="--dp-program-card-focus-y: {{ card_focus_y }};"
                     loading="lazy"
                     decoding="async"

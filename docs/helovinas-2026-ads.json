@@ -1,0 +1,598 @@
+{
+  "customer_id": "7294988670",
+  "status": "DRAFT_NOT_APPLIED",
+  "operations": [
+    {
+      "campaignBudgetOperation": {
+        "create": {
+          "resourceName": "customers/7294988670/campaignBudgets/-1",
+          "name": "Search | Helovinas | 2026 – 5 EUR",
+          "amountMicros": "5000000",
+          "deliveryMethod": "STANDARD",
+          "explicitlyShared": false
+        }
+      }
+    },
+    {
+      "campaignOperation": {
+        "create": {
+          "resourceName": "customers/7294988670/campaigns/-2",
+          "name": "Search | Helovinas | 2026",
+          "status": "PAUSED",
+          "advertisingChannelType": "SEARCH",
+          "campaignBudget": "customers/7294988670/campaignBudgets/-1",
+          "containsEuPoliticalAdvertising": "DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING",
+          "targetSpend": {
+            "cpcBidCeilingMicros": "800000"
+          },
+          "networkSettings": {
+            "targetGoogleSearch": true,
+            "targetSearchNetwork": false,
+            "targetContentNetwork": false,
+            "targetPartnerSearchNetwork": false
+          },
+          "geoTargetTypeSetting": {
+            "positiveGeoTargetType": "PRESENCE"
+          },
+          "endDateTime": "2026-11-01 23:59:59"
+        }
+      }
+    },
+    {
+      "campaignCriterionOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "language": {
+            "languageConstant": "languageConstants/1029"
+          }
+        }
+      }
+    },
+    {
+      "campaignCriterionOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "proximity": {
+            "geoPoint": {
+              "latitudeInMicroDegrees": 54687200,
+              "longitudeInMicroDegrees": 25279700
+            },
+            "radius": 30,
+            "radiusUnits": "KILOMETERS"
+          }
+        }
+      }
+    },
+    {
+      "adGroupOperation": {
+        "create": {
+          "resourceName": "customers/7294988670/adGroups/-3",
+          "campaign": "customers/7294988670/campaigns/-2",
+          "name": "Helovino programa vaikams",
+          "status": "ENABLED",
+          "type": "SEARCH_STANDARD"
+        }
+      }
+    },
+    {
+      "adGroupAdOperation": {
+        "create": {
+          "adGroup": "customers/7294988670/adGroups/-3",
+          "status": "ENABLED",
+          "ad": {
+            "finalUrls": [
+              "https://dokipoki.lt/programos/helovino-programa-vaikams/"
+            ],
+            "responsiveSearchAd": {
+              "headlines": [
+                {
+                  "text": "Helovino programa vaikams"
+                },
+                {
+                  "text": "Velniukų Helovino vakarėlis"
+                },
+                {
+                  "text": "1,5 val. smagių išdaigų"
+                },
+                {
+                  "text": "Vienas arba du Velniukai"
+                },
+                {
+                  "text": "Helovinas be bauginimo"
+                },
+                {
+                  "text": "Velniški burtai ir žaidimai"
+                },
+                {
+                  "text": "Didysis muilo burbulas"
+                },
+                {
+                  "text": "Ugnies išbandymas vaikams"
+                },
+                {
+                  "text": "DOKI POKI Helovino šventė"
+                },
+                {
+                  "text": "Helovino animatoriai"
+                },
+                {
+                  "text": "Gaukite pasiūlymą"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": "Žaisminga 1,5 val. Helovino programa vaikams su vienu arba dviem Velniukais."
+                },
+                {
+                  "text": "Velniukų išdaigos, limonadas, burtai, ugnies išbandymas ir didelis muilo burbulas."
+                },
+                {
+                  "text": "Smagus, vaikams pritaikytas Helovinas be bauginimo. Gaukite pasiūlymą."
+                },
+                {
+                  "text": "Programa gimtadieniams, darželiams, mokykloms ir įmonių vaikų šventėms."
+                }
+              ],
+              "path1": "helovinas",
+              "path2": "vaikams"
+            }
+          }
+        }
+      }
+    },
+    {
+      "adGroupCriterionOperation": {
+        "create": {
+          "adGroup": "customers/7294988670/adGroups/-3",
+          "status": "ENABLED",
+          "keyword": {
+            "text": "helovino programa vaikams",
+            "matchType": "EXACT"
+          }
+        }
+      }
+    },
+    {
+      "adGroupCriterionOperation": {
+        "create": {
+          "adGroup": "customers/7294988670/adGroups/-3",
+          "status": "ENABLED",
+          "keyword": {
+            "text": "helovyno programa vaikams",
+            "matchType": "EXACT"
+          }
+        }
+      }
+    },
+    {
+      "adGroupCriterionOperation": {
+        "create": {
+          "adGroup": "customers/7294988670/adGroups/-3",
+          "status": "ENABLED",
+          "keyword": {
+            "text": "helovino šventė vaikams",
+            "matchType": "EXACT"
+          }
+        }
+      }
+    },
+    {
+      "adGroupCriterionOperation": {
+        "create": {
+          "adGroup": "customers/7294988670/adGroups/-3",
+          "status": "ENABLED",
+          "keyword": {
+            "text": "helovyno šventė vaikams",
+            "matchType": "EXACT"
+          }
+        }
+      }
+    },
+    {
+      "adGroupCriterionOperation": {
+        "create": {
+          "adGroup": "customers/7294988670/adGroups/-3",
+          "status": "ENABLED",
+          "keyword": {
+            "text": "helovinas vaikams",
+            "matchType": "EXACT"
+          }
+        }
+      }
+    },
+    {
+      "adGroupCriterionOperation": {
+        "create": {
+          "adGroup": "customers/7294988670/adGroups/-3",
+          "status": "ENABLED",
+          "keyword": {
+            "text": "helovynas vaikams",
+            "matchType": "EXACT"
+          }
+        }
+      }
+    },
+    {
+      "adGroupCriterionOperation": {
+        "create": {
+          "adGroup": "customers/7294988670/adGroups/-3",
+          "status": "ENABLED",
+          "keyword": {
+            "text": "helovino programa vaikams",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "adGroupCriterionOperation": {
+        "create": {
+          "adGroup": "customers/7294988670/adGroups/-3",
+          "status": "ENABLED",
+          "keyword": {
+            "text": "helovyno programa vaikams",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "adGroupCriterionOperation": {
+        "create": {
+          "adGroup": "customers/7294988670/adGroups/-3",
+          "status": "ENABLED",
+          "keyword": {
+            "text": "helovino šventė vaikams",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "adGroupCriterionOperation": {
+        "create": {
+          "adGroup": "customers/7294988670/adGroups/-3",
+          "status": "ENABLED",
+          "keyword": {
+            "text": "helovyno šventė vaikams",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "adGroupCriterionOperation": {
+        "create": {
+          "adGroup": "customers/7294988670/adGroups/-3",
+          "status": "ENABLED",
+          "keyword": {
+            "text": "helovino animatorius",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "adGroupCriterionOperation": {
+        "create": {
+          "adGroup": "customers/7294988670/adGroups/-3",
+          "status": "ENABLED",
+          "keyword": {
+            "text": "helovyno animatorius",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "adGroupCriterionOperation": {
+        "create": {
+          "adGroup": "customers/7294988670/adGroups/-3",
+          "status": "ENABLED",
+          "keyword": {
+            "text": "helovino animatoriai",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "adGroupCriterionOperation": {
+        "create": {
+          "adGroup": "customers/7294988670/adGroups/-3",
+          "status": "ENABLED",
+          "keyword": {
+            "text": "helovino personažai vaikams",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "adGroupCriterionOperation": {
+        "create": {
+          "adGroup": "customers/7294988670/adGroups/-3",
+          "status": "ENABLED",
+          "keyword": {
+            "text": "helovyno vakarėlis vaikams",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "campaignCriterionOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "negative": true,
+          "keyword": {
+            "text": "suaugusiems",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "campaignCriterionOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "negative": true,
+          "keyword": {
+            "text": "siaubo parkas",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "campaignCriterionOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "negative": true,
+          "keyword": {
+            "text": "siaubo kambarys",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "campaignCriterionOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "negative": true,
+          "keyword": {
+            "text": "filmas",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "campaignCriterionOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "negative": true,
+          "keyword": {
+            "text": "kostiumai",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "campaignCriterionOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "negative": true,
+          "keyword": {
+            "text": "kostiumas",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "campaignCriterionOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "negative": true,
+          "keyword": {
+            "text": "kaukė",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "campaignCriterionOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "negative": true,
+          "keyword": {
+            "text": "kaukės",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "campaignCriterionOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "negative": true,
+          "keyword": {
+            "text": "makiažas",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "campaignCriterionOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "negative": true,
+          "keyword": {
+            "text": "dekoracijos",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "campaignCriterionOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "negative": true,
+          "keyword": {
+            "text": "papuošimai",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "campaignCriterionOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "negative": true,
+          "keyword": {
+            "text": "nemokamai",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "campaignCriterionOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "negative": true,
+          "keyword": {
+            "text": "bilietai",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "campaignCriterionOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "negative": true,
+          "keyword": {
+            "text": "renginiai vilniuje",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "campaignCriterionOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "negative": true,
+          "keyword": {
+            "text": "kur nueiti",
+            "matchType": "PHRASE"
+          }
+        }
+      }
+    },
+    {
+      "campaignAssetOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "asset": "customers/7294988670/assets/335126738428",
+          "fieldType": "SITELINK"
+        }
+      }
+    },
+    {
+      "campaignAssetOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "asset": "customers/7294988670/assets/133517948965",
+          "fieldType": "SITELINK"
+        }
+      }
+    },
+    {
+      "assetOperation": {
+        "create": {
+          "resourceName": "customers/7294988670/assets/-10",
+          "calloutAsset": {
+            "calloutText": "1,5 valandos programa"
+          }
+        }
+      }
+    },
+    {
+      "campaignAssetOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "asset": "customers/7294988670/assets/-10",
+          "fieldType": "CALLOUT"
+        }
+      }
+    },
+    {
+      "assetOperation": {
+        "create": {
+          "resourceName": "customers/7294988670/assets/-11",
+          "calloutAsset": {
+            "calloutText": "1 arba 2 Velniukai"
+          }
+        }
+      }
+    },
+    {
+      "campaignAssetOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "asset": "customers/7294988670/assets/-11",
+          "fieldType": "CALLOUT"
+        }
+      }
+    },
+    {
+      "assetOperation": {
+        "create": {
+          "resourceName": "customers/7294988670/assets/-12",
+          "calloutAsset": {
+            "calloutText": "Vaikams pritaikyta"
+          }
+        }
+      }
+    },
+    {
+      "campaignAssetOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "asset": "customers/7294988670/assets/-12",
+          "fieldType": "CALLOUT"
+        }
+      }
+    },
+    {
+      "assetOperation": {
+        "create": {
+          "resourceName": "customers/7294988670/assets/-13",
+          "calloutAsset": {
+            "calloutText": "Vilnius ir visa Lietuva"
+          }
+        }
+      }
+    },
+    {
+      "campaignAssetOperation": {
+        "create": {
+          "campaign": "customers/7294988670/campaigns/-2",
+          "asset": "customers/7294988670/assets/-13",
+          "fieldType": "CALLOUT"
+        }
+      }
+    }
+  ]
+}
