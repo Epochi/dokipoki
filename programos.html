@@ -44,9 +44,10 @@ description: "DOKIPOKI programos vaikų šventėms: gimtadieniams, darželio iš
                 <a href="{{ href }}" class="dp-programos-card__image-link" aria-label="{{ card_title }}">
                   <img
                     class="responsive-img"
-                    alt="{{ card_title }} – programa vaikų šventei"
+                    alt="{% if program.image_alt %}{{ program.image_alt }}{% else %}{{ card_title }} – programa vaikų šventei{% endif %}"
                     src="{{ img }}"
-                    style="--dp-program-card-focus-y: {{ card_focus_y }};"
+                    {% if program.card_srcset %}srcset="{{ program.card_srcset }}" sizes="(max-width: 600px) 90vw, 450px"{% endif %}
+                    style="--dp-program-card-focus-y: {{ card_focus_y }};{% if program.card_contain %}object-fit:contain;background:#fff;{% endif %}"
                     loading="lazy"
                     decoding="async"
                   >
@@ -59,8 +60,9 @@ description: "DOKIPOKI programos vaikų šventėms: gimtadieniams, darželio iš
                     </a>
                   </h2>
 
+                  {% if program.card_description %}<p class="kg-font kg-font--small">{{ program.card_description }}</p>{% endif %}
                   <a href="{{ href }}" class="btn-large waves-effect waves-light dp-btn section-header dp-programos-card__btn">
-                    Peržiūrėti
+                    {{ program.card_cta | default: "Peržiūrėti" }}
                   </a>
                 </div>
               </article>

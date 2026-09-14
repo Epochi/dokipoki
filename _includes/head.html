@@ -69,7 +69,7 @@
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:type" content="{% if page.layout == 'post' or page.layout == 'personazas' %}article{% else %}website{% endif %}">
   <meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% elsif page.seo_title %}{{ page.seo_title }}{% elsif page.url == '/' %}Animatoriai vaikams Vilniuje | DOKIPOKI personažai{% elsif page.personazas %}{{ page.personazas }} | {{ site.title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta property="og:description" content="{{ meta_description }}">
+  <meta property="og:description" content="{{ page.og_description | default: meta_description | escape }}">
   <meta property="og:url" content="{{ canonical | absolute_url }}">
   <meta property="og:image" content="{{ og_image | absolute_url }}"/>
 
