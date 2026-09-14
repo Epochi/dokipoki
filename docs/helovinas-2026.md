@@ -6,6 +6,8 @@ Puslapis: https://dokipoki.lt/programos/helovino-programa-vaikams/
 
 ## Svetainė
 
+Naujausias naudotojo patikslinimas: DUK ir užklausos forma pašalinti. Hero ir puslapio apačioje palikti tik „Susisiekti per Messenger“ mygtukai į esamą `site.messenger_url`, su esamais Messenger CTA atributais. Ankstesni žemiau aprašyti formos patikrinimai yra ankstesnės versijos istorija; galutinė naršyklės patikra tikrina Messenger nuorodas bei formos ir DUK nebuvimą. Jokios Ads kampanijos ar konversijos šiuo pakeitimu nekuriamos.
+
 Galutinė dizaino kryptis pagal naudotojo peržiūrą: puslapis naudoja esamą `christmas` layoutą ir jo CSS / sąveikas. Hero nuotrauka ir tekstas greta, veiklos viename mėtiniame bloke, pasirinkimo ir vietos tekstai poriniuose spalviniuose blokuose, Kalėdų stiliaus užklausos forma ir DUK. Naujų layoutų ar CSS failų nėra, Kalėdų puslapis nekeistas. Helovino forma išlaiko vieną esamą `corporate_inquiry_form_submit` įvykį ir neįjungia kalėdinių konversijų. Hero nuotrauka užpildo esamą Kalėdų rėmelį su 38 % vertikaliu fokusu.
 
 Programų sąrašo nuotraukai pagal vėlesnę naudotojo pastabą taikomas bendras `object-fit: cover` ir `card_focus_y: 38%`: ji užpildo kortelės plotą, centre matomi abu Velniukai. Originalūs WebP ir vidinio puslapio nuotrauka nekeisti.

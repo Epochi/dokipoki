@@ -33,29 +33,16 @@ const title='Velniukų Helovino vakarėlis';
   assert.ok(await page.locator('.ch-hero-photo img').evaluate(img=>img.naturalWidth>0&&getComputedStyle(img).objectFit==='cover'));
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   await page.screenshot({path:path.join(root,'_preview',`helovinas-${width}.png`),fullPage:true});
-  for(const cta of await page.locator('a[href="#helovino-uzklausa"]').all()){
-   await cta.click();assert.ok(page.url().endsWith('#helovino-uzklausa'));assert.equal(await page.locator('[name="Dominanti programa"]').inputValue(),title);
+  assert.equal(await page.locator('main form').count(),0);
+  assert.equal(await page.locator('#helovinas-faq').count(),0);
+  const contact=page.locator('main a[data-cta-type="messenger"]');
+  assert.equal(await contact.count(),2);
+  for(const cta of await contact.all()){
+   assert.equal(await cta.getAttribute('href'),'https://m.me/personazaidokipoki');
+   assert.equal(await cta.getAttribute('target'),'_blank');
+   assert.match(await cta.getAttribute('rel'),/noopener/);
+   assert.equal(await cta.innerText(),'Susisiekti per Messenger');
   }
-  const form=page.locator('form.corporate-inquiry-form');
-  await form.evaluate(f=>f.dispatchEvent(new Event('submit',{bubbles:true,cancelable:true})));
-  assert.equal(await page.evaluate(()=>mockRequests.length),0);
-  await page.locator('[name="Kontaktinis vardas"]').fill('Testas');await page.locator('[name=email]').fill('test@example.invalid');
-  await page.locator('[name="Pageidaujama data"]').fill('2026-10-25');
-  await page.locator('[name="Miestas / renginio vieta"]').fill('Vilnius');
-  await page.locator('[name="Apytikslis vaikų skaičius ir amžius"]').fill('10 vaikų, 6 metai');
-  await form.evaluate(f=>{f.dispatchEvent(new Event('submit',{bubbles:true,cancelable:true}));f.dispatchEvent(new Event('submit',{bubbles:true,cancelable:true}));});
-  assert.equal(await page.evaluate(()=>mockRequests.length),1);
-  assert.equal(await page.evaluate(()=>mockRequests[0].fields['Dominanti programa']),title);
-  assert.equal(await page.evaluate(()=>mockRequests[0].fields._subject),title+' – DOKI POKI');
-  await page.evaluate(()=>mockRequests[0].resolve({ok:true,json:async()=>({success:false})}));
-  await page.waitForFunction(()=>!document.querySelector('button[type=submit]').disabled);
-  assert.equal(await page.locator('[name=email]').inputValue(),'test@example.invalid');
-  assert.equal(await page.evaluate(()=>(window.dataLayer||[]).filter(e=>e.event==='corporate_inquiry_form_submit').length),0);
-  await form.evaluate(f=>f.dispatchEvent(new Event('submit',{bubbles:true,cancelable:true})));
-  await page.evaluate(()=>mockRequests[1].resolve({ok:true,json:async()=>({success:'true'})}));
-  await page.waitForFunction(()=>!document.querySelector('button[type=submit]').disabled);
-  assert.equal(await page.evaluate(()=>dataLayer.filter(e=>e.event==='corporate_inquiry_form_submit').length),1);
-  assert.equal(await page.locator('[name="Dominanti programa"]').inputValue(),title);
   for(const route of ['/','/programos/']){
    await page.goto('http://127.0.0.1:4175'+route);await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>document.querySelector('#klaro')?.remove());
    assert.ok(await page.locator(`a[href="${url}"]`).count()>0);
@@ -66,5 +53,5 @@ const title='Velniukų Helovino vakarėlis';
  }
  assert.match(fs.readFileSync(path.join(root,'_site/sitemap.xml'),'utf8'),/https:\/\/dokipoki.lt\/programos\/helovino-programa-vaikams\//);
  assert.deepEqual(errors,[]);
- await browser.close();console.log('PASS: 1440/390/360px layouts, links, metadata, Service, sitemap, CTA, mocked failure/retry/double-submit and one existing conversion event.');
+ await browser.close();console.log('PASS: 1440/390/360px layouts, links, metadata, Service, sitemap, Messenger CTA, no form or FAQ.');
 })().catch(e=>{console.error(e);process.exit(1);});

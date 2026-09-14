@@ -26,7 +26,7 @@ card_srcset: "/assets/images/programos/velniuku-helovino-vakarelis-360.webp 360w
     <h1>Velniukų Helovino <span>vakarėlis</span></h1>
     <p class="ch-lead">1,5 valandos velniškai smagių išdaigų, burtų ir netikėtų Helovino išbandymų vaikams. Į šventę gali atvykti vienas arba du DOKI POKI Velniukai. ❤️‍🔥</p>
     <ul class="ch-features"><li>1,5 valandos</li><li>1 arba 2 Velniukai</li><li>Vilnius ir visa Lietuva</li></ul>
-    <div class="ch-actions"><a href="#helovino-uzklausa" class="ch-button">Gauti pasiūlymą</a></div>
+    <div class="ch-actions"><a href="{{ site.messenger_url }}" class="ch-button" target="_blank" rel="noopener noreferrer" data-cta-type="messenger" data-cta-scope="programa" data-programa="helovino-programa-vaikams">Susisiekti per Messenger</a></div>
   </div>
   <div class="ch-hero-photo"><img src="/assets/images/programos/velniuku-helovino-vakarelis.webp" srcset="/assets/images/programos/velniuku-helovino-vakarelis-360.webp 360w, /assets/images/programos/velniuku-helovino-vakarelis-600.webp 600w, /assets/images/programos/velniuku-helovino-vakarelis.webp 1000w" sizes="(max-width: 700px) 90vw, 560px" width="1000" height="1500" alt="DOKI POKI Velniukai Helovino programoje vaikams" loading="eager" decoding="async" style="object-position:50% 38%;" fetchpriority="high"><span class="ch-photo-doodle" aria-hidden="true">♡</span></div>
 </section>
@@ -46,41 +46,5 @@ card_srcset: "/assets/images/programos/velniuku-helovino-vakarelis-360.webp 360w
     <article class="ch-mail"><div class="ch-offer-copy"><h2>Vienas ar du Velniukai?</h2><p>Galite pasirinkti vieną Velniuką arba į šventę pasikviesti velniškai smagų jų duetą. Tinkamiausią variantą padėsime parinkti pagal vaikų skaičių, amžių ir šventės vietą.</p></div></article>
     <article class="ch-cookies"><div class="ch-offer-copy"><h2>Kur gali atvykti Velniukai?</h2><p>Programa tinka vaikų gimtadieniams, žaidimų kambariams, darželiams, mokykloms ir įmonių Helovino šventėms. Atvykstame į šventes Vilniuje ir kituose Lietuvos miestuose.</p></div></article>
   </div>
-</section>
-<section class="ch-inquiry" id="helovino-uzklausa" aria-labelledby="helovinas-form-title">
-  <div class="ch-wrap ch-form-layout">
-    <div class="ch-form-intro"><h2 id="helovinas-form-title">Pasikvieskite Velniukus į savo šventę</h2><p>Parašykite šventės datą, vietą ir vaikų skaičių. Patikrinsime Velniukų užimtumą ir pateiksime pasiūlymą.</p></div>
-    <form class="corporate-inquiry-form ch-form" style="padding:0;border:0;background:transparent;box-shadow:none;" action="https://formsubmit.co/ajax/{{ site.contact_email }}" method="POST"
-    data-success-message="Ačiū! Jūsų užklausą gavome. Susisieksime nurodytu el. paštu. 🤍"
-    data-error-message="Užklausos išsiųsti nepavyko. Pabandykite dar kartą arba susisiekite telefonu." novalidate>
-      <div class="ch-field"><label for="helovinas-field-0">Kontaktinis vardas *</label><input id="helovinas-field-0" type="text" name="Kontaktinis vardas" autocomplete="name" required>
-</div>
-      <div class="ch-field"><label for="helovinas-field-1">El. paštas *</label><input id="helovinas-field-1" type="email" name="email" autocomplete="email" required>
-</div>
-      <div class="ch-field"><label for="helovinas-field-2">Telefono numeris</label><input id="helovinas-field-2" type="tel" name="Telefono numeris" autocomplete="tel">
-</div>
-      <div class="ch-field"><label for="helovinas-field-3">Pageidaujama data</label><input id="helovinas-field-3" type="date" name="Pageidaujama data" autocomplete="off">
-</div>
-      <div class="ch-field"><label for="helovinas-field-4">Miestas / renginio vieta *</label><input id="helovinas-field-4" type="text" name="Miestas / renginio vieta" autocomplete="address-level2" required>
-</div>
-      <div class="ch-field"><label for="helovinas-field-5">Apytikslis vaikų skaičius ir amžius *</label><input id="helovinas-field-5" type="text" name="Apytikslis vaikų skaičius ir amžius" autocomplete="off" required>
-</div>
-      <div class="ch-field ch-field-wide"><label for="helovinas-field-6">Dominanti programa</label><input id="helovinas-field-6" type="text" name="Dominanti programa" value="Velniukų Helovino vakarėlis" readonly>
-      </div>
-      <div class="ch-field ch-field-wide"><label for="helovinas-field-7">Papildoma informacija</label><textarea id="helovinas-field-7" name="Papildoma informacija">
-</textarea>
-</div>
-      <div hidden><input type="hidden" name="_subject" value="Velniukų Helovino vakarėlis – DOKI POKI"><input type="hidden" name="Užklausos šaltinis" value="Velniukų Helovino vakarėlis – {{ page.url | absolute_url }}"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_replyto" value=""><input type="text" name="_honey" class="corporate-inquiry-form__honey" tabindex="-1" autocomplete="off" aria-hidden="true"></div>
-      <div class="ch-form-bottom"><button class="ch-button" type="submit">Gauti pasiūlymą</button><p id="ch-status" class="corporate-inquiry-form__validation" role="status" aria-live="polite" aria-atomic="true"></p></div>
-    </form>
-  </div>
-</section>
-<section class="ch-offers ch-wrap" aria-labelledby="helovinas-faq">
-  <div class="ch-section-heading"><h2 id="helovinas-faq">DUK</h2></div>
-  <div class="ch-offer-pair">
-    <article><h3>Ar programa nėra per baisi mažesniems vaikams?</h3><p>Ne. Programa žaisminga ir pritaikoma pagal vaikų amžių. Velniukai atvyksta išdykauti ir linksminti, o ne gąsdinti.</p></article>
-    <article><h3>Kiek trunka programa?</h3><p>Velniukų Helovino vakarėlis trunka 1,5 valandos.</p></article>
-    <article><h3>Ar galima pasirinkti vieną Velniuką?</h3><p>Taip. Galite rinktis vieną arba du Velniukus.</p></article>
-    <article><h3>Kur vyksta programa?</h3><p>Velniukai gali atvykti į gimtadienius, žaidimų kambarius, darželius, mokyklas ir įmonių šventes Vilniuje bei kituose Lietuvos miestuose.</p></article>
-  </div>
+  <div class="ch-center"><a href="{{ site.messenger_url }}" class="ch-button" target="_blank" rel="noopener noreferrer" data-cta-type="messenger" data-cta-scope="programa" data-programa="helovino-programa-vaikams">Susisiekti per Messenger</a></div>
 </section>
