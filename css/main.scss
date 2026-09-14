@@ -2060,6 +2060,27 @@ body.rozine .kontaktai #Kontaktai {
 .kontaktai .consent-settings-link {
   margin-bottom: 0;
 }
+.home-service {
+  padding-top: 12px;
+  padding-bottom: 24px;
+  color: #333333;
+}
+.home-service h2 { margin: 0 0 16px; }
+.home-service__steps { padding-left: 1.6em; margin: 20px 0; }
+.home-service__steps li { padding-left: 6px; margin-bottom: 14px; }
+.home-service__steps h3 { margin: 0 0 4px; }
+.home-service__steps p { margin: 0; }
+.home-service__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.home-service a { color: #333333; }
+.home-service p a { text-decoration: underline; display: inline-flex; align-items: center; min-height: 44px; }
+.home-service .dp-btn.section-header { color: #333333 !important; }
+.home-service a:focus-visible { outline: 3px solid #333333; outline-offset: 4px; }
+
 .page-home main > .empty-divider {
   min-height: 40px;
   margin-bottom: 16px;
