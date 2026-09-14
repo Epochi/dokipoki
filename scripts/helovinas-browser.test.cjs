@@ -27,10 +27,10 @@ const title='Velniukų Helovino vakarėlis';
   assert.equal(await page.locator('meta[name=robots]').getAttribute('content'),'index, follow');
   assert.equal(await page.locator('meta[property="og:title"]').getAttribute('content'),title+' | DOKI POKI');
   assert.match(await page.locator('meta[property="og:description"]').getAttribute('content'),/^Žaisminga 1,5 valandos/);
-  assert.equal(await page.locator('.dp-grid .card').count(),5);
+  assert.equal(await page.locator('.ch-featured .ch-features li').count(),5);
   const schemas=(await page.locator('script[type="application/ld+json"]').allTextContents()).map(JSON.parse);
   const service=schemas.find(s=>s['@type']==='Service');assert.ok(service);assert.equal(service.name,title);assert.ok(!service.offers&&!service.aggregateRating);
-  assert.ok(await page.locator('.row img.responsive-img').evaluate(img=>img.naturalWidth>0&&getComputedStyle(img).objectFit==='contain'));
+  assert.ok(await page.locator('.ch-hero-photo img').evaluate(img=>img.naturalWidth>0&&getComputedStyle(img).objectFit==='cover'));
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   await page.screenshot({path:path.join(root,'_preview',`helovinas-${width}.png`),fullPage:true});
   for(const cta of await page.locator('a[href="#helovino-uzklausa"]').all()){

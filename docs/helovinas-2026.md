@@ -6,6 +6,8 @@ Puslapis: https://dokipoki.lt/programos/helovino-programa-vaikams/
 
 ## Svetainė
 
+Galutinė dizaino kryptis pagal naudotojo peržiūrą: puslapis naudoja esamą `christmas` layoutą ir jo CSS / sąveikas. Hero nuotrauka ir tekstas greta, veiklos viename mėtiniame bloke, pasirinkimo ir vietos tekstai poriniuose spalviniuose blokuose, Kalėdų stiliaus užklausos forma ir DUK. Naujų layoutų ar CSS failų nėra, Kalėdų puslapis nekeistas. Helovino forma išlaiko vieną esamą `corporate_inquiry_form_submit` įvykį ir neįjungia kalėdinių konversijų. Hero nuotrauka užpildo esamą Kalėdų rėmelį su 38 % vertikaliu fokusu.
+
 Programų sąrašo nuotraukai pagal vėlesnę naudotojo pastabą taikomas bendras `object-fit: cover` ir `card_focus_y: 38%`: ji užpildo kortelės plotą, centre matomi abu Velniukai. Originalūs WebP ir vidinio puslapio nuotrauka nekeisti.
 
 Po vizualinės peržiūros programų sąrašo kortelė supaprastinta pagal naudotojo pastabą: nuotrauka, „Helovinas“ ir bendras „Peržiūrėti“ mygtukas, be aprašymo. Vidinis puslapis naudoja esamus `row`, `col`, `dp-grid dp-masonry`, `dp-item`, `card` ir `dp-plain-section` išdėstymus kaip kitos programos; atskiras Helovino CSS išdėstymas pašalintas. Pakartotinis build ir naršyklės patikros 1440/390/360 px pločiais praėjo.
