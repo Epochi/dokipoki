@@ -6,6 +6,7 @@ const fs=require('node:fs');
 const path=require('node:path');
 const root=path.resolve(__dirname,'..');
 const url='/programos/helovino-programa-vaikams/';
+const base=process.env.PREVIEW_URL || 'http://127.0.0.1:4175';
 const title='Velniukų Helovino vakarėlis';
 (async()=>{
  const browser=await chromium.launch({headless:true});
@@ -19,7 +20,7 @@ const title='Velniukų Helovino vakarėlis';
  const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
  for(const width of [1440,390,360]){
   await page.setViewportSize({width,height:1000});
-  await page.goto('http://127.0.0.1:4175'+url);await page.evaluate(()=>document.fonts.ready);
+  await page.goto(base+url);await page.evaluate(()=>document.fonts.ready);
   await page.evaluate(()=>document.querySelector('#klaro')?.remove());
   assert.equal(await page.locator('h1').count(),1);
   assert.equal(await page.title(),'Helovino programa vaikams | DOKI POKI');
@@ -30,7 +31,7 @@ const title='Velniukų Helovino vakarėlis';
   assert.equal(await page.locator('.ch-featured .ch-features li').count(),5);
   const schemas=(await page.locator('script[type="application/ld+json"]').allTextContents()).map(JSON.parse);
   const service=schemas.find(s=>s['@type']==='Service');assert.ok(service);assert.equal(service.name,title);assert.ok(!service.offers&&!service.aggregateRating);
-  assert.ok(await page.locator('.ch-hero-photo img').evaluate(img=>img.naturalWidth>0&&getComputedStyle(img).objectFit==='cover'));
+  assert.ok(await page.locator('.ch-hero-photo img').evaluate(img=>img.naturalWidth>0&&getComputedStyle(img).objectFit==='contain' && Math.abs(img.clientWidth/img.clientHeight-img.naturalWidth/img.naturalHeight)<0.01));
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   await page.screenshot({path:path.join(root,'_preview',`helovinas-${width}.png`),fullPage:true});
   assert.equal(await page.locator('main form').count(),0);
@@ -44,7 +45,7 @@ const title='Velniukų Helovino vakarėlis';
    assert.equal(await cta.innerText(),'Susisiekti per Messenger');
   }
   for(const route of ['/','/programos/']){
-   await page.goto('http://127.0.0.1:4175'+route);await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>document.querySelector('#klaro')?.remove());
+   await page.goto(base+route);await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>document.querySelector('#klaro')?.remove());
    assert.ok(await page.locator(`a[href="${url}"]`).count()>0);
    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
    const card=route==='/'?page.locator('section[aria-labelledby="helovinas-promo-title"]'):page.locator('article').filter({has:page.locator(`a[href="${url}"]`)});
