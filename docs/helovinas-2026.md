@@ -6,6 +6,8 @@ Puslapis: https://dokipoki.lt/programos/helovino-programa-vaikams/
 
 ## Svetainė
 
+Programų sąrašo nuotraukai pagal vėlesnę naudotojo pastabą taikomas bendras `object-fit: cover` ir `card_focus_y: 38%`: ji užpildo kortelės plotą, centre matomi abu Velniukai. Originalūs WebP ir vidinio puslapio nuotrauka nekeisti.
+
 Po vizualinės peržiūros programų sąrašo kortelė supaprastinta pagal naudotojo pastabą: nuotrauka, „Helovinas“ ir bendras „Peržiūrėti“ mygtukas, be aprašymo. Vidinis puslapis naudoja esamus `row`, `col`, `dp-grid dp-masonry`, `dp-item`, `card` ir `dp-plain-section` išdėstymus kaip kitos programos; atskiras Helovino CSS išdėstymas pašalintas. Pakartotinis build ir naršyklės patikros 1440/390/360 px pločiais praėjo.
 
 - Tikslūs pateikti tekstai, penkios veiklos, 1,5 valandos, vienas arba du Velniukai, be kainų. Papildomos SEO pastraipos nepridėtos, nes pirmenybė teikiama reikalavimui išsaugoti tikslius tekstus.
