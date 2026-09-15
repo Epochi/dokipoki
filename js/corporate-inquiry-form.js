@@ -218,7 +218,12 @@
     }
 
     if (isChristmas) {
-      subjectInput.value = 'Kalėdų puslapio užklausa – DOKI POKI';
+      var christmasDateInput = form.querySelector('#ch-date');
+      var christmasNameInput = form.querySelector('#ch-name');
+      var christmasDate = christmasDateInput && christmasDateInput.value.trim() ? christmasDateInput.value.trim() : 'data nenurodyta';
+      var christmasName = christmasNameInput && christmasNameInput.value.trim() ? christmasNameInput.value.trim().replace(/\s+/g, ' ') : 'vardas nenurodytas';
+
+      subjectInput.value = 'Kalėdų užklausa – ' + christmasDate + ' – ' + christmasName + ' – DOKI POKI';
       return;
     }
 
