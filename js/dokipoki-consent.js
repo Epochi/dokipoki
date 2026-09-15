@@ -151,15 +151,15 @@
         acceptAll: 'Priimti visus',
         acceptSelected: 'Išsaugoti pasirinkimą',
         close: 'Uždaryti',
-        decline: 'Atmesti nebūtinus',
+        decline: 'Atmesti nebūtinuosius',
         ok: 'Priimti visus',
-        save: 'Išsaugoti',
+        save: 'Išsaugoti pasirinkimą',
         consentNotice: {
-          description: 'Nebūtini slapukai įjungiami tik su jūsų sutikimu.',
-          learnMore: 'Valdyti pasirinkimus'
+          description: 'Naudojame būtinuosius slapukus svetainei veikti. Jums sutikus, analitikos ir reklamos slapukai padeda vertinti lankomumą, reklamos veiksmingumą ir pritaikyti reklamą. Galite priimti visus, atmesti nebūtinuosius arba pasirinkti slapukų nustatymus.',
+          learnMore: 'Slapukų nustatymai'
         },
         consentModal: {
-          description: 'Naudojame būtinus slapukus svetainei veikti. Čia galite pasirinkti, kokius analitikos ir reklamos slapukus leidžiate naudoti.',
+          description: 'Pasirinkite, ar leidžiate naudoti analitikos ir reklamos slapukus. Būtinieji slapukai visada aktyvūs. Sutikimą bet kada galite pakeisti ar atšaukti paspaudę „Slapukų nustatymai“ svetainės apačioje.',
           title: 'Slapukų nustatymai'
         },
         purposeItem: {
@@ -168,26 +168,26 @@
         },
         purposes: {
           functional: {
-            title: 'Būtini',
-            description: 'Reikalingi svetainei ir slapukų pasirinkimui išsaugoti.'
+            title: 'Būtinieji slapukai',
+            description: 'Užtikrina pagrindines svetainės funkcijas ir išsaugo jūsų slapukų pasirinkimą. Jiems sutikimo nereikia.'
           },
           analytics: {
-            title: 'Analitika',
-            description: 'Padeda suprasti svetainės lankomumą ir pagerinti turinį.'
+            title: 'Analitikos slapukai',
+            description: '„Google Analytics“ padeda suprasti, kaip lankytojai naudojasi svetaine ir kurie puslapiai lankomi. Šią informaciją naudojame turiniui tobulinti. Aktyvuojami tik jums sutikus.'
           },
           marketing: {
-            title: 'Reklama',
-            description: 'Naudojama Google Ads matavimui ir reklamos nustatymams.'
+            title: 'Reklamos slapukai',
+            description: '„Google Ads“ slapukai naudojami reklamos veiksmingumui matuoti ir reklamai pritaikyti pagal jūsų veiklą. Aktyvuojami tik jums sutikus.'
           }
         },
         service: {
           disableAll: {
-            title: 'Įjungti arba išjungti visas paslaugas',
-            description: 'Naudokite jungiklį visoms nebūtinoms paslaugoms pakeisti.'
+            title: 'Visi nebūtinieji slapukai',
+            description: 'Vienu jungikliu leiskite arba neleiskite naudoti analitikos ir reklamos slapukų.'
           },
           required: {
-            title: 'visada reikalinga',
-            description: 'Šios paslaugos negalima išjungti.'
+            title: 'Visada aktyvi',
+            description: 'Ši paslauga būtina svetainės veikimui, todėl jos išjungti negalima.'
           },
           purpose: 'Tikslas',
           purposes: 'Tikslai'
@@ -197,13 +197,13 @@
     services: [
       {
         name: 'essential',
-        title: 'Butini svetaines slapukai',
+        title: 'Būtinieji svetainės slapukai',
         purposes: ['functional'],
         required: true
       },
       {
         name: 'analytics',
-        title: 'Analitika',
+        title: 'Google Analytics',
         purposes: ['analytics'],
         default: false,
         cookies: [
