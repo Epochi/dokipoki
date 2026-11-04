@@ -17,6 +17,7 @@ jobs:
           const endpoint = 'https://formsubmit.co/ajax/info@dokipoki.lt';
           const health = await fetch(endpoint, { signal: AbortSignal.timeout(20000) });
           console.log('Provider reachable, HTTP', health.status);
+          console.log('Provider response', (await health.text()).slice(0,500));
           if (health.status >= 500 || health.status === 403) throw Error('Provider health check failed; no test sent');
           const data = new FormData();
           for (const [key, value] of Object.entries({
