@@ -8,7 +8,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const base = process.env.PREVIEW_URL || 'http://127.0.0.1:4177';
 const screenshots = path.resolve(__dirname, '../_preview/screenshots');
-const scenarios = ['/', '/programos/gimtadieniai/', '/personazai/zmogus-voras/'];
+const scenarios = ['/', '/programos/gimtadieniai/', '/personazai/zmogus-voras/', '/programos/rumi-demon-hunters/'];
 (async()=>{
   fs.mkdirSync(screenshots,{recursive:true});
   const browser=await chromium.launch({headless:true});
@@ -96,8 +96,10 @@ const scenarios = ['/', '/programos/gimtadieniai/', '/personazai/zmogus-voras/']
     assert.doesNotMatch(JSON.stringify(events),/audit@example|private-query|Vilnius TESTAS|370 600|2027-02/);
     // Analytics failures or withheld consent must not turn accepted requests into errors.
     for(const variant of ['denied','throws']){
+      const previousEvents=await page.evaluate(()=>inquiryEvents.length);
       await consent(variant!=='denied',variant==='throws');await fill();await submit.click();await complete('boolean');
       assert.equal(await page.locator('[data-inquiry-status].is-success').count(),1);
+      assert.equal(await page.evaluate(()=>inquiryEvents.length),previousEvents);
     }
     await consent();
     await fill();
@@ -113,6 +115,16 @@ const scenarios = ['/', '/programos/gimtadieniai/', '/personazai/zmogus-voras/']
     await page.locator('[data-quick-inquiry]').evaluate(form=>form.dispatchEvent(new Event('submit',{cancelable:true})));
     assert.equal(await page.evaluate(()=>mockRequests.length),before+1);
     await page.evaluate(()=>jsonResolve({success:true}));await page.waitForFunction(()=>!document.querySelector('[data-quick-inquiry] button').disabled);
+    // Preserve an organic entry across an internal navigation only with consent.
+    await consent(false);
+    await page.goto(base+'/programos/gimtadieniai/',{referer:'https://www.google.lt/search?q=animatoriai'});
+    await consent(true);
+    await page.goto(base+'/personazai/zmogus-voras/');await consent(true);
+    await fill();await page.locator('[data-quick-inquiry] button').click();
+    const attribution=await page.evaluate(()=>mockRequests.at(-1).fields);
+    assert.equal(attribution['Užklausos kanalas'],'organic_search');
+    assert.equal(attribution['Pradinis puslapis'],'/programos/gimtadieniai/');
+    await complete('boolean');
     // Christmas audience choices retain the existing form and select the right offer.
     await page.goto(base+'/kaledos/');await consent(false);
     assert.equal(await page.locator('.ch-audience-cards article').count(),3);
@@ -120,6 +132,19 @@ const scenarios = ['/', '/programos/gimtadieniai/', '/personazai/zmogus-voras/']
       const cta=card.locator('[data-ch-offer]');const offer=await cta.getAttribute('data-ch-offer');const audience=await cta.getAttribute('data-ch-audience');
       await cta.click();assert.equal(await page.locator('#ch-interest').inputValue(),offer);assert.equal(await page.locator('#ch-audience').inputValue(),audience);
     }
+    await page.locator('#ch-name').fill('Techninis testas');
+    await page.locator('#ch-email').fill('test@example.invalid');
+    await page.locator('[data-christmas-inquiry] button').click();
+    assert.equal(await page.evaluate(()=>mockRequests.length),1);
+    assert.equal(await page.evaluate(()=>dataLayer.filter(x=>x.event==='christmas_inquiry_form_submit').length),0);
+    await page.evaluate(()=>mockRequests[0].resolve({ok:true,json:async()=>({success:false})}));
+    await page.waitForFunction(()=>!document.querySelector('[data-christmas-inquiry] button').disabled);
+    assert.equal(await page.locator('#ch-email').inputValue(),'test@example.invalid');
+    assert.equal(await page.evaluate(()=>dataLayer.filter(x=>x.event==='christmas_inquiry_form_submit').length),0);
+    await page.locator('[data-christmas-inquiry] button').click();
+    await page.evaluate(()=>mockRequests[1].resolve({ok:true,json:async()=>({success:true})}));
+    await page.waitForFunction(()=>!document.querySelector('[data-christmas-inquiry] button').disabled);
+    assert.equal(await page.evaluate(()=>dataLayer.filter(x=>x.event==='christmas_inquiry_form_submit').length),1);
     const paths=[...scenarios,'/kaledos/'];
     for(const width of [320,390,768,1440]){
       await page.setViewportSize({width,height:900});

@@ -15,6 +15,7 @@ description: "Rumi from Demon Hunters programa vaikų šventei – muzika, šoki
 og_image: "/img/programos/rumi-demon-hunters/GV_0317 (4).webp"
 hide_program_header: true
 hide_program_hero: true
+quick_inquiry: true
 ---
 
 <script type="application/ld+json">
@@ -211,6 +212,9 @@ hide_program_hero: true
   </div>
 </div>
 
+<p class="kg-font kg-font--small center-align">Renkate programą gimtadieniui? Palyginkite <a href="/programos/gimtadieniai/">Rumi ir klasikinių gimtadienių kainas, trukmę ir veiklas</a>. Dėl Rumi galite užklausti tiesiogiai šiame puslapyje.</p>
+<p class="birthday-cta"><a href="#uzklausa" data-quick-inquiry-open class="btn-large waves-effect waves-light dp-btn section-header">Patikrinti datą ir gauti pasiūlymą</a></p>
+
 <div class="row">
   <div class="col s12">
     <div class="dp-grid dp-masonry">
@@ -299,3 +303,4 @@ hide_program_hero: true
     </div>
   </div>
 </div>
+{% include quick-inquiry.html scope='programa' program='Rumi Demon Hunters' service_id='rumi-demon-hunters' %}

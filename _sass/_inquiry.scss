@@ -40,6 +40,7 @@
 .birthday-conditions { padding: 20px 24px; background: #e8f5f1; border-radius: 8px; margin: 22px 0; }
 .birthday-example { margin: 32px 0; }
 .birthday-example figure { margin: 0; }
+.birthday-example__photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .birthday-example img { width: 100%; height: auto; border-radius: 8px; }
 .birthday-example figcaption { font: 13px/1.5 Roboto, sans-serif; color: #545b65; margin-top: 8px; }
 .birthday-cta, .persona-inquiry-link { text-align: center; margin: 20px 0; }
