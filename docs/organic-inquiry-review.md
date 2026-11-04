@@ -46,6 +46,10 @@ attribution aid, not a replacement for GA4 session attribution.
   consent, cross-page organic attribution and analytics payload privacy.
 - Responsive review at 320, 390, 768 and 1440 pixels; links, fragment targets,
   canonical URLs, robots metadata, JSON-LD and sitemap inclusion checked.
+- GSC URL Inspection returned PASS for the existing home, birthday, Christmas
+  and Rumi URLs, with indexing allowed and matching Google canonical URLs.
+  That checks the current live version; unpublished preview content cannot yet
+  have been recrawled by Google.
 - A separate check loaded the actual Google tag and intercepted its collection
   requests: the new lead and click events reached GA4 transport without inquiry
   PII. Those requests were stopped before Google; no test conversions were sent.

@@ -17,4 +17,4 @@ Piratas – charizmatiškas ir energingas personažas, kuris į vaikų šventę 
 
 Pirato programa vaikų šventėms sudaryta iš aktyvių žaidimų, komandinių užduočių, lobių paieškų ir smagių išbandymų. Animatorius vaikams lengvai prisitaiko prie jų amžiaus ir grupės dydžio, todėl veiksmas išlieka saugus, įtraukiantis ir kupinas juoko.
 
-Piratas puikiai pasirodo tiek vienas, tiek kartu su [Pirate]({{ site.baseurl }}/personazai/pirate/), kai dviejų piratų komanda sukuria dar stipresnį įspūdį. Tai puikus pasirinkimas vaikų gimtadieniams ir teminėms vaikų šventėms. 
+Piratas puikiai pasirodo tiek vienas, tiek kartu su [Pirate]({{ site.baseurl }}/personazai/pirate/), kai dviejų piratų komanda sukuria dar stipresnį įspūdį. Tai puikus pasirinkimas vaikų gimtadieniams ir teminėms vaikų šventėms.
