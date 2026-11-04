@@ -69,6 +69,7 @@ const scenarios = ['/', '/programos/gimtadieniai/', '/personazai/zmogus-voras/',
       assert.equal(fields['Šventės data'],'Data dar derinama');
       assert.equal(fields['Telefonas'],'+370 600 00000');assert.ok(!fields.email);
       assert.equal(fields['Miestas'],'Vilnius TESTAS');assert.ok(fields['Užklausos numeris']);
+      assert.equal(fields._url,'https://dokipoki.lt'+url);
       if(url.includes('zmogus'))assert.equal(fields['Personažas'],'Žmogus Voras');
       await complete('boolean');
       assert.equal(await page.locator('[data-inquiry-status].is-success').count(),1);

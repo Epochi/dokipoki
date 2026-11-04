@@ -16,6 +16,9 @@ comparison while retaining direct contact.
 
 The shared form needs a date or an undecided-date checkbox, city, and one email or
 phone contact. The current program or character is transmitted automatically.
+The provider's documented _url field carries the canonical source explicitly,
+so source identification does not depend on a localhost or stripped referrer
+([provider help](https://formsubmit.co/help)). This does not bypass its bot checks.
 Messenger and phone remain available. A provider error retains the entered
 values and allows retry; a pending request cannot be submitted twice.
 
@@ -57,6 +60,10 @@ attribution aid, not a replacement for GA4 session attribution.
   one-time GitHub-hosted connectivity check returned a Cloudflare challenge (403)
   and stopped without posting a test inquiry. The test workflow was removed.
   No received test email was found. Do not report this as a delivered inquiry.
+  After adding _url, a controlled browser test again made a POST but received no
+  provider response (net::ERR_FAILED); the UI kept the inputs and showed failure.
+  The owner clarified that they had not submitted the form themselves, so their
+  earlier answer is not evidence of a failed manual-browser submission.
 
 The existing corporate unit-test DOM stub was updated to match the unchanged
 shared Christmas/corporate form selector. No production legacy form logic changed.

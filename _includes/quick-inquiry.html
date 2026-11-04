@@ -33,6 +33,7 @@
     <input type="hidden" name="Programa" value="{{ inquiry_program | escape }}" data-inquiry-program>
     <input type="hidden" name="Personažas" value="{{ page.personazas | default: '' | escape }}" data-inquiry-character>
     <input type="hidden" name="Užklausos puslapis" value="{{ page.url | absolute_url }}">
+    <input type="hidden" name="_url" value="{{ page.url | absolute_url }}">
     <input type="hidden" name="_subject" value="DOKI POKI svetainės užklausa">
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_captcha" value="false">
