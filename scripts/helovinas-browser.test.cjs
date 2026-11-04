@@ -46,10 +46,14 @@ const title='Velniukų Helovino vakarėlis';
   }
   for(const route of ['/','/programos/']){
    await page.goto(base+route);await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>document.querySelector('#klaro')?.remove());
-   assert.ok(await page.locator(`a[href="${url}"]`).count()>0);
    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
-   const card=route==='/'?page.locator('section[aria-labelledby="helovinas-promo-title"]'):page.locator('article').filter({has:page.locator(`a[href="${url}"]`)});
-   await card.screenshot({path:path.join(root,'_preview',`${route==='/'?'home':'programs'}-${width}.png`)});
+   if(route==='/'){
+    assert.equal(await page.locator('section[aria-labelledby="helovinas-promo-title"]').count(),0);
+   }else{
+    assert.ok(await page.locator(`a[href="${url}"]`).count()>0);
+    const card=page.locator('article').filter({has:page.locator(`a[href="${url}"]`)});
+    await card.screenshot({path:path.join(root,'_preview',`programs-${width}.png`)});
+   }
   }
  }
  assert.match(fs.readFileSync(path.join(root,'_site/sitemap.xml'),'utf8'),/https:\/\/dokipoki.lt\/programos\/helovino-programa-vaikams\//);
