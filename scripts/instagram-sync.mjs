@@ -10,7 +10,7 @@ const manualPostsPath = path.join(repoRoot, "_data", "instagram_manual_posts.jso
 const cacheDir = path.join(repoRoot, "img", "instagram-cache");
 
 const accessToken = process.env.INSTAGRAM_ACCESS_TOKEN;
-const userId = process.env.INSTAGRAM_USER_ID;
+const userId = process.env.INSTAGRAM_USER_ID?.trim();
 const apiBase = (process.env.INSTAGRAM_API_BASE || "https://graph.instagram.com").replace(/\/+$/, "");
 const feedLimit = Math.max(1, parseInt(process.env.INSTAGRAM_FEED_LIMIT || "33", 10));
 const initialCount = Math.max(1, parseInt(process.env.INSTAGRAM_INITIAL_COUNT || "9", 10));
@@ -19,6 +19,12 @@ const cacheVersion = 2;
 
 if (!accessToken) {
   throw new Error("INSTAGRAM_ACCESS_TOKEN is required.");
+}
+
+if (new URL(apiBase).hostname === "graph.facebook.com" && !userId) {
+  throw new Error(
+    "INSTAGRAM_USER_ID is required for Facebook Graph API. Use the Instagram professional account ID, not the Facebook Page, business or system user ID."
+  );
 }
 
 const previousFeed = await readJson(dataPath);
