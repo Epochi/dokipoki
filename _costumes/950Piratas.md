@@ -1,4 +1,5 @@
 ---
+birthday_offer: true
 layout: personazas
 img: 950Piratas.jpg
 personazas: Piratas

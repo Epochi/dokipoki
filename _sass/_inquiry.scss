@@ -1,0 +1,63 @@
+.quick-inquiry {
+  margin: 32px 0; padding: 28px; border-radius: 12px; background: #fff8fa;
+  border: 1px solid #e6cbd8; scroll-margin-top: 88px;
+  &__intro { max-width: 760px; margin: 0 auto 24px; text-align: center; }
+  &__intro h2 { margin-top: 0; }
+  &__context { color: #76536c; }
+  &__form { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+  &__field { min-width: 0; }
+  &__field > label { display: block; font: 600 16px/1.5 Roboto, sans-serif; color: #37414a; margin-bottom: 8px; }
+  &__field input[type="text"], &__field input[type="date"] {
+    box-sizing: border-box; display: block; width: 100%; min-width: 0; height: 50px; margin: 0;
+    border: 1px solid #a5aeb7; border-radius: 6px; background: #fff; padding: 10px 12px;
+    color: #26333d; font: 16px/1.5 Roboto, sans-serif; box-shadow: none;
+  }
+  &__field input:focus { outline: 2px solid #76536c; outline-offset: 2px; border-color: #76536c; }
+  &__field input[aria-invalid="true"] { border-color: #a32740; }
+  &__field input:disabled { background: #f1edf0; color: #65707a; }
+  &__field small { display: block; margin-top: 7px; color: #545b65; font: 13px/1.5 Roboto, sans-serif; }
+  &__field .quick-inquiry__date-choice { display: flex; align-items: center; gap: 8px; margin-top: 10px; cursor: pointer; }
+  &__date-choice input[type="checkbox"] { position: static; opacity: 1; width: 20px; height: 20px; accent-color: #76536c; pointer-events: auto; }
+  &__date-choice input + span { padding-left: 0; height: auto; line-height: 1.5; font: 14px/1.5 Roboto, sans-serif; }
+  &__date-choice input + span::before, &__date-choice input + span::after { display: none; }
+  &__bottom { grid-column: 1 / -1; text-align: center; }
+  &__bottom .btn-large { height: auto; min-height: 54px; padding: 12px 24px; line-height: 1.25; white-space: normal; font-size: 28px; }
+  &__bottom .btn-large:disabled { cursor: wait; }
+  &__status { margin: 12px 0; }
+  &__status.is-error { color: #a32740; }
+  &__status.is-success { color: #225f46; }
+  &__note { font: 13px/1.6 Roboto, sans-serif; color: #545b65; max-width: 680px; margin: 10px auto; }
+  & a:not(.btn-large) { text-decoration: underline; text-underline-offset: 3px; }
+  & [hidden] { display: none !important; }
+}
+.birthday-offers { margin: 28px 0 36px; }
+.birthday-offers .offer-comparison { width: 100%; border-collapse: collapse; background: #fff8fa; border-radius: 8px; }
+.offer-comparison caption { text-align: left; padding: 0 0 14px; }
+.offer-comparison th, .offer-comparison td { padding: 16px 14px; border-bottom: 1px solid #e6cbd8; vertical-align: top; font: 16px/1.6 Roboto, sans-serif; }
+.offer-comparison th { color: #37414a; }
+.offer-comparison th[scope="row"] { min-width: 130px; }
+.offer-comparison .offer-price { white-space: nowrap; font-weight: 700; }
+.birthday-conditions { padding: 20px 24px; background: #e8f5f1; border-radius: 8px; margin: 22px 0; }
+.birthday-example { margin: 32px 0; }
+.birthday-example figure { margin: 0; }
+.birthday-example img { width: 100%; height: auto; border-radius: 8px; }
+.birthday-example figcaption { font: 13px/1.5 Roboto, sans-serif; color: #545b65; margin-top: 8px; }
+.birthday-cta, .persona-inquiry-link { text-align: center; margin: 20px 0; }
+.birthday-cta .btn-large, .persona-inquiry-link .btn-large { height: auto; line-height: 1.25; padding: 12px 22px; white-space: normal; }
+@media (max-width: 700px) {
+  .quick-inquiry { padding: 20px 15px; }
+  .quick-inquiry__form { grid-template-columns: 1fr; gap: 20px; }
+  .quick-inquiry__bottom .btn-large { width: 100%; font-size: 25px; padding-inline: 12px; }
+  .offer-comparison thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+  .offer-comparison, .offer-comparison tbody, .offer-comparison tr, .offer-comparison th, .offer-comparison td { display: block; width: 100%; box-sizing: border-box; }
+  .offer-comparison caption { display: block; width: 100%; }
+  .offer-comparison tr { border: 1px solid #e6cbd8; border-radius: 8px; margin-bottom: 16px; overflow: hidden; }
+  .offer-comparison th[scope="row"] { background: #f4e3eb; font-size: 19px; }
+  .offer-comparison td { padding: 12px 14px; }
+  .offer-comparison td[data-label]::before { content: attr(data-label); display: block; font-weight: 700; color: #545b65; }
+  .birthday-conditions { padding: 18px; }
+}
+// Keep the existing homepage character cards within a narrow phone viewport.
+@media (max-width: 360px) {
+  .page-home .personazai-wrapper img:not(.active) { max-width: 100%; height: auto; }
+}

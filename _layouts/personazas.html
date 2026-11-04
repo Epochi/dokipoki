@@ -47,6 +47,9 @@
           <div class="personazas-text kg-font kg-font--normal" style="line-height: 1.6;">
             <div class="personazas-content" style="margin-top: 8px;">
               {{ content }}
+              {% if page.birthday_offer %}
+              <p>Planuojate gimtadienį? Palyginkite <a href="{{ '/programos/gimtadieniai/' | relative_url }}">gimtadienių programas su animatoriais, jų trukmę ir kainas</a>. Dėl šio personažo galite užklausti ir tiesiogiai žemiau.</p>
+              {% endif %}
             </div>
           </div>
 
@@ -109,6 +112,7 @@
 
           <!-- CTA zona -->
           <div class="section center-align" style="margin-top: 14px; padding-top: 0;">
+            <p class="persona-inquiry-link"><a href="#uzklausa" data-quick-inquiry-open class="btn-large waves-effect waves-light dp-btn section-header">Patikrinti datą ir gauti pasiūlymą</a></p>
             <a
               href="{{ site.messenger_url }}"
               class="btn-large waves-effect waves-light dp-btn section-header cta-btn"
@@ -146,6 +150,7 @@
         </div>
       </div>
     </div>
+    {% include quick-inquiry.html scope="persona" program="Programa su pasirinktu personažu" %}
   </div>
 
   {% include kontaktai.html %}
@@ -181,5 +186,6 @@
   <script src="https://code.jquery.com/jquery-migrate-3.4.1.min.js"></script>
   <script src="{{ "/js/bin/materialize.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "/js/bin/main.js" | prepend: site.baseurl }}"></script>
+  <script defer src="{{ '/js/quick-inquiry.js' | relative_url }}"></script>
 </body>
 </html>

@@ -60,6 +60,7 @@
 
 		{% include ribbon-divider.html %}
 		{% include kaina.html %}
+		<div class="container">{% include quick-inquiry.html scope="home" program="Padėkite pasirinkti šventės programą" service_id="home" %}</div>
 
 		{% include debeselis-divider.html %}
 
@@ -77,5 +78,6 @@
 	<script src="{{ '/js/masonry/imagesloaded.min.js' | relative_url }}"></script>
 	<script src="{{ '/js/bin/main.js' | relative_url }}"></script>
 	<script src="https://player.vimeo.com/api/player.js"></script>
+	<script defer src="{{ '/js/quick-inquiry.js' | relative_url }}"></script>
 </body>
 </html>

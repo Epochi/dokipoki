@@ -1,0 +1,40 @@
+name: One-time inquiry delivery verification
+on:
+  push:
+    branches: [codex/organic-inquiries-20261104]
+    paths: [.github/workflows/inquiry-delivery-check.yml]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Verify the form provider and send one labelled synthetic inquiry
+        shell: bash
+        run: |
+          node --input-type=module <<'JS'
+          const endpoint = 'https://formsubmit.co/ajax/info@dokipoki.lt';
+          const health = await fetch(endpoint, { signal: AbortSignal.timeout(20000) });
+          console.log('Provider reachable, HTTP', health.status);
+          if (health.status >= 500 || health.status === 403) throw Error('Provider health check failed; no test sent');
+          const data = new FormData();
+          for (const [key, value] of Object.entries({
+            _subject: 'TESTAS SEO-20261104-REMOTE - delivery check, NOT A BOOKING',
+            _captcha: 'false', _template: 'table',
+            email: 'info@dokipoki.lt', _replyto: 'info@dokipoki.lt',
+            'Programa': 'Synthetic delivery verification. Not a client inquiry. Do not reserve a date.',
+            'Miestas': 'Vilnius - technical test only',
+            'Kontaktas': 'info@dokipoki.lt',
+            'Data': 'Not specified - technical test',
+            'Uzklausos saltinis': 'https://dokipoki.lt/programos/gimtadieniai/',
+            'Uzklausos kanalas': 'technical_test'
+          })) data.set(key, value);
+          const response = await fetch(endpoint, {
+            method: 'POST', body: data, signal: AbortSignal.timeout(25000),
+            headers: { Accept: 'application/json', Referer: 'https://dokipoki.lt/programos/gimtadieniai/' }
+          });
+          const result = await response.json();
+          console.log(JSON.stringify({ http: response.status, success: result.success, message: result.message }));
+          if (!response.ok || ![true, 'true'].includes(result.success)) throw Error('No explicit provider acceptance');
+          JS
