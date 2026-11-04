@@ -28,6 +28,7 @@ plugins:
   - jekyll-sitemap
 
 exclude:
+  - workers
   - Gemfile
   - Gemfile.lock
   - context.md

@@ -135,7 +135,7 @@
       button.disabled = true;
       button.textContent = 'Siunčiama...';
       var controller = new AbortController();
-      var timeout = root.setTimeout(function () { controller.abort(); }, 20000);
+      var timeout = root.setTimeout(function () { controller.abort(); }, 35000);
       fetch(form.action, { method: 'POST', body: payload, headers: { Accept: 'application/json' }, signal: controller.signal })
         .then(function (response) { if (!response.ok) throw new Error('Provider rejected request'); return response.json(); })
         .then(function (result) {

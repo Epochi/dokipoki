@@ -11,7 +11,7 @@
         data-scope="{{ inquiry_scope | escape }}" data-service-id="{{ inquiry_service_id | escape }}"
         data-analytics-id="{{ site.data.inquiry.analytics_measurement_id | escape }}"
         data-page-path="{{ page.url | escape }}" data-site-origin="{{ site.url | escape }}"
-        action="https://formsubmit.co/ajax/{{ site.contact_email }}" method="post" novalidate>
+        action="{{ site.data.inquiry.endpoint | escape }}" method="post" novalidate>
     <div class="quick-inquiry__field">
       <label for="inquiry-date">Šventės data</label>
       <input id="inquiry-date" type="date" name="Šventės data" required data-inquiry-date>

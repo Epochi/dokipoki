@@ -16,14 +16,16 @@ comparison while retaining direct contact.
 
 The shared form needs a date or an undecided-date checkbox, city, and one email or
 phone contact. The current program or character is transmitted automatically.
-The provider's documented _url field carries the canonical source explicitly,
-so source identification does not depend on a localhost or stripped referrer
-([provider help](https://formsubmit.co/help)). This does not bypass its bot checks.
+The endpoint is configured in _data/inquiry.yml. The replacement gateway sends
+through a private Cloudflare service binding to the portal's existing Gmail
+authorization. Sender and recipient are fixed to info@dokipoki.lt; no secrets
+are copied to the public site. Canonical source is included explicitly.
 Messenger and phone remain available. A provider error retains the entered
 values and allows retry; a pending request cannot be submitted twice.
 
 The generate_lead event is emitted only after an HTTP-success response containing
-success: true or success: "true". It means provider acceptance, not a qualified
+success: true or success: "true". The replacement gateway returns true only after
+Gmail returns a message ID. It means provider acceptance, not a qualified
 inquiry, delivered email or confirmed booking. The inquiry_cta_click and
 inquiry_submit_click events are separate interactions. Google's automatic
 form_start/form_submit events must not be used as successful inquiries.
@@ -42,8 +44,9 @@ attribution aid, not a replacement for GA4 session attribution.
 
 - Jekyll production content builds successfully. The local Windows build uses
   an ignored Sass-path compatibility helper; production configuration is unchanged.
-- The quick-inquiry and corporate-inquiry-form unit suites pass 18 checks,
-  including legacy corporate acceptance/error behavior.
+- Website unit suites pass 28 checks, including legacy corporate
+  acceptance/error behavior and the new gateway's parsing, CORS, rate limiting,
+  deduplication, uncertain-send handling and bounded receipt expiry.
 - The quick-inquiry browser suite tests intercepted submissions, rejection,
   retry, delayed JSON lock, date validation, one phone/email, selected context,
   consent, cross-page organic attribution and analytics payload privacy.
@@ -56,7 +59,7 @@ attribution aid, not a replacement for GA4 session attribution.
 - A separate check loaded the actual Google tag and intercepted its collection
   requests: the new lead and click events reached GA4 transport without inquiry
   PII. Those requests were stopped before Google; no test conversions were sent.
-- Real delivery remains unverified: the local provider request timed out. A
+- Initial FormSubmit delivery remains unverified: the local provider request timed out. A
   one-time GitHub-hosted connectivity check returned a Cloudflare challenge (403)
   and stopped without posting a test inquiry. The test workflow was removed.
   No received test email was found. Do not report this as a delivered inquiry.
@@ -64,6 +67,28 @@ attribution aid, not a replacement for GA4 session attribution.
   provider response (net::ERR_FAILED); the UI kept the inputs and showed failure.
   The owner clarified that they had not submitted the form themselves, so their
   earlier answer is not evidence of a failed manual-browser submission.
+  The owner subsequently submitted the form from the local preview and received
+  its error message. A separately hosted HTTPS preview test also failed.
+
+Replacement mail delivery is prepared but not deployed. Portal PR
+[12](https://github.com/infodokipoki/dokipoki-os-portal/pull/12) adds only a private
+named RPC entrypoint with a fixed mailbox. Its 19 isolated mailer checks,
+typecheck and production build passed. Automatic approval review rejected the
+production portal deployment and required explicit owner approval; no bypass
+was attempted. A live Gmail receipt is still required after that approval.
+
+The gateway persists only receipt state, a payload hash and timestamps, not
+contact or inquiry contents. Identical retries share one send; unknown outcomes
+cannot silently send twice. Daily cleanup retains roughly 7–8 days, with at most
+200 send attempts per UTC day and 20 requests per minute per IP/location.
+These are bounded safeguards, not a guarantee against every abuse pattern.
+The SQLite-backed namespace and binding do not change account billing limits.
+No database queries are added to the portal's existing UI requests.
+
+HTTPS content preview:
+https://dokipoki-review.dokipoki-os-portal.workers.dev/
+It is blocked from indexing by both HTTP headers and robots.txt and has analytics
+disabled. The production website remains on GitHub Pages.
 
 The existing corporate unit-test DOM stub was updated to match the unchanged
 shared Christmas/corporate form selector. No production legacy form logic changed.
