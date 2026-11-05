@@ -14,6 +14,11 @@ comparison while retaining direct contact.
 
 ## Form and measurement
 
+Owner's visual direction: contact actions and offer/navigation choices added in
+this change use the site's existing button styles, rather than bare blue text
+links. Homepage buttons align with a visible gap on desktop and stack on mobile.
+The button styling preserves anchor destinations and inquiry-selection data.
+
 The shared form needs a date or an undecided-date checkbox, city, and one email or
 phone contact. The current program or character is transmitted automatically.
 The endpoint is configured in _data/inquiry.yml. The replacement gateway sends

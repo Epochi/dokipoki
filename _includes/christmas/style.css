@@ -130,3 +130,7 @@
 .christmas-hub .ch-field input[type="date"]::-webkit-datetime-edit{min-width:0;padding:0}
 .christmas-hub #ch-status.is-error{color:#8b243a}
 .christmas-hub .ch-button:disabled{opacity:.65;cursor:wait}
+.christmas-hub .ch-actions{flex-wrap:wrap}
+.christmas-hub .ch-button{max-width:100%}
+.christmas-hub .ch-audience-cards .ch-button+.ch-button{margin-top:12px}
+.christmas-hub .ch-offer-pair .ch-offer-copy>.ch-button{margin-top:auto;align-self:flex-start}

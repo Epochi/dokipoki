@@ -31,31 +31,31 @@ quick_inquiry: true
         <th scope="row">Klasikinė: žaidimai, tatuiruotės ir balionai</th>
         <td data-label="Kaina Vilniuje"><span class="offer-price">Nuo 100 €</span></td>
         <td data-label="Trukmė ir komanda">1 val.<br>1 animatorius su pasirinktu personažu</td>
-        <td data-label="Kas įeina">Judrūs žaidimai, šokiai, laikinos tatuiruotės ir balionėlių lankstymas. Veiklas pritaikome pagal personažą ir vaikų amžių.<br><a href="#uzklausa" data-quick-inquiry-open data-inquiry-program="Klasikinė programa: tatuiruotės ir balionai" data-inquiry-service="birthday-classic-balloons">Pasirinkti šį variantą</a></td>
+        <td data-label="Kas įeina">Judrūs žaidimai, šokiai, laikinos tatuiruotės ir balionėlių lankstymas. Veiklas pritaikome pagal personažą ir vaikų amžių.<br><a class="btn-large waves-effect waves-light dp-btn section-header dp-action-button" href="#uzklausa" data-quick-inquiry-open data-inquiry-program="Klasikinė programa: tatuiruotės ir balionai" data-inquiry-service="birthday-classic-balloons">Pasirinkti šį variantą</a></td>
       </tr>
       <tr>
         <th scope="row">Klasikinė: žaidimai ir veidukų piešimas</th>
         <td data-label="Kaina Vilniuje"><span class="offer-price">Nuo 100 €</span></td>
         <td data-label="Trukmė ir komanda">1 val.<br>1 animatorius su tinkamu personažu</td>
-        <td data-label="Kas įeina">Žaidimai, šokiai ir veidukų piešimas. Tai alternatyva tatuiruočių ir balionų variantui. Žmogus Voras veidukų nepiešia.<br><a href="#uzklausa" data-quick-inquiry-open data-inquiry-program="Klasikinė programa: veidukų piešimas" data-inquiry-service="birthday-classic-facepaint">Pasirinkti šį variantą</a></td>
+        <td data-label="Kas įeina">Žaidimai, šokiai ir veidukų piešimas. Tai alternatyva tatuiruočių ir balionų variantui. Žmogus Voras veidukų nepiešia.<br><a class="btn-large waves-effect waves-light dp-btn section-header dp-action-button" href="#uzklausa" data-quick-inquiry-open data-inquiry-program="Klasikinė programa: veidukų piešimas" data-inquiry-service="birthday-classic-facepaint">Pasirinkti šį variantą</a></td>
       </tr>
       <tr>
         <th scope="row">Rumi Basic</th>
         <td data-label="Kaina Vilniuje">Individualus pasiūlymas</td>
         <td data-label="Trukmė ir komanda">1 val.<br>1 Rumi personažas</td>
-        <td data-label="Kas įeina">Įšventinimas į Demon Hunters komandą, Huntrix tatuiruotės, žaidimai ir šokiai.<br><a href="#uzklausa" data-quick-inquiry-open data-inquiry-program="Rumi Basic" data-inquiry-service="birthday-rumi-basic">Pasirinkti Rumi Basic</a></td>
+        <td data-label="Kas įeina">Įšventinimas į Demon Hunters komandą, Huntrix tatuiruotės, žaidimai ir šokiai.<br><a class="btn-large waves-effect waves-light dp-btn section-header dp-action-button" href="#uzklausa" data-quick-inquiry-open data-inquiry-program="Rumi Basic" data-inquiry-service="birthday-rumi-basic">Pasirinkti Rumi Basic</a></td>
       </tr>
       <tr>
         <th scope="row">Rumi Premium</th>
         <td data-label="Kaina Vilniuje">Individualus pasiūlymas</td>
         <td data-label="Trukmė ir komanda">1 val.<br>1 gyvai dainuojanti Rumi atlikėja</td>
-        <td data-label="Kas įeina">Visa Basic programa ir gyvas dainavimas. Prieš patvirtindami užsakymą patikriname dainuojančios atlikėjos užimtumą.<br><a href="#uzklausa" data-quick-inquiry-open data-inquiry-program="Rumi Premium" data-inquiry-service="birthday-rumi-premium">Pasirinkti Rumi Premium</a></td>
+        <td data-label="Kas įeina">Visa Basic programa ir gyvas dainavimas. Prieš patvirtindami užsakymą patikriname dainuojančios atlikėjos užimtumą.<br><a class="btn-large waves-effect waves-light dp-btn section-header dp-action-button" href="#uzklausa" data-quick-inquiry-open data-inquiry-program="Rumi Premium" data-inquiry-service="birthday-rumi-premium">Pasirinkti Rumi Premium</a></td>
       </tr>
       <tr>
         <th scope="row">Rumi Premium Plus</th>
         <td data-label="Kaina Vilniuje">Individualus pasiūlymas</td>
         <td data-label="Trukmė ir komanda">1 val.<br>1 Rumi personažas</td>
-        <td data-label="Kas įeina">Visa Premium programa, jubiliatės Rumi šukuosena ir talismanas. Šiuos priedus ir atlikėjos užimtumą patvirtiname pasiūlyme.<br><a href="#uzklausa" data-quick-inquiry-open data-inquiry-program="Rumi Premium Plus" data-inquiry-service="birthday-rumi-plus">Pasirinkti Rumi Premium Plus</a></td>
+        <td data-label="Kas įeina">Visa Premium programa, jubiliatės Rumi šukuosena ir talismanas. Šiuos priedus ir atlikėjos užimtumą patvirtiname pasiūlyme.<br><a class="btn-large waves-effect waves-light dp-btn section-header dp-action-button" href="#uzklausa" data-quick-inquiry-open data-inquiry-program="Rumi Premium Plus" data-inquiry-service="birthday-rumi-plus">Pasirinkti Rumi Premium Plus</a></td>
       </tr>
     </tbody>
   </table>
@@ -66,12 +66,12 @@ quick_inquiry: true
   <p><strong>Vieta.</strong> Dirbame Vilniuje ir Kaune, atvykstame ir į kitus Lietuvos miestus. Programos kainą ir kelionę nurodome konkrečiame pasiūlyme pagal Jūsų šventės vietą.</p>
   <p><strong>Vaikų skaičius ir trukmė.</strong> Vienas animatorius orientuojasi į grupę iki 15 vaikų. Didesnei grupei pasiūlysime tinkamą komandos dydį. Jei dalyvaus daugiau nei 10 vaikų arba norėsite daugiau laiko individualioms veikloms, aptarsime 1,5 val. programą ir jos kainą.</p>
   <p><strong>Gruodžio šventės.</strong> Gruodžio šventėms pasiūlymą sudarome individualiai pagal datą, vietą ir programą. Tikslią programos sudėtį, trukmę ir visą mokėtiną sumą patvirtiname prieš rezervaciją.</p>
-  <p>Ieškote kitokio formato? Peržiūrėkite <a href="/programos/rumi-demon-hunters/">Rumi Demon Hunters programą</a> arba <a href="/programos/">kitas švenčių programas</a>. Eksperimentams atskirai įvertiname erdvę ir tinkamas veiklas.</p>
+  <p>Ieškote kitokio formato? Peržiūrėkite kitas švenčių programas. Eksperimentams atskirai įvertiname erdvę ir tinkamas veiklas.</p><div class="dp-action-buttons"><a class="btn-large waves-effect waves-light dp-btn section-header dp-action-button" href="/programos/rumi-demon-hunters/">Rumi Demon Hunters programa</a><a class="btn-large waves-effect waves-light dp-btn section-header dp-action-button" href="/programos/">Visos švenčių programos</a></div>
 </section>
 
 <section class="birthday-example row" aria-labelledby="birthday-example-title">
   <div class="col s12 m5"><figure><div class="birthday-example__photos"><img src="/img/programos/rumi-demon-hunters/rumi-gimtadienis-1.webp" alt="Rumi animatorė bendrauja su Rumi kostiumu pasipuošusia gimtadienio dalyve" width="1366" height="2048" loading="lazy" decoding="async"><img src="/img/programos/rumi-demon-hunters/rumi-gimtadienis-2.webp" alt="Rumi ir gimtadienio dalyvė kartu atkartoja judesius" width="1366" height="2048" loading="lazy" decoding="async"></div><figcaption>Akimirkos iš mūsų Rumi gimtadienio galerijos.</figcaption></figure></div>
-  <div class="col s12 m7 kg-font kg-font--small"><h2 class="section-header" id="birthday-example-title">Rumi gimtadienio akimirka</h2><p>Šioje šventėje Rumi susitiko su mažąja savo heroje - abi pasipuošusios derančiais kostiumais ir violetinėmis kasomis. Nuotraukose - jų bendravimas ir bendri judesiai žaidimų erdvėje.</p><p>Jei Jūsų vaikas laukia Rumi, galite pasirinkti Basic, Premium arba Premium Plus programą. Nuotraukoje matomas vaiko kostiumas nėra programos kainos dalis.</p><p><a href="/programos/rumi-demon-hunters/">Daugiau Rumi programos nuotraukų ir veiklų</a></p><p>Dar neišsirinkote herojaus? Peržiūrėkite <a href="/personazai/">visus personažus vaikų gimtadieniui</a> arba užklausoje palikite bendrą gimtadienio programą - padėsime pasirinkti.</p></div>
+  <div class="col s12 m7 kg-font kg-font--small"><h2 class="section-header" id="birthday-example-title">Rumi gimtadienio akimirka</h2><p>Šioje šventėje Rumi susitiko su mažąja savo heroje - abi pasipuošusios derančiais kostiumais ir violetinėmis kasomis. Nuotraukose - jų bendravimas ir bendri judesiai žaidimų erdvėje.</p><p>Jei Jūsų vaikas laukia Rumi, galite pasirinkti Basic, Premium arba Premium Plus programą. Nuotraukoje matomas vaiko kostiumas nėra programos kainos dalis.</p><p>Dar neišsirinkote herojaus? Peržiūrėkite personažus arba užklausoje palikite bendrą gimtadienio programą - padėsime pasirinkti.</p><div class="dp-action-buttons"><a class="btn-large waves-effect waves-light dp-btn section-header dp-action-button" href="/programos/rumi-demon-hunters/">Rumi programa ir nuotraukos</a><a class="btn-large waves-effect waves-light dp-btn section-header dp-action-button" href="/personazai/">Visi personažai</a></div></div>
 </section>
 
 {% include quick-inquiry.html scope="birthday" program="Gimtadienio programa - padėkite pasirinkti" service_id="gimtadieniai" %}

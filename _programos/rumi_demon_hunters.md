@@ -212,7 +212,7 @@ quick_inquiry: true
   </div>
 </div>
 
-<p class="kg-font kg-font--small center-align">Renkate programą gimtadieniui? Palyginkite <a href="/programos/gimtadieniai/">Rumi ir klasikinių gimtadienių kainas, trukmę ir veiklas</a>. Dėl Rumi galite užklausti tiesiogiai šiame puslapyje.</p>
+<p class="kg-font kg-font--small center-align">Renkate programą gimtadieniui? Galite palyginti Rumi ir klasikines programas. Dėl Rumi taip pat galite užklausti tiesiogiai šiame puslapyje.</p><div class="dp-action-buttons"><a class="btn-large waves-effect waves-light dp-btn section-header dp-action-button" href="/programos/gimtadieniai/">Gimtadienių programos ir kainos</a></div>
 <p class="birthday-cta"><a href="#uzklausa" data-quick-inquiry-open class="btn-large waves-effect waves-light dp-btn section-header">Patikrinti datą ir gauti pasiūlymą</a></p>
 
 <div class="row">

@@ -45,6 +45,14 @@
 .birthday-example figcaption { font: 13px/1.5 Roboto, sans-serif; color: #545b65; margin-top: 8px; }
 .birthday-cta, .persona-inquiry-link { text-align: center; margin: 20px 0; }
 .birthday-cta .btn-large, .persona-inquiry-link .btn-large { height: auto; line-height: 1.25; padding: 12px 22px; white-space: normal; }
+.dp-action-buttons { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px; margin: 18px 0; }
+.dp-action-buttons a.dp-action-button,
+.birthday-offers a.dp-action-button,
+.page-home .home-messenger-cta a.dp-action-button {
+  height: auto !important; min-height: 48px; line-height: 1.35 !important;
+  white-space: normal !important; text-align: center; padding: 12px 20px;
+}
+.birthday-offers a.dp-action-button { margin-top: 12px; }
 @media (max-width: 700px) {
   .quick-inquiry { padding: 20px 15px; }
   .quick-inquiry__form { grid-template-columns: 1fr; gap: 20px; }
