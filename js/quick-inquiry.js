@@ -48,6 +48,8 @@
     else { try { root.sessionStorage.removeItem(storageKey); } catch (_) {} }
   });
   document.querySelectorAll('[data-quick-inquiry]').forEach(function (form) {
+    var eventType = form.querySelector('[data-inquiry-event-type]');
+    var children = form.querySelector('[data-inquiry-children]');
     var date = form.querySelector('[data-inquiry-date]');
     var unknown = form.querySelector('[data-inquiry-date-unknown]');
     var city = form.querySelector('[data-inquiry-city]');
@@ -89,9 +91,10 @@
       } catch (_) { /* Analytics must never change the result of an accepted inquiry. */ }
     }
     unknown.addEventListener('change', syncDate);
-    [date, city, contact].forEach(function (field) {
+    [eventType, children, date, city, contact].forEach(function (field) {
       field.addEventListener('input', function () { field.setCustomValidity(''); field.removeAttribute('aria-invalid'); });
     });
+    eventType.addEventListener('change', function () { eventType.setCustomValidity(''); eventType.removeAttribute('aria-invalid'); });
     document.querySelectorAll('[data-quick-inquiry-open]').forEach(function (link) {
       link.addEventListener('click', function () {
         if (link.dataset.inquiryProgram) program.value = link.dataset.inquiryProgram;
@@ -99,7 +102,11 @@
         var context = form.closest('section').querySelector('[data-inquiry-context]');
         if (context) context.textContent = character.value || program.value;
         emit('inquiry_cta_click');
-        root.setTimeout(function () { date.disabled ? city.focus() : date.focus(); }, 0);
+        root.setTimeout(function () {
+          if (!eventType.value) eventType.focus();
+          else if (!children.value) children.focus();
+          else date.disabled ? city.focus() : date.focus();
+        }, 0);
       });
     });
     button.addEventListener('click', function () { if (!busy) emit('inquiry_submit_click'); });
@@ -109,11 +116,13 @@
       event.preventDefault();
       if (busy) return;
       message('', '');
+      eventType.setCustomValidity(eventType.value ? '' : 'Pasirinkite šventės tipą.');
+      children.setCustomValidity(/^[1-9]\d{0,3}$/.test(children.value) ? '' : 'Įrašykite apytikslį vaikų skaičių.');
       city.setCustomValidity(city.value.trim() ? '' : 'Įrašykite miestą.');
       var type = contactType(contact.value);
       contact.setCustomValidity(type ? '' : 'Įrašykite galiojantį el. paštą arba telefono numerį.');
       if (!unknown.checked && (!date.value || date.value < date.min)) date.setCustomValidity('Pasirinkite šventės datą arba pažymėkite, kad data dar derinama.');
-      var invalid = [date, city, contact].find(function (field) { return !field.disabled && !field.checkValidity(); });
+      var invalid = [eventType, children, date, city, contact].find(function (field) { return !field.disabled && !field.checkValidity(); });
       if (invalid) {
         invalid.setAttribute('aria-invalid', 'true');
         message(invalid.validationMessage || 'Užpildykite trūkstamą informaciją.', 'error');

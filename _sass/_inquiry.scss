@@ -4,10 +4,11 @@
   &__intro { max-width: 760px; margin: 0 auto 24px; text-align: center; }
   &__intro h2 { margin-top: 0; }
   &__context { color: #76536c; }
-  &__form { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
-  &__field { min-width: 0; }
+  &__form { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 22px; }
+  &__field { min-width: 0; grid-column: span 2; }
+  &__field--half { grid-column: span 3; }
   &__field > label { display: block; font: 600 16px/1.5 Roboto, sans-serif; color: #37414a; margin-bottom: 8px; }
-  &__field input[type="text"], &__field input[type="date"] {
+  &__field input[type="text"], &__field input[type="date"], &__field input[type="number"], &__field select {
     box-sizing: border-box; display: block; width: 100%; min-width: 0; height: 50px; margin: 0;
     border: 1px solid #a5aeb7; border-radius: 6px; background: #fff; padding: 10px 12px;
     color: #26333d; font: 16px/1.5 Roboto, sans-serif; box-shadow: none;
@@ -21,6 +22,7 @@
   &__date-choice input + span { padding-left: 0; height: auto; line-height: 1.5; font: 14px/1.5 Roboto, sans-serif; }
   &__date-choice input + span::before, &__date-choice input + span::after { display: none; }
   &__bottom { grid-column: 1 / -1; text-align: center; }
+  &__bottom > &__contact-question { text-align: center; }
   &__bottom .btn-large { height: auto; min-height: 54px; padding: 12px 24px; line-height: 1.25; white-space: normal; font-size: 28px; }
   &__bottom .btn-large:disabled { cursor: wait; }
   &__status { margin: 12px 0; }
@@ -56,6 +58,7 @@
 @media (max-width: 700px) {
   .quick-inquiry { padding: 20px 15px; }
   .quick-inquiry__form { grid-template-columns: 1fr; gap: 20px; }
+  .quick-inquiry__field { grid-column: 1 / -1; }
   .quick-inquiry__bottom .btn-large { width: 100%; font-size: 25px; padding-inline: 12px; }
   .offer-comparison thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
   .offer-comparison, .offer-comparison tbody, .offer-comparison tr, .offer-comparison th, .offer-comparison td { display: block; width: 100%; box-sizing: border-box; }

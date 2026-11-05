@@ -19,8 +19,12 @@ this change use the site's existing button styles, rather than bare blue text
 links. Homepage buttons align with a visible gap on desktop and stack on mobile.
 The button styling preserves anchor destinations and inquiry-selection data.
 
-The shared form needs a date or an undecided-date checkbox, city, and one email or
-phone contact. The current program or character is transmitted automatically.
+The shared form needs a celebration type, approximate number of children, date
+or an undecided-date checkbox, city, and one email or phone contact. Birthday and
+Rumi pages preselect birthday; other pages ask the visitor to choose. The current
+program or character is transmitted automatically. Type and child count are
+validated and forwarded to the prepared mailer, never to analytics. The direct
+contact question is explicitly centered at desktop and phone widths.
 The endpoint is configured in _data/inquiry.yml. The replacement gateway sends
 through a private Cloudflare service binding to the portal's existing Gmail
 authorization. Sender and recipient are fixed to info@dokipoki.lt; no secrets
@@ -49,7 +53,7 @@ attribution aid, not a replacement for GA4 session attribution.
 
 - Jekyll production content builds successfully. The local Windows build uses
   an ignored Sass-path compatibility helper; production configuration is unchanged.
-- Website unit suites pass 28 checks, including legacy corporate
+- Website unit suites pass 29 checks, including legacy corporate
   acceptance/error behavior and the new gateway's parsing, CORS, rate limiting,
   deduplication, uncertain-send handling and bounded receipt expiry.
 - The quick-inquiry browser suite tests intercepted submissions, rejection,
@@ -77,7 +81,7 @@ attribution aid, not a replacement for GA4 session attribution.
 
 Replacement mail delivery is prepared but not deployed. Portal PR
 [12](https://github.com/infodokipoki/dokipoki-os-portal/pull/12) adds only a private
-named RPC entrypoint with a fixed mailbox. Its 19 isolated mailer checks,
+named RPC entrypoint with a fixed mailbox. Its 25 isolated mailer checks,
 typecheck and production build passed. Automatic approval review rejected the
 production portal deployment and required explicit owner approval; no bypass
 was attempted. A live Gmail receipt is still required after that approval.

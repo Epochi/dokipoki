@@ -1,5 +1,6 @@
 const allowedOrigins=new Set(['https://dokipoki.lt','https://www.dokipoki.lt',
   'https://dokipoki-review.dokipoki-os-portal.workers.dev','http://127.0.0.1:4177']);
+const eventTypes=new Set(['birthday','christmas','kindergarten','corporate','wedding_christening','other']);
 export async function limitedText(request,maximum=8192){
   if(Number(request.headers.get('content-length')||0)>maximum)throw new Error('too_large');
   if(!request.body)return '';
@@ -19,10 +20,12 @@ export async function parseInquiry(request){
   const input={
     reference:value('Užklausos numeris',80),contact:value('Kontaktas',120),city:value('Miestas',80),
     date:value('Šventės data',30),program:value('Programa',160),character:value('Personažas',120),
+    eventType:value('Šventės tipas',40),children:value('Vaikų skaičius',4),
     sourceUrl:value('Užklausos puslapis',240),entryPath:value('Pradinis puslapis',200),
     channel:value('Užklausos kanalas',40)
   };
-  if(!/^[a-zA-Z0-9-]{16,80}$/.test(input.reference)||!input.city||!input.contact||!input.date||!input.program)throw Error('invalid');
+  if(!/^[a-zA-Z0-9-]{16,80}$/.test(input.reference)||!input.city||!input.contact||!input.date||!input.program||
+      !eventTypes.has(input.eventType)||!/^[1-9]\d{0,3}$/.test(input.children))throw Error('invalid');
   return input;
 }
 export async function inquiryHash(input){

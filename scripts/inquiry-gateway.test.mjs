@@ -7,15 +7,19 @@ function store(){
  return {values,get:async key=>values.get(key),put:async(key,value)=>{values.set(key,value);},delete:async key=>values.delete(key),getAlarm:async()=>alarm,setAlarm:async time=>{alarm=time;},
  list:async({prefix='',limit=Infinity}={})=>new Map([...values].filter(([key])=>key.startsWith(prefix)).slice(0,limit))};
 }
-const input={reference:'test-inquiry-20261104-01',city:'Vilnius',contact:'test@example.invalid',date:'Data dar derinama',program:'Rumi',character:'',sourceUrl:'https://dokipoki.lt/',entryPath:'/',channel:'organic_search'};
+const input={reference:'test-inquiry-20261104-01',city:'Vilnius',contact:'test@example.invalid',date:'Data dar derinama',eventType:'birthday',children:'12',program:'Rumi',character:'',sourceUrl:'https://dokipoki.lt/',entryPath:'/',channel:'organic_search'};
 function request(patch={},options={}){
  const fields={'Užklausos numeris':input.reference,'Miestas':input.city,'Kontaktas':input.contact,'Šventės data':input.date,'Programa':input.program,'Personažas':'',
- 'Užklausos puslapis':input.sourceUrl,'Pradinis puslapis':'/','Užklausos kanalas':'organic_search',...patch};
+ 'Šventės tipas':input.eventType,'Vaikų skaičius':input.children,'Užklausos puslapis':input.sourceUrl,'Pradinis puslapis':'/','Užklausos kanalas':'organic_search',...patch};
  const body=new FormData();for(const [key,value] of Object.entries(fields))body.set(key,value);
  return new Request('https://inquiries.invalid/inquiry',{method:'POST',headers:{Origin:'https://dokipoki.lt',...options.headers},body,...options});
 }
 test('multipart inquiry retains Unicode fields, phone-only and undecided date',async()=>{
  const parsed=await parseInquiry(request({'Kontaktas':'+370 600 00000'}));assert.equal(parsed.city,'Vilnius');assert.equal(parsed.contact,'+370 600 00000');assert.equal(parsed.date,'Data dar derinama');
+ assert.equal(parsed.eventType,'birthday');assert.equal(parsed.children,'12');
+});
+test('unknown celebration types and invalid child counts are rejected',async()=>{
+ for(const patch of [{'Šventės tipas':'invalid'},{'Vaikų skaičius':''},{'Vaikų skaičius':'0'},{'Vaikų skaičius':'-1'},{'Vaikų skaičius':'1.5'},{'Vaikų skaičius':'10000'}])await assert.rejects(parseInquiry(request(patch)));
 });
 test('oversized requests and honeypots are rejected before the mailer',async()=>{
  await assert.rejects(parseInquiry(request({'_honey':'bot'})));

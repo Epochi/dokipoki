@@ -303,4 +303,4 @@ quick_inquiry: true
     </div>
   </div>
 </div>
-{% include quick-inquiry.html scope='programa' program='Rumi Demon Hunters' service_id='rumi-demon-hunters' %}
+{% include quick-inquiry.html scope='programa' program='Rumi Demon Hunters' service_id='rumi-demon-hunters' event_type='birthday' %}

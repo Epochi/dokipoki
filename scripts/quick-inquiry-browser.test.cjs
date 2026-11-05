@@ -33,6 +33,8 @@ const scenarios = ['/', '/programos/gimtadieniai/', '/personazai/zmogus-voras/',
       },{enabled,throwTag});
     }
     async function fill(contact='audit@example.invalid',unknown=true){
+      await page.locator('[data-inquiry-event-type]').selectOption('birthday');
+      await page.locator('[data-inquiry-children]').fill('12');
       await page.locator('[data-inquiry-date-unknown]').setChecked(unknown);
       if(!unknown) await page.locator('[data-inquiry-date]').fill('2027-02-20');
       await page.locator('[data-inquiry-city]').fill('Vilnius TESTAS');
@@ -57,16 +59,29 @@ const scenarios = ['/', '/programos/gimtadieniai/', '/personazai/zmogus-voras/',
       assert.equal(await page.locator('meta[name=robots]').getAttribute('content'),'index, follow');
       for(const schema of await page.locator('script[type="application/ld+json"]').allTextContents()) JSON.parse(schema);
       await page.locator('[data-quick-inquiry-open]').first().click();
-      await page.waitForFunction(()=>document.querySelector('[data-inquiry-date]')===document.activeElement);
+      await page.waitForFunction(()=>{
+        const type=document.querySelector('[data-inquiry-event-type]');
+        return (type.value?document.querySelector('[data-inquiry-children]'):type)===document.activeElement;
+      });
       const submit=page.locator('[data-quick-inquiry] button');
       await submit.click();assert.equal(await page.evaluate(()=>mockRequests.length),0);
       await fill('invalid');await submit.click();assert.equal(await page.evaluate(()=>mockRequests.length),0);
+      if(url==='/'){
+        await fill();await page.locator('[data-inquiry-event-type]').selectOption('');await submit.click();
+        assert.equal(await page.evaluate(()=>mockRequests.length),0);
+        await page.locator('[data-inquiry-event-type]').selectOption('birthday');
+        for(const count of ['', '0','-1','1.5','10000']){
+          await page.locator('[data-inquiry-children]').fill(count);await submit.click();
+          assert.equal(await page.evaluate(()=>mockRequests.length),0);
+        }
+      }
       await fill('+370 600 00000');await submit.click();
       await page.locator('[data-quick-inquiry]').evaluate(form=>form.dispatchEvent(new Event('submit',{cancelable:true})));
       assert.equal(await page.evaluate(()=>mockRequests.length),1);
       assert.equal(await submit.isDisabled(),true);
       const fields=await page.evaluate(()=>mockRequests[0].fields);
       assert.equal(fields['Šventės data'],'Data dar derinama');
+      assert.equal(fields['Šventės tipas'],'birthday');assert.equal(fields['Vaikų skaičius'],'12');
       assert.equal(fields['Telefonas'],'+370 600 00000');assert.ok(!fields.email);
       assert.equal(fields['Miestas'],'Vilnius TESTAS');assert.ok(fields['Užklausos numeris']);
       assert.equal(fields._url,'https://dokipoki.lt'+url);
@@ -75,6 +90,7 @@ const scenarios = ['/', '/programos/gimtadieniai/', '/personazai/zmogus-voras/',
       assert.equal(await page.locator('[data-inquiry-status].is-success').count(),1);
       assert.equal(await page.evaluate(()=>inquiryEvents.filter(event=>event[1]==='generate_lead').length),1);
       assert.equal(await page.locator('[data-inquiry-contact]').inputValue(),'');
+      assert.equal(await page.locator('[data-inquiry-children]').inputValue(),'');
     }
     await page.goto(base+'/programos/gimtadieniai/?email=private-query@example.invalid');await consent();
     await page.locator('[data-inquiry-service="birthday-rumi-premium"]').click();
@@ -87,6 +103,7 @@ const scenarios = ['/', '/programos/gimtadieniai/', '/personazai/zmogus-voras/',
       const success=mode==='string';
       assert.equal(await page.locator('[data-inquiry-status].is-success').count(),success?1:0);
       assert.equal(await page.locator('[data-inquiry-contact]').inputValue(),success?'':'audit@example.invalid');
+      assert.equal(await page.locator('[data-inquiry-children]').inputValue(),success?'':'12');
     }
     const events=await page.evaluate(()=>inquiryEvents);
     const lead=events.find(event=>event[1]==='generate_lead');
@@ -161,6 +178,7 @@ const scenarios = ['/', '/programos/gimtadieniai/', '/personazai/zmogus-voras/',
         if(url!=='/kaledos/'){
           await page.locator('[data-quick-inquiry-open]').first().click();
           const rect=await page.locator('[data-inquiry-contact]').boundingBox();assert.ok(rect.width>120&&rect.height>=44);
+          assert.equal(await page.locator('.quick-inquiry__contact-question').evaluate(el=>getComputedStyle(el).textAlign),'center');
           assert.ok(parseFloat(await page.locator('[data-inquiry-contact]').evaluate(el=>getComputedStyle(el).fontSize))>=16);
           if(width===390)await page.locator('#uzklausa').screenshot({path:path.join(screenshots,`form-${url.replace(/\W/g,'_')||'home'}.png`)});
         }
