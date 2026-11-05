@@ -1,0 +1,13 @@
+{
+  "name": "dokipoki-inquiries",
+  "account_id": "5bf610963c262f657017308a33fa3b6e",
+  "main": "index.mjs",
+  "compatibility_date": "2026-11-04",
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": {"enabled": false},
+  "services": [{"binding":"MAILER","service":"dokipoki-os-portal","entrypoint":"WebsiteInquiryMailer"}],
+  "durable_objects": {"bindings":[{"name":"RECEIPTS","class_name":"WebsiteInquiryReceipts"}]},
+  "migrations": [{"tag":"v1","new_sqlite_classes":["WebsiteInquiryReceipts"]}],
+  "ratelimits": [{"name":"INQUIRY_RATE_LIMIT","namespace_id":"2026110401","simple":{"limit":20,"period":60}}]
+}

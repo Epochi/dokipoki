@@ -1,4 +1,5 @@
 ---
+birthday_offer: true
 layout: personazas
 img: 540Pimpackiukai.jpg
 personazas: Pimpačkiukai

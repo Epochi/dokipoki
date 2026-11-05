@@ -1,4 +1,5 @@
 ---
+birthday_offer: true
 layout: personazas
 img: 840zmogus_voras.jpg
 personazas: Žmogus Voras

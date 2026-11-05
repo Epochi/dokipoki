@@ -26,13 +26,14 @@ function harness() {
   const reply = field(''), subject = field(''), button = field(''), message = field('');
   const inputs = [name, email, company, date, dateHidden, note, reply, subject];
   const selectors = {
-    'button[type="submit"]': button, '.corporate-inquiry-form__validation': message,
+    'button[type="submit"]': button, '.corporate-inquiry-form__validation, #ch-status': message,
     'input[name="_replyto"]': reply, 'input[name="email"]': email,
     'input[name="Įmonės pavadinimas"]': company, '[data-subject-field]': subject,
     '[data-date-field]': date, '[data-date-submit]': dateHidden
   };
   let onSubmit, resetCount = 0;
   const form = {
+    hasAttribute() { return false; },
     action: 'https://provider.invalid/never-sent',
     querySelector: selector => selectors[selector] || null,
     querySelectorAll: selector => selector === '[required]' ? [name, email, date, note] : inputs,

@@ -14,13 +14,12 @@
           {% if page.url == "/" %}
           <div class="home-messenger-cta">
             <a
-              href="{{ site.messenger_url }}"
-              class="btn-large waves-effect waves-light dp-btn section-header"
-              target="_blank"
-              rel="noopener"
+              href="#uzklausa" data-quick-inquiry-open
+              class="btn-large waves-effect waves-light dp-btn section-header dp-action-button"
             >
-              Susisiekti per Messenger &#8594;
+              Patikrinti datą ir gauti pasiūlymą
             </a>
+            <a class="btn-large waves-effect waves-light dp-btn section-header dp-action-button cta-btn" href="{{ site.messenger_url }}" target="_blank" rel="noopener noreferrer" data-cta-scope="home" data-cta-type="messenger">Rašyti per Messenger</a>
           </div>
           {% endif %}
         </div>

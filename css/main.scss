@@ -9,6 +9,7 @@
 @import "fonts";
 @import "materialize";
 @import "styles.scss";
+@import "inquiry";
 
 /* ================================
    FONT + MOBILE STABILITY
@@ -1498,6 +1499,9 @@ body.rozine .instagram-gallery-section > .row{
 
 .home-messenger-cta{
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
   justify-content: center;
   width: 100%;
   margin-top: 18px;
@@ -1509,6 +1513,8 @@ body.rozine .instagram-gallery-section > .row{
 
 @media (max-width: 600px){
   .home-messenger-cta{
+    flex-direction: column;
+    gap: 12px;
     margin-top: 10px;
     margin-bottom: 30px;
     transform: translateY(-100%);

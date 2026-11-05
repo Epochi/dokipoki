@@ -1,0 +1,15 @@
+analytics_measurement_id: "G-M67JFTZQXQ"
+endpoint: "https://dokipoki-inquiries.dokipoki-os-portal.workers.dev/inquiry"
+event_types:
+  - id: birthday
+    label: Gimtadienis
+  - id: christmas
+    label: Kalėdų šventė
+  - id: kindergarten
+    label: Darželio šventė
+  - id: corporate
+    label: Įmonės renginys
+  - id: wedding_christening
+    label: Vestuvės / krikštynos
+  - id: other
+    label: Kita šventė

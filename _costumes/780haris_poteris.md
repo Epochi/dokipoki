@@ -1,4 +1,5 @@
 ---
+birthday_offer: true
 layout: personazas
 img: 800haris_poteris.jpg.jpg
 personazas: Haris Poteris

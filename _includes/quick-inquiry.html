@@ -1,0 +1,64 @@
+{% assign inquiry_scope = include.scope | default: 'programa' %}
+{% assign inquiry_program = include.program | default: page.title | default: 'Padėkite pasirinkti programą' %}
+{% assign inquiry_service_id = include.service_id | default: page.url | slugify %}
+{% assign inquiry_event_type = include.event_type | default: '' %}
+<section id="uzklausa" class="quick-inquiry dp-plain-section" aria-labelledby="quick-inquiry-title">
+  <div class="quick-inquiry__intro">
+    <h2 id="quick-inquiry-title" class="section-header">Patikrinti datą ir gauti pasiūlymą</h2>
+    <p class="kg-font kg-font--small">Parašykite, kada ir kur planuojate šventę. Atsakysime su Jūsų šventei tinkamu pasiūlymu.</p>
+    <p class="quick-inquiry__context kg-font kg-font--small" data-inquiry-context>{{ page.personazas | default: inquiry_program | escape }}</p>
+  </div>
+  <form class="quick-inquiry__form" data-quick-inquiry
+        data-scope="{{ inquiry_scope | escape }}" data-service-id="{{ inquiry_service_id | escape }}"
+        data-analytics-id="{{ site.data.inquiry.analytics_measurement_id | escape }}"
+        data-page-path="{{ page.url | escape }}" data-site-origin="{{ site.url | escape }}"
+        action="{{ site.data.inquiry.endpoint | escape }}" method="post" novalidate>
+    <div class="quick-inquiry__field quick-inquiry__field--half">
+      <label for="inquiry-event-type">Šventės tipas</label>
+      <select id="inquiry-event-type" class="browser-default" name="Šventės tipas" required data-inquiry-event-type>
+        <option value="">Pasirinkite šventės tipą</option>
+        {% for event_type in site.data.inquiry.event_types %}
+        <option value="{{ event_type.id | escape }}"{% if event_type.id == inquiry_event_type %} selected{% endif %}>{{ event_type.label | escape }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="quick-inquiry__field quick-inquiry__field--half">
+      <label for="inquiry-children">Vaikų skaičius</label>
+      <input id="inquiry-children" type="number" name="Vaikų skaičius" required min="1" max="9999" step="1" inputmode="numeric" data-inquiry-children aria-describedby="inquiry-children-help">
+      <small id="inquiry-children-help">Nurodykite apytikslį vaikų skaičių.</small>
+    </div>
+    <div class="quick-inquiry__field">
+      <label for="inquiry-date">Šventės data</label>
+      <input id="inquiry-date" type="date" name="Šventės data" required data-inquiry-date>
+      <label class="quick-inquiry__date-choice" for="inquiry-date-unknown">
+        <input id="inquiry-date-unknown" type="checkbox" name="Data dar derinama" value="Taip" data-inquiry-date-unknown>
+        <span>Data dar derinama</span>
+      </label>
+    </div>
+    <div class="quick-inquiry__field">
+      <label for="inquiry-city">Miestas</label>
+      <input id="inquiry-city" type="text" name="Miestas" required maxlength="80" autocomplete="address-level2" list="inquiry-cities" data-inquiry-city>
+      <datalist id="inquiry-cities"><option value="Vilnius"></option><option value="Kaunas"></option></datalist>
+    </div>
+    <div class="quick-inquiry__field">
+      <label for="inquiry-contact">El. paštas arba telefonas</label>
+      <input id="inquiry-contact" type="text" name="Kontaktas" required maxlength="120" autocomplete="email" inputmode="email" data-inquiry-contact aria-describedby="inquiry-contact-help">
+      <small id="inquiry-contact-help">Užtenka vieno Jums patogaus kontakto.</small>
+    </div>
+    <input type="hidden" name="Programa" value="{{ inquiry_program | escape }}" data-inquiry-program>
+    <input type="hidden" name="Personažas" value="{{ page.personazas | default: '' | escape }}" data-inquiry-character>
+    <input type="hidden" name="Užklausos puslapis" value="{{ page.url | absolute_url }}">
+    <input type="hidden" name="_url" value="{{ page.url | absolute_url }}">
+    <input type="hidden" name="_subject" value="DOKI POKI svetainės užklausa">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <div hidden aria-hidden="true"><input type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
+    <div class="quick-inquiry__bottom">
+      <button type="submit" class="btn-large waves-effect waves-light dp-btn section-header">Patikrinti datą ir gauti pasiūlymą</button>
+      <p class="quick-inquiry__status kg-font kg-font--small" data-inquiry-status role="status" aria-live="polite" tabindex="-1"></p>
+      <p class="quick-inquiry__note">Duomenis naudosime susisiekti dėl šventės. Programą, galutinę kainą ir datos rezervaciją patvirtinsime atskirai.</p>
+      <p class="quick-inquiry__contact-question kg-font kg-font--small">Patogiau susisiekti tiesiogiai?</p><div class="dp-action-buttons"><a class="btn-large waves-effect waves-light dp-btn section-header dp-action-button" href="{{ site.messenger_url }}" target="_blank" rel="noopener noreferrer">Rašyti per Messenger</a><a class="btn-large waves-effect waves-light dp-btn section-header dp-action-button" href="tel:{{ site.contact_phone_raw }}">Skambinti {{ site.contact_phone_display }}</a></div>
+    </div>
+    <noscript><p>Formai reikia JavaScript. Susisiekite kitu būdu:</p><div class="dp-action-buttons"><a class="btn-large waves-effect waves-light dp-btn section-header dp-action-button" href="mailto:{{ site.contact_email }}">Rašyti el. paštu</a><a class="btn-large waves-effect waves-light dp-btn section-header dp-action-button" href="tel:{{ site.contact_phone_raw }}">Skambinti</a></div></noscript>
+  </form>
+</section>
